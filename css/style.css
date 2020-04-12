@@ -1,8 +1,5 @@
 @charset "UTF-8";
 /* $VARIABLE */
-.slick-loading .slick-list {
-  background: #fff url("../library/slick_slider/ajax-loader.gif") center center no-repeat; }
-
 * {
   margin: 0;
   padding: 0;
@@ -271,6 +268,9 @@ body {
     padding: 10px 10px;
     margin-left: 5px; } }
 
+.slick-loading .slick-list {
+  background: #fff url("../library/slick_slider/ajax-loader.gif") center center no-repeat; }
+
 /* If click on down icon open  block*/
 .menu_icon_down_click {
   position: fixed;
@@ -389,26 +389,11 @@ body {
         margin: 0px 3px;
         font-family: roboto;
         font-weight: 500; }
-      .slide .slider .block_slader:hover .preview {
-        display: block;
-        -webkit-transform: 800ms all;
-        -ms-transform: 800ms all;
-        transform: 800ms all; }
 
 .slick-slide {
   margin: 0px 20px; }
 
 /* Выключаем кнопки с боку */
-.slick-prev,
-.slick-next {
-  display: none;
-  width: 0px;
-  height: 0px;
-  padding: 0;
-  color: transparent;
-  visibility: hidden;
-  border: none; }
-
 /* Анимация для значка показа профиля*/
 .status {
   position: absolute;
@@ -514,6 +499,30 @@ body {
     height: 30px;
     opacity: .3;
     }*/ }
+
+.prev {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  -webkit-transform: translate(-50%, -150%);
+  -ms-transform: translate(-50%, -150%);
+  transform: translate(-50%, -150%);
+  z-index: 9222299;
+  background: red; }
+
+.next {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  -webkit-transform: translate(-50%, -130%);
+  -ms-transform: translate(-50%, -130%);
+  transform: translate(-50%, -130%);
+  z-index: 9222299;
+  background: red; }
 
 #main {
   position: relative;

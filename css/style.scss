@@ -2,7 +2,7 @@
 $tColor : #DFD9D9;
 $bColor : #4193FE;
 
-.slick-loading .slick-list{background: #fff url('../library/slick_slider/ajax-loader.gif') center center no-repeat;}
+
 
 
 * {
@@ -291,6 +291,7 @@ body {
     }
 }
 
+.slick-loading .slick-list{background: #fff url('../library/slick_slider/ajax-loader.gif') center center no-repeat;}
 
 
 /* If click on down icon open  block*/
@@ -432,10 +433,6 @@ body {
             font-family: roboto;
             font-weight: 500;
         }
-        &:hover .preview{
-        display: block;
-        transform: 800ms all;
-                }
 
         }
     }
@@ -446,18 +443,6 @@ body {
       margin: 0px 20px;
     }
     /* Выключаем кнопки с боку */
-    .slick-prev,
-    .slick-next
-    {
-    display: none;
-    width: 0px;
-    height: 0px;
-    padding: 0;
-    color: transparent;
-    visibility: hidden;
-    border: none;
-    }
-    
 
 
 /* Анимация для значка показа профиля*/
@@ -560,6 +545,26 @@ body {
 }
 
 
+.prev{
+width: 30px;
+height: 30px;
+position: absolute;
+top: 50%;
+left: -20px;
+transform: translate(-50%, -150%);
+z-index: 9222299;
+background: red;
+}
+.next{
+width: 30px;
+height: 30px;
+position: absolute;
+top: 50%;
+right: -20px;
+transform: translate(-50%, -130%);
+z-index: 9222299;
+background: red;
+}
 
 
 
