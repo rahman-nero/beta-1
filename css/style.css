@@ -344,7 +344,7 @@ body {
 /* Slick Slider */
 .slide {
   /*background-color: #000;*/
-  background-image: url("../img/back.png");
+  background-image: url("../img/back.jpg");
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
