@@ -34,7 +34,7 @@ a {
   text-decoration: none; }
 
 body {
-  font-family: Segoe, Arial , sans-serif;
+  font-family: Segoe, Roboto, Arial , sans-serif;
   background-color: #18191A;
   /*background: url('https://static.zerochan.net/Tomioka.Giyuu.full.2669301.jpg');*/
   background-repeat: no-repeat;
@@ -529,7 +529,8 @@ body {
     /*float: right;*/
     position: relative;
     float: left;
-    width: 320px;
+    min-width: 320px;
+    max-width: 320px;
     /*margin: 0px 0px 0px 0px;*/
     background-color: #242526;
     padding: 00px 0px; }
@@ -565,13 +566,23 @@ body {
           #main aside #menu ul li:hover {
             background: #242424; }
     #main aside .date_new_episode {
+      margin: 40px 0px;
       position: relative;
-      /*background: #000;*/ }
+      /*background: #1B1B1B;*/
+      background: #212121; }
       #main aside .date_new_episode .title_block {
         width: initial;
-        padding: 15px 10px 15px 30px;
-        background: #212121;
+        padding: 15px 10px 15px 20px;
+        background: #1B1B1B;
+        border-bottom: 2px solid #4193FE;
         /*border-bottom: 2px dashed $bColor;*/ }
+        #main aside .date_new_episode .title_block img {
+          width: 20px;
+          height: 20px;
+          float: left;
+          bottom: 1px;
+          position: relative;
+          margin-right: 10px; }
       #main aside .date_new_episode .new_episode_tommorow {
         display: block;
         padding: 10px 10px 20px;
@@ -591,13 +602,16 @@ body {
       padding: 20px 10px;
       margin: 10px 0px;
       display: block;
+      /*max-width: 20px;*/
       background: #1E1F20;
+      word-wrap: break-word;
       height: 529px; }
       #main aside .chat span:first-child {
         font-size: 18px;
         /*color: white;*/
         color: #DFD9D9;
-        border-bottom: 2px solid red;
+        /*background: #000;*/
+        /*border-bottom: 2px solid red;*/
         margin-left: 10px; }
         #main aside .chat span:first-child img {
           width: 20px;
@@ -606,6 +620,7 @@ body {
           top: 3px;
           margin-right: 10px; }
       #main aside .chat .message_block {
+        word-wrap: break-word;
         width: initial;
         position: relative;
         overflow: auto;
@@ -614,6 +629,7 @@ body {
         #main aside .chat .message_block .message {
           /*display: block;*/
           width: initial;
+          /*max-width: 420px;*/
           margin: 10px 10px 15px;
           padding-bottom: 5px;
           display: -webkit-box;
@@ -630,7 +646,11 @@ body {
               height: 40px;
               border-radius: 4px; }
           #main aside .chat .message_block .message .text_message {
-            /*background: #000;*/ }
+            /*background: #000;*/
+            width: 230px;
+            /*position: relative;*/
+            display: block;
+            word-wrap: break-word; }
             #main aside .chat .message_block .message .text_message .data_public {
               position: absolute;
               font-size: 13px;
