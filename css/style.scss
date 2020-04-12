@@ -9,6 +9,8 @@ $bColor : #4193FE;
     margin:0;
     padding:0;
     box-sizing: border-box;
+  outline: none;
+
 
     &::selection{
     color: black;
@@ -501,8 +503,9 @@ body {
                 content: 'Онгоинг';
                 position: absolute;
                 bottom: -19px;
-                padding: 5px 10px;
-                /*font-weight: 200;*/
+                padding: 3px 10px;
+                font-weight: 200;
+                font-family: ROBOTO;
 
                 font-size: 14px;
                 background: #2B2C2D;
@@ -513,7 +516,7 @@ body {
                 border-radius: 2px;
                 opacity: 0;
                 /*transform: rotate3d(0, 1, 0, 90deg);*/
-                z-index: 99;
+                z-index: 9999;
 
             }
 
