@@ -1,0 +1,13 @@
+@charset 'UTF-8';
+/* Slider */
+.slick-loading .slick-list
+{
+    background: #fff url('./ajax-loader.gif') center center no-repeat;
+}
+
+/* Icons - здесь должен быть подключен шрифт т.е иконки slick. но я их убрал */ 
+/* Arrows */
+
+
+
+/* Крч чтобы сократить код я удалить тут стили для дотов, не удивляйся, если у тебя доты будут не корректно отображается, возьму с офф сайта */

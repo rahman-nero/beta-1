@@ -1,0 +1,953 @@
+/* $VARIABLE */
+$tColor : #DFD9D9;
+$bColor : #4193FE;
+
+.slick-loading .slick-list{background: #fff url('../library/slick_slider/ajax-loader.gif') center center no-repeat;}
+
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+    &::selection{
+    color: black;
+    background: red;
+    }
+}
+
+
+/* Оформления ползунка */
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+    
+    background-color: #212121;
+}
+
+::-moz-scrollbar {
+    width: 8px;
+    background-color: rgba(0, 0, 0, .0);
+}
+
+::-moz-scrollbar-thumb {
+     background: linear-gradient(0deg, #ff0000, #ff9000);
+}
+
+a {text-decoration: none; }
+
+body {
+    font-family: Segoe, Arial , sans-serif;
+    background-color:#18191A;
+     /*background: url('https://static.zerochan.net/Tomioka.Giyuu.full.2669301.jpg');*/
+    background-repeat: no-repeat;
+    font-weight: bold;
+    background-size: cover;
+    /*background-clip: fixed;*/
+    background-attachment: fixed;
+    font-smoothing: antialiased;
+   
+}
+
+@font-face {
+ font-family: "Segoe";
+ src: url("../fonts/Segoe ui historic.ttf") format("ttf");
+}
+/* MENU */
+#header{
+        position: absolute;
+        max-width: 100%;
+        min-width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        background-color: #242526;
+        letter-spacing: 0.2px;
+        box-shadow: 0px 0px 10px rgba(0,0,0,.1);
+        border-bottom: 0.02px solid #393A3B; 
+        padding: 20px;
+            .main_menu {
+            width:initial;
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            .logo{flex: .2; a {  color:$tColor;}}
+
+             /* Поиск в верхнем меню */
+            .search{
+                flex: 1.5;
+                color: $tColor;
+                display: flex;
+                /*background: #000;*/
+                height: 25px;
+                position: relative;
+                & span {
+                    position: absolute;
+                    right: 10px;
+
+                }
+                
+
+                & input{
+                    background-color: #1F1F20;
+                    border: none;
+
+                    /*border-bottom: 1.5px solid #4193FE;*/
+                    outline: none;
+                    width: 300px;
+                    border-radius: 20px;
+                    /*border-radius:4px; */
+                    color: $tColor;
+                    position: relative;
+                    bottom: 4px;
+                    /*box-shadow: inset 0px 0px 10px 1px #000;*/
+                    padding: 9px 9px 8px 35px;
+                }
+                 .search_click{
+                    position: relative; 
+                    border-radius: 50%;
+                    top: 0px;
+                    left:30px;
+                    z-index: 9;
+                    img {
+                     width: 17px;
+                     height: 17px;
+                     }
+                 }
+            }
+
+            /* Ссылки в середине */
+
+            .links{
+                text-align: center;
+                flex: 1.9;
+                position: relative;
+                & a{
+                    color:$tColor;
+                    width: auto;
+                    position: relative;
+                    border-radius: 5px;
+                    padding: 10px 15px;
+                        
+                   /* & img{ если вместо текста появится иконки
+                        width: 25px;
+                        height: 25px;
+                    }*/
+
+
+                    &:hover{
+                        color: #4193FE;
+                        background-color: #363839;
+                        transition-duration: 400ms;
+                    }
+
+                
+                }
+            }
+            
+
+            
+
+            /* Раздел профиль и тю в меню */
+            .user_auth{
+                flex: 1.5;
+                display: flex;
+                position: relative;
+                align-items:center;
+                justify-content: flex-end;
+                /*background-color: #000;*/
+                a:before { 
+                content:attr(data-title);
+                position: absolute;
+                border: 1px solid #242526;
+                box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+                background-color: #2B2C2D;
+                color: white;
+                font-size: 13px;
+                padding: 4px 8px;
+                border-radius: 5px;
+                display: block;
+                /*transform: rotate3d(0, 1, 0, 90deg);*/
+                z-index: 99;
+                opacity: 0;
+                bottom: -35px;
+                margin-left: -25px;
+                }
+                a:hover:before{
+                    opacity: 1;
+                    transition-duration: 900ms;
+                    /*transform: rotate3d(0, 0, 0, 0deg);*/
+
+                }
+                .active_link {
+                    background-color:#4193FE;
+                    &::after{display:none;}
+                }
+                & span{
+                    padding:10px;
+                    background-color: #3A3B3C;
+                    border-radius: 50%;
+                    text-align: center;
+                    margin: 0px 5px;
+                    z-index: 1;
+
+                    &::after{
+                        content: "";
+                        position:absolute;
+                        width: 18px;
+                        padding: 0px;
+                        height: 0px;
+                        background-color:#4193FE;
+                        z-index: 1;
+                        display: block;
+                        opacity: 0;
+                        margin-left: 15px;
+                        border-radius: 50%;
+                        bottom: -3px;
+                    }
+
+                     &:hover:after {
+                        opacity: 1;
+                        animation-name: fill_background_color;
+                        animation-duration: 600ms;
+                        animation-timing-function: ease;
+                        animation-iteration-count: 1;
+                        animation-fill-mode: forwards;
+                    }
+                    
+                }
+
+                & span img{
+                    width: 18px;
+                    position: relative;
+                    top: 4px;
+                    z-index: 2;
+                    height: 18px;
+                }
+                .link_for_profile{
+                /* Атрибут data-title - чтоб на нем не работал */
+                :before{display: none; opacity: 0;} 
+
+                .user_image{
+                    background-color: transparent;
+                    border-radius: 15px;
+                    padding: 9px 10px;
+                    font-size: 14px;
+                    z-index:11;
+                    color: white;
+                    position: relative;
+                    top: -6px;
+                    text-align: center;
+                    & img{
+                        width: 30px;
+                        height: 30px;
+                        top: 10px;
+                        border-radius: 50%;
+                        margin-right: 10px;
+                    }
+
+                    &:hover{
+                        background-color: #363839;
+                        transition-duration: 400ms;
+                    }
+                       
+                    /* Чтобы другая аимация не сработала (вверху) */
+                    &:after{display: none;} 
+
+                    }
+                }
+            }}
+        }
+
+
+
+
+
+
+ /*Animation*/
+
+
+@keyframes linea_bottom_link{
+    100% {
+    width: 100%;
+    
+    position: absolute;
+    }
+}
+
+
+@keyframes fill_background_color{
+    100% {
+    height: 17px;
+    padding: 10px 10px;
+    margin-left: 5px;
+    }
+}
+
+
+
+/* If click on down icon open  block*/
+.menu_icon_down_click{
+    position: fixed;
+    background-color: #242526;
+    display: none;
+    right: 20px;
+    top:90px;
+    padding: 10px;
+    border:1px solid #393A3B;
+    border-radius: 10px;
+    /*box-shadow: 0px 0px 20px  rgba(45,136,255,.2);*/
+    z-index: 99;
+    a {color:$tColor;}
+    & img { 
+        width: 20px;
+        height: 20px;
+        position: relative;
+        float: left;
+        bottom: 2px;
+        margin-right: 10px;
+    }
+    .block_user_info{
+            padding: 10px 5px 10px 5px;
+            border-radius: 10px;
+           & img{
+            width: 40px;
+            float: left;
+            position: relative;
+            bottom: 5px;
+            margin-right: 10px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        p { font-size: 12px; }
+         &:hover{
+            background:#18191A;
+        }
+ 
+    }
+
+    a:not(:first-child){
+        display: block;
+        font-size: 15px;
+        margin: 5px 0px;
+        border-radius: 5px;
+        padding: 10px 10px;
+
+        &:hover{
+            transiton-duration:800ms;
+            background:#18191A;
+        }
+        &:last-child:hover{
+            transiton-duration:800ms;
+            background:rgba(255,0,0,.8);
+        }
+
+    }
+
+    &:before{
+        content: "";
+        z-index:-1;
+        top: -30px;
+        right: 8px;
+        border: 15px solid transparent; 
+
+        border-bottom: 15px solid #242526;
+        position: absolute;
+    }
+}
+
+.open_menu{
+    display: block;
+    opacity: 0;
+    animation-name: showMenu;
+    animation-duration: 600ms;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+
+    
+ /* Slick Slider */
+.slide{
+    /*background-color: #000;*/
+    background-image: url('https://i.pinimg.com/originals/88/eb/5c/88eb5cc2fcebaeb2bd76987a4ca4ad2b.png');
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 2px solid #4193FE;
+    margin: 56px auto 9px;
+    /*top: 56px;*/
+    padding: 50px 20px 40px;
+
+    max-width: 100%;
+    &::after{
+        width:100%;
+        height: 100%;
+        content: '';
+        background-color: rgba(0,0,0,.7);
+        display: block;
+        left: 0;
+        top:0;
+        /*z-index: 1;*/
+        position: absolute;
+    }
+
+  
+
+    .slider{
+        max-width: 1700px;
+        outline: none;
+        z-index: 2;
+        margin: 0 auto;
+        & a { color: $tColor; }
+        .block_slader{
+            position: relative;
+            margin: 0px 5px ;
+        /* Мигающая ламопчка */
+    
+
+        & img{
+            max-width: 193px;
+            max-height: 278px;
+        }
+
+        .title{
+            display: block;
+            margin: 10px 3px 3px;
+            color: white;
+            font-family: roboto;
+            font-weight: 500;
+        }
+         small {
+            margin: 0px 3px;
+            font-family: roboto;
+            font-weight: 500;
+        }
+        &:hover .preview{
+        display: block;
+        transform: 800ms all;
+                }
+
+        }
+    }
+
+
+    }
+    .slick-slide {
+      margin: 0px 20px;
+    }
+    /* Выключаем кнопки с боку */
+    .slick-prev,
+    .slick-next
+    {
+    display: none;
+    width: 0px;
+    height: 0px;
+    padding: 0;
+    color: transparent;
+    visibility: hidden;
+    border: none;
+    }
+    
+
+
+/* Анимация для значка показа профиля*/
+
+.status{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            /*background-color: #fff;*/
+            top: 10px;
+            left: 10px;
+
+            .puls_ongoing{
+                width: 10px;
+                height: 10px;
+                background-color:#7F33F0;
+                top: 50%;
+                /*left: 50%;*/
+                text-align: center;
+                transform: translate(0%,-50%);
+                border-radius: 50%;
+                position: relative;
+
+                &::after{
+                    position:absolute;
+                    width: 10px;
+                    content: '';
+                    height: 10px;
+                    border-radius: 50%;
+                    top: 50%;
+                    left: 50%;
+                    z-index: 9;
+                    animation-name: puls;
+                    transform: translate(-50%,-50%);
+                    animation-duration: 4s;
+                    animation-timing-function: ease-in-out;
+                    animation-iteration-count: infinite;
+
+                }
+            }
+
+            :before{
+                content: 'Онгоинг';
+                position: absolute;
+                bottom: -19px;
+                padding: 5px 10px;
+                /*font-weight: 200;*/
+
+                font-size: 14px;
+                background: #2B2C2D;
+                left: -50%;
+                border-radius: 3px;
+                transform: translate(-40%,50%);
+                box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+                border-radius: 2px;
+                opacity: 0;
+                /*transform: rotate3d(0, 1, 0, 90deg);*/
+                z-index: 99;
+
+            }
+
+            :hover:before{
+                opacity: 1;
+                transition-duration: 800ms;
+            }
+        }
+
+@keyframes showMenu{
+    100% {
+    opacity: 1;
+    }
+}
+
+
+@keyframes puls{
+    0% {
+    opacity: 1;
+    }  
+
+    40%, 100% {
+    opacity: 0;
+    }
+
+    10% {
+      
+        background-color: #7F33F0;
+    }
+  
+    30% {
+    width: 35px;
+    height: 35px;
+    }
+  
+   /* 100% {
+    width: 30px;
+    height: 30px;
+    opacity: .3;
+    }*/
+}
+
+
+
+
+
+#main{
+    position: relative;
+    margin: -9px auto 0px;
+    /*margin-top: 56px;*/
+    max-width: 1640px;
+    padding: 0px;
+    display: flex;
+    color: $tColor;
+
+     /* Меню */
+    aside {
+        color: $tColor;
+        /*float: right;*/
+        position: relative;
+        float: left;
+        width: 320px;
+         /*margin: 0px 0px 0px 0px;*/
+        background-color: #242526;
+        padding: 00px 0px;
+
+        .wrapper{
+            width: initial;
+            /*background:linear-gradient(to left, #F9B120, #E93F3A);*/
+            background: #1B1B1B;
+            display: flex;
+            line-height: 30px;
+            border-bottom: 2px solid $bColor;
+            padding: 10px 20px;
+            & img{ 
+            width: 20px;
+            height: 20px;
+            /*float: left;*/
+            top: 4px;
+            margin-right: 10px;
+            position: relative; }
+        }
+        #menu{
+            padding: 10px 0px;
+            position: relative;
+            ul{
+                list-style: none;
+
+                li{ 
+                    font-weight: bold;
+                    font-family: roboto;
+                    color: $tColor;
+                    background: #212121;
+                    margin: 0px 0px;
+                    padding: 11px 9px 11px 30px;
+                    &:hover{
+                        background:#242424;
+                    }
+                }
+            }
+        }
+        .date_new_episode{
+            position: relative;
+            /*background: #000;*/
+            .title_block{
+                width: initial;
+                padding: 15px 10px 15px 30px;
+                background: #212121;
+                /*border-bottom: 2px dashed $bColor;*/
+            }
+
+            .new_episode_tommorow{
+                display: block;
+                padding: 10px 10px 20px;
+                /*background: #aaa;*/
+
+                & img{
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 3px;
+                    float: left;
+                    margin: 0px 15px 0px 5px;
+                }
+
+                & span{
+                margin-top: 2px;
+                display: block;
+                font-size: 15px;
+                }
+            }
+
+        }
+       
+        .chat{
+            position: relative;
+            padding: 20px 10px;
+            margin: 10px 0px;
+            display: block;
+            background: #1E1F20;
+            height: 529px;
+
+             span:first-child{
+                font-size:18px;
+                /*color: white;*/
+                color:$tColor;
+                border-bottom: 2px solid red;
+                margin-left: 10px;
+                & img{
+                    width: 20px;
+                    height: 20px;
+
+                    position: relative;
+                    top: 3px;
+                    margin-right: 10px;
+                }
+            }
+            .message_block{
+                width: initial;
+                position: relative;
+                overflow: auto;
+                 height: 450px;
+                 margin-top: 15px;
+                .message{
+
+                    /*display: block;*/
+                    width: initial;
+                    margin: 10px 10px 15px;
+                    padding-bottom: 5px;
+                    display: flex;
+                    border-bottom: 1px dashed $bColor;
+                    .img_author_chat{
+                        /*background: #000;*/
+                        width: 40px;
+                        height: 40px;
+                        margin-right: 12px;
+                    & img{
+                        width: 40px;
+                        height:40px;
+                        border-radius: 4px;
+                        
+                    }
+                }
+
+                .text_message{
+                    /*background: #000;*/
+                    .data_public{
+                        position: absolute;
+                        font-size: 13px;
+                        font-weight: normal;
+                        right: 15px;
+                    }
+                    .author{
+                        font-size: 12px;
+                        color: #FF4437;
+                    }
+
+                    .text{
+                         position: relative;
+                        font-weight: normal;
+                        font-size: 13px;
+                        margin-top: 4px;
+                        font-family: roboto;
+
+                    }
+                }
+                    
+                }
+
+                
+            }
+            .form_send{
+                    position: absolute;
+                    padding: 10px ;
+                    background: #282A2B;
+                    bottom:-25px;
+                    width: 100%;
+                    left: 0;
+                    display: inline-flex;
+
+                    input{
+                        width: 250px;
+                        background-color: #292B2C;
+                        box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,.2);
+                        padding: 8px 9px;
+                        color: $tColor;
+                        border: 1px solid $bColor;
+                        /*border-radius: 3px;*/
+                    }
+                    & img{
+                        width: 30px;
+                        height: 30px;
+                        position: relative;
+                        top: 10px;
+                        margin-left: 10px;
+                    }
+                }
+        }
+        .vk{
+            margin-top: 100px;
+            width: initial;
+            padding: 0px 14px;
+
+        }
+
+
+
+
+
+    }
+
+        
+    section{
+        /*background-image: url('https://howdyho.net/media/images/decor.png');*/
+        /*background-color: #212121;*/
+        padding: 25px 5px 15px;
+        width: 100%;
+
+        /*background: #000;*/
+        z-index: 9;
+        margin: 100px 0px 0px 40px;
+        
+        .block_with_anime {
+            margin-top: 40px;
+            margin: 0px 20px ;
+            margin-bottom: 60px;
+            img{
+            width: 375px;
+            height: 170px; }
+
+        /* Новые Серии */
+        .new_episode{
+            position: relative;
+            overflow: hidden;
+            /*box-shadow: 0px 0px 10px 10px rgba(0,0,0,.1);*/
+            box-shadow: 0 1px 2px var(--shadow-2);
+            display: inline-block;
+                
+            margin: 10px;
+            cursor: pointer;
+            .title{
+                text-align: center;
+                bottom: 4px;
+                width: 100%;
+                /*margin-right: 10px;*/
+                padding: 7px ;
+                background: rgba(0,0,0,.6);
+                position: absolute;
+                }
+
+        
+            .last_episode{
+                position: absolute;
+                right: 10px;
+                color: white;
+                font-size: 13px;
+                padding: 3px 5px;
+                border-radius: 3px;
+                background: rgba(0,0,0,.9);
+                top:8px;
+            }
+
+            small:last-child{
+                padding-left: 3px;
+                color: #C4BFBF;
+            }
+            
+
+           
+               
+        }
+
+        /* Аниме в ряд - Рекомендации*/
+
+    .anime_in_row{
+        position: relative;
+        display: inline-block;
+        /*background: #000;*/
+        width: 225px;
+        margin:0px 8px;
+        margin-bottom: 40px;
+        transform: 800ms all;
+
+        img{
+        width: 100%;
+        height: 308px;
+        }
+
+           .eye{
+            position: absolute;
+            background: rgba(0,0,0,.8);
+            border-radius: 3px;
+            right:7px;
+            top: 7px;
+            padding: 4px 5px 0px;
+            font-size: 11px;        
+             & img {
+            margin-right: 7px;
+            float: left;
+            top: -3px;
+            position: relative; 
+            width: 18px;
+            height: 18px;
+            }
+        }
+        h4{
+            position: relative;
+            color: #FF8F09;
+            margin: 5px 3px 1px;
+        }
+
+         small{
+                padding-left: 3px;
+                color: rgb(136, 145, 157);
+            }
+
+        .bookmark{
+            position: absolute;
+            background: rgba(0,0,0,.9);
+            box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+            cursor: pointer;
+            /*margin: 36px;*/
+            display: none;
+            right: 10px;
+            top: 8px;
+            padding: 5px 7px 0px;
+            transform: 800ms all;
+            /*display: block;*/
+            /*text-align: center;*/
+            /*line-height: 35px;*/
+            border-radius: 3px;
+            img { width: 18px;height: 18px; }
+        }
+
+        &:hover .eye{
+            display: none;
+            transition-duration: 800ms;
+            transform: 800ms all;
+        }
+        &:hover .bookmark{
+            display: block;
+             transform: 800ms all;
+        }
+
+        } 
+
+
+
+ 
+
+    }
+     
+
+   
+    }
+   
+
+
+}
+
+
+
+
+/* Media Queries */
+@media (min-width: 1200px) and (max-width: 1570px) {
+    
+
+    .logo{flex: .2; a {  color:$tColor;}}
+        /* Поиск в верхнем меню */
+     .search{
+        flex: 1;
+        color: $tColor;
+        display: flex;
+
+        height: 25px;
+        position: relative;
+        & span {
+            position: absolute;
+            right: 10px;
+        }
+    }
+
+
+    #header .main_menu .search input {
+    width: 180px;
+    border-radius: 20px;
+    }
+
+    #header .main_menu .links {
+        a{ 
+            font-size: 13px;
+            padding: 5px 8px;
+        }
+    }
+}
+
+
+
