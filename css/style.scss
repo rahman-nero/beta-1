@@ -411,14 +411,17 @@ body {
         margin: 0 auto;
         & a { color: $tColor; }
         .block_slader{
+            width: 193px;
+            display: inline-table;
+            
             position: relative;
-            margin: 0px 5px ;
-        /* Мигающая ламопчка */
-    
+            margin: 0px 5px ;    
 
         & img{
-            max-width: 193px;
-            max-height: 278px;
+         background-color: #242526;
+            
+           width: 193px;
+           height: 278px;
         }
 
         .title{
@@ -546,24 +549,35 @@ body {
 
 
 .prev{
-width: 30px;
-height: 30px;
-position: absolute;
-top: 50%;
-left: -20px;
-transform: translate(-50%, -150%);
-z-index: 9222299;
-background: red;
+    position: absolute;
+    top: 50%;
+    padding: 25px 3px;
+    left: -20px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -70%);
+    z-index: 922;
+}
+.next:hover, .prev:hover{
+    background-color: rgba(20,20,20,.7);
 }
 .next{
-width: 30px;
-height: 30px;
-position: absolute;
-top: 50%;
-right: -20px;
-transform: translate(-50%, -130%);
-z-index: 9222299;
-background: red;
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    padding: 25px 3px;
+    background-position: center;
+    transform: translate(-50%, -70%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 922;
+
+}
+
+.next img, .prev img{
+    width: 30px;
+    height: 30px;
 }
 
 
@@ -804,15 +818,17 @@ background: red;
 
         /*background: #000;*/
         z-index: 9;
-        margin: 100px 0px 0px 40px;
+        margin: 50px 0px 0px 40px;
         
         .block_with_anime {
             margin-top: 40px;
             margin: 0px 20px ;
             margin-bottom: 60px;
+
             img{
             width: 375px;
-            height: 170px; }
+            height: 170px; 
+            background-color: #242526;}
 
         /* Новые Серии */
         .new_episode{
@@ -870,6 +886,8 @@ background: red;
         img{
         width: 100%;
         height: 308px;
+         background-color: #242526;
+         border: none;
         }
 
            .eye{
