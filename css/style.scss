@@ -37,7 +37,7 @@ $bColor : #4193FE;
 }
 
 ::-moz-scrollbar-thumb {
-     background: linear-gradient(0deg, #ff0000, #ff9000);
+  background: linear-gradient(0deg, #ff0000, #ff9000);
 }
 
 a {text-decoration: none; }
@@ -66,12 +66,13 @@ body {
         min-width: 100%;
         top: 0;
         left: 0;
-        z-index: 99;
+        z-index: 999999;
         background-color: #242526;
         letter-spacing: 0.2px;
         box-shadow: 0px 0px 10px rgba(0,0,0,.1);
         border-bottom: 0.02px solid #393A3B; 
         padding: 20px;
+
             .main_menu {
             width:initial;
             position: relative;
@@ -122,54 +123,23 @@ body {
                      }
                  }
             }
-
-            /* Ссылки в середине */
-
-            .links{
-                text-align: center;
-                flex: 1.9;
-                position: relative;
-                & a{
-                    color:$tColor;
-                    width: auto;
-                    position: relative;
-                    border-radius: 5px;
-                    padding: 10px 15px;
-                        
-                   /* & img{ если вместо текста появится иконки
-                        width: 25px;
-                        height: 25px;
-                    }*/
-
-
-                    &:hover{
-                        color: #4193FE;
-                        background-color: #363839;
-                        transition-duration: 400ms;
-                    }
-
-                
-                }
-            }
-            
-
-            
-
             /* Раздел профиль и тю в меню */
             .user_auth{
                 flex: 1.5;
                 display: flex;
                 position: relative;
                 align-items:center;
+                cursor: pointer;
                 justify-content: flex-end;
                 /*background-color: #000;*/
-                a:before { 
+
+                a::before { 
                 content:attr(data-title);
                 position: absolute;
                 border: 1px solid #242526;
                 box-shadow: 0px 0px 10px rgba(0,0,0,.2);
                 background-color: #2B2C2D;
-                color: white;
+                color: $tColor;
                 font-size: 13px;
                 padding: 4px 8px;
                 border-radius: 5px;
@@ -415,11 +385,10 @@ body {
             display: inline-table;
             
             position: relative;
-            margin: 0px 5px ;    
+            margin: 0px 10px ;    
 
         & img{
-         background-color: #242526;
-            
+         background-color: #242526; 
            width: 193px;
            height: 278px;
         }
@@ -493,7 +462,7 @@ body {
                 bottom: -19px;
                 padding: 3px 10px;
                 font-weight: 200;
-                font-family: ROBOTO;
+                font-family: Roboto;
 
                 font-size: 14px;
                 background: #2B2C2D;
@@ -584,10 +553,11 @@ body {
 
 #main{
     position: relative;
-    margin: -9px auto 0px;
+    margin: 109px auto 0px;
     /*margin-top: 56px;*/
     max-width: 1640px;
     padding: 0px;
+  
     display: flex;
     color: $tColor;
 
@@ -596,6 +566,7 @@ body {
         color: $tColor;
         /*float: right;*/
         position: relative;
+      box-shadow: 0px 0px 10px rgba(0,0,0,.2);
         float: left;
         min-width: 320px;
         max-width: 320px;
@@ -647,7 +618,7 @@ body {
                 width: initial;
                 padding: 15px 10px 15px 20px;
                 background: #1B1B1B;
-                border-bottom: 2px solid $bColor;
+                /*border-bottom: 2px solid $bColor;*/
                 /*border-bottom: 2px dashed $bColor;*/
 
             & img{
@@ -657,14 +628,16 @@ body {
                 bottom: 1px;
                 position: relative;
                 margin-right: 10px;
-            }
+             }
             }
 
             .new_episode_tommorow{
                 display: block;
+                /*background-color: transparent;*/
                 padding: 10px 10px 20px;
+                /*border-bottom: 2px solid $bColor;*/
                 /*background: #aaa;*/
-
+                background: #242526;
                 & img{
                     width: 30px;
                     height: 30px;
@@ -690,9 +663,11 @@ body {
             /*max-width: 20px;*/
             background: #1E1F20;
             word-wrap: break-word;
-            height: 529px;
+            /*height: 529px;*/
 
-             span:first-child{
+
+
+            span:first-child{
                 font-size:18px;
                 /*color: white;*/
                 color:$tColor;
@@ -708,6 +683,58 @@ body {
                     margin-right: 10px;
                 }
             }
+            
+            .loading_chat{
+                position: absolute;
+                width: 100%;
+                top: 0;
+                height: 100%;
+                z-index: 99;
+                margin: 0px -10px;
+                background: #212223;
+              .centerLoading{
+                width: 200px;
+                padding: 10px;
+                /*background-color: #000;*/
+                transform: translate(-50%,-50%);
+                top: 50%;
+                left: 50%;
+                display: block;
+                text-align: center;
+                position: relative;
+                & img{
+                  width: 100px;
+                  
+                }
+
+            .load_circle{
+                width: 50px;
+                height: 50px;
+                position: relative;
+                /*background-color: #000;*/
+                margin: 10px auto;
+                border-radius: 50%;
+                display:block;
+                /*top: 55%;*/
+                /*left: 36%;*/
+                border-left: 3px solid $bColor;
+                border-top: 3px solid transparent;
+
+                border-bottom: 3px solid $bColor;
+                border-right: 3px solid $bColor;
+                /*transform: translate(0%, 0%);*/
+                
+                animation-name: loads;
+                    animation-duration: 1s;
+                    animation-timing-function: linear;
+                    animation-iteration-count: infinite;
+                }
+
+              }
+
+
+            }
+
             .message_block{
                 word-wrap: break-word;
                 width: initial;
@@ -761,6 +788,11 @@ body {
                         font-size: 13px;
                         margin-top: 4px;
                         font-family: roboto;
+                        & img{
+                                position: relative;
+                            width: 30px;
+                            height: 30px;
+                        }
 
                     }
                 }
@@ -770,32 +802,89 @@ body {
                 
             }
             .form_send{
-                    position: absolute;
-                    padding: 10px ;
-                    background: #282A2B;
-                    bottom:-25px;
+                    position: relative;       
                     width: 100%;
                     left: 0;
-                    display: inline-flex;
-
+                    
+                .block_input{
+                    /*flex: 1;*/
+                    margin: 20px 0px 0px;
+                    display: flex;
                     input{
-                        width: 250px;
+                        width: 270px;
                         background-color: #292B2C;
                         box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,.2);
-                        padding: 8px 9px;
+                        padding: 8px 29px 8px 9px;
                         color: $tColor;
                         border: 1px solid $bColor;
                         /*border-radius: 3px;*/
                     }
-                    & img{
-                        width: 30px;
-                        height: 30px;
-                        position: relative;
-                        top: 10px;
-                        margin-left: 10px;
+
+                    .smile_icon{
+                        position: absolute;
+                        right:46px;
+                        bottom: 3px;
+                        img{
+                            width: 20px;
+                            height: 20px;
+                            cursor: pointer;
+
+                        }
+                    :hover{
+                    transform: rotate(360deg);
+                    transition-duration: 1s;
                     }
                 }
-        }
+            
+
+                    .send_button{
+                        margin-left: 10px;
+                            /*background-color: #000;*/
+                        cursor: pointer;
+                        img{
+                            width: 30px;
+                            position: relative;
+                            top: 2px;
+
+                        }
+                    }
+                }
+
+                /* Блок который показывается коглда кликаешь на иконку смаилики  */
+                .smiles_all{
+                    position: absolute;
+                    right:40px;
+                    top: -110px;
+                    width: 230px;
+                    height: 100px;
+                    display: none;
+
+                    /*overflow: auto;*/
+                    overflow-y: auto;
+                    background-color: #222;
+                    padding: 10px 5px;
+                    border-radius: 6px;
+                    border: 1px solid #393A3B;
+                    box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+                    & img {
+                        width: 25px;
+                        height: 25px;
+                        margin: 0px 3px;
+                        cursor: pointer;
+                        float: left;
+
+                    &:hover{
+                            background-color:#191919;
+                            border-radius: 5px;
+                            transition-duration: 500ms;
+                        }
+                    }
+
+                }
+        
+                }
+            }
+
         .vk{
             margin-top: 100px;
             width: initial;
@@ -818,7 +907,7 @@ body {
 
         /*background: #000;*/
         z-index: 9;
-        margin: 50px 0px 0px 40px;
+        /*margin: 0px 0px 0px 40px;*/
         
         .block_with_anime {
             margin-top: 40px;
@@ -855,19 +944,13 @@ body {
                 position: absolute;
                 right: 10px;
                 color: white;
+                font-weight: 400;
                 font-size: 13px;
-                padding: 3px 5px;
-                border-radius: 3px;
+                padding: 3px 9px;
+                border-radius: 2px;
                 background: rgba(0,0,0,.9);
                 top:8px;
             }
-
-            small:last-child{
-                padding-left: 3px;
-                color: #C4BFBF;
-            }
-            
-
            
                
         }
@@ -897,10 +980,12 @@ body {
             right:7px;
             top: 7px;
             padding: 4px 5px 0px;
-            font-size: 11px;        
-             & img {
+            font-size: 11px;   
+
+        & img {
             margin-right: 7px;
             float: left;
+            background-color: transparent;
             top: -3px;
             position: relative; 
             width: 18px;
@@ -933,7 +1018,7 @@ body {
             /*text-align: center;*/
             /*line-height: 35px;*/
             border-radius: 3px;
-            img { width: 18px;height: 18px; }
+            img { width: 18px;height: 18px; background-color: transparent;}
         }
 
         &:hover .eye{
@@ -960,6 +1045,18 @@ body {
    
 
 
+}
+
+
+@keyframes loads{
+    0% {
+        /*transform: translate(-50%, 0%);*/
+    }
+
+    100%{
+        transform: rotate(360deg);
+        /*transform: translate(-50%, 0%);*/
+    }
 }
 
 

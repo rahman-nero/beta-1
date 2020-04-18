@@ -50,20 +50,8 @@
                         <span class="search_click"><img src="img/search.png" alt="Поиск"></span>
                         <input type="text" name="search" autocomplete="off" placeholder="Введите что-нибудь)">
                     </form>
-                    <div class="search_result">
-                        
-                    </div>
+                    
             </div>
-
-            <!-- <div class="links">
-            <a href="">Аниме</a>
-                <a href="">Манга</a>
-                    <a href="">Огненные аниме</a>
-                        <a href="">Онгоинги</a>
-                    <a href="">Дата выхода аниме</a>
-                </div> -->
-
-        
             <div class="user_auth">
               <div class="link_for_profile">
                 <a href=""><span class="user_image"><img src="img/s.jpg">Nezuko</span></a>
@@ -75,7 +63,7 @@
                    <a href="" data-title="Уведомление"><span><img src="img/notification.png" alt="Уведомление"></span></a>
                    <a href="" data-title="Сообщение"><span><img src="img/comment.png" alt="Сообщение"></span></a>
                   <a href="" data-title="Избранные&nbsp;аниме"><span><img src="img/heart.svg" alt="Избранные аниме"></span></a>
-                <a class="click_for_open" data-title="Развернуть"><span><img src="img/down-arrow.png"  alt="Развернуть"></span></a>
+                <a class="click_for_open" data-title="Развернуть"><span><img src="img/down-arrow.png" class="visible"  alt="Развернуть"></span></a>
             </div>
         </div>        
 </header>
@@ -167,7 +155,7 @@
         </section>
 </div>
     <main id="main">
-         <aside>
+        <aside>
             <div class="wrapper"><img src="img/menu.svg" alt="Меню">Меню</div>
             <nav id="menu">
                 <ul>
@@ -195,8 +183,35 @@
 
             <div class="chat">
                 <span><img src="img/chat.svg" >Онлайн Чат</span><br>
-                <div class="message_block">
+                <div class="loading_chat">
+                    <div class="centerLoading">
+                        <div class="load_circle"></div>
+                    </div>
+                </div>
+            <div class="message_block">
+
                     <div class="message">
+                        <div class="img_author_chat">     
+                            <img src="img/s.jpg"> 
+                        </div>
+                    <div class="text_message">
+                        <span class="data_public">11:34</span>
+                        <span class="author">NEzuko</span>
+                        <div class="text">Привет а чат работает?</div>
+                    </div>
+                </div>
+
+                <div class="message">
+                        <div class="img_author_chat">     
+                            <img src="img/s.jpg"> 
+                        </div>
+                    <div class="text_message">
+                        <span class="data_public">11:34</span>
+                        <span class="author">NEzuko</span>
+                        <div class="text">Привет а чат работает?</div>
+                    </div>
+                </div>
+                <div class="message">
                         <div class="img_author_chat">     
                             <img src="img/s.jpg"> 
                         </div>
@@ -247,35 +262,48 @@
                     <div class="text_message">
                         <span class="data_public">11:34</span>
                         <span class="author">NEzuko</span>
-                        <div class="text">нетт</div>
+                        <div class="text">нетт =s==ad=</div>
                     </div>
                 </div>
-                </div>
+            </div>
+
                 <div class="form_send">
                         <form action="#">
-                            <input type="text" name="text" placeholder="Введите сошпение" autocomplete="off">
-                            <span><img src="img/send.svg"></span>
+                            <div class="block_input"> 
+                                <input type="text" name="text" placeholder="Введите сообщение" autocomplete="off" id="input_chat">
+                                <span class="smile_icon" title="Смайлики"><img src="img/smile (1).svg" class="smile_i"></span>
+                                <div class="send_button"><img src="img/send.svg" ></div>
+                            </div>
                         </form>
+                        <div class="smiles_all">
+                            <img src="img/smile/=ad=.png" alt="s" data-code='=ad=' class="smile_icon_code">
+                            <img src="img/smile/=ad=.png" alt="s" data-code='=ad=' class="smile_icon_code">
+                            <img src="img/smile/=ad=.png" alt="s" data-code='=ads=' class="smile_icon_code">
+                        </div>
                     </div>
             </div>
                 
-           <!--  <div class="vk">
+            <div class="vk">
                 <br>
 
                 <h2>Мы в вк</h2>
                 <hr color='red' size="2" width="50px">
                 <br>
-                <iframe name="fXD21881" frameborder="0" src="https://vk.com/widget_community.php?app=0&amp;width=291px&amp;_ver=1&amp;gid=84392011&amp;mode=4&amp;color1=080C0F&amp;color2=F0F0F0&amp;color3=8AC547&amp;class_name=&amp;height=500&amp;url=https%3A%2F%2Fhowdyho.net%2F&amp;referrer=&amp;title=%E0%B9%96%DB%A3%DB%9C%D0%9A%D0%BB%D0%BE%D0%BD%D0%B4%D0%B0%D0%B9%D0%BA%20%E0%B9%96%DB%A3%DB%9C%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%81%D1%82%D0%B0%20%E2%80%94%20%D0%9F%D0%B8%D1%80%D0%B0%D1%82%D1%81%D0%BA%D0%B0%D1%8F%20%D0%B1%D1%83%D1%85%D1%82%D0%B0%20%D0%B4%D0%BB%D1%8F%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D0%BE%D0%B2&amp;1716407ac7e" width="291" height="500" scrolling="no" id="vkwidget1" style="overflow: hidden; height: 499.503px;"><iframe name="fXD21881" frameborder="0" src="https://vk.com/widget_community.php?app=0&amp;width=291px&amp;_ver=1&amp;gid=84392011&amp;mode=4&amp;color1=080C0F&amp;color2=F0F0F0&amp;color3=8AC547&amp;class_name=&amp;height=500&amp;url=https%3A%2F%2Fhowdyho.net%2F&amp;referrer=&amp;title=%E0%B9%96%DB%A3%DB%9C%D0%9A%D0%BB%D0%BE%D0%BD%D0%B4%D0%B0%D0%B9%D0%BA%20%E0%B9%96%DB%A3%DB%9C%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%81%D1%82%D0%B0%20%E2%80%94%20%D0%9F%D0%B8%D1%80%D0%B0%D1%82%D1%81%D0%BA%D0%B0%D1%8F%20%D0%B1%D1%83%D1%85%D1%82%D0%B0%20%D0%B4%D0%BB%D1%8F%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D0%BE%D0%B2&amp;1716407ac7e" width="291" height="500" scrolling="no" id="vkwidget1" style="overflow: hidden; height: 499.503px;"></iframe></iframe>
-            </div> -->
-            
-            <!-- <div class="ads">
+        
+            </div>
+          <!--   
+            <div class="ads">
                 <span><img src="img/book.svыg" alt="">Реклама</span><br>
                 
             </div> -->
         
         </aside>
 
-        <section>
+
+
+
+
+    <section>
             <div class="block_with_anime">
                 <h2>Новые серии</h2>
                     <hr width="40px " color='#4193FE'><br>
@@ -306,8 +334,8 @@
 
             <article class="new_episode">
                 <img class="lazyload" data-was-processed="true"  data-src="https://www.meme-arsenal.com/memes/71f588928570628ee98254254e298a55.jpg" alt="">
-                <small class="last_episode">32 серия </small>
                     <div class="title">Ванпачмен</div>
+                    <small class="last_episode">32 серия </small>
             </article>
         </div>
 
@@ -471,7 +499,7 @@
 
 
 
-<footer>
+        <footer>
             asdaasdasd
         </footer>
 
@@ -497,7 +525,7 @@
     </a>
 
     <a href=""><img src="img/friends.png">Друзья</a>
-    <a href=""><img src="img/comment.png">Cообщение</a>
+     <a href=""><img src="img/comment.png">Cообщение</a>
         <a href=""><img src="img/edit.png" >Редактировать профиль</a>
         <a class="theme"><input type="checkbox"> &nbsp; &nbsp;Черная тема</a>
          <hr size="1" color="#393A3B">
@@ -506,8 +534,7 @@
 </div>
 
 
-    
-<script src="js/js.js"></script>
+<script src="js/js.js" defer=""></script>
 
  <script type="text/javascript">
    $(".variable").slick({
