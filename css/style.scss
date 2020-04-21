@@ -79,7 +79,10 @@ body {
             display: flex;
             align-items: center;
 
-            .logo{flex: .2; a {  color:$tColor;}}
+            .logo{
+                flex: .2; 
+                a {  color:$tColor;}
+            }
 
              /* Поиск в верхнем меню */
             .search{
@@ -1000,10 +1003,10 @@ body {
     
 
         img{
-        width: 100%;
-        height: 307px;
-         background-color: #242526;
-         border: none;
+            width: 100%;
+            height: 307px;
+            background-color: #242526;
+            border: none;
         }
 
         .eye{
@@ -1179,12 +1182,12 @@ body {
         }
 
         &:hover .litle_desc{
-        animation-name: desc_view;
-        animation-duration: 150ms;
-        animation-timing-function: ease;
-        /*animation-iteration-count: 1;*/
-        visibility: visible;
-        animation-fill-mode: forwards;  
+            animation-name: desc_view;
+            animation-duration: 150ms;
+            animation-timing-function: ease;
+            /*animation-iteration-count: 1;*/
+            visibility: visible;
+            animation-fill-mode: forwards;  
 
         }      
 
@@ -1230,6 +1233,7 @@ body {
 
 
 /* Media Queries */
+
 @media (min-width: 1200px) and (max-width: 1570px) {
     
 
@@ -1261,6 +1265,100 @@ body {
         }
     }
 }
+
+
+
+
+
+/*@media (max-width: 1000px) {
+
+#header .main_menu .user_auth{ display: none;  } 
+.prev, .next{
+    display: none;
+}
+#header .main_menu .search{ display: none;  } 
+#header .main_menu .logo{margin: 0px auto; position: relative; font-size: 22px;}
+  #main aside{
+    display: none;
+  }
+  #main section .block_with_anime .new_episode{
+    min-width: 340px;
+  }
+#main section .block_with_anime .anime_in_row {
+    max-width: 290px;
+    min-width: 190px;
+    margin: 15px 10px;
+}    
+#main section .block_with_anime .anime_in_row img {
+    width: 100%;
+    background-color: #242526;
+    border: none;
+}
+#main section .block_with_anime .anime_in_row .litle_desc  {
+display: none;
+
+}
+}
+*/
+
+
+
+@media (max-width: 378px) {
+#header{
+    top: -1px;
+}
+#header .main_menu .user_auth{ display: none;  } 
+
+#header .main_menu .search{ display: none;  } 
+#header .main_menu .logo{margin: 0px auto; position: relative; font-size: 22px;}
+  #main {
+    padding: 0;
+  }
+
+  #main aside{
+    display: none;
+  }
+  #main section .block_with_anime .new_episode{
+    max-width: 290px;
+    /*background-color: #000;*/
+  }
+
+ #main section .block_with_anime{
+    margin: 0px;
+ } 
+
+#main section .block_with_anime .anime_in_row {
+    width: 150px;
+    display: inline-table;
+    background-color: transparent;
+    margin: 15px 5px;
+}  
+
+#main section .block_with_anime .anime_in_row img {
+    width: 100%;
+    background-color: #242526;
+    border: none;
+    height: 230px;
+
+}
+
+#main section .block_with_anime .anime_in_row .litle_desc  {
+display: none;
+
+}
+
+
+#main section{
+    background: none;
+    padding: 3px;
+}
+footer{
+    display: none;
+}
+
+
+}
+
 
 
 
