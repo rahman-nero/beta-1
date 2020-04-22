@@ -18,23 +18,22 @@
 
 
     <!-- Library --> 
-   
-
-    <!-- Slick js -->
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" type="text/javascript"></script>
 
     <!-- Lazy Load -->
-    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@15.1.1/dist/lazyload.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@15.1.1/dist/lazyload.min.js" defer="" type="text/javascript"></script>
+
+    <!-- Slick js -->
+    <script type="text/javascript" src="library/slick_slider/slick.min.js" defer="" ></script>
 
     <!-- Slick js - css -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css"/>
+    <link  rel="stylesheet" href="library/slick_slider/slick-theme.css"></script>
+    <link rel="stylesheet" type="text/css" href="library/slick_slider/slick.css"/>
 
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    
 
-
-   
 
 </head>
 <body>
@@ -648,13 +647,14 @@
 <script type="text/javascript"> 
     var lazyLoadInstance =  new LazyLoad ({
     elements_selector :  " .lazyload " 
- 
+
     });
 
     let wid = window.screen.availWidth;
     if (wid <= 1000) {
         prev = false;
         next = false;
+
     }else{
         prev = '<div class="prev"><img src="img/left.svg"></div>';
         next = '<div class="next"><img src="img/right.svg"></div>';
