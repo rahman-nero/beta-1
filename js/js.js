@@ -1,4 +1,7 @@
+window.addEventListener('DOMContentLoaded', function(){
+  
 jQuery(function(){
+
 
 let wid = window.screen.availWidth;
 
@@ -153,4 +156,6 @@ let wid = window.screen.availWidth;
 });
 
 
+
+});
 
