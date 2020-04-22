@@ -18,9 +18,12 @@
 
 
     <!-- Library --> 
+   
+
+    <!-- Slick js -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <!-- Lazy Load -->
-    <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js" async=""></script>
 
     <!-- Slick js - css -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css"/>
@@ -638,11 +641,12 @@
 
 
 
-<!-- Slick js -->
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" async="" ></script>
 
 <script src="js/js.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js"></script>
 <script>
+    lazyload();
+
     let wid = window.screen.availWidth;
     if (wid <= 1000) {
         prev = false;
@@ -651,7 +655,6 @@
         prev = '<div class="prev"><img src="img/left.svg"></div>';
         next = '<div class="next"><img src="img/right.svg"></div>';
     }
-    lazyload();
 
  $(".variable").slick({
         dots: false,
