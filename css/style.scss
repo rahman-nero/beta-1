@@ -1,0 +1,1364 @@
+/* $VARIABLE */
+$tColor : #DFD9D9;
+$bColor : #4193FE;
+
+
+
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  outline: none;
+
+
+    &::selection{
+    color: black;
+    background: red;
+    }
+}
+
+
+/* Оформления ползунка */
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+    
+    background-color: #212121;
+}
+
+::-moz-scrollbar {
+    width: 8px;
+    background-color: rgba(0, 0, 0, .0);
+}
+
+::-moz-scrollbar-thumb {
+  background: linear-gradient(0deg, #ff0000, #ff9000);
+}
+
+a {text-decoration: none; }
+
+body {
+    font-family: Segoe, Roboto, Arial , sans-serif;
+    background-color:#18191A;
+     /*background: url('https://static.zerochan.net/Tomioka.Giyuu.full.2669301.jpg');*/
+    background-repeat: no-repeat;
+    font-weight: bold;
+    background-size: cover;
+    /*background-clip: fixed;*/
+    background-attachment: fixed;
+    /*font-smoothing: antialiased;*/
+   
+}
+
+@font-face {
+ font-family: "Segoe";
+ src: url("../fonts/Segoe ui historic.ttf") format("ttf");
+}
+/* MENU */
+#header{
+        position: absolute;
+        max-width: 100%;
+        min-width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 999999;
+        background-color: #242526;
+        letter-spacing: 0.2px;
+        box-shadow: 0px 0px 10px rgba(0,0,0,.1);
+        border-bottom: 0.02px solid #393A3B; 
+        padding: 20px;
+
+        .main_menu {
+            width:initial;
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            .logo{
+                flex: .2; 
+                a {  color:$tColor;}
+            }
+
+             /* Поиск в верхнем меню */
+            .search{
+                flex: 1.5;
+                color: $tColor;
+                display: flex;
+                /*background: #000;*/
+                height: 25px;
+                position: relative;
+                & span {
+                    position: absolute;
+                    right: 10px;
+
+                }
+                
+
+                & input{
+                    background-color: #1F1F20;
+                    border: none;
+
+                    /*border-bottom: 1.5px solid #4193FE;*/
+                    outline: none;
+                    width: 300px;
+                    border-radius: 20px;
+                    /*border-radius:4px; */
+                    color: $tColor;
+                    position: relative;
+                    bottom: 4px;
+                    /*box-shadow: inset 0px 0px 10px 1px #000;*/
+                    padding: 9px 40px 8px 15px;
+                }
+                 .search_click{
+                    position: absolute; 
+                    /*border-radius: 50%;*/
+                    top: -4px;
+                    left:265px;
+                    width: 32px;
+                    text-align: center;
+                    height: 32px;
+                    cursor:pointer; 
+
+                    border-radius: 50%;
+                    box-shadow: 0px 0px 10px rgba(0,0,0,.3);
+                    background-color: $bColor;
+
+                     line-height: 38px;
+                    z-index: 1;
+
+                    img {
+                     width: 17px;
+                     height: 17px;
+                     }
+                 }
+            }
+            /* Раздел профиль и тю в меню */
+            .user_auth{
+                flex: 1.5;
+                display: flex;
+                position: relative;
+                align-items:center;
+                cursor: pointer;
+                justify-content: flex-end;
+                /*background-color: #000;*/
+
+                a::before { 
+                content:attr(data-title);
+                position: absolute;
+                border: 1px solid #242526;
+                box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+                background-color: #2B2C2D;
+                color: $tColor;
+                font-size: 13px;
+                padding: 4px 8px;
+                border-radius: 5px;
+                display: block;
+                /*transform: rotate3d(0, 1, 0, 90deg);*/
+                z-index: 99;
+                opacity: 0;
+                bottom: -35px;
+                margin-left: -25px;
+                }
+                a:hover:before{
+                    opacity: 1;
+                    transition-duration: 900ms;
+                    /*transform: rotate3d(0, 0, 0, 0deg);*/
+
+                }
+                .active_link {
+                    background-color:#4193FE;
+                    &::after{display:none;}
+                }
+                & span{
+                    padding:10px;
+                    background-color: #3A3B3C;
+                    border-radius: 50%;
+                    text-align: center;
+                    margin: 0px 5px;
+                    z-index: 1;
+
+                    &::after{
+                        content: "";
+                        position:absolute;
+                        width: 18px;
+                        padding: 0px;
+                        height: 0px;
+                        background-color:#4193FE;
+                        z-index: 1;
+                        display: block;
+                        opacity: 0;
+                        margin-left: 15px;
+                        border-radius: 50%;
+                        bottom: -3px;
+                    }
+
+                     &:hover:after {
+                        opacity: 1;
+                        animation-name: fill_background_color;
+                        animation-duration: 600ms;
+                        animation-timing-function: ease;
+                        animation-iteration-count: 1;
+                        animation-fill-mode: forwards;
+                    }
+                    
+                }
+
+                & span img{
+                    width: 18px;
+                    position: relative;
+                    top: 4px;
+                    z-index: 2;
+                    height: 18px;
+                }
+                .link_for_profile{
+                /* Атрибут data-title - чтоб на нем не работал */
+                :before{display: none; opacity: 0;} 
+
+                .user_image{
+                    background-color: transparent;
+                    border-radius: 15px;
+                    padding: 9px 10px;
+                    font-size: 14px;
+                    z-index:11;
+                    color: white;
+                    position: relative;
+                    top: -6px;
+                    text-align: center;
+                    & img{
+                        width: 30px;
+                        height: 30px;
+                        top: 10px;
+                        border-radius: 50%;
+                        margin-right: 10px;
+                    }
+
+                    &:hover{
+                        background-color: #363839;
+                        transition-duration: 400ms;
+                    }
+                       
+                    /* Чтобы другая аимация не сработала (вверху) */
+                    &:after{display: none;} 
+
+                    }
+                }
+            }}
+        }
+
+
+
+
+
+
+ /*Animation*/
+
+
+@keyframes linea_bottom_link{
+    100% {
+    width: 100%;
+    
+    position: absolute;
+    }
+}
+
+
+@keyframes fill_background_color{
+    100% {
+    height: 17px;
+    padding: 10px 10px;
+    margin-left: 5px;
+    }
+}
+
+.slick-loading .slick-list{background: #fff url('../library/slick_slider/ajax-loader.gif') center center no-repeat;}
+
+
+/* If click on down icon open  block*/
+.menu_icon_down_click{
+    position: fixed;
+    background-color: #242526;
+    display: none;
+    right: 20px;
+    top:90px;
+    padding: 10px;
+    border:1px solid #393A3B;
+    border-radius: 10px;
+    /*box-shadow: 0px 0px 20px  rgba(45,136,255,.2);*/
+    z-index: 99;
+    a {color:$tColor;}
+    & img { 
+        width: 20px;
+        height: 20px;
+        position: relative;
+        float: left;
+        bottom: 2px;
+        margin-right: 10px;
+    }
+    .block_user_info{
+            padding: 10px 5px 10px 5px;
+            border-radius: 10px;
+           & img{
+            width: 40px;
+            float: left;
+            position: relative;
+            bottom: 5px;
+            margin-right: 10px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        p { font-size: 12px; }
+         &:hover{
+            background:#18191A;
+        }
+ 
+    }
+
+    a:not(:first-child){
+        display: block;
+        font-size: 15px;
+        margin: 5px 0px;
+        border-radius: 5px;
+        padding: 10px 10px;
+
+        &:hover{
+            transiton-duration:800ms;
+            background:#18191A;
+        }
+        &:last-child:hover{
+            transiton-duration:800ms;
+            background:rgba(255,0,0,.8);
+        }
+
+    }
+
+    &:before{
+        content: "";
+        z-index:-1;
+        top: -30px;
+        right: 8px;
+        border: 15px solid transparent; 
+
+        border-bottom: 15px solid #242526;
+        position: absolute;
+    }
+}
+
+.open_menu{
+    display: block;
+    opacity: 0;
+    animation-name: showMenu;
+    animation-duration: 600ms;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+
+    
+ /* Slick Slider */
+.slide{
+    /*background-color: #000;*/
+    background-image: url('../img/back (1).jpg');
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 2px solid #4193FE;
+    margin: 56px auto 9px;
+    /*top: 56px;*/
+    padding: 50px 20px 40px;
+
+    max-width: 100%;
+    &::after{
+        width:100%;
+        height: 100%;
+        content: '';
+        background-color: rgba(0,0,0,.7);
+        display: block;
+        left: 0;
+        top:0;
+        /*z-index: 1;*/
+        position: absolute;
+    }
+
+  
+
+    .slider{
+        max-width: 1700px;
+        outline: none;
+        z-index: 2;
+        margin: 0 auto;
+        & a { color: $tColor; }
+        .block_slader{
+            width: 193px;
+            display: inline-table;
+            
+            position: relative;
+            margin: 0px 10px ;    
+
+        & img{
+         background-color: #242526; 
+           width: 193px;
+           height: 278px;
+        }
+
+        .title{
+            display: block;
+            margin: 10px 3px 3px;
+            color: white;
+            font-family: roboto;
+            font-weight: 500;
+        }
+         small {
+            margin: 0px 3px;
+            font-family: roboto;
+            font-weight: 500;
+        }
+
+        }
+    }
+
+
+    }
+    .slick-slide {
+      margin: 0px 20px;
+    }
+    /* Выключаем кнопки с боку */
+
+
+/* Анимация для значка показа профиля*/
+
+.status{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            /*background-color: #fff;*/
+            top: 10px;
+            left: 10px;
+
+            .puls_ongoing{
+                width: 10px;
+                height: 10px;
+                background-color:#7F33F0;
+                top: 50%;
+                /*left: 50%;*/
+                text-align: center;
+                transform: translate(0%,-50%);
+                border-radius: 50%;
+                position: relative;
+
+                &::after{
+                    position:absolute;
+                    width: 10px;
+                    content: '';
+                    height: 10px;
+                    border-radius: 50%;
+                    top: 50%;
+                    left: 50%;
+                    z-index: 9;
+                    animation-name: puls;
+                    transform: translate(-50%,-50%);
+                    animation-duration: 4s;
+                    animation-timing-function: ease-in-out;
+                    animation-iteration-count: infinite;
+
+                }
+            }
+
+            :before{
+                content: 'Онгоинг';
+                position: absolute;
+                bottom: -19px;
+                padding: 3px 10px;
+                font-weight: 200;
+                font-family: Roboto;
+
+                font-size: 14px;
+                background: #2B2C2D;
+                left: -50%;
+                border-radius: 3px;
+                transform: translate(-40%,50%);
+                box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+                border-radius: 2px;
+                opacity: 0;
+                /*transform: rotate3d(0, 1, 0, 90deg);*/
+                z-index: 9999;
+
+            }
+
+            :hover:before{
+                opacity: 1;
+                transition-duration: 800ms;
+            }
+        }
+
+@keyframes showMenu{
+    100% {
+    opacity: 1;
+    }
+}
+
+
+@keyframes puls{
+    0% {
+    opacity: 1;
+    }  
+
+    40%, 100% {
+    opacity: 0;
+    }
+
+    10% {
+      
+        background-color: #7F33F0;
+    }
+  
+    30% {
+    width: 35px;
+    height: 35px;
+    }
+  
+   /* 100% {
+    width: 30px;
+    height: 30px;
+    opacity: .3;
+    }*/
+}
+
+
+.prev{
+    position: absolute;
+    top: 50%;
+    padding: 25px 3px;
+    left: -20px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -70%);
+    z-index: 922;
+}
+.next:hover, .prev:hover{
+    background-color: rgba(20,20,20,.7);
+}
+.next{
+    position: absolute;
+    top: 50%;
+    right: -65px;
+    padding: 25px 3px;
+    background-position: center;
+    transform: translate(-50%, -70%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 922;
+
+}
+
+.next img, .prev img{
+    width: 30px;
+    height: 30px;
+}
+
+
+/* Главный блок который управляет контентом и меню) */
+#main{
+    position: relative;
+    margin: 59px auto 0px;
+    /*margin-top: 56px;*/
+    max-width: 1640px;
+    padding: 0px;
+  
+    display: flex;
+    color: $tColor;
+
+     /* Меню */
+    aside {
+        color: $tColor;
+        /*float: right;*/
+        position: relative;
+        box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+        float: left;
+        min-width: 320px;
+        max-width: 320px;
+         /*margin: 0px 0px 0px 0px;*/
+        background-color: #222324;
+        /*padding: 00px 0px;*/
+
+        /* Это надпись 'Меню' с икнокой рядом */
+        .wrapper{
+            width: initial;
+            /*background:linear-gradient(to left, #F9B120, #E93F3A);*/
+            background: #1B1B1B;
+            display: flex;
+            line-height: 30px;
+            border-bottom: 2px solid $bColor;
+            padding: 10px 20px;
+            & img{ 
+            width: 20px;
+            height: 20px;
+            /*float: left;*/
+            top: 4px;
+            margin-right: 10px;
+            position: relative; }
+        }
+
+        /* Ссылки в меню */
+        #menu{
+            padding: 00px 0px;
+            position: relative;
+            ul{
+                list-style: none;
+
+                li{ 
+                    font-weight: bold;
+                    font-family: roboto;
+                    color: $tColor;
+                    background: #212121;
+                    margin: 0px 0px;
+                    padding: 11px 9px 11px 30px;
+                    &:hover{
+                        background:#242424;
+                    }
+                }
+            }
+        }
+        .date_new_episode{
+            margin: 40px 0px;
+            position: relative;
+            background: #222222;
+            padding: 0px 0px 30px;
+            /*background: #212121;*/
+            .title_block{
+                width: initial;
+                padding: 15px 10px 15px 20px;
+                background: #1B1B1B;
+                /*border-bottom: 2px solid $bColor;*/
+                /*border-bottom: 2px dashed $bColor;*/
+
+            & img{
+                width: 20px;
+                height: 20px;
+
+                float: left;
+                bottom: 1px;
+                position: relative;
+                margin-right: 10px;
+             }
+            }
+
+            .new_episode_tommorow{
+                display: block;
+
+                /*background-color: transparent;*/
+                padding: 10px 10px 0px;
+                /*border-bottom: 2px solid $bColor;*/
+                /*background: #fff;*/
+                /*font-weight: normal;*/
+                font-size: 14px;
+                /*background: #242526;*/
+                & img{
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 3px;
+                    float: left;
+                    margin: 0px 15px 0px 5px;
+                }
+
+                & span{
+                margin-top: 2px;
+                display: block;
+                font-size: 13px;
+                }
+            }
+
+        }
+        /* Чат в меню */
+        .chat{
+            position: relative;
+            padding: 20px 10px;
+            margin: 10px 0px;
+            display: block;
+            /*max-width: 20px;*/
+            background: #1E1F20;
+            word-wrap: break-word;
+            /*height: 529px;*/
+
+
+
+            span:first-child{
+                font-size:18px;
+                /*color: white;*/
+                color:$tColor;
+                /*background: #000;*/
+                /*border-bottom: 2px solid red;*/
+                margin-left: 10px;
+                & img{
+                    width: 20px;
+                    height: 20px;
+
+                    position: relative;
+                    top: 3px;
+                    margin-right: 10px;
+                }
+            }
+            
+            .loading_chat{
+                position: absolute;
+                width: 100%;
+                top: 0;
+                height: 100%;
+                z-index: 99;
+                margin: 0px -10px;
+                background: #212223;
+              .centerLoading{
+                width: 200px;
+                padding: 10px;
+                /*background-color: #000;*/
+                transform: translate(-50%,-50%);
+                top: 50%;
+                left: 50%;
+                display: block;
+                text-align: center;
+                position: relative;
+                & img{
+                  width: 100px;
+                  
+                }
+
+            .load_circle{
+                width: 50px;
+                height: 50px;
+                position: relative;
+                /*background-color: #000;*/
+                margin: 10px auto;
+                border-radius: 50%;
+                display:block;
+                /*top: 55%;*/
+                /*left: 36%;*/
+                border-left: 3px solid $bColor;
+                border-top: 3px solid transparent;
+
+                border-bottom: 3px solid $bColor;
+                border-right: 3px solid $bColor;
+                /*transform: translate(0%, 0%);*/
+                
+                animation-name: loads;
+                    animation-duration: 1s;
+                    animation-timing-function: linear;
+                    animation-iteration-count: infinite;
+                }
+
+              }
+
+
+            }
+
+            .message_block{
+                word-wrap: break-word;
+                width: initial;
+                position: relative;
+                overflow: auto;
+                 height: 450px;
+                 margin-top: 15px;
+                .message{
+
+                    /*display: block;*/
+                    width: initial;
+                    /*max-width: 420px;*/
+                    margin: 10px 10px 15px;
+                    padding-bottom: 5px;
+                    display: flex;
+                    border-bottom: 1px dashed $bColor;
+                    .img_author_chat{
+                        /*background: #000;*/
+                        width: 40px;
+                        height: 40px;
+                        margin-right: 12px;
+                    & img{
+                        width: 40px;
+                        height:40px;
+                        border-radius: 4px;
+                        
+                    }
+                }
+
+                .text_message{
+                    /*background: #000;*/
+                   width: 230px;
+                   /*position: relative;*/
+                   display: block;
+
+                    word-wrap: break-word;
+                    .data_public{
+                        position: absolute;
+                        font-size: 13px;
+                        font-weight: normal;
+                        right: 15px;
+                    }
+                    .author{
+                        font-size: 12px;
+                        color: #FF4437;
+                    }
+
+                    .text{
+                         position: relative;
+                        font-weight: normal;
+                        font-size: 13px;
+                        margin-top: 4px;
+                        font-family: roboto;
+                        & img{
+                                position: relative;
+                            width: 30px;
+                            height: 30px;
+                        }
+
+                    }
+                }
+                    
+                }
+
+                
+            }
+            .form_send{
+                    position: relative;       
+                    width: 100%;
+                    left: 0;
+                    
+                .block_input{
+                    /*flex: 1;*/
+                    margin: 20px 0px 0px;
+                    display: flex;
+                    input{
+                        width: 270px;
+                        background-color: #292B2C;
+                        box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,.2);
+                        padding: 8px 29px 8px 9px;
+                        color: $tColor;
+                        border: 1px solid $bColor;
+                        /*border-radius: 3px;*/
+                    }
+
+                    .smile_icon{
+                        position: absolute;
+                        right:46px;
+                        bottom: 3px;
+                        img{
+                            width: 20px;
+                            height: 20px;
+                            cursor: pointer;
+
+                        }
+                    :hover{
+                    transform: rotate(360deg);
+                    transition-duration: 1s;
+                    }
+                }
+            
+
+                    .send_button{
+                        margin-left: 10px;
+                            /*background-color: #000;*/
+                        cursor: pointer;
+                        img{
+                            width: 30px;
+                            position: relative;
+                            top: 2px;
+
+                        }
+                    }
+                }
+
+                /* Блок который показывается коглда кликаешь на иконку смаилики  */
+                .smiles_all{
+                    position: absolute;
+                    right:40px;
+                    top: -110px;
+                    width: 230px;
+                    height: 100px;
+                    display: none;
+
+                    /*overflow: auto;*/
+                    overflow-y: auto;
+                    background-color: #222;
+                    padding: 10px 5px;
+                    border-radius: 6px;
+                    border: 1px solid #393A3B;
+                    box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+                    & img {
+                        width: 25px;
+                        height: 25px;
+                        margin: 0px 3px;
+                        cursor: pointer;
+                        float: left;
+
+                    &:hover{
+                            background-color:#191919;
+                            border-radius: 5px;
+                            transition-duration: 500ms;
+                        }
+                    }
+
+                }
+        
+                }
+            }
+
+        /* Ссылка на вк */
+        .vk{
+            margin-top: 100px;
+            width: initial;
+            padding: 0px 14px;
+
+        }
+
+
+
+
+
+    }
+
+        
+    section{
+        background-image: url('https://howdyho.net/media/images/decor.png');
+        /*background-color: #212121;*/
+        margin-left: 20px;
+        padding: 25px 15px 15px;
+        width: 100%;
+        /*background-color: #000;*/
+
+        /*background: #000;*/
+        z-index: 9;
+        /*margin: 0px 0px 0px 40px;*/
+        
+        .block_with_anime {
+            margin-top: 40px;
+            /*background-color: #fff;*/
+            margin-bottom: 60px;
+
+        /* Новые Серии */
+    .new_episode{
+                position: relative;
+                overflow: hidden;
+                /*box-shadow: 0px 0px 10px 10px rgba(0,0,0,.1);*/
+                box-shadow: 0 1px 2px var(--shadow-2);
+                display: inline-block;
+                margin: 10px 10px 10px 0px;
+                width: 390px;
+
+                cursor: pointer;
+
+                img{
+                width: 100%;
+                height: 180px; 
+                background-color: #242526;
+                }
+
+            .title{
+                text-align: center;
+                bottom: 4px;
+                width: 100%;
+                font-weight: 600;
+                letter-spacing: 0.3px;
+                font-size: 15px;
+                font-family: Roboto;
+                /*margin-right: 10px;*/
+                padding: 7px ;
+                background: rgba(0,0,0,.8);
+                position: absolute;
+                }
+
+        
+            .last_episode{
+                position: absolute;
+                right: 10px;
+                /*font-family: Roboto;*/
+                color: white;
+                /*font-weight: ;*/
+                font-size: 13px;
+                box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+                padding: 3px 6px;
+                border-radius: 2px;
+                /*background: white;*/
+                background: rgba(0,0,0,.8);
+
+                top:8px;
+            }       
+    }
+
+        /* Аниме в ряд - Рекомендации*/
+
+    .anime_in_row{
+        position: relative;
+        display: inline-block;
+        background: #222324;
+        padding: 0px 0px 10px;
+        width: 224px;
+        margin:0px 26px 0px 0px;
+        margin-bottom: 70px;
+        transform: 800ms all;
+    
+
+        img{
+            width: 100%;
+            height: 307px;
+            background-color: #242526;
+            border: none;
+        }
+
+        .eye{
+                position: absolute;
+                background: $bColor;
+                border-radius: 3px 0px 0px 3px;
+                right:-5px;
+                display: none;
+                top: 34px;
+                padding: 4px 5px 0px;
+                font-size: 11px;   
+
+                & img {
+                margin-right: 7px;
+                float: left;
+                background-color: transparent;
+                top: -3px;
+                position: relative; 
+                width: 18px;
+                height: 18px;
+                }
+            }
+        h4{
+            position: relative;
+            color: $tColor;
+            /*font-size: 17px;*/
+            margin: 5px 8px 1px;
+        }
+
+         small{
+                padding-left: 8px;
+                color: rgb(136, 145, 157);
+            }
+
+        .bookmark{
+            position: absolute;
+            background: rgba(0,0,0,.9);
+            box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+            cursor: pointer;
+            /*margin: 36px;*/
+            display: none;
+            right: 10px;
+            top: 8px;
+            padding: 5px 7px 0px;
+            transform: 800ms all;
+            /*display: block;*/
+            /*text-align: center;*/
+            /*line-height: 35px;*/
+            border-radius: 3px;
+            img { width: 18px;height: 18px; background-color: transparent;}
+        }
+
+        /* Описание при наведении */
+        .litle_desc  {
+            left:110%;
+            top: 50%;
+            transform: translate(0%,-50%); 
+            width: 350px;
+            font-size: 13px;
+            font-weight: normal;
+            font-family: Roboto;
+            position: absolute;
+            background-color: #272829;
+            border-left: 2px solid $bColor;
+            box-shadow: 0px 0px 20px rgba(0,0,0,.4);
+            padding: 10px 20px;
+            z-index: 9;
+            /*display: none;*/
+            visibility: hidden;
+            opacity: 0;
+
+            & a{
+                border-bottom: 1px  dashed #ddd;
+                color: $tColor;
+            }
+
+            .all_title{ 
+                font-size: 18px;
+                display: block;
+                margin: 5px 0px 5px; 
+                border-bottom: 1px dashed $bColor;
+            }
+            p {
+                font-weight: normal;
+                font-family: Arial;
+                margin: 15px 0px;
+            }
+
+            .descripion_anime{
+                position: relative;
+                margin: 10px 0px;
+                border-left: 2px solid $bColor;
+                padding-left: 5px;
+                & span{ color: #4193FE; }
+            }
+
+
+
+            &::after{
+                content: "";
+                /*width: 30px;*/
+                border: 8px solid transparent; /* Прозрачные границы */
+                border-right: 10px solid $bColor;
+                left: -20px;
+                top: 50%; 
+                transform: translate(0%,-50%);
+                /*border-top: 1px solid green; */
+                position: absolute;
+            }
+
+         }
+
+         .left_deg{
+            left: -372px;
+            border-left: none;
+            border-right: 2px solid $bColor;
+
+            &::after{
+            left:100%;
+            border-left: 10px solid $bColor;
+            border-right: none;
+
+            }
+         }
+
+        /* Блок с показамой рейтинга аниме */
+        .raiting{
+            position: absolute;
+            border-radius: 2px 0px 0px 2px;
+            background-color:#ED3F00;
+            top:9px;
+            /*color: black;*/
+            font-weight: normal;
+            /*display: flex;*/
+            /*width: 30px;*/
+            padding: 1px 9px 3px;
+            right: 0px;
+            /*border-radius: 50%;*/
+            font-size: 14px;
+
+            & img{
+                margin: 0px 3px 0px 0px;
+                width: 17px;
+                position: relative;
+                /*bottom: 1px;*/
+                top: 2px;
+                /*position: absolute;*/
+                background-color: transparent;
+                height: 17px;
+            }
+            &::before{
+                content: '';
+                display: none;
+                position: absolute;
+                bottom: -8.4px;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                border: 2px solid #D03700;
+                right: -7px;
+            }
+        }
+
+
+        &:hover .eye{
+            display: none;
+            transition-duration: 800ms;
+            transform: 800ms all;
+        }
+        &:hover .bookmark{
+            display: block;
+             transform: 800ms all;
+        }
+
+        &:hover .litle_desc{
+            animation-name: desc_view;
+            animation-duration: 150ms;
+            animation-timing-function: ease;
+            /*animation-iteration-count: 1;*/
+            visibility: visible;
+            animation-fill-mode: forwards;  
+
+        }      
+
+        } 
+
+
+
+ 
+
+    }
+     
+
+   
+    }
+   
+
+
+}
+
+
+@keyframes desc_view{
+    25% {opacity: .25}
+    50% {opacity: .50}
+    75% {opacity: .75}
+    100% {opacity: 1}   
+}
+
+
+
+
+
+
+@keyframes loads{
+
+
+    100%{
+        transform: rotate(360deg);
+        /*transform: translate(-50%, 0%);*/
+    }
+}
+
+
+
+
+/* Media Queries */
+
+@media (min-width: 1200px) and (max-width: 1570px) {
+    
+
+    .logo{flex: .2; a {  color:$tColor;}}
+        /* Поиск в верхнем меню */
+     .search{
+        flex: 1;
+        color: $tColor;
+        display: flex;
+
+        height: 25px;
+        position: relative;
+        & span {
+            position: absolute;
+            right: 10px;
+        }
+    }
+
+
+    #header .main_menu .search input {
+    width: 180px;
+    border-radius: 20px;
+    }
+
+    #header .main_menu .links {
+        a{ 
+            font-size: 13px;
+            padding: 5px 8px;
+        }
+    }
+}
+
+
+
+
+
+/*@media (max-width: 1000px) {
+
+#header .main_menu .user_auth{ display: none;  } 
+.prev, .next{
+    display: none;
+}
+#header .main_menu .search{ display: none;  } 
+#header .main_menu .logo{margin: 0px auto; position: relative; font-size: 22px;}
+  #main aside{
+    display: none;
+  }
+  #main section .block_with_anime .new_episode{
+    min-width: 340px;
+  }
+#main section .block_with_anime .anime_in_row {
+    max-width: 290px;
+    min-width: 190px;
+    margin: 15px 10px;
+}    
+#main section .block_with_anime .anime_in_row img {
+    width: 100%;
+    background-color: #242526;
+    border: none;
+}
+#main section .block_with_anime .anime_in_row .litle_desc  {
+display: none;
+
+}
+}
+*/
+
+
+
+@media (max-width: 378px) {
+#header{
+    top: -1px;
+}
+#header .main_menu .user_auth{ display: none;  } 
+
+#header .main_menu .search{ display: none;  } 
+#header .main_menu .logo{margin: 0px auto; position: relative; font-size: 22px;}
+  #main {
+    padding: 0;
+  }
+
+  #main aside{
+    display: none;
+  }
+  #main section .block_with_anime .new_episode{
+    max-width: 290px;
+    /*background-color: #000;*/
+  }
+
+ #main section .block_with_anime{
+    margin: 0px;
+ } 
+
+#main section .block_with_anime .anime_in_row {
+    width: 150px;
+    display: inline-table;
+    background-color: transparent;
+    margin: 15px 5px;
+}  
+
+#main section .block_with_anime .anime_in_row img {
+    width: 100%;
+    background-color: #242526;
+    border: none;
+    height: 230px;
+
+}
+
+#main section .block_with_anime .anime_in_row .litle_desc  {
+display: none;
+
+}
+
+
+#main section{
+    background: none;
+    padding: 3px;
+}
+footer{
+    display: none;
+}
+
+
+}
+
+
+
+
