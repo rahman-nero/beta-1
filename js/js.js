@@ -1,31 +1,6 @@
-window.addEventListener('DOMContentLoaded', function(){
-  
+
 jQuery(function(){
 
-
-let wid = window.screen.availWidth;
-
-    if (wid <= 1000) {
-        prev = false;
-        next = false;
-    }else{
-        prev = '<div class="prev"><img src="img/left.svg"></div>';
-        next = '<div class="next"><img src="img/right.svg"></div>';
-    }
-
-   $(".variable").slick({
-        dots: false,
-        slidesToShow: 5,
-        slidesToScroll: 3,
-        variableWidth: true,
-        infinite: true,
-        autoplaySpeed: 4000,
-
-        prevArrow: prev,
-        nextArrow: next,
-      });
-
-   lazyload();
 
 
   // Крч когда кликаешь на в любое место кроме открытого блока. то он закрывается, например, у нас открыть верхний блок в меню где ссылки, черная тема и редактировать аккаунт  и тд, если она открыта, мы делаем так чтобы она закрывалась если кликнуть не на нее, чтобы не приходилось кликать опять на иконку чтобы зарктыь блок 
@@ -150,10 +125,6 @@ let wid = window.screen.availWidth;
 
 
 
-
-
-
-});
 
 
 

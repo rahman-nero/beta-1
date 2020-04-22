@@ -1303,62 +1303,71 @@ display: none;
 
 
 
+
+
+
 @media (max-width: 378px) {
 #header{
     top: -1px;
-}
-#header .main_menu .user_auth{ display: none;  } 
+    .main_menu { 
 
-#header .main_menu .search{ display: none;  } 
-#header .main_menu .logo{margin: 0px auto; position: relative; font-size: 22px;}
+        .user_auth{  display: none; }  
+        .search{ display: none;  } 
+        .logo{margin: 0px auto; position: relative; font-size: 22px;}
+    } 
+}
+
+
   #main {
     padding: 0;
-  }
-
-  #main aside{
-    display: none;
-  }
-  #main section .block_with_anime .new_episode{
-    max-width: 290px;
-    /*background-color: #000;*/
-  }
-
- #main section .block_with_anime{
-    margin: 0px;
- } 
-
-#main section .block_with_anime .anime_in_row {
-    width: 150px;
-    display: inline-table;
-    background-color: transparent;
-    margin: 15px 5px;
-}  
-
-#main section .block_with_anime .anime_in_row img {
     width: 100%;
-    background-color: #242526;
-    border: none;
-    height: 230px;
+    aside{display: none;}
 
-}
-
-#main section .block_with_anime .anime_in_row .litle_desc  {
-display: none;
-
-}
-
-
-#main section{
+    section{
     background: none;
-    padding: 3px;
+    /*padding: 0px;*/
+    margin-left: 0px;
+    padding: 0px 10px;
+
+        .block_with_anime{
+             margin: 0px 0px 70px;
+            position: relative;
+            .new_episode{ max-width: 100%;}
+
+            .anime_in_row{
+                width: 150px;
+                display: inline-table;
+                background-color: transparent;
+                margin: 15px 5px;
+
+                img {
+                    width: 100%;
+                    background-color: #242526;
+                    border: none;
+                    height: 230px;
+
+                }
+
+                .litle_desc{
+                    display: none;
+
+                }
+
+            }
+
+        }
+
+    }
+
 }
+
+ 
 footer{
     display: none;
 }
 
 
 }
-
 
 
 

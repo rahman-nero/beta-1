@@ -14,16 +14,16 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- JS & Jquery-->
-    <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" async=""></script>
+    <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 
     <!-- Library --> 
 
     <!-- Lazy Load -->
-    <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js" ></script>
 
     <!-- Slick js -->
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer ></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" ></script>
 
 
     <!-- Fonts -->
@@ -645,8 +645,37 @@
 
 
 
-<script src="js/js.js" defer></script>
+<script src="js/js.js"></script>
+<script type="text/javascript">
+let wid = window.screen.availWidth;
 
+    if (wid <= 1000) {
+        prev = false;
+        next = false;
+    }else{
+        prev = '<div class="prev"><img src="img/left.svg"></div>';
+        next = '<div class="next"><img src="img/right.svg"></div>';
+    }
+
+$(document).on('ready', function() {
+
+   $(".variable").slick({
+        dots: false,
+        slidesToShow: 5,
+        slidesToScroll: 3,
+        variableWidth: true,
+        infinite: true,
+        autoplaySpeed: 4000,
+
+        prevArrow: prev,
+        nextArrow: next,
+      });
+   lazyload();
+});
+   
+
+
+</script>
 
 
 </body>
