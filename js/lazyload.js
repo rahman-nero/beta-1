@@ -7,6 +7,7 @@ let haveMode = "IntersectionObserver" in window ? 'true' : 'false';
 
 if (haveMode == 'true') {
     let lazyImages = [].slice.call(document.querySelectorAll("img.lazyload"));
+
     let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
@@ -36,7 +37,10 @@ if (haveMode == 'true') {
   }
   
 } catch(e) {
-  alert(e);
+
+let a = document.querySelector('.block_with_anime + h2');
+a.innerHTML = e; 
+
  var els = document.getElementsByClassName("lazyload");
 
       Array.prototype.forEach.call(els, function(el) {
