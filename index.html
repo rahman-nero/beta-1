@@ -677,15 +677,11 @@
 <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
 <script src="./js/js.js" type="text/javascript"></script>
 <script src="./library/slick_slider/slick.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="./js/lazyload.js" type="text/javascript"></script>
+<script src="./js/lazyload.js" async="" type="text/javascript"></script>
 
 <script type="text/javascript">
     if (screen.availWidth < 1000) {
-        
-    var lazyImagesMobile = document.getElementsByClassName("lazyload");
-        [].forEach.call(lazyImagesMobile, function(event){
-        var s  = event.src = event.dataset.src;
-    });
+
 
     $(".regular").slick({
         dots: false,
