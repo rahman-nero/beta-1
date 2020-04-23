@@ -21,6 +21,7 @@ if (screen.availWidth > 1000) {
     });
   }
 }else{
+  alert('sd');
       var lazyImagesMobile = document.getElementsByClassName("lazyload");
         [].forEach.call(lazyImagesMobile, function(event){
         var s  = event.src = event.dataset.src;
