@@ -681,6 +681,7 @@
 
 <script type="text/javascript">
     if (screen.availWidth < 1000) {
+
     $(".regular").slick({
         dots: false,
         infinite: true,
@@ -694,8 +695,10 @@
       });
 
     }else{
+        alert(navigator.userAgent);
 
         $(".regular").slick({
+
                 dots: false,
                 infinite: true,
                 slidesToShow: 6,
