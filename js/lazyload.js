@@ -18,17 +18,22 @@ let lazyImages = [].slice.call(document.querySelectorAll("img.lazyload"));
       lazyImageObserver.observe(lazyImage);
     }); 
 
-  }else{
-     // var els = document.getElementsByClassName("lazyload");
+  }
 
-     //  Array.prototype.forEach.call(els, function(el) {
-     //     var img = el.src = el.dataset.src;
-     //     alert(img);
-     //  });
 
-      [].forEach.call(document.getElementsByClassName('lazyload'), function(el) {
-        el.src = el.dataset.src;
+
+  if (document.getElementsByClassName("lazyload")[0].src == false) {
+
+     var els = document.getElementsByClassName("lazyload");
+
+      Array.prototype.forEach.call(els, function(el) {
+         var img = el.src = el.dataset.src;
+         alert(img);
       });
+
+      // [].forEach.call(document.getElementsByClassName('lazyload'), function(el) {
+      //   el.src = el.dataset.src;
+      // });
 
 
   }
