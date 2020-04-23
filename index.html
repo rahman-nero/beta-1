@@ -71,7 +71,7 @@
 <div class="slide">
         <section class="regular slider">
 
-           <!-- <div>
+           <div>
         <a href=""> 
          <div class="block_slader">    
             <div class="status">
@@ -83,7 +83,7 @@
                          <small>48 серии </small>
                     </div>
                 </a>
-        </div> -->
+        </div>
         
          <div>
         <a href="">
@@ -168,26 +168,6 @@
 
         </section>
 
-<!--         <section class="regular slider">
-    <div>
-      <img src="http://placehold.it/350x300?text=1">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=2">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=3">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=4">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=5">
-    </div>
-    <div>
-      <img src="http://placehold.it/350x300?text=6">
-    </div>
-  </section> -->
 </div>
 <main id="main">
   
@@ -704,6 +684,7 @@ let lazyImages = [].slice.call(document.querySelectorAll("img.lazyload"));
   }
 
 }else{
+    alert('Не поддерживается');
   var lazyImagesMobile = document.getElementsByClassName("lazyload");
         [].forEach.call(lazyImagesMobile, function(event){
         var s  = event.src = event.dataset.src;
@@ -735,10 +716,8 @@ let lazyImages = [].slice.call(document.querySelectorAll("img.lazyload"));
                 infinite: true,
                 slidesToShow: 6,
                 variableWidth: true,
-                centerMode: true,
                 slidesToScroll:1,
                 prevArrow: '<div class="prev"><img src="img/left.svg"></div>',
-                lazyLoad : 'ohdemand',
                 nextArrow : '<div class="next"><img src="img/right.svg"></div>'
 
               });
