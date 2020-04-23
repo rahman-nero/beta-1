@@ -685,7 +685,7 @@
     var lazyImagesMobile = document.querySelectorAll("img.lazyload");
 
     lazyImagesMobile.forEach(function(event){
-         event.src = event.dataset.src;
+       var img = event.src = event.dataset.src;
 
     });
     alert(img);
