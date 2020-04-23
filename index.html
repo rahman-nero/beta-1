@@ -643,18 +643,6 @@
 
 
 <script type="text/javascript"> 
-    $(".variable").slick({
-        dots: false,
-        slidesToShow: 5,
-        slidesToScroll: 3,
-        variableWidth: true,
-        infinite: true,
-        autoplaySpeed: 4000,
-
-        prevArrow: prev,
-        nextArrow: next,
-      });
-    
     let wid = window.screen.availWidth;
     if (wid <= 1000) {
         prev = false;
@@ -665,11 +653,13 @@
         next = '<div class="next"><img src="img/right.svg"></div>';
     }
 
-
-    
-
-
- 
+    $(".variable").slick({
+        dots: false,
+        slidesToShow: 5,
+        infinite: true,
+        prevArrow: prev,
+        nextArrow: next,
+      });
     
 </script>
 
