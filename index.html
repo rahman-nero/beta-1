@@ -656,12 +656,38 @@
 
 
 <script>
+    let haveMode = "IntersectionObserver" in window ? 'true' : 'false';
+    if (haveMode == 'false') {
     var els = document.getElementsByClassName("lazyload");
 
       Array.prototype.forEach.call(els, function(el) {
          var img = el.src = el.dataset.src;
          alert('elsellImage');
       });
+    }else{
+
+         let lazyImages = [].slice.call(document.querySelectorAll("img.lazyload"));
+
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target;
+          lazyImage.src = lazyImage.dataset.src;
+          // lazyImage.srcset = lazyImage.dataset.srcset;
+          lazyImage.classList.remove("lazyload");
+          lazyImageObserver.unobserve(lazyImage);
+        }
+      });
+    });
+
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage);
+      console.log('LAzyImgae');
+    }); 
+
+    }
+    
 </script>
 <script src="./js/js.js" type="text/javascript"></script>
 <script src="./js/slick_settings.js"  type="text/javascript"></script>
