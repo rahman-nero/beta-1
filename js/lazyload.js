@@ -1,12 +1,9 @@
 // Lazy load
-alert("IntersectionObserver" in window);
-alert("IntersectionObserverEntry" in window);
-
 
   try {
     
 
-if ("IntersectionObserver" in window && "IntersectionObserverEntry" in window && "intersectionRatio" in window.IntersectionObserverEntry.prototype) {
+if ("IntersectionObserver" in window == true) {
     let lazyImages = [].slice.call(document.querySelectorAll("img.lazyload"));
     let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
       entries.forEach(function(entry) {
@@ -25,6 +22,14 @@ if ("IntersectionObserver" in window && "IntersectionObserverEntry" in window &&
       lazyImageObserver.observe(lazyImage);
       alert('LAzyImgae');
     }); 
+
+  }else{
+    var els = document.getElementsByClassName("lazyload");
+
+      Array.prototype.forEach.call(els, function(el) {
+         var img = el.src = el.dataset.src;
+         alert('elsellImage');
+      });
 
   }
 
