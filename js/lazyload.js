@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
-
+// Lazy load
 if (screen.availWidth > 1000) {
+
   var lazyImages = [].slice.call(document.querySelectorAll("img.lazyload"));
   if ("IntersectionObserver" in window && "IntersectionObserverEntry" in window && "intersectionRatio" in window.IntersectionObserverEntry.prototype) {
     let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
@@ -19,7 +20,10 @@ if (screen.availWidth > 1000) {
       lazyImageObserver.observe(lazyImage);
     });
   }
+}else{
+      var lazyImagesMobile = document.getElementsByClassName("lazyload");
+        [].forEach.call(lazyImagesMobile, function(event){
+        var s  = event.src = event.dataset.src;
+    });
 }
-
-  
 });

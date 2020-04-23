@@ -681,21 +681,6 @@
 
 <script type="text/javascript">
     if (screen.availWidth < 1000) {
-
-    // let div = document.createElement('div');
-    //   div.className = "alert";
-    //   div.innerHTML = "<strong>Всем привет!</strong> Вы прочитали важное сообщение.";
-
-    //  document.body.append(div);
-
-
-
-    var lazyImagesMobile = document.getElementsByClassName("lazyload");
-    [].forEach.call(lazyImagesMobile, function(event){
-    var s  = event.src = event.dataset.src;
-    });
-    
-
     $(".regular").slick({
         dots: false,
         infinite: true,
