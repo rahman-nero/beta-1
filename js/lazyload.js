@@ -1,4 +1,3 @@
-document.addEventListener("DOMContentLoaded", function() {
 // Lazy load
 if (screen.availWidth > 1000) {
 
@@ -27,4 +26,3 @@ if (screen.availWidth > 1000) {
         var s  = event.src = event.dataset.src;
     });
 }
-});
