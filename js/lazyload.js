@@ -2,7 +2,7 @@
 alert("IntersectionObserver" in window);
 alert("IntersectionObserverEntry" in window);
 
-try {
+
   let lazyImages = [].slice.call(document.querySelectorAll("img.lazyload"));
   if ("IntersectionObserver" in window && "IntersectionObserverEntry" in window && "intersectionRatio" in window.IntersectionObserverEntry.prototype) {
     let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
@@ -23,7 +23,7 @@ try {
       alert('LAzyImgae');
     }); 
 
-  }else{
+  }else if ("IntersectionObserver" in window == false){
     var els = document.getElementsByClassName("lazyload");
 
       Array.prototype.forEach.call(els, function(el) {
@@ -33,27 +33,23 @@ try {
   }
 
 
-} catch(e) {
-  
- alert('Ошибка в внутри');
-}
 
 
-  if (document.getElementsByClassName("lazyload")[0].src == undefined) {
+  // if (document.getElementsByClassName("lazyload")[0].src == undefined) {
 
-     var els = document.getElementsByClassName("lazyload");
+  //    var els = document.getElementsByClassName("lazyload");
 
-      Array.prototype.forEach.call(els, function(el) {
-         var img = el.src = el.dataset.src;
-         alert(img);
-      });
+  //     Array.prototype.forEach.call(els, function(el) {
+  //        var img = el.src = el.dataset.src;
+  //        alert(img);
+  //     });
 
-      // [].forEach.call(document.getElementsByClassName('lazyload'), function(el) {
-      //   el.src = el.dataset.src;
-      // });
+  //     // [].forEach.call(document.getElementsByClassName('lazyload'), function(el) {
+  //     //   el.src = el.dataset.src;
+  //     // });
 
 
-  }
+  // }
 
 
 
