@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-
+if (screen.availWidth > 1000) {
   var lazyImages = [].slice.call(document.querySelectorAll("img.lazyload"));
   if ("IntersectionObserver" in window && "IntersectionObserverEntry" in window && "intersectionRatio" in window.IntersectionObserverEntry.prototype) {
     let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
@@ -19,4 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
       lazyImageObserver.observe(lazyImage);
     });
   }
+}
+
+  
 });
