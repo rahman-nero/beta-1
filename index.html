@@ -682,12 +682,12 @@
 <script type="text/javascript">
     if (window.innerWidth < 1000 ) {
 
-    // var lazyImagesMobile = document.querySelectorAll("img.lazyload");
+    var lazyImagesMobile = document.getElementsByClassName("lazyload");
+console.log(lazyImagesMobile);
 
-    // lazyImagesMobile.forEach(function(event){
-    //    var img = event.src = event.dataset.src;
-    //     alert(img);
-    // });
+    Array.from(lazyImagesMobile).forEach(function(event){
+      event.src = event.dataset.src;
+    });
     
 
     $(".regular").slick({
