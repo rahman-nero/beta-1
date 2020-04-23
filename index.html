@@ -677,9 +677,42 @@
 <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
 <script src="./js/js.js" type="text/javascript"></script>
 <script src="./library/slick_slider/slick.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="./js/lazyload.js" async="" type="text/javascript"></script>
+<!-- <script src="./js/lazyload.js" async="" type="text/javascript"></script> -->
 
 <script type="text/javascript">
+
+if ('IntersectionObserver' in window) {
+  alert('message?: DOMString');
+
+let lazyImages = [].slice.call(document.querySelectorAll("img.lazyload"));
+  if ("IntersectionObserver" in window && "IntersectionObserverEntry" in window && "intersectionRatio" in window.IntersectionObserverEntry.prototype) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target;
+          lazyImage.src = lazyImage.dataset.src;
+          // lazyImage.srcset = lazyImage.dataset.srcset;
+          lazyImage.classList.remove("lazyload");
+          lazyImageObserver.unobserve(lazyImage);
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage);
+    });
+  }
+
+}else{
+  var lazyImagesMobile = document.getElementsByClassName("lazyload");
+        [].forEach.call(lazyImagesMobile, function(event){
+        var s  = event.src = event.dataset.src;
+    });
+}
+
+ 
+
+
     if (screen.availWidth < 1000) {
 
 
@@ -702,7 +735,7 @@
                 infinite: true,
                 slidesToShow: 6,
                 variableWidth: true,
-                 centerMode: true,
+                centerMode: true,
                 slidesToScroll:1,
                 prevArrow: '<div class="prev"><img src="img/left.svg"></div>',
                 lazyLoad : 'ohdemand',

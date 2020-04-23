@@ -1,5 +1,6 @@
 // Lazy load
 if ('IntersectionObserver' in window) {
+  alert('message?: DOMString');
 
 let lazyImages = [].slice.call(document.querySelectorAll("img.lazyload"));
   if ("IntersectionObserver" in window && "IntersectionObserverEntry" in window && "intersectionRatio" in window.IntersectionObserverEntry.prototype) {
