@@ -3,8 +3,9 @@ alert("IntersectionObserver" in window);
 alert("IntersectionObserverEntry" in window);
 
 
-  let lazyImages = [].slice.call(document.querySelectorAll("img.lazyload"));
+  
   if ("IntersectionObserver" in window && "IntersectionObserverEntry" in window && "intersectionRatio" in window.IntersectionObserverEntry.prototype) {
+    let lazyImages = [].slice.call(document.querySelectorAll("img.lazyload"));
     let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
