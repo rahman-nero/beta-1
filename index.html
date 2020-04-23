@@ -655,19 +655,11 @@
 </div>
 
 
-<script>
-    let haveMode = "IntersectionObserver" in window ? 'true' : 'false';
-    if (haveMode == 'false') {
-    var els = document.getElementsByClassName("lazyload");
+<script >
 
-      Array.prototype.forEach.call(els, function(el) {
-         var img = el.src = el.dataset.src;
-         alert('elsellImage');
-      });
-    }else{
+  var lazyImages = [].slice.call(document.querySelectorAll("img.lazyload"));
 
-         let lazyImages = [].slice.call(document.querySelectorAll("img.lazyload"));
-
+  if ("IntersectionObserver" in window) {
     let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
@@ -680,13 +672,17 @@
       });
     });
 
-
     lazyImages.forEach(function(lazyImage) {
       lazyImageObserver.observe(lazyImage);
-      console.log('LAzyImgae');
-    }); 
+    });
+  } else {
+     var els = document.getElementsByClassName("lazyload");
 
-    }
+      Array.prototype.forEach.call(els, function(el) {
+         var img = el.src = el.dataset.src;
+         alert('elsellImage');
+      });
+  }
     
 </script>
 <script src="./js/js.js" type="text/javascript"></script>
