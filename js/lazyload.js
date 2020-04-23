@@ -19,9 +19,5 @@ if (screen.availWidth > 1000) {
       lazyImageObserver.observe(lazyImage);
     });
   }
-}else{
-      var lazyImagesMobile = document.getElementsByClassName("lazyload");
-        [].forEach.call(lazyImagesMobile, function(event){
-        var s  = event.src = event.dataset.src;
-    });
 }
+      
