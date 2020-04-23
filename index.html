@@ -690,10 +690,10 @@
 
 
 
-    let lazyImagesMobile = document.getElementsByClassName("lazyload");
+    var lazyImagesMobile = document.getElementsByClassName("lazyload");
     [].forEach.call(lazyImagesMobile, function(event){
-        console.log(event);
-     event.src = event.dataset.src;
+    var s  = event.src = event.dataset.src;
+    alert(s);
     });
     
 
