@@ -23,7 +23,7 @@ alert("IntersectionObserverEntry" in window);
       alert('LAzyImgae');
     }); 
 
-  }else if ("IntersectionObserver" in window == false){
+  }else if ("IntersectionObserver" in window === false){
     var els = document.getElementsByClassName("lazyload");
 
       Array.prototype.forEach.call(els, function(el) {
@@ -34,24 +34,3 @@ alert("IntersectionObserverEntry" in window);
 
 
 
-
-  // if (document.getElementsByClassName("lazyload")[0].src == undefined) {
-
-  //    var els = document.getElementsByClassName("lazyload");
-
-  //     Array.prototype.forEach.call(els, function(el) {
-  //        var img = el.src = el.dataset.src;
-  //        alert(img);
-  //     });
-
-  //     // [].forEach.call(document.getElementsByClassName('lazyload'), function(el) {
-  //     //   el.src = el.dataset.src;
-  //     // });
-
-
-  // }
-
-
-
-  
-      
