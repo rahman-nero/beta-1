@@ -1309,7 +1309,10 @@ display: none;
 @media (max-width: 378px) {
 #header{
     top: -1px;
-    .main_menu { 
+    .main_menu {
+    position: relative;
+    width: 150px;
+    margin:0px auto; 
 
         .user_auth{  display: none; }  
         .search{ display: none;  } 
