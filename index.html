@@ -685,10 +685,10 @@
     var lazyImagesMobile = document.querySelectorAll("img.lazyload");
 
     lazyImagesMobile.forEach(function(event){
-      var img = event.src = event.dataset.src;
-
+         event.src = event.dataset.src;
 
     });
+    alert(img)
 
     $(".regular").slick({
         dots: false,
