@@ -1,6 +1,4 @@
 // Lazy load
-if ('IntersectionObserver' in window) {
-  alert('message?: DOMString');
 
 let lazyImages = [].slice.call(document.querySelectorAll("img.lazyload"));
   if ("IntersectionObserver" in window && "IntersectionObserverEntry" in window && "intersectionRatio" in window.IntersectionObserverEntry.prototype) {
@@ -19,14 +17,15 @@ let lazyImages = [].slice.call(document.querySelectorAll("img.lazyload"));
     lazyImages.forEach(function(lazyImage) {
       lazyImageObserver.observe(lazyImage);
     });
+  }else{
+    var lazyImagesMobile = document.getElementsByClassName("lazyload");
+        [].forEach.call(lazyImagesMobile, function(event){
+         event.src = event.dataset.src;
+    });
+
   }
 
-}else{
-  var lazyImagesMobile = document.getElementsByClassName("lazyload");
-        [].forEach.call(lazyImagesMobile, function(event){
-        var s  = event.src = event.dataset.src;
-    });
-}
+
 
   
       
