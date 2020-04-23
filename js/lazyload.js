@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   if (window.innerWidth < 1000) {
     lazyImagesMobile.forEach(function(event){
-      let img = event.src = event.dataset.src;
+      var img = event.src = event.dataset.src;
 
 
     });
