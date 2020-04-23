@@ -681,7 +681,16 @@
 
 <script type="text/javascript">
     if (window.innerWidth < 1000 ) {
-        $(".regular").slick({
+
+    var lazyImagesMobile = document.querySelectorAll("img.lazyload");
+
+    lazyImagesMobile.forEach(function(event){
+      var img = event.src = event.dataset.src;
+
+
+    });
+
+    $(".regular").slick({
         dots: false,
         infinite: true,
         slidesToShow: 2,
