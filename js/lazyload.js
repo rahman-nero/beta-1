@@ -28,7 +28,7 @@ alert("IntersectionObserverEntry" in window);
 
       Array.prototype.forEach.call(els, function(el) {
          var img = el.src = el.dataset.src;
-         alert('elseImage');
+         alert('elsellImage');
       });
   }
 
