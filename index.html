@@ -643,18 +643,6 @@
 
 
 <script type="text/javascript"> 
-
-    let wid = window.screen.availWidth;
-    if (wid <= 1000) {
-        prev = false;
-        next = false;
-
-    }else{
-        prev = '<div class="prev"><img src="img/left.svg"></div>';
-        next = '<div class="next"><img src="img/right.svg"></div>';
-    }
-
-$(document).on('ready', function (){
     $(".variable").slick({
         dots: false,
         slidesToShow: 5,
@@ -666,8 +654,21 @@ $(document).on('ready', function (){
         prevArrow: prev,
         nextArrow: next,
       });
+    
+    let wid = window.screen.availWidth;
+    if (wid <= 1000) {
+        prev = false;
+        next = false;
 
-})
+    }else{
+        prev = '<div class="prev"><img src="img/left.svg"></div>';
+        next = '<div class="next"><img src="img/right.svg"></div>';
+    }
+
+
+    
+
+
  
     
 </script>
