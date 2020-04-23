@@ -654,7 +654,8 @@
         next = '<div class="next"><img src="img/right.svg"></div>';
     }
 
- $(".variable").slick({
+$(window).on('ready', function (){
+    $(".variable").slick({
         dots: false,
         slidesToShow: 5,
         slidesToScroll: 3,
@@ -666,6 +667,8 @@
         nextArrow: next,
       });
 
+})
+ 
     
 </script>
 
