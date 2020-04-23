@@ -1,8 +1,9 @@
 // Lazy load
 document.addEventListener('DOMContentLoaded', () => {
 
+try {
 
-    let haveMode = "IntersectionObserver" in window ? 'true' : 'false';
+let haveMode = "IntersectionObserver" in window ? 'true' : 'false';
 
 if (haveMode == 'true') {
     let lazyImages = [].slice.call(document.querySelectorAll("img.lazyload"));
@@ -33,6 +34,17 @@ if (haveMode == 'true') {
       });
 
   }
+  
+} catch(e) {
+  alert(e);
+ var els = document.getElementsByClassName("lazyload");
+
+      Array.prototype.forEach.call(els, function(el) {
+         var img = el.src = el.dataset.src;
+         alert('elsellImage');
+      });
+}
+
 
   });
 
