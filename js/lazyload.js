@@ -18,8 +18,8 @@ let lazyImages = [].slice.call(document.querySelectorAll("img.lazyload"));
       lazyImageObserver.observe(lazyImage);
     });
   }else{
-    var lazyImagesMobile = document.getElementsByClassName("lazyload");
-        [].forEach.call(lazyImagesMobile, function(event){
+    var lazyImagesMobile = document.querySelectorAll("img.lazyload");
+        lazyImagesMobile.forEach(function(event){
          event.src = event.dataset.src;
     });
 
