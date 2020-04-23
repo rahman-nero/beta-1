@@ -690,8 +690,8 @@
 
 
 
-    let lazyImagesMobile = document.querySelectorAll("img.lazyload");
-    lazyImagesMobile.forEach(function(event){
+    let lazyImagesMobile = document.getElementsByClassName("lazyload");
+    [].forEach.call(lazyImagesMobile, function(event){
      event.src = event.dataset.src;
     });
     
