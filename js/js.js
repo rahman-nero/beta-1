@@ -24,6 +24,10 @@ $("body").click(function(event) {
               $('.menu_icon_down_click').toggleClass('open_menu');
         }
 
+
+
+      // Мобилыьны меню
+
     // Показ смайликов
     if (event.target.className != 'smile_i') {
         if ($('.smiles_all').css('display') == 'block') {
@@ -39,6 +43,16 @@ $("body").click(function(event) {
 
     
 
+});
+
+$('.open_mb_menu').click(function(event) {
+  if ( $('.menu_mb').css('display') == 'block' ) {
+    $('.menu_mb').css({'display': 'none'});
+  }else{
+    $('.menu_mb').css({'display': 'block'});
+
+  }
+    
 });
 
 

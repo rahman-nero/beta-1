@@ -64,9 +64,10 @@ body {
         position: absolute;
         max-width: 100%;
         min-width: 100%;
-        top: 0;
+        top: 0px;
+        /*bottom: 10px;*/
         left: 0;
-        z-index: 999999;
+        z-index: 999;
         background-color: #242526;
         letter-spacing: 0.2px;
         box-shadow: 0px 0px 10px rgba(0,0,0,.1);
@@ -253,8 +254,9 @@ body {
 
 
 
-
-
+.mobile_menu, .menu_mb{
+    display: none;
+}
  /*Animation*/
 
 
@@ -366,6 +368,7 @@ body {
     background-image: url('../img/back (1).jpg');
     position: relative;
     background-repeat: no-repeat;
+        overflow: hidden;
     background-size: cover;
     background-position: center;
     border-bottom: 2px solid #4193FE;
@@ -394,16 +397,16 @@ body {
         z-index: 2;
         margin: 0 auto;
         & a { color: $tColor; }
-        .block_slader{
-            width: 193px;
+        & div{
             display: inline-table;
-            
+        .block_slader{
+            width: 193px;            
             position: relative;
             margin: 0px 10px ;    
 
         & img{
          background-color: #242526; 
-           width: 193px;
+           width: 100%;
            height: 278px;
         }
 
@@ -422,13 +425,13 @@ body {
 
         }
     }
+    }
 
 
     }
     .slick-slide {
       margin: 0px 20px;
     }
-    /* Выключаем кнопки с боку */
 
 
 /* Анимация для значка показа профиля*/
@@ -460,7 +463,7 @@ body {
                     border-radius: 50%;
                     top: 50%;
                     left: 50%;
-                    z-index: 9;
+                    z-index: 99;
                     animation-name: puls;
                     transform: translate(-50%,-50%);
                     animation-duration: 4s;
@@ -1270,76 +1273,189 @@ body {
 
 
 
-/*@media (max-width: 1000px) {
-
-#header .main_menu .user_auth{ display: none;  } 
-.prev, .next{
-    display: none;
-}
-#header .main_menu .search{ display: none;  } 
-#header .main_menu .logo{margin: 0px auto; position: relative; font-size: 22px;}
-  #main aside{
-    display: none;
-  }
-  #main section .block_with_anime .new_episode{
-    min-width: 340px;
-  }
-#main section .block_with_anime .anime_in_row {
-    max-width: 290px;
-    min-width: 190px;
-    margin: 15px 10px;
-}    
-#main section .block_with_anime .anime_in_row img {
-    width: 100%;
-    background-color: #242526;
-    border: none;
-}
-#main section .block_with_anime .anime_in_row .litle_desc  {
-display: none;
-
-}
-}
-*/
 
 
 
 
-
-
-@media (max-width: 378px) {
+@media (max-width: 588px) {
 #header{
     top: -1px;
-    .main_menu {
-    position: relative;
-    width: 150px;
-    margin:0px auto; 
-    text-align: center;
+    /*display: none;*/
+    .main_menu {display: none;}
+}
+.menu_mb{
+    width: 290px;
+    min-height:100%;
+    background-color: rgba(36,37,38,1);
+    position: fixed;
+    display: none;
+    right: 0;
+    padding:0px 0px;
+    top: 0;
+    z-index: 99909;
+    &::before{
+        content: '';
+        position: absolute;
+        min-width: 100%;
+        min-height: 100%;
+        background-color: rgba(0,0,0,.5);
+        top: 0;
+        right: 100%;
 
-        .user_auth{  display: none; }  
-        .search{ display: none;  } 
-        .logo{margin: 0px auto; position: relative; font-size: 22px;}
+    }
+    h3{
+        color: $bColor;
+        margin: 0px 20px; 
+        /*border-bottom: 2px solid $bColor;*/
+    }
+
+    .block_mb{
+        display: block;
+        margin: 10px 0px 30px;
+        /*background-color: #212121;*/
+        position: relative;
+        /* Этот первый блок с имем и т.д */
+        .user_auth{
+            position: relative;
+            width: 100%;
+            padding: 15px 20px;
+            display: flex;
+            .img_mb img{
+                width: 40px;
+                background-color: $bColor;
+                border-radius: 50%;
+                border: 2px solid $bColor;
+                height: 40px;
+            } 
+        }
+
+        .user_info{
+            position: relative;
+             margin-left: 20px;
+            /*background-color: #000;*/
+            & span{
+
+                display: block;
+                color: $tColor;
+            }
+
+            & span:last-child{
+                margin-top: 5px;
+                font-size: 14px;
+                font-weight: normal;
+
+            }
+        }
+
+        /* Это ссылки после первого блока */
+        .menu_links{
+            /*padding: 10px;*/
+
+            ul {
+                list-style: none;
+
+                li{
+                    background-color: #212223;
+                    padding: 10px 30px;
+                    z-index: 0;
+
+                    a{
+                        color:$tColor;
+                        font-size: 14px;
+                        font-family: Roboto;
+                        font-weight:500;
+                        z-index: 2;
+
+                    &::after{
+                        content: '';
+                        z-index: -1;
+                        /*top: 0;*/
+                        margin-top: -12px;
+                        display: none;
+                        /*display: block;*/
+                        width: 100%;
+                        /*margin:10px 10px; */
+                        height: 30px;
+                        position: absolute;
+                        left: 0px;
+                        background-color: $bColor;
+                    }
+
+                    }
+
+                    
+                   
+                }
+
+            }
+
+        }
+
     } 
 }
 
-
-  #main {
-    padding: 0;
+.mobile_menu{
     width: 100%;
+    /*display: none;*/
+    left: 0;
+    /*height: 50px;*/
+    position: fixed;
+    display: flex;
+    bottom: -1px;
+    padding: 12px 20px 10px;
+    z-index: 9999999;
+    background:rgba(36,37,38,.98); 
+   .icon_mobile{
+    width: 20%;
+    /*background-color: #000;*/
+    text-align: center;
+    padding: 0px 10px;
+    & img{
+        padding: 1px;
+        width: 29px;
+        height: 29px;
+    }
+   }
+
+}
+
+/*.slide{
+    margin: 0px auto ;
+}
+*/
+
+#main {
+    padding: 0;
+    max-width:600px ;
+    position: relative;
     aside{display: none;}
 
     section{
-    background: none;
+    /*background: none;*/
     /*padding: 0px;*/
     margin-left: 0px;
     padding: 0px 10px;
 
         .block_with_anime{
-             margin: 0px 0px 70px;
+            max-width: 350px;
+
+             margin: 0px auto;
             position: relative;
-            .new_episode{ max-width: 100%;}
+            .new_episode{ max-width: 100%;
+
+                .img_art{
+                    width: 100%;
+                    height: 50%;
+                    & img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+             
+            }
 
             .anime_in_row{
-                width: 150px;
+                width: 46%;
                 display: inline-table;
                 background-color: transparent;
                 margin: 15px 5px;
@@ -1348,7 +1464,7 @@ display: none;
                     width: 100%;
                     background-color: #242526;
                     border: none;
-                    height: 230px;
+                    height: 60%;
 
                 }
 

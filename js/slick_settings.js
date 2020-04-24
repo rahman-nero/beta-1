@@ -1,17 +1,19 @@
 if (screen.availWidth < 1000) {
-        $(".regular").slick({
+          $(".regular").slick({
             dots: false,
             infinite: true,
             slidesToShow: 2,
             variableWidth: true,
-             centerMode: true,
+             // centerMode: true,
             slidesToScroll:1,
             prevArrow: false,
             nextArrow : false
 
           });
+
     }else{
-        $(".regular").slick({
+       
+         $(".regular").slick({
             dots: false,
             infinite: true,
             slidesToShow: 6,

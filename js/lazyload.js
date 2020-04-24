@@ -1,3 +1,6 @@
+ 
+// Это lazyload - если браузер не поддерживает IntersectionObserver - то он просто убирает data-src и ставить src в блоке else написано
+
  "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
