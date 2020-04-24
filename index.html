@@ -677,6 +677,12 @@ document.addEventListener("DOMContentLoaded", function () {
       lazyImageObserver.observe(lazyImage);
     });
   } else {// Possibly fall back to a more compatible method here
+  	 var els = document.getElementsByClassName("lazyload");
+
+      Array.prototype.forEach.call(els, function(el) {
+         var img = el.src = el.dataset.src;
+         alert('elsellImage');
+      });
   }
 });
 </script>
