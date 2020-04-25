@@ -3,30 +3,50 @@ jQuery(function(){
   // Крч когда кликаешь на в любое место кроме открытого блока. то он закрывается, например, у нас открыть верхний блок в меню где ссылки, черная тема и редактировать аккаунт  и тд, если она открыта, мы делаем так чтобы она закрывалась если кликнуть не на нее, чтобы не приходилось кликать опять на иконку чтобы зарктыь блок 
 
 $("body").click(function(event) {
+  console.log(event);
   console.log(event.target.className);
 
     // если он не кликнул на иконку 'развернуть' - в меню , то сработает ,  
-    if ( event.target.className != 'active_link' && event.target.className != 'visible'){
+    if (  event.target.className == 'visible'  || event.target.className == 'active_link' ){
           //  модалка открыта, и он кликнул на другое место, тогда модалка в правом углу закрывается
-            if ( $('.menu_icon_down_click').hasClass('open_menu') ){
+            if ( $('.menu_icon_down_click').hasClass('open_menu')){
+
                    $('.menu_icon_down_click').toggleClass('open_menu');
-                console.log('Кликнул');
+              }else{
+
+                  $('.click_for_open span').toggleClass('active_link');
+                  $('.menu_icon_down_click').toggleClass('open_menu');
               }
 
           }else{
           // в Ином случае мы открываем модалку
-              if ($('.menu_icon_down_click').hasClass('open_menu')) {
-                   $('.click_for_open span').toggleClass('active_link');
-              }else{
-                   $('.click_for_open span').toggleClass('active_link');
-              }
-
-              $('.menu_icon_down_click').toggleClass('open_menu');
+          if ($('.menu_icon_down_click').hasClass('open_menu')) {
+            $('.click_for_open span').toggleClass('active_link');
+            $('.menu_icon_down_click').toggleClass('open_menu');
+          }
+             
         }
 
 
 
-      // Мобилыьны меню
+      // Мобильный меню
+      if (event.target.className == 'icon_mobile open_mb_menu' || event.target.parentElement.className == 'icon_mobile open_mb_menu') {
+        // $('.open_mb_menu').click(function(event) {
+          if ( $('.menu_mb').css('transform') == 'matrix(1, 0, 0, 1, 290, 0)' ) {
+              
+              $('.menu_mb').css({'transform': 'translateX(0%)'});
+              $('.menu_mb').toggleClass('close_menu');
+              
+          
+          }else{
+
+            $('.menu_mb').css({'transform': 'translateX(100%)'});
+            $('.menu_mb').toggleClass('close_menu');
+
+          }
+    
+      // });
+      }
 
     // Показ смайликов
     if (event.target.className != 'smile_i') {
@@ -45,15 +65,9 @@ $("body").click(function(event) {
 
 });
 
-$('.open_mb_menu').click(function(event) {
-  if ( $('.menu_mb').css('display') == 'block' ) {
-    $('.menu_mb').css({'display': 'none'});
-  }else{
-    $('.menu_mb').css({'display': 'block'});
+// Мобильное меню
 
-  }
-    
-});
+
 
 
  	// Функция которая включает меняет тему, на черную или на белую

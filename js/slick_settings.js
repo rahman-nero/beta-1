@@ -2,12 +2,13 @@ if (screen.availWidth < 1000) {
           $(".regular").slick({
             dots: false,
             infinite: true,
-            slidesToShow: 2,
+            slidesToShow: 1,
             variableWidth: true,
-             // centerMode: true,
+             
             slidesToScroll:1,
             prevArrow: false,
-            nextArrow : false
+            nextArrow : false,
+            centerMode: true,
 
           });
 

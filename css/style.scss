@@ -23,7 +23,7 @@ $bColor : #4193FE;
 
 ::-webkit-scrollbar {
     width: 8px;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: #242526;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -1281,20 +1281,36 @@ body {
 #header{
     top: -1px;
     /*display: none;*/
-    .main_menu {display: none;}
+    .main_menu {
+        .search{
+            display: none;
+        }
+        .user_auth{
+            display: none;
+        }
+        .logo{
+            color: $tColor;
+            width: 50%;
+            margin: 0px auto;
+            text-align: center;
+        }
+        /*display: none;*/
+    }
 }
 .menu_mb{
     width: 290px;
     min-height:100%;
     background-color: rgba(36,37,38,1);
     position: fixed;
-    display: none;
     right: 0;
+    transform: translateX(100%);
+    display: block;
     padding:0px 0px;
     top: 0;
     z-index: 99909;
     &::before{
         content: '';
+        display: none;
         position: absolute;
         min-width: 100%;
         min-height: 100%;
@@ -1312,7 +1328,7 @@ body {
     .block_mb{
         display: block;
         margin: 10px 0px 30px;
-        /*background-color: #212121;*/
+        background-color: #212121;
         position: relative;
         /* Этот первый блок с имем и т.д */
         .user_auth{
@@ -1393,9 +1409,15 @@ body {
 
     } 
 }
+.close_menu{
+    &:before{
+        visibility:hidden;
+    }
+}
+
 
 .mobile_menu{
-    width: 100%;
+    min-width: 100%;
     /*display: none;*/
     left: 0;
     /*height: 50px;*/
@@ -1411,7 +1433,7 @@ body {
     text-align: center;
     padding: 0px 10px;
     & img{
-        padding: 1px;
+        padding: 2px;
         width: 29px;
         height: 29px;
     }
@@ -1437,11 +1459,11 @@ body {
     padding: 0px 10px;
 
         .block_with_anime{
-            max-width: 350px;
+            max-width: 450px;
 
              margin: 0px auto;
             position: relative;
-            .new_episode{ max-width: 100%;
+            .new_episode{ width: 100%;
 
                 .img_art{
                     width: 100%;
