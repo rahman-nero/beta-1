@@ -32,14 +32,17 @@ $("body").click(function(event) {
       // Мобильный меню
       if (event.target.className == 'icon_mobile open_mb_menu' || event.target.parentElement.className == 'icon_mobile open_mb_menu') {
        
-          if ( $('.menu_mb').css('transform') == 'matrix(1, 0, 0, 1, 340, 0)' ) {
+          if ( $('.menu_mb').css('opacity') == '0' ) {
               $('.menu_mb').css({'transform': 'translateX(0%)'});
+              $('.menu_mb').css({'opacity': '1'});
               $('.menu_mb').toggleClass('close_menu');
               
           
           }else{
             $('.menu_mb').css({'transform': 'translateX(100%)'});
+            $('.menu_mb').css({'opacity': '0'});
             $('.menu_mb').toggleClass('close_menu');
+
 
           }
     
