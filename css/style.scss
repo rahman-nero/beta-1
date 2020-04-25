@@ -921,9 +921,9 @@ body {
 
         
     section{
-        background-image: url('https://howdyho.net/media/images/decor.png');
+        background-image: url('../img/decor.png');
         /*background-color: #212121;*/
-        margin-left: 20px;
+        margin-right: 20px;
         padding: 25px 15px 15px;
         width: 100%;
         /*background-color: #000;*/
@@ -938,7 +938,7 @@ body {
             margin-bottom: 60px;
 
         /* Новые Серии */
-    .new_episode{
+        .new_episode{
 
             position: relative;
             overflow: hidden;
@@ -992,6 +992,7 @@ body {
 
     .anime_in_row{
         position: relative;
+        /*overflow: hidden;*/
         display: inline-block;
         background: #222324;
         padding: 0px 0px 10px;
@@ -1001,20 +1002,25 @@ body {
         transform: 800ms all;
     
 
+       .anim_img{
+        overflow: hidden;
+        height: 307px;
+
         img{
             width: 100%;
-            height: 307px;
+            height: 100%;
             background-color: #242526;
             border: none;
         }
+    }
 
         .eye{
                 position: absolute;
                 background: $bColor;
                 border-radius: 3px 0px 0px 3px;
-                right:-5px;
-                display: none;
-                top: 34px;
+                right:1px;
+                /*display: none;*/
+                top: 36px;
                 padding: 4px 5px 0px;
                 font-size: 11px;   
 
@@ -1030,6 +1036,7 @@ body {
             }
         h4{
             position: relative;
+            z-index: 2;
             color: $tColor;
             /*font-size: 17px;*/
             margin: 5px 8px 1px;
@@ -1037,6 +1044,7 @@ body {
 
          small{
                 padding-left: 8px;
+                 z-index: 2;
                 color: rgb(136, 145, 157);
             }
 
@@ -1175,6 +1183,12 @@ body {
             transition-duration: 800ms;
             transform: 800ms all;
         }
+
+        &:hover .anim_img img{
+        transform: scale(1.4);
+        transition-duration: 1s;
+        }
+
         &:hover .bookmark{
             display: block;
              transform: 800ms all;
@@ -1188,7 +1202,11 @@ body {
             visibility: visible;
             animation-fill-mode: forwards;  
 
-        }      
+        }  
+        &:hover{
+            box-shadow: 0px 0px 10px rgba(0,0,0,.3);
+            transition-duration: 800ms;
+        }    
 
         } 
 
@@ -1295,7 +1313,7 @@ body {
         background-color: rgba(36,37,38,1);
         overflow:auto;
         position: fixed;
-        box-shadow: 0px 0px 10px rgba(0,0,0,.4);
+        /*box-shadow: 0px 0px 10px rgba(0,0,0,.4);*/
         right: 0;
         transform: translateX(100%);
         display: block;
@@ -1448,15 +1466,13 @@ body {
         aside{display: none;}
 
         section{
-        /*background: none;*/
-        /*padding: 0px;*/
-        margin-left: 0px;
-        padding: 0px 10px;
+           margin-right: 0px;
+        padding: 0px 0px 0px 0px;
 
             .block_with_anime{
                 max-width: 550px;
 
-                 margin: 0px auto;
+                 margin: 0px auto 50px;
                  padding: 0px 10px;
                 position: relative;
                 .new_episode{
@@ -1476,13 +1492,8 @@ body {
                     display: inline-table;
                     background-color: transparent;
                     margin: 15px 5px;
-
-                    img {
-                        width: 100%;
-                        background-color: #242526;
-                        border: none;
+                     .anim_img{
                         height: 250px;
-                        /*max-height: 297px;*/
 
                     }
 
@@ -1538,7 +1549,7 @@ body {
         background-color: rgba(36,37,38,1);
         overflow:auto;
         position: fixed;
-        box-shadow: 0px 0px 10px rgba(0,0,0,.4);
+        /*box-shadow: 0px 0px 10px rgba(0,0,0,.4);*/
         right: 0;
         transform: translateX(100%);
         display: block;
@@ -1691,9 +1702,7 @@ body {
         aside{display: none;}
 
         section{
-        /*background: none;*/
-        /*padding: 0px;*/
-        margin-left: 0px;
+            margin-right: 0px;
         padding: 0px 10px;
 
             .block_with_anime{
@@ -1715,19 +1724,25 @@ body {
                 }
 
                 .anime_in_row{
-                    width: 30.5%;
+                    width: 30.9%;
                     display: inline-table;
                     background-color: transparent;
                     margin: 15px 5px;
 
-                    img {
-                        width: 100%;
-                        background-color: #242526;
-                        border: none;
-                        height:50%;
-                        /*max-height: 297px;*/
+                    .anim_img{
+                        height: 50%;
 
                     }
+                     h4{
+                font-size: 14px;
+                margin: 5px 0px 5px 4px ;
+            }
+
+         small{
+            display: none;
+                margin-left: 2px;
+                color: rgb(136, 145, 157);
+            }
 
                     .litle_desc{
                         display: none;
@@ -1784,7 +1799,7 @@ body {
     background-color: rgba(36,37,38,1);
     overflow:auto;
     position: fixed;
-    box-shadow: 0px 0px 10px rgba(0,0,0,.4);
+    /*box-shadow: 0px 0px 10px rgba(0,0,0,.4);*/
     right: 0;
     transform: translateX(100%);
     opacity: 0;
@@ -1938,10 +1953,8 @@ body {
     aside{display: none;}
 
     section{
-    /*background: none;*/
-    /*padding: 0px;*/
-    margin-left: 0px;
-    padding: 0px 10px;
+       margin-right: 0px;
+        padding: 0px 10px;
 
         .block_with_anime{
             /*max-width: 550px;*/
@@ -1967,14 +1980,10 @@ body {
                 background-color: transparent;
                 margin: 15px 5px;
 
-                img {
-                    width: 100%;
-                    background-color: #242526;
-                    border: none;
-                    height:50%;
-                    /*max-height: 297px;*/
+                .anim_img{
+                        height: 50%;
 
-                }
+                    }
 
                 .litle_desc{
                     display: none;
