@@ -909,13 +909,24 @@ body {
         .vk{
             margin-top: 100px;
             width: initial;
+            height: 300px;
             padding: 0px 14px;
 
         }
 
 
 
-
+    .ads{
+        width: initial;
+        margin: 10px 15px;
+        /*background-color: #000;*/
+        .ad_section{
+            margin: 10px 0px;
+            width: initial;
+            height: 300px;
+            background: #212121;
+        }
+    }
 
     }
 
