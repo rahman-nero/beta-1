@@ -31,6 +31,7 @@ $("body").click(function(event) {
 
       // Мобильный меню
       if (event.target.className == 'icon_mobile open_mb_menu' || event.target.parentElement.className == 'icon_mobile open_mb_menu') {
+        alert('Открываешь меню');
         // $('.open_mb_menu').click(function(event) {
           if ( $('.menu_mb').css('transform') == 'matrix(1, 0, 0, 1, 290, 0)' ) {
               
@@ -39,7 +40,7 @@ $("body").click(function(event) {
               
           
           }else{
-
+              alert('Закрываешь меню');
             $('.menu_mb').css({'transform': 'translateX(100%)'});
             $('.menu_mb').toggleClass('close_menu');
 
