@@ -91,6 +91,7 @@ body {
             .search{
                 flex: 1.5;
                 color: $tColor;
+                margin-left: 50px;
                 display: flex;
                 /*background: #000;*/
                 height: 25px;
@@ -1268,6 +1269,16 @@ body {
 
 }
 
+
+.sit_naruto{
+    position: absolute;
+    /*width: 100px;*/
+    top: -80px;
+    right: -52px; 
+    img {
+        width: 100px;
+    }
+}
 
 footer{
     /*position: absolute;*/
