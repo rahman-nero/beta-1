@@ -115,17 +115,21 @@ if (localStorage.getItem('theme') == 'white' ) {
 
     // Показ меню при скроле
 
-   $(window).scroll(function(event) {
-   	 if ($(window).scrollTop() > 250){
-	   	 	$('#header').css({'position' : 'fixed'});
-   	 }
-   	});
+   $(window).scroll(function(){
+      if ($(this).scrollTop() > 80) {
+          $('#header').addClass('fixed');
+      } else {
+          $('#header').removeClass('fixed');
+      }
+});
     
 
     // Открытие чата, когда загуржена страница убирается лоадер с чата
     $('.loading_chat').fadeOut('slow');
 
     // всталяет смайлик в чат
+
+if (screen.availWidth < 1000) {
 
     $('.smile_icon_code').each(function(){
         $(this).on('click', function(){
@@ -134,6 +138,19 @@ if (localStorage.getItem('theme') == 'white' ) {
                $('#input_chat').val(message_chat);
         });
     });
+
+  }else{
+
+     $('.smile_icon_code').each(function(){
+        $(this).on('click', function(){
+             let code_smile =  $(this).attr('data-code');
+                let message_chat =  $('#input_chat').val() + code_smile;
+               $('.desktop_chat').val(message_chat);
+        });
+    });
+
+
+  }
 
 
     // Смайлы в чате, отображение смайлов в сообщение место кода, подставляем смайлы
