@@ -74,7 +74,29 @@ $("body").click(function(event) {
 
 });
 
-// Мобильное меню
+// Сортировка
+
+
+$('.select').each(function(index, el) {
+    $(el).on('click', function () {
+
+      if ($(el.children).css('visibility') == 'visible') 
+      {
+          $(el.children).css({'visibility' : 'hidden'});
+
+      }else{
+        $('.options').css({'visibility' : 'hidden'});
+        $(el.children).css({'visibility' : 'visible'});
+      }
+
+    })  
+});
+
+
+
+
+
+
 
 
 

@@ -23,6 +23,7 @@
 
 </head>
 <body>
+<!-- HEADER -->
 <header id="header">
         <div class="main_menu">
            <div class="logo">
@@ -53,7 +54,9 @@
             </div>
 
         </div>        </header>
+<!-- END HEADER -->
 
+<!-- Мобильное меню которые открывается с боку -->
 <div class="menu_mb close_menu">
 	<br>
 	<h3>Профиль</h3>
@@ -181,7 +184,10 @@
                                 <img data-src="img/smile/=ad=.png" alt="s" data-code='=ads=' class="smile_icon_code lazyload">
                             </div></div>
     </div></div>
+<!-- Конец открывающей меню -->
 
+
+<!-- Меню с низу - мобильная версия -->
 <div class="mobile_menu">
 	<div class="icon_mobile" ><img src="img/home.svg" alt=""></div>
 		<div class="icon_mobile"><img src="img/search.svg" alt=""></div>
@@ -189,23 +195,69 @@
 		<div class="icon_mobile"><img src="img/heart.png" alt=""></div>
 	<div class="icon_mobile open_mb_menu"><img src="img/menu3.svg" ></div></div>
 
-<!--  SLider -->
+<!-- конец - меню с низу - мобильная версия -->
+
 
 <main id="main">
 
-	<section>
+	<section  class="section_anime_sort">
 		<div class="top_menu_sort">
-			<div class="center_inscription">
-				Смотреть все Аниме
+			<div class="sort_panel">
+					<div class="select">
+						Категории  &darr;
+						<div class="options">
+							<div><input type="checkbox" id="one"><label for="one">Боевик</label></div>
+                            <div><input type="checkbox" id="one"><label for="one">Боевик</label></div>
+                            <div><input type="checkbox" id="one"><label for="one">Боевик</label></div>
+                            <div><input type="checkbox" id="one"><label for="one">Боевик</label></div>
+                            <div><input type="checkbox" id="one"><label for="one">Боевик</label></div>
+                            <div><input type="checkbox" id="one"><label for="one">Боевик</label></div>
+						</div>
+					</div>
+
+					<div class="select">
+						Тип
+						<div class="options">
+							<input type="checkbox" id="one"><label for="one">asdasda</label>
+                            <input type="checkbox" id="one"><label for="one">asdasda</label>
+                              <input type="checkbox" id="one"><label for="one">asdasda</label>
+                            <input type="checkbox" id="one"><label for="one">asdasda</label>
+						</div>
+					</div>
+
+                    <div class="select">
+                        Статус
+                        <div class="options">
+                            <input type="checkbox" id="one"><label for="one">asdasda</label>
+                            <input type="checkbox" id="one"><label for="one">asdasda</label>
+                              <input type="checkbox" id="one"><label for="one">asdasda</label>
+                            <input type="checkbox" id="one"><label for="one">asdasda</label>
+                        </div>
+                    </div>
+
+                    <div class="select">
+                        По рейтингу
+                        <div class="options">
+                           <input type="checkbox" id="one"><label for="one">asdasda</label>
+                            <input type="checkbox" id="one"><label for="one">asdasda</label>
+                              <input type="checkbox" id="one"><label for="one">asdasda</label>
+                            <input type="checkbox" id="one"><label for="one">asdasda</label>
+                        </div>
+                    </div>    	
+
 			</div>
+		</div>
+		<div class="block_with_anime anime_result" >
+			
 		</div>
 	</section>
 
+<!-- Боковое меню -->
 <aside>
     <!-- <div class="sit_naruto">
         <img class="lazyload" data-src="img/PotableDarkAkitainu-size_restricted.gif" alt="">
     </div> -->
-            <div class="wrapper"><img src="img/menu.svg" alt="Меню">Меню</div>
+        <div class="wrapper"><img src="img/menu.svg" alt="Меню">Меню</div>
             <nav id="menu">
                 <ul>
                     <a href=""><li>Аниме</li></a>
@@ -356,6 +408,8 @@
             
         
     </aside>
+
+<!-- Конец боковое меню -->
 
 </main>
 

@@ -1358,10 +1358,113 @@ footer{
 
 
 
+/* Страница сортировки Аниме */
+
+#main .section_anime_sort{
+    padding: 0px;
+}
+
 /* Страница Все Аниме */
 .top_menu_sort{
-    
+    position: relative;
+    background: #111;
+    display: block;
+
+    .center_inscription{
+        text-align: center;
+        padding: 15px 0px;
+         background: #222;
+    }
+
+    .sort_panel{
+        background: #242526;
+        position: relative;
+        user-select: none;
+        display: flex;
+
+        padding: 20px;
+        .select{
+            position: relative;
+            /*width: auto;*/
+            cursor: pointer;
+            /*border: 1px solid #ddd;*/
+            border-radius: 2px;
+            /*box-shadow: inset 0px 0px 5px rgba(0,0,0,.3);*/
+            /*font-weight: normal;*/
+            background-color: #18191A;
+            margin: 0px 10px;
+            padding: 6px 30px;  
+            &:hover{
+                background:$bColor;
+                transition-duration: 1s;
+            }
+
+            .options{
+                position: absolute;
+                display: inline-table;
+                width:400px; 
+                /*min-width:300px; */
+                visibility: hidden;
+                left: 0;
+                padding: 10px 10px;
+                margin-top: 40px;
+                background: #111;
+        
+
+                    input[type='checkbox']{
+                        /*margin: 5px 0px;*/
+                            width: 0px;
+                            height: 0px;
+                            display: none;
+                    }
+
+                    div{
+                        display: inline-table;
+                        /*background: #000;*/
+
+                    label{
+                        display: flex;
+                        margin:5px 3px;
+                        /*background: #000;*/
+                        font-size:15px;
+                        font-weight: 600;
+
+                    &::before{
+                      content: " ";
+                      margin:0px 10px;
+                      border-radius: 50%;
+                      position: relative;
+                      text-align: center;
+                      width: 12px;
+                      height: 12px;
+                      background: #000;
+                      border: 2px dashed $bColor;
+                    }
+                        
+                    }
+
+                    input:checked + label::before{
+                        background: $bColor;
+                        border: 2px solid $bColor;
+                    }
+        
+            }
+        }
+
+
+        }
+
+    }
+
+
 }
+
+.anime_result{
+    padding: 0px 10px;
+    background: #212121 ;
+    height: 820px;
+}
+
 
 
 
