@@ -529,12 +529,11 @@ body {
     background-image: url('../img/back (1).jpg');
     position: relative;
     background-repeat: no-repeat;
-        overflow: hidden;
+    overflow: hidden;
     background-size: cover;
     background-position: center;
     border-bottom: 2px solid #4193FE;
     margin: 0px auto 9px;
-    /*top: 56px;*/
     padding: 50px 20px 40px;
 
     max-width: 100%;
@@ -599,21 +598,25 @@ body {
     position: absolute;
     top: 50%;
     padding: 25px 3px;
-    left: -20px;
+     background-color: rgba(20,20,20,.7);
+    left: 28px;
     background-position: center;
+    cursor: pointer;
     background-size: contain;
     background-repeat: no-repeat;
     transform: translate(-50%, -70%);
     z-index: 922;
 }
 .next:hover, .prev:hover{
-    background-color: rgba(20,20,20,.7);
+    background-color: rgba(20,20,20,.8);
 }
 .next{
     position: absolute;
     top: 50%;
-    right: -65px;
+    right: -18px;
     padding: 25px 3px;
+    cursor: pointer;
+    background-color: rgba(20,20,20,.7);
     background-position: center;
     transform: translate(-50%, -70%);
     background-size: cover;
