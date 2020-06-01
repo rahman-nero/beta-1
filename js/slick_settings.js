@@ -1,4 +1,6 @@
 if (screen.availWidth < 1000) {
+
+
           $(".regular").slick({
             dots: false,
             slidesToShow: 1,
@@ -7,11 +9,13 @@ if (screen.availWidth < 1000) {
             slidesToScroll:1,
             prevArrow: false,
             nextArrow : false,
-            centerMode: true,
+            centerMode: true
 
           });
 
     }else{
+        $('.menu_mb').remove();
+        $('.mobile_menu').remove();
        
          $(".regular").slick({
             dots: false,
@@ -19,8 +23,8 @@ if (screen.availWidth < 1000) {
             infinite: true,
             variableWidth: true,
             slidesToScroll:2,
-            prevArrow: '<div class="prev"><img src="img/left.svg"></div>',
-            nextArrow : '<div class="next"><img src="img/right.svg"></div>'
+            prevArrow: '<div class="prev"><img src="img/icons/left.svg"></div>',
+            nextArrow : '<div class="next"><img src="img/icons/right.svg"></div>'
         });
 
     }
