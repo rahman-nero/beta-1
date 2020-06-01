@@ -140,9 +140,11 @@ if (localStorage.getItem('theme') == 'white' ) {
 
    $(window).scroll(function(){
       if ($(this).scrollTop() > 80) {
-          $('#header').addClass('fixed');
+          $('#header').css({'padding' : '13px'});
       } else {
           $('#header').removeClass('fixed');
+          $('#header').css({'padding' : '16px 20px'});
+
       }
 });
     
@@ -197,7 +199,22 @@ if (screen.availWidth < 1000) {
 
 
 
-$('.loading_page').fadeOut('2000');
+
+  // Смена постеров при наведение на анмие
+
+  $('section.regular.slider .block_slader').each(function(index, el) {
+      console.log(index);
+      $(el).mouseover(function() {
+        console.log(el.dataset.poster);
+        let img_poster = el.dataset.poster;
+
+        $('.slide').css({
+          'background-image': `url(${img_poster})`
+        });
+
+      });    
+  });
+
 
 
 });
