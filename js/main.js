@@ -74,6 +74,20 @@ $("body").click(function(event) {
 
 });
 
+
+// Кнопка вверх
+
+$('.up-button').click(function() {
+  $('html, body').animate({scrollTop: 0},500);
+    return false;
+});
+
+
+
+
+
+
+
 // Сортировка
 
 
@@ -91,11 +105,6 @@ $('.select').each(function(index, el) {
 
     })  
 });
-
-
-
-
-
 
 
 

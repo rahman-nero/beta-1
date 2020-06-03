@@ -1,12 +1,9 @@
 if (screen.availWidth < 1000) {
-
-
           $(".regular").slick({
             dots: false,
             slidesToShow: 1,
             variableWidth: true,
-             
-            slidesToScroll:1,
+            slidesToScroll:1,   
             prevArrow: false,
             nextArrow : false,
             centerMode: true
@@ -20,6 +17,8 @@ if (screen.availWidth < 1000) {
          $(".regular").slick({
             dots: false,
             slidesToShow: 6,
+            autoplay: true,
+            autoplaySpeed: 5000,
             infinite: true,
             variableWidth: true,
             slidesToScroll:2,
