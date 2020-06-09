@@ -1459,7 +1459,18 @@ footer{
     .view_all_records{font-size: 14px}
 
     footer{display: none;}
+.slide{
 
+    .slider{
+
+        & div{
+
+            .block_slader{
+                margin: 0px -6px;
+            }
+        }
+    }
+}
     #header{
         top: -1px;
         /*display: none;*/
