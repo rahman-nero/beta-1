@@ -1479,6 +1479,8 @@ footer{
         }
     }
 
+    .up-button{display: none;}
+
    .mobile_menu{
         display: flex;
     }
@@ -1546,6 +1548,7 @@ footer{
     footer{
         display: none;
     }
+    .up-button{display: none;}
 
     #header{
         top: -1px;
@@ -1659,9 +1662,6 @@ footer{
         display: flex;
     }
 
-     .menu_mb{
-        display:block;
-    }
 
 
 
