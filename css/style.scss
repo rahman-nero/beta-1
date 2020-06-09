@@ -18,10 +18,6 @@ $bColor : #4193FE;
     font-family: Segoe; /* Имя шрифта */
     src: url(../fonts/9404.ttf); /* Путь к файлу со шрифтом */
 }
-@font-face {
-    font-family: Segoe ui; /* Имя шрифта */
-    src: url(../fonts/segoe_ui.ttf); /* Путь к файлу со шрифтом */
-}
 
 /* Оформления ползунка */
 
@@ -47,7 +43,7 @@ $bColor : #4193FE;
 a {text-decoration: none; }
 
 body {
-    font-family: Segoe, Segoe ui, Arial , sans-serif;
+    font-family: Segoe,Roboto, Arial , sans-serif;
     background-color:#18191A;
     font-smoothing: antialiased;
     background-repeat: no-repeat;
