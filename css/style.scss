@@ -531,228 +531,213 @@ body {
 
 /* Чат во меню */
 .chat{
-position: relative;
-padding: 20px 10px;
-margin: 10px 0px;
-display: block;
-width: 100%;
-/*max-width: 20px;*/
-background: #1E1F20;
-word-wrap: break-word;
-/*height: 529px;*/
-
-
-
-span:first-child{
-font-size:18px;
-/*color: white;*/
-color:$tColor;
-/*background: #000;*/
-/*border-bottom: 2px solid red;*/
-margin-left: 10px;
-& img{
-    width: 20px;
-    height: 20px;
-
     position: relative;
-    top: 3px;
-    margin-right: 10px;
-}
-}
-
-.loading_chat{
-position: absolute;
-width: 100%;
-top: 0;
-height: 100%;
-z-index: 99;
-margin: 0px -10px;
-background: #212223;
-.centerLoading{
-width: 200px;
-padding: 10px;
-/*background-color: #000;*/
-transform: translate(-50%,-50%);
-top: 50%;
-left: 50%;
-display: block;
-text-align: center;
-position: relative;
-& img{
-  width: 100px;
-  
-}
-
-.load_circle{
-width: 50px;
-height: 50px;
-position: relative;
-/*background-color: #000;*/
-margin: 10px auto;
-border-radius: 50%;
-display:block;
-/*top: 55%;*/
-/*left: 36%;*/
-border-left: 3px solid $bColor;
-border-top: 3px solid transparent;
-border-bottom: 3px solid $bColor;
-border-right: 3px solid $bColor;
-/*transform: translate(0%, 0%);*/
-
-animation-name: loads;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
-}
-
-
-}
-
-.message_block{
-position: relative;
-overflow: auto;
- height: 450px;
- margin-top: 15px;
-.message{
-    margin: 10px 10px 15px;
-    word-break: break-all;
-    padding-bottom: 5px;
-    display: flex;
-    border-bottom: 1px dashed $bColor;
-    .img_author_chat{
-        /*background: #000;*/
-        width: 40px;
-        height: 40px;
-        margin-right: 12px;
-    & img{
-        width: 40px;
-        height:40px;
-        border-radius: 4px;
-        
-    }
-}
-
-.text_message{
-    color: $tColor;
-    /*background: #000;*/
-   max-width: 100%;
-   /*position: relative;*/
-   display: block;
-    /*word-wrap: initialzzzz;*/
-    .data_public{
-        position: absolute;
-        font-size: 13px;
-        font-weight: normal;
-        right: 15px;
-    }
-    .author{
-        font-size: 12px;
-        color: #FF4437;
-    }
-
-    .text{
-         position: relative;
-        font-weight: normal;
-        font-size: 13px;
-        margin-top: 4px;
-        /*font-family: roboto;*/
-        & img{
-                position: relative;
-            width: 30px;
-            height: 30px;
-        }
-
-    }
-}
-    
-}
-
-
-}
-.form_send{
-    position: relative;       
+    padding: 20px 10px;
+    margin: 10px 0px;
+    display: block;
     width: 100%;
-    left: 0;
-    
-.block_input{
-    /*flex: 1;*/
-    margin: 20px 0px 0px;
-    display: flex;
-    input{
-        width: 270px;
-        background-color: #292B2C;
-        box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,.2);
-        padding: 8px 29px 8px 9px;
-        color: $tColor;
-        border: 1px solid $bColor;
-        /*border-radius: 3px;*/
-    }
+    /*max-width: 20px;*/
+    background: #1E1F20;
+    word-wrap: break-word;
+    /*height: 529px;*/
 
-    .smile_icon{
-        position: absolute;
-        right:46px;
-        bottom: 3px;
-        img{
+
+
+    span:first-child{
+        font-size:18px;
+        color:$tColor;
+        margin-left: 10px;
+        & img{
             width: 20px;
             height: 20px;
-            cursor: pointer;
-
-        }
-        :hover{
-        transform: rotate(360deg);
-        transition-duration: 1s;
-        }
-}
-
-
-    .send_button{
-        margin-left: 10px;
-            /*background-color: #000;*/
-        cursor: pointer;
-        img{
-            width: 30px;
             position: relative;
-            top: 2px;
-
-        }
-    }
-}
-
-/* Блок который показывается коглда кликаешь на иконку смаилики  */
-.smiles_all{
-    position: absolute;
-    right:40px;
-    top: -110px;
-    width: 230px;
-    height: 100px;
-    display: none;
-
-    /*overflow: auto;*/
-    overflow-y: auto;
-    background-color: #222;
-    padding: 10px 5px;
-    border-radius: 6px;
-    border: 1px solid #393A3B;
-    box-shadow: 0px 0px 10px rgba(0,0,0,.2);
-    & img {
-        width: 25px;
-        height: 25px;
-        margin: 0px 3px;
-        cursor: pointer;
-        float: left;
-
-    &:hover{
-            background-color:#191919;
-            border-radius: 5px;
-            transition-duration: 500ms;
+            top: 3px;
+            margin-right: 10px;
         }
     }
 
-}
+    .loading_chat{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        height: 100%;
+        z-index: 99;
+        margin: 0px -10px;
+        background: #212223;
 
-}
+        .centerLoading{
+            width: 200px;
+            padding: 10px;
+            /*background-color: #000;*/
+            transform: translate(-50%,-50%);
+            top: 50%;
+            left: 50%;
+            display: block;
+            text-align: center;
+            position: relative;
+            & img{width: 100px;}
+
+            .load_circle{
+            width: 50px;
+            height: 50px;
+            position: relative;
+            /*background-color: #000;*/
+            margin: 10px auto;
+            border-radius: 50%;
+            display:block;
+            /*top: 55%;*/
+            /*left: 36%;*/
+            border-left: 3px solid $bColor;
+            border-top: 3px solid transparent;
+            border-bottom: 3px solid $bColor;
+            border-right: 3px solid $bColor;
+            /*transform: translate(0%, 0%);*/
+
+            animation-name: loads;
+                animation-duration: 1s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+            }
+
+        }
+
+
+    }
+
+    .message_block{
+        position: relative;
+        overflow: auto;
+        height: 450px;
+        margin-top: 15px;
+        .message{
+            margin: 10px 10px 15px;
+            word-break: break-all;
+            padding-bottom: 5px;
+            display: flex;
+            border-bottom: 1px dashed $bColor;
+            .img_author_chat{
+                /*background: #000;*/
+                width: 40px;
+                height: 40px;
+                margin-right: 12px;
+            & img{
+                width: 40px;
+                height:40px;
+                border-radius: 4px;
+                }
+            }
+
+            .text_message{
+                color: $tColor;
+                max-width: 100%;
+                display: block;
+                .data_public{
+                    position: absolute;
+                    font-size: 13px;
+                    font-weight: normal;
+                    right: 15px;
+                }
+                .author{
+                    font-size: 12px;
+                    color: #FF4437;
+                }
+                .text{
+                    position: relative;
+                    font-weight: normal;
+                    font-size: 13px;
+                    margin-top: 4px;
+                    /*font-family: roboto;*/
+                    & img{
+                        position: relative;
+                        width: 30px;
+                        height: 30px;
+                    }
+
+                }
+            }
+        
+        }
+
+
+    }
+
+    .form_send{
+        position: relative;       
+        width: 100%;
+        left: 0;
+        
+        .block_input{
+            /*flex: 1;*/
+            margin: 20px 0px 0px;
+            display: flex;
+            input{
+                width: 270px;
+                background-color: #292B2C;
+                box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,.2);
+                padding: 8px 29px 8px 9px;
+                color: $tColor;
+                border: 1px solid $bColor;
+            }
+            .smile_icon{
+                position: absolute;
+                right:46px;
+                bottom: 3px;
+                img{
+                    width: 20px;
+                    height: 20px;
+                    cursor: pointer;
+                }
+                :hover{
+                transform: rotate(360deg);
+                transition-duration: 1s;
+                }
+            }
+
+            .send_button{
+                margin-left: 10px;
+                cursor: pointer;
+                img{
+                    width: 30px;
+                    position: relative;
+                    top: 2px;
+
+                }
+            }
+        }
+
+        /* Блок который показывается коглда кликаешь на иконку смаилики  */
+        .smiles_all{
+            position: absolute;
+            right:40px;
+            top: -110px;
+            width: 230px;
+            height: 100px;
+            display: none;
+
+            /*overflow: auto;*/
+            overflow-y: auto;
+            background-color: #222;
+            padding: 10px 5px;
+            border-radius: 6px;
+            border: 1px solid #393A3B;
+            box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+            & img {
+                width: 25px;
+                height: 25px;
+                margin: 0px 3px;
+                cursor: pointer;
+                float: left;
+
+            &:hover{
+                    background-color:#191919;
+                    border-radius: 5px;
+                    transition-duration: 500ms;
+                }
+            }
+
+        }
+
+    }
 }
 
 
@@ -778,36 +763,52 @@ overflow: auto;
         /* Это надпись 'Меню' с икнокой рядом */
         .wrapper{
             width: initial;
-            /*background:linear-gradient(to left, #F9B120, #E93F3A);*/
             background: #1B1B1B;
-            display: flex;
-            line-height: 30px;
+
             border-bottom: 2px solid $bColor;
             padding: 10px 20px;
             & img{ 
             width: 20px;
-            height: 20px;
-            /*float: left;*/
             top: 4px;
             margin-right: 10px;
-            position: relative; }
+            position: relative;
+            }
         }
 
         /* Ссылки в меню */
         #menu{
+            background: #212121;
+            margin: 50px 0px;
             ul{
                 list-style: none;
                 li{ 
-                    /*font-weight: normal;*/
-                    padding: 10px 20px;
-                    margin-top: 10px;
-
-                    /*font-family: Segoe;*/
+                    padding: 14px 15px 14px 22px;
+                    font-family: Roboto;
                     font-size: 14px;
                     color: $tColor;
-                    /*padding: 11px 9px 11px 30px;*/
+                    & img{
+                        width: 21px;
+                        float: left;
+                        margin-right: 9px;
+                    }
+
+                    &::after{
+                        content: '';
+                        width: 11px;
+                        height: 11px;
+                        background:#191A1B;
+                        border-radius: 50%;
+                        position: absolute;
+                        right: 20px;
+                    }
                     &:hover{
-                        background:#242424;
+                        background:#1A1A1A;
+
+                        &:after{
+                            background-color:$bColor;
+                            box-shadow: 0px 0px 10px rgba(0,0,0,.3);
+                            transition-duration: 700ms;
+                        }
                     }
                 }
             }
@@ -815,6 +816,7 @@ overflow: auto;
 
         /* Выход новой серии */
         .date_new_episode{
+            display: none;
             margin: 40px 0px;
             position: relative;
             background: #222222;
@@ -1212,7 +1214,8 @@ overflow: auto;
 .sit_naruto{
     position: absolute;
     /*width: 100px;*/
-    top: -65px;
+    top: -116px;
+    display: none;
     left: 0px; 
     z-index: 99;
     img {
