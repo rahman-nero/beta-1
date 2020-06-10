@@ -17,6 +17,7 @@ $bColor : #4193FE;
 @font-face {
     font-family: Segoe; /* Имя шрифта */
     src: url(../fonts/9404.ttf); /* Путь к файлу со шрифтом */
+    font-display: auto;
 }
 
 /* Оформления ползунка */
