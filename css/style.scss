@@ -108,7 +108,9 @@ body {
 	    z-index: 9;
 	    height: 17px; 
 	    background-repeat: no-repeat; 
-	    margin-left: -276px; 
+	    margin-left: -276px;
+	     
+	     /*left: 112px;*/
 	    margin-top: 10px; 
 	    position: absolute;
 	}
@@ -227,6 +229,7 @@ body {
 /* Конец иконки входа, и т.д в конце верхнего меню  */
 
 /* end top header - menu*/
+.menu-mobile-icon{display: none;}
 
 
 
@@ -290,14 +293,68 @@ body {
 
 
 
-@media (max-width: 1180px) {
-
+@media (max-width: 1020px) {
+	#header{ 
+		background: transparent;
+		border: none;
+		padding: 0;
+	}
+	.center-header{
+		padding: 10px ;
+	}
+	.logo{display: none;}
 	.search{
 		flex: 2;
-		input {width: 100%;}	
-		&::before{margin-left: -217px}
+		input {
+			width: 100%;
+			background: #1D1E1F;
+			font-family:Roboto;
+			padding-top:12px;
+			font-size: 15px; 
+			padding-bottom:12px; 
+		}	
+		&::before{margin-left: 0;left: 13px; margin-top: 12px;}
 		/* Блок в котором будут показыватся результаты паиска */
 		.result-search{width: 100%;}
+
+		.menu-mobile-icon{
+			display: block;
+			z-index: 1;
+			position: absolute;
+			top:9px;
+			cursor: pointer;
+			left: 14px;
+
+			& img {
+				width: 24px;
+				height: 24px;
+			}
+		}
+	}
+
+	.user-info-block{
+		display: none;
 	}
 
 }
+
+
+.mobile_menu{
+	position: fixed;
+	width: 100%!important;
+	/*background: $twoColor;*/
+	background: rgba(32,33,34,.7);
+	/*border-top: 1px solid #2C2E2F;*/
+	bottom: 0px;
+	text-align: center;
+	display: flex;
+ 	& a { 
+ 		width: 25%; 
+ 		padding: 10px;
+		& img{
+			width: 25px;
+			height: 25px;
+		}
+	 }
+}
+
