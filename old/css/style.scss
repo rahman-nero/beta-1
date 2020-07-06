@@ -62,179 +62,179 @@ body {
 }
 
 /* Верхний меню */
-#header {
-    min-width: 100%;
-    top: 0;
-    transition: all 1s;
-    left: 0;
-    z-index: 999;
-    background-color: rgba(36,37,38,.99);
-    position:fixed;
-    letter-spacing: 0.2px;
-    /*box-shadow: 0px 0px 10px rgba(0,0,0,.1);*/
-    border-bottom: 0.01px solid #393A3B; 
-    padding: 13px 10px;
+// #header {
+//     min-width: 100%;
+//     top: 0;
+//     transition: all 1s;
+//     left: 0;
+//     z-index: 999;
+//     background-color: rgba(36,37,38,.99);
+//     position:fixed;
+//     letter-spacing: 0.2px;
+//     /*box-shadow: 0px 0px 10px rgba(0,0,0,.1);*/
+//     border-bottom: 0.01px solid #393A3B; 
+//     padding: 13px 10px;
 
-    .main_menu {
-        max-width:1550px;
-        margin: 0px  auto;
-        position: relative;
-        display: flex;
-        align-items: center;
+//     .main_menu {
+//         max-width:1550px;
+//         margin: 0px  auto;
+//         position: relative;
+//         display: flex;
+//         align-items: center;
 
-        .logo{
-            flex: .2; 
-            color:$tColor;
-            a {  
-                color:$tColor;
-                font-size: 14px; 
-            }
-        }
+//         .logo{
+//             flex: .2; 
+//             color:$tColor;
+//             a {  
+//                 color:$tColor;
+//                 font-size: 14px; 
+//             }
+//         }
 
-         /* Поиск в верхнем меню */
-        .search{
-            flex: 1.5;
-            color: $tColor;
-            margin-left: 50px;
-            display: flex;
-            height: 25px;
-            position: relative;
+//          /* Поиск в верхнем меню */
+//         .search{
+//             flex: 1.5;
+//             color: $tColor;
+//             margin-left: 50px;
+//             display: flex;
+//             height: 25px;
+//             position: relative;
 
 
-            & input{
-                background-color: #1F1F20;
-                border: none;
-                outline: none;
-                width:300px;
-                border-radius: 20px;
-                color: $tColor;
-                position: relative;
-                bottom: 4px;
-                padding: 9px 40px 8px 15px;
-            }
-             .search_click{
-                position: absolute; 
-                top: -3px;
-                left:269px;
-                display: flex;
-                text-align: center;
-                cursor:pointer; 
-                padding: 7px;
-                border-radius: 50%;
-                background-color: $bColor;
-                z-index: 1;
+//             & input{
+//                 background-color: #1F1F20;
+//                 border: none;
+//                 outline: none;
+//                 width:300px;
+//                 border-radius: 20px;
+//                 color: $tColor;
+//                 position: relative;
+//                 bottom: 4px;
+//                 padding: 9px 40px 8px 15px;
+//             }
+//              .search_click{
+//                 position: absolute; 
+//                 top: -3px;
+//                 left:269px;
+//                 display: flex;
+//                 text-align: center;
+//                 cursor:pointer; 
+//                 padding: 7px;
+//                 border-radius: 50%;
+//                 background-color: $bColor;
+//                 z-index: 1;
 
-                img {width: 17px;height: 17px;}
-             }
-        }
-        /* Раздел профиль и тю в меню */
+//                 img {width: 17px;height: 17px;}
+//              }
+//         }
+//         /* Раздел профиль и тю в меню */
 
-        .user_auth{
-            flex: 1.5;
-            display: flex;
-            position: relative;
-            align-items:center;
-            cursor: pointer;
-            justify-content: flex-end;
+//         .user_auth{
+//             flex: 1.5;
+//             display: flex;
+//             position: relative;
+//             align-items:center;
+//             cursor: pointer;
+//             justify-content: flex-end;
 
-             a::before { 
-                content:attr(data-title);
-                position: absolute;
-                border: 1px solid #242526;
-                box-shadow: 0px 0px 10px rgba(0,0,0,.2);
-                background-color: #2B2C2D;
-                color: $tColor;
-                font-size: 13px;
-                padding: 4px 8px;
-                border-radius: 5px;
-                display: block;
-                transform: rotate3d(0, 1, 0, 90deg);
-                z-index: 99;
-                opacity: 0;
-                bottom: -35px;
-                margin-left: -25px;
-                }
-                a:hover:before{
-                    opacity: 1;
-                    transition-duration:200ms;
-                    transform: rotate3d(0, 0, 0, 0deg);
+//              a::before { 
+//                 content:attr(data-title);
+//                 position: absolute;
+//                 border: 1px solid #242526;
+//                 box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+//                 background-color: #2B2C2D;
+//                 color: $tColor;
+//                 font-size: 13px;
+//                 padding: 4px 8px;
+//                 border-radius: 5px;
+//                 display: block;
+//                 transform: rotate3d(0, 1, 0, 90deg);
+//                 z-index: 99;
+//                 opacity: 0;
+//                 bottom: -35px;
+//                 margin-left: -25px;
+//                 }
+//                 a:hover:before{
+//                     opacity: 1;
+//                     transition-duration:200ms;
+//                     transform: rotate3d(0, 0, 0, 0deg);
 
-                }
+//                 }
 
-            .active_link {
-                background-color:#4193FE;
-                &::after{display:none;}
-            }
-            & span{
-                padding:9px;
-                background-color: #3A3B3C;
-                border-radius: 50%;
-                position: relative;
-                display: flex;
-                margin: 0px 5px;
-                z-index: 1;
-                /* Синиц круг при наведении на ссылку */
-                &::after{
-                    content: "";
-                    position:absolute;
-                    width: 10px;
-                    opacity: 0;
-                    height:10px;
-                    background-color:#4193FE;
-                    border-radius: 50%;
-                    bottom: 0px;
-                    margin-left: 4px;
-                    }
+//             .active_link {
+//                 background-color:#4193FE;
+//                 &::after{display:none;}
+//             }
+//             & span{
+//                 padding:9px;
+//                 background-color: #3A3B3C;
+//                 border-radius: 50%;
+//                 position: relative;
+//                 display: flex;
+//                 margin: 0px 5px;
+//                 z-index: 1;
+//                 /* Синиц круг при наведении на ссылку */
+//                 &::after{
+//                     content: "";
+//                     position:absolute;
+//                     width: 10px;
+//                     opacity: 0;
+//                     height:10px;
+//                     background-color:#4193FE;
+//                     border-radius: 50%;
+//                     bottom: 0px;
+//                     margin-left: 4px;
+//                     }
 
-                 &:hover:after {
-                    opacity: 1;
-                    animation-name: fill_background_color;
-                    animation-duration: 600ms;
-                    animation-timing-function: ease;
-                    animation-iteration-count: 1;
-                    animation-fill-mode: forwards;
-                }
+//                  &:hover:after {
+//                     opacity: 1;
+//                     animation-name: fill_background_color;
+//                     animation-duration: 600ms;
+//                     animation-timing-function: ease;
+//                     animation-iteration-count: 1;
+//                     animation-fill-mode: forwards;
+//                 }
                 
-                & img{
-                    align-items: center;
-                    justify-content: center;
-                    width: 18px;
-                    z-index: 2;
-                    height: 18px;
-                }
-            }
+//                 & img{
+//                     align-items: center;
+//                     justify-content: center;
+//                     width: 18px;
+//                     z-index: 2;
+//                     height: 18px;
+//                 }
+//             }
 
 
-                .link_for_profile{
-                    /* Атрибут data-title - чтоб на нем не работал */
-                    :before{display: none; opacity: 0;} 
+//                 .link_for_profile{
+//                     /* Атрибут data-title - чтоб на нем не работал */
+//                     :before{display: none; opacity: 0;} 
 
-                    .user_image{
-                        background-color: transparent;
-                        border-radius: 15px;
-                        font-size: 14px;
-                        padding: 3px 30px 3px 5px;
-                        color: white;
-                        & img{
-                            width: 30px;
-                            height: 30px;
-                            float: left;
-                            border-radius: 50%;
-                        }
+//                     .user_image{
+//                         background-color: transparent;
+//                         border-radius: 15px;
+//                         font-size: 14px;
+//                         padding: 3px 30px 3px 5px;
+//                         color: white;
+//                         & img{
+//                             width: 30px;
+//                             height: 30px;
+//                             float: left;
+//                             border-radius: 50%;
+//                         }
 
-                        &:hover{
-                            background-color: #363839;
-                            transition-duration: 400ms;
-                        }
+//                         &:hover{
+//                             background-color: #363839;
+//                             transition-duration: 400ms;
+//                         }
                            
-                        /* Чтобы другая аимация не сработала (вверху) */
-                        &:after{display: none;} 
+//                         /* Чтобы другая аимация не сработала (вверху) */
+//                         &:after{display: none;} 
 
-                        }
-                }
-            }
-        }
-}
+//                         }
+//                 }
+//             }
+//         }
+// }
 
  /* Анимация при наведений на ссылки в верхнем меню, заполнение кнопки синим цветом */
 @keyframes fill_background_color{

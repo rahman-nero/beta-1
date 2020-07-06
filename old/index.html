@@ -28,36 +28,92 @@
 </head>
 <body>
 <!-- HEADER -->
-<header id="header">
-        <div class="main_menu">
-           <div class="logo">
-             <a href="index.html">ANiMeShoW</a>
-    		 
-            </div>
+    <!-- <header id="header">
+            <div class="main_menu">
+            <div class="logo">
+                <a href="index.html">ANiMeShoW</a>
+                
+                </div>
 
-            <div class="search">
-                    <form action="search.php" method="POST">
-                        <span class="search_click"><img src="img/icons/search.svg" alt="Поиск"></span>
-                        <input type="text" name="search" autocomplete="off" placeholder="Введите что-нибудь)">
-                    </form>  
-            </div>
+                <div class="search">
+                        <form action="search.php" method="POST">
+                            <span class="search_click"><img src="img/icons/search.svg" alt="Поиск"></span>
+                            <input type="text" name="search" autocomplete="off" placeholder="Введите что-нибудь)">
+                        </form>  
+                </div>
 
-            <div class="user_auth">
+                <div class="user_auth">
 
-              <div class="link_for_profile">
-                <a href=""><span class="user_image"><img src="img/s.jpg">Nezuko</span></a>
-                  </div>
-                    <!-- <a href=""  data-title="Войти"><span><img src="img/enter.png"></span></a> -->
-                     <!-- <a href="" data-title="Регистрация"><span><img src="img/plus.png"></span></a> -->
+                <div class="link_for_profile">
+                    <a href=""><span class="user_image"><img src="img/s.jpg">Nezuko</span></a>
+                    </div>
+                        <a href=""  data-title="Войти"><span><img src="img/enter.png"></span></a>
+                        <a href="" data-title="Регистрация"><span><img src="img/plus.png"></span></a>
 
-                   <a href="" data-title="Сообщение"><span><img src="img/icons/comment.svg" alt="Сообщение"></span></a>
-                  <a href="" data-title="Избранные&nbsp;аниме"><span><img src="img/icons/heart.svg" alt="Избранные аниме"></span></a>
-                <a class="click_for_open" data-title="Развернуть"><span><img src="img/icons/down-arrow.svg" class="visible"  alt="Развернуть"></span></a>
-            </div>
+                    <a href="" data-title="Сообщение"><span><img src="img/icons/comment.svg" alt="Сообщение"></span></a>
+                    <a href="" data-title="Избранные&nbsp;аниме"><span><img src="img/icons/heart.svg" alt="Избранные аниме"></span></a>
+                    <a class="click_for_open" data-title="Развернуть"><span><img src="img/icons/down-arrow.svg" class="visible"  alt="Развернуть"></span></a>
+                </div>
 
-        </div>        
-</header>
+            </div>        
+    </header> -->
 <!-- END HEADER -->
+
+<!-- Top menu -->
+<header id="header">
+    <div class="block-header-top" >
+        <div class="center">       
+            <a href="">ТОП 100 АНИМЕ</a>
+            <a href="">ТОП 100 МАНГИ</a>
+        </div>
+    </div>
+	<div class="center-header">
+		<div class="logo">
+			<!-- <a href="index.html"><img src="" alt="Логотип"></a> -->
+				<a href="">АНИМЕ</a>
+		</div>
+		<div class="search">
+			<form action="">
+				<input type="text" placeholder="Аниме, манга ...">
+			</form>
+			<div class="result-search">
+				<p><a href="">Показать все результаты</a></p>
+				<a href="">Наруто</a>
+				<a href="">Sao</a>
+			</div>
+		</div>
+		<div class="user-info-block">
+			<div class="user-avatar-login">
+				<img src="img/users/nezuko.jpg" alt="Nero">
+				<a href="">Rahman</a>
+			</div>
+			<!-- <a href="" data-title="" class="not-auth-user">Вход</a>
+			<a href="" data-title="" class="not-auth-user">Регистрация</a> -->
+			<div class="user-panel-links">
+				<a href="" data-title=""><span><img src="img/header/bell.svg" alt="Уведомление"></span></a>
+				<a href="" data-title=""><span><img src="img/header/heart.svg" alt="Уведомление"></span></a>
+					<a href=""><span><img src="img/header/messenger.svg" alt="Сообщение"></span></a>
+				<a href=""><span><img src="img/header/down-arrow.svg" alt="Развернуть"></span></a>
+				<!-- Модальное окно  -->
+				<div class="modal-info-user">
+					<div class="block-info-modal">
+						<img src="img/users/nezuko.jpg" alt="Nero">
+							<a href="">Nero</a><br>
+						<small>Посмотреть профиль</small>
+					</div>
+				    	<hr size="1" color="#393A3B">
+							<a href=""><img src="img/header/friends.svg">Друзья</a>
+								<a href=""><img src="img/header/settings.svg">Редактировать профиль</a>
+				    		<a href=""><img src="img/header/messenger.svg">Cообщение</a>
+				      	<hr size="1" color="#393A3B">
+				    <a href=""><img src="img/header/logout.svg" >Выйти</a>
+				</div>
+				<!-- Конец модального окна  -->
+			</div>
+		</div>
+	</div>
+</header>
+<!-- end top menu -->
 
 
 
