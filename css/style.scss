@@ -440,7 +440,7 @@ body {
 
 .content-section{
 	position: relative;
-	width: 1140px;
+	max-width: 1140px;
 	background-image: url(../img/registration/decor-min.png);
 	background-position: center;
 	background-size: cover;
@@ -901,4 +901,21 @@ aside {
 	.block-header-top{display: none;}
 	.header__style_line {display: none;}
 	.header-open-block {display: none;}
+		
+	#main {
+		display: block;
+	}
+	.content-section{ 
+		background: transparent;
+		max-width: 1140px;
+		padding: 55px 0px;
+		margin: 0;
+	}
+
+	.block_release{display: block;}
+	.block_info_release{
+		margin-top: 50px;
+		width: 100%!important;
+	}
+
 }
