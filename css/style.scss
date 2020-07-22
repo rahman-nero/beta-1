@@ -465,9 +465,19 @@ body {
 		// Описание этого блока - крч тайтл в блоке
 		.release__header{
 			padding: 19px;
+			position: relative;
 			font-size: 20px;	
 			border-bottom: 1px solid #0D0D0D;
 			background-color: #111111;
+			& img {
+				float: left;
+				margin-top: 3px;
+				margin-right: 10px;
+			}
+			.magic_effect_img{
+				left: 21px;
+				margin-top: 2px;
+			}
 		}
 		// блок в котором находится - аниме и т.п
 		.block_release_content{
@@ -514,13 +524,17 @@ body {
 	position: relative;
 	margin: 20px 0px;
 	min-width: 100%;
-	height: 300px;
 	article {
+		display: inline-block;
+		margin: 0px 19px 20px 0px;
 		width: 197px;
+		background: #111;
+		padding-bottom: 10px;
+		overflow: hidden;
 		.img {
 			position: relative;
-			width: 197px;
-			height: 290px;
+			width: 100%;
+			height: 285px;
 			background: #0F0F0F;
 			& img {
 				width: 100%;
@@ -529,10 +543,12 @@ body {
 		}
 		.title_anime, small{
 			position: relative;
-			margin: 10px 5px 0px ;
+			margin: 10px 0px 0px 10px;
+			font-size: 15px;
 		}
 
 		small {
+			font-size: 13px;
 			color: rgba(255,255,255,.5);
 		}
 	}
@@ -562,14 +578,7 @@ aside {
                  font-family: Roboto;
                  font-size: 14px;
                  color: $textColor;
-                 .main_img_icon{
-                     width: 25px;
-                     float: left;
-                     margin-right: 9px;
-                     z-index: 9;
-                     margin-top: -4px;
-                 		filter: blur(2px);
-                 }
+                 
 
                  &::after{
                      content: '';
@@ -593,22 +602,35 @@ aside {
                      }
                  }
 
-                 .magic_effect_img{
-	                 	position: absolute;
-	                 	filter: blur(0px);
-	                 	z-index: 1;
-	                 	margin-top: -2px;
-	                 	left: 24px;
-	                 	& img{
-	                 		width: 21px;
-	                 	}
-                 }
+                
              }
          }
      }
 
 }
 /*  Правое меню */
+
+// красивое оформление иконок 
+.main_img_icon{
+   width: 25px;
+   float: left;
+   margin-right: 9px;
+   z-index: 9;
+   margin-top: -4px;
+		filter: blur(2px);
+}
+
+// красивое оформление иконок  (с ним)
+.magic_effect_img{
+  	position: absolute;
+  	filter: blur(0px);
+  	z-index: 1;
+  	margin-top: -2px;
+  	left: 24px;
+  	& img{
+  		width: 21px;
+  	}
+}
 
 /* Чат во меню */
 .chat{
