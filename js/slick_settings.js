@@ -5,8 +5,9 @@ if (screen.availWidth < 1000) {
         variableWidth: true,
         slidesToScroll:1,   
         centerMode: true,
+        lazyLoad : 'ondemand',
         prevArrow: '<div class="prev"><img src="img/slider/left.svg"></div>',
-        nextArrow : '<div class="next"><img src="img/slider/right.svg"></div>'
+        nextArrow : '<div class="next"><img src="img/slider/right.svg"></div>',
 
       });
 
