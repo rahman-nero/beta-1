@@ -761,7 +761,6 @@ aside {
 		}
 
 	}
-
 	.slick-slader{margin-top: 0; padding: 80px 10px 40px;}
 
 	.mobile_menu{
@@ -782,8 +781,11 @@ aside {
 
 		 }
 	}
-	
-	#aside{
+	aside{
 		display: none;
 	}
+
+	.block-header-top{display: none;}
+	.header__style_line {display: none;}
+	.header-open-block {display: none;}
 }
