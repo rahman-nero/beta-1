@@ -1,7 +1,7 @@
 /* $VARIABLE */
 $textColor : rgba(228, 230, 235,1);
 $buttonColor : #2D88FF;
-$backColor : #18191A;
+$backColor : #141314;
 $twoColor : #202122;
 
 /* #3F4243 - цвет иконок*/
@@ -432,9 +432,8 @@ body {
 #main{
 	position: relative;
 	max-width: 1500px;
-	padding: 10px;
-	margin: -10px auto 0;
-	/*background: #000*/
+	padding:0px 10px;
+	margin: 0px auto 0px;
 	display: flex;
 	height: 100%!important;
 }
@@ -446,9 +445,59 @@ body {
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	margin:50px 30px 10px 10px;
-	/*background:#ddd; */
+	padding: 55px 20px;
+	margin:0px 30px 0px 0px;
 }
+
+.block_release{
+	min-width: 100%;
+	display: flex;
+	margin: 20px 0px 80px;
+
+	.block_info_release {
+		width: 350px;
+		margin-right: 20px;
+		.release__header{
+			padding: 19px;
+			font-size: 22px;	
+			border-bottom: 1px solid #0D0D0D;
+			background-color: #111111;
+		}
+
+		.block_release_content{
+			position: relative;
+			background: #0F0F0F;
+			.anime{
+				padding: 10px;
+				& img{
+					width: 30px;
+					border-radius: 50%;
+				}
+			}
+		}
+
+	}
+
+}
+
+
+
+// Название блока - крч смотри в коде
+.section__title{
+	position: relative;
+	font-size: 22px;
+}
+
+.block_anime{
+	position: relative;
+	margin: 20px 0px;
+	min-width: 100%;
+	background: #1F1F1F;
+	height: 300px;
+}
+
+
+
 
 /*  Правое меню */
 aside {
