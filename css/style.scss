@@ -122,7 +122,7 @@ body {
 
 	/* Иконка поиск */
 	&::before{
-		background-image: url(../img/header/search.svg);
+		background-image: url('../img/header/search.svg');
 		content: ""; 
 	    background-size: 17px 17px; 
 	    width: 17px; 
@@ -346,8 +346,8 @@ body {
 /* Slick - Слайдер */
 .slick-slader{
 	position: relative;
-	/*background: #212121;*/
-	background-image: url(../img/slider/back.jpg);
+	background: #212121;
+	// background-image: url(../img/slider/back.jpg);
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
