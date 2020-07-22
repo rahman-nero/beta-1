@@ -449,24 +449,27 @@ body {
 	margin:0px 30px 0px 0px;
 }
 
+// первые три блока, с датами выхода и тп 
 .block_release{
 	min-width: 100%;
 	display: flex;
 	margin: 20px 0px 80px;
-
+	// Три блока
 	.block_info_release {
 		width: 350px;
 		margin-right: 20px;
+		// Описание этого блока - крч тайтл в блоке
 		.release__header{
 			padding: 19px;
 			font-size: 22px;	
 			border-bottom: 1px solid #0D0D0D;
 			background-color: #111111;
 		}
-
+		// блок в котором находится - аниме и т.п
 		.block_release_content{
 			position: relative;
 			background: #0F0F0F;
+			// сами аниме в блоке
 			.anime{
 				padding: 10px;
 				& img{
