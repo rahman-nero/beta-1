@@ -1,0 +1,844 @@
+/* $VARIABLE */
+$textColor : rgba(228, 230, 235,1);
+$buttonColor : #2D88FF;
+$backColor : #0F0F0F;
+$twoColor :#111111;
+
+/* #3F4243 - цвет иконок*/
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    outline: none;
+    &::selection{
+        color: black;
+        background: red;
+    }
+}
+
+
+@font-face {
+    font-family: Segoe Ui; /* Имя шрифта */
+    src: url(../fonts/segoe_ui_historic.ttf); /* Путь к файлу со шрифтом */
+}
+
+/* Оформления ползунка */
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #242526;
+}
+
+::-webkit-scrollbar-thumb {
+    
+    background-color: #212121;
+}
+
+::-moz-scrollbar {
+    width: 8px;
+    background-color: rgba(0, 0, 0, .0);
+}
+
+::-moz-scrollbar-thumb {
+  background: linear-gradient(0deg, #ff0000, #ff9000);
+}
+
+a {text-decoration: none; color:$textColor;}
+
+body {
+    font-family: Segoe Ui, Roboto, Arial , sans-serif;
+    background-color:$backColor;
+    font-weight: 500;
+    color:$textColor; 
+}
+
+
+
+/* top header - menu*/
+#header{
+	position: fixed;
+	top: 0;
+	width: 100%!important;
+	background: $twoColor;
+	z-index: 2;
+	/*padding: 16px;*/
+	box-shadow: 0px 3px 10px rgba(40,40,40,.04);
+	border-bottom: 1px solid #2C2E2F;
+}
+
+.block-header-top{ 
+	position: relative;
+	padding: 14px 10px;
+	background: #131313;
+	.center{
+		padding: 0px 15px;
+		text-align: right;
+		margin: auto;
+		max-width: 1400px;
+	}
+	a{ 
+		font-family: Roboto;
+		font-size: 13px;
+		margin: 0px 5px;
+		letter-spacing: -0.3px;
+		color: #DBDDE2;
+		font-weight: bold;
+	}
+}
+
+
+/* Выравнивания меню по центру */
+.center-header{
+	display: flex;
+	position: relative;
+	max-width:1400px;
+    align-items: center;
+	padding: 15px;
+	margin: auto;
+}
+
+/* Логотип */
+.logo{
+	flex: 1;
+	font-size: 14px;
+	letter-spacing: .4px;
+}
+/* Конец логотипа*/
+
+/* Поиск */
+.search{
+	flex: 3;
+	position: relative;
+	text-align: center;
+	input {
+		position: relative;
+		background: #151515;
+		border: 1px solid #0D0D0D;
+		width: 576px;
+		border-radius: 3px;
+		color: $textColor;
+		// border: none;
+		padding: 11px 20px 9px 40px;
+	}	
+
+	/* Иконка поиск */
+	&::before{
+		background-image: url('../img/header/search.svg');
+		content: ""; 
+	    background-size: 17px 17px; 
+	    width: 17px; 
+	    z-index: 9;
+	    height: 17px; 
+	    background-repeat: no-repeat; 
+	    margin-left: -276px;
+	     
+	     /*left: 112px;*/
+	    margin-top: 10px; 
+	    position: absolute;
+	}
+
+	/* Блок в котором будут показыватся результаты паиска */
+	.result-search{
+		position: absolute;
+		background: $twoColor;
+		display:none; 
+		font-size: 12px;
+		width: 576px;
+		text-align: left;
+		transform: translate(-50%);
+		left: 50%;
+		p { 
+			padding: 9px 20px;
+			font-style: italic;
+			background: #28292A;
+			box-shadow: 0px 0px 2px rgba(25,25,25,.4);
+		}
+
+		& a:not(:first-child){
+			background: $twoColor;
+			padding: 6px 20px;
+			display: block;
+			&:hover{
+				background-color:#28292A;
+				transition-duration: 800ms;
+			}
+		}
+
+	}
+}
+/* Конец поиска*/
+
+/* иконки входа, и т.д в конце верхнего меню */
+.user-info-block{
+	/*background: #111;*/
+	flex: 1.3;
+    display:flex;
+    position: relative;
+    align-items:center;
+    cursor: pointer;
+    justify-content: flex-end;
+
+    /* Это ссылки которые показываются когда пользователь не авторизован */
+	.not-auth-user{
+		margin: 0px 0px;
+		font-weight: 500;
+		font-size: 14px;
+		padding: 6px 25px;
+		border-radius: 2px;
+
+		&:hover{ 
+			&:first-child{background-color:$buttonColor;}
+			background: #1C1D1E;
+			transition-duration: 500ms;
+		}
+	}
+
+	/* Фото пользователя и его логин */
+	.user-avatar-login{
+		margin-right: 10px;
+		position: relative;
+		padding: 4px 10px 4px 6px;
+		border-radius: 30px;
+		display: inline-flex;
+		line-height: 31px;
+		a { 
+			font-size: 14px;
+			font-weight: 500;
+		}
+		& img{
+			width: 30px;
+			margin-right: 5px;
+			border-radius: 50%;
+		}
+
+		&:hover{ 
+			transition-duration: 500ms;
+			background: $buttonColor;
+		}
+	}
+
+	/* Ссылки в кругу */
+	.user-panel-links{
+		position: relative;
+		a {
+			display: inline-flex;
+			& span{
+                padding:10px;
+                background-color: #1A1A1A;
+                border-radius: 50%;
+                position: relative;
+                display: flex;
+                margin-right: 2px;
+                z-index: 1;
+
+                & img{
+                    align-items: center;
+                    justify-content: center;
+                    width: 18px;
+                    z-index: 2;
+                    height: 18px;
+                }
+            }
+
+            &:hover span{ 
+				transition-duration: 500ms;
+				background: $buttonColor;
+            }
+        }
+
+	}
+}
+/* Конец иконки входа, и т.д в конце верхнего меню  */
+
+/* Стилизация меню - блок в низу оформление крч как в opera gx  */
+.header-open-block{
+	position: absolute;
+	bottom: -8px;
+	width: 46px;
+	height: 8px;
+	background: #2B92CA;
+	left: 50%;
+	box-shadow: 0px 0px 5px  #2B92CA;
+	transform:translate(-50%,0%);
+	cursor: pointer;
+	&::before, &::after{
+		content: '';
+		position: absolute;
+		left: -8px;
+		border: 8px solid transparent; border-top: 8px solid #2B92CA;
+	}
+	&::after{right: -8px}
+}
+
+// line-bottom on header
+.header__style_line, .article__line{
+	position: absolute;
+	bottom: 0px;
+	min-width: 100%;
+	height: 1.5px;
+	left: 0;
+	background: linear-gradient(to left, $twoColor, $buttonColor, $twoColor);
+}
+
+
+
+
+/* end top header - menu*/
+
+.mobile_menu{display: none}
+
+
+/* Модальное окно в верхнем меню */
+.modal-info-user{
+	display: none;
+	position: absolute;
+	width: 243px;
+	right: 0;
+	margin-right: 8px;
+	border-radius: 9px;
+	border: 1px solid #2C2E2F;
+	margin-top: 8px;
+	box-shadow: 0px 0px 3px rgba(0,0,0,0.1);
+	background: #202122;
+	padding: 8px;
+
+	.block-info-modal{
+		position: relative;
+		border-radius: 10px;
+		padding: 4px;
+		margin-bottom: 5px;
+		a {font-size: 14px}	
+		& img { 
+			width: 42px;
+			float: left;
+			margin-right: 10px;
+			border-radius: 50%;
+		}
+
+		&:hover{
+			background: #2F3234;
+			transition-duration: 500ms;
+		}
+	}
+	
+	.block-info-modal + hr + a{margin-top: 9px}
+
+	.block-info-modal ~ a{
+		padding: 9px 8px;
+		display: block!important;
+		margin: 5px 0px;
+		border-radius: 5px;
+		font-size: 15px;
+		font-family:Roboto;
+
+		& img { 
+			width: 18px;
+			float: left;
+			margin-right: 10px;
+
+		}	
+		&:hover {
+			background: #2F3234;
+			transition-duration: 500ms;
+		}
+	}
+}
+
+/* Slick - Слайдер */
+.slick-slader{
+	position: relative;
+	background: #212121;
+	// background-image: url(../img/slider/back.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-top: 119px;
+	font-family: Roboto;
+	padding: 25px 10px;
+	font-weight: normal;
+	border-bottom: 2px solid $buttonColor;
+	
+	/* Черная пленка над фоном слайдера */
+	&::before{
+		content:"";
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,.7);
+		top: 0;
+		left: 0;
+		position: absolute;
+	}
+
+	section.slider{
+		max-width: 1500px;
+		overflow-y: auto;
+		margin: 0px auto 0;
+		.slick-list{padding: 15px 0}
+
+		div{
+			margin: 0px 5px;
+			text-align:center;
+			& img{
+				width: 180px;
+				border-radius: 10px;
+				height: 274px;
+				transition: all 300ms;
+				
+				&:hover{
+					transform:scale(1.03);
+				}
+			}
+
+			.slider-block-title{
+				display: block;
+				margin: 10px 5px 3px;
+				font-size: 14px;
+				font-weight: bold;
+			}
+
+			small{
+				// display: none;
+				margin-left: 5px;
+			}
+		}
+	}
+	
+	/* Кнопки */
+	.prev, .next{
+		background: rgba(0,0,0,.7);
+		position: absolute;
+		cursor:pointer;
+		padding: 25px 7px;
+		text-align: center;
+		transform: translate(-50%, -50%);
+		top: 47%;
+		z-index: 1;
+		& img{
+			width: 27px!important;
+			height: 27px!important;
+		}
+
+		&:hover{
+			background: rgba(0,0,0,.9);
+		}
+	}
+
+	.prev{left: 27px}
+	.next{right: -20px}
+
+}
+/* конец slick - Слайдера */
+
+/* Контейнер где находятся меню и контент */
+#main{
+	position: relative;
+	max-width: 1500px;
+	padding:0px 10px;
+	margin: 0px auto 0px;
+	display: flex;
+	height: 100%!important;
+}
+
+.content-section{
+	position: relative;
+	width: 1140px;
+	background-image: url(../img/registration/decor-min.png);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 55px 20px;
+	margin:0px 30px 0px 0px;
+}
+
+// первые три блока, с датами выхода и тп 
+.block_release{
+	min-width: 100%;
+	display: flex;
+	margin: 20px 0px 80px;
+	// Три блока
+	.block_info_release {
+		width: 350px;
+		margin-right: 20px;
+		// Описание этого блока - крч тайтл в блоке
+		.release__header{
+			padding: 19px;
+			font-size: 22px;	
+			border-bottom: 1px solid #0D0D0D;
+			background-color: #111111;
+		}
+		// блок в котором находится - аниме и т.п
+		.block_release_content{
+			position: relative;
+			background: #0F0F0F;
+			// сами аниме в блоке
+			.anime{
+				padding: 10px;
+				& img{
+					width: 30px;
+					border-radius: 50%;
+				}
+			}
+		}
+
+	}
+
+}
+
+
+
+// Название блока - крч смотри в коде
+.section__title{
+	position: relative;
+	font-size: 22px;
+}
+
+.block_anime{
+	position: relative;
+	margin: 20px 0px;
+	min-width: 100%;
+	background: #1F1F1F;
+	height: 300px;
+}
+
+
+
+
+/*  Правое меню */
+aside {
+     color: $textColor;
+     position: relative;
+     box-shadow: 0px 0px 5px  rgba(0,0,0,.2);
+     float: left;
+     min-width: 320px;
+     max-width: 320px;
+     background-color: #111111;
+
+     /* Ссылки в меню */
+     #menu{
+    		background: #141414;
+         margin: 50px 0px;
+         ul{
+             list-style: none;
+             li{ 
+                 padding: 14px 15px 14px 22px;
+                 font-family: Roboto;
+                 font-size: 14px;
+                 color: $textColor;
+                 .main_img_icon{
+                     width: 25px;
+                     float: left;
+                     margin-right: 9px;
+                     z-index: 9;
+                     margin-top: -4px;
+                 		filter: blur(2px);
+                 }
+
+                 &::after{
+                     content: '';
+                     width: 11px;
+                     height: 11px;
+                     background:#191A1B;
+                     border-radius: 50%;
+                     position: absolute;
+                     right: 20px;
+                 }
+                 &:hover{
+                     background:#1A1A1A;
+                     &:after{
+                         background-color:$buttonColor;
+                         box-shadow: 0px 0px 10px rgba(0,0,0,.3);
+                         transition-duration: 700ms;
+                     }
+                     .main_img_icon{
+                      	transition-duration: 700ms;
+                     	filter:blur(1px);
+                     }
+                 }
+
+                 .magic_effect_img{
+	                 	position: absolute;
+	                 	filter: blur(0px);
+	                 	z-index: 1;
+	                 	margin-top: -2px;
+	                 	left: 24px;
+	                 	& img{
+	                 		width: 21px;
+	                 	}
+                 }
+             }
+         }
+     }
+
+}
+/*  Правое меню */
+
+/* Чат во меню */
+.chat{
+    position: relative;
+    padding: 20px 10px;
+    margin: 10px 0px;
+    display: block;
+    width: 100%;
+    background: #141414;
+
+    span:first-child{
+        font-size:18px;
+        color:$textColor;
+        margin-left: 10px;
+        & img{
+            width: 20px;
+            height: 20px;
+            position: relative;
+            top: 3px;
+            margin-right: 10px;
+        }
+    }
+
+    .loading_chat{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        height: 100%;
+        z-index: 99;
+        margin: 0px -10px;
+        background: #212223;
+        .centerLoading{
+            width: 200px;
+            padding: 10px;
+            transform: translate(-50%,-50%);
+            top: 50%;
+            left: 50%;
+            display: block;
+            text-align: center;
+            position: relative;
+            & img{width: 100px;}
+
+            .load_circle{
+            width: 50px;
+            height: 50px;
+            position: relative;
+            /*background-color: #000;*/
+            margin: 10px auto;
+            border-radius: 50%;
+            display:block;
+            /*top: 55%;*/
+            /*left: 36%;*/
+            border-left: 3px solid $buttonColor;
+            border-top: 3px solid transparent;
+            border-bottom: 3px solid $buttonColor;
+            border-right: 3px solid $buttonColor;
+            /*transform: translate(0%, 0%);*/
+
+            animation-name: loads;
+                animation-duration: 1s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+            }
+
+        }
+    }
+
+    .message_block{
+        position: relative;
+        overflow: auto;
+        height: 450px;
+        margin-top: 15px;
+        .message{
+            margin: 10px 10px 15px;
+            word-break: break-all;
+            padding-bottom: 5px;
+            display: flex;
+            border-bottom: 1px dashed $buttonColor;
+            .img_author_chat{
+                width: 40px;
+                height: 40px;
+                margin-right: 12px;
+            & img{
+                width: 40px;
+                height:40px;
+                border-radius: 4px;
+                }
+            }
+
+            .text_message{
+                color: $textColor;
+                max-width: 100%;
+                display: block;
+                .data_public{
+                    position: absolute;
+                    font-size: 13px;
+                    font-weight: normal;
+                    right: 15px;
+                }
+                .author{
+                    font-size: 12px;
+                    color: #FF4437;
+                }
+                .text{
+                    position: relative;
+                    font-weight: normal;
+                    font-size: 13px;
+                    margin-top: 4px;
+                    /*font-family: roboto;*/
+                    & img{
+                        position: relative;
+                        width: 30px;
+                        height: 30px;
+                    }
+
+                }
+            }
+        
+        }
+
+
+    }
+
+    .form_send{
+        position: relative;       
+        width: 100%;
+        left: 0;
+        
+        .block_input{
+            /*flex: 1;*/
+            margin: 20px 0px 0px;
+            display: flex;
+            input{
+                width: 270px;
+                background-color: #292B2C;
+                box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,.2);
+                padding: 8px 29px 8px 9px;
+                color: $textColor;
+                border: 1px solid $buttonColor;
+            }
+            .smile_icon{
+                position: absolute;
+                right:46px;
+                bottom: 3px;
+                img{
+                    width: 20px;
+                    height: 20px;
+                    cursor: pointer;
+                }
+                :hover{
+                transform: rotate(360deg);
+                transition-duration: 1s;
+                }
+            }
+
+            .send_button{
+                margin-left: 10px;
+                cursor: pointer;
+                img{
+                    width: 30px;
+                    position: relative;
+                    top: 2px;
+
+                }
+            }
+        }
+
+        /* Блок который показывается коглда кликаешь на иконку смаилики  */
+        .smiles_all{
+            position: absolute;
+            right:40px;
+            top: -110px;
+            width: 230px;
+            height: 100px;
+            display: none;
+
+            /*overflow: auto;*/
+            overflow-y: auto;
+            background-color: #222;
+            padding: 10px 5px;
+            border-radius: 6px;
+            border: 1px solid #393A3B;
+            box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+            & img {
+                width: 25px;
+                height: 25px;
+                margin: 0px 3px;
+                cursor: pointer;
+                float: left;
+
+            &:hover{
+                    background-color:#191919;
+                    border-radius: 5px;
+                    transition-duration: 500ms;
+                }
+            }
+
+        }
+
+    }
+}
+
+
+
+/* конец - контейнер где находятся меню и контент */
+
+/* Animation */
+
+/* Загрузка чата */
+@keyframes loads{
+    100%{transform: rotate(360deg);}
+}
+/* Animation */
+
+
+
+@media (max-width: 1020px) {
+
+	#header{
+		.block-header-top{display: none;}
+		background: transparent;
+		border: none;
+		padding: 0;
+		.center-header{
+			padding: 10px ;
+			.logo{display: none;}
+			.search{
+				flex: 2;
+				input {
+					width: 100%;
+					background: #1D1E1F;
+					font-family:Roboto;
+					padding-top:12px;
+					font-size: 15px; 
+					padding-bottom:12px; 
+				}	
+				&::before{margin-left: 0;left: 13px; margin-top: 12px;}
+				.result-search{width: 100%;}
+			}
+			.user-info-block{display: none;}
+		}
+
+	}
+	.slick-slader{margin-top: 0; padding: 80px 10px 40px;}
+
+	.mobile_menu{
+		position: fixed;
+		width: 100%!important;
+		background: rgba(32,33,34,.7);
+		z-index: 2;
+		bottom: 0px;
+		text-align: center;
+		display: flex;
+	 	& a { 
+	 		width: 25%; 
+	 		padding: 10px;
+			& img{
+				width: 25px;
+				height: 25px;
+			}
+
+		 }
+	}
+	aside{
+		display: none;
+	}
+
+	.block-header-top{display: none;}
+	.header__style_line {display: none;}
+	.header-open-block {display: none;}
+}
