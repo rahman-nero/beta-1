@@ -454,10 +454,14 @@ body {
 	min-width: 100%;
 	display: flex;
 	margin: 20px 0px 80px;
+
 	// Три блока
 	.block_info_release {
 		width: 350px;
+		border: 1px solid #0D0D0D;
 		margin-right: 20px;
+		background: #0F0F0F;
+
 		// Описание этого блока - крч тайтл в блоке
 		.release__header{
 			padding: 19px;
@@ -468,13 +472,26 @@ body {
 		// блок в котором находится - аниме и т.п
 		.block_release_content{
 			position: relative;
-			background: #0F0F0F;
+
 			// сами аниме в блоке
 			.anime{
-				padding: 10px;
+				padding: 15px;
+				// margin: 20px 0px;
+				display: flex;
 				& img{
-					width: 30px;
+					width: 35px;
+					height: 35px;
 					border-radius: 50%;
+				}
+				div {
+					margin-left: 10px;
+					margin-top: -3px;
+					width: 100%;
+					// background: #111;
+					small{
+						display: block;
+						color:rgba(255,255,255,.5);
+					}
 				}
 			}
 		}
