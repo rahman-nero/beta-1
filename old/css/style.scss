@@ -533,12 +533,7 @@ body {
     margin: 10px 0px;
     display: block;
     width: 100%;
-    /*max-width: 20px;*/
     background: #1E1F20;
-    word-wrap: break-word;
-    /*height: 529px;*/
-
-
 
     span:first-child{
         font-size:18px;
@@ -552,7 +547,7 @@ body {
             margin-right: 10px;
         }
     }
-
+    // Загружечный круг
     .loading_chat{
         position: absolute;
         width: 100%;
@@ -598,32 +593,32 @@ body {
 
         }
 
-
     }
-
+    // Блок в котором находятся сообщения
     .message_block{
         position: relative;
         overflow: auto;
         height: 450px;
         margin-top: 15px;
+        // Сами сообщения
         .message{
             margin: 10px 10px 15px;
             word-break: break-all;
             padding-bottom: 5px;
             display: flex;
             border-bottom: 1px dashed $bColor;
+            // Изображения отправившего
             .img_author_chat{
-                /*background: #000;*/
                 width: 40px;
                 height: 40px;
                 margin-right: 12px;
-            & img{
-                width: 40px;
-                height:40px;
-                border-radius: 4px;
+                 & img{
+                    width: 40px;
+                    height:40px;
+                    border-radius: 4px;
                 }
             }
-
+            // Текст собщения
             .text_message{
                 color: $tColor;
                 max-width: 100%;
@@ -649,7 +644,6 @@ body {
                         width: 30px;
                         height: 30px;
                     }
-
                 }
             }
         
@@ -657,14 +651,13 @@ body {
 
 
     }
-
-    .form_send{
+    // Форма отправки сообщения
+    .form_send{ 
         position: relative;       
         width: 100%;
         left: 0;
         
         .block_input{
-            /*flex: 1;*/
             margin: 20px 0px 0px;
             display: flex;
             input{
@@ -684,9 +677,9 @@ body {
                     height: 20px;
                     cursor: pointer;
                 }
-                :hover{
-                transform: rotate(360deg);
-                transition-duration: 1s;
+                &:hover{
+                    transform: rotate(360deg);
+                    transition-duration: 1s;
                 }
             }
 
