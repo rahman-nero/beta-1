@@ -20,6 +20,7 @@ $twoColor : #202122;
 @font-face {
     font-family: Segoe Ui; /* Имя шрифта */
     src: url(../fonts/segoe_ui_historic.ttf); /* Путь к файлу со шрифтом */
+    font-display: swap;
 }
 
 /* Оформления ползунка */
