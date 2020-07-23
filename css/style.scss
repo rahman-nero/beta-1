@@ -458,17 +458,17 @@ body {
 	// Три блока
 	.block_info_release {
 		width: 350px;
-		border: 1px solid #0D0D0D;
+		border: 1px solid #151515;
 		margin-right: 20px;
-		background: #0F0F0F;
+		background: #222324;
 
 		// Описание этого блока - крч тайтл в блоке
 		.release__header{
 			padding: 19px;
 			position: relative;
 			font-size: 20px;	
-			border-bottom: 1px solid #0D0D0D;
-			background-color: #111111;
+			border-bottom: 1px solid #151515;
+			background-color: #222324;
 			& img {
 				float: left;
 				margin-top: 3px;
@@ -504,7 +504,7 @@ body {
 				}
 
 				&:hover{
-					background: #111111;
+               background:#1A1A1A;
 				}
 			}
 		}
