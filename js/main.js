@@ -5,7 +5,7 @@ if (screen.availWidth > 1200) {
 			$('.block-header-top').hide(200);
 		else if ($(window).scrollTop() <= 150)
 			$('.block-header-top').show(200);
-	});
+	},  {passive: true});
 }
 
 // Загрузка чата
