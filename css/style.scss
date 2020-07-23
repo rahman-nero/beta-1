@@ -524,6 +524,7 @@ body {
 	position: relative;
 	margin: 20px 0px;
 	min-width: 100%;
+	// Аниме блоки
 	article {
 		display: inline-block;
 		margin: 0px 19px 20px 0px;
@@ -532,7 +533,7 @@ body {
 		background: #111;
 		padding-bottom: 10px;
 		position: relative;
-		overflow: hidden;
+		// overflow: hidden;
 		.img {
 			position: relative;
 			width: 100%;
@@ -613,8 +614,66 @@ body {
 				 }
 			}
 		}
+
+
 	}
 }
+
+
+// Просмотров аниме 
+.watch{
+ 	position: absolute;
+ 	right:-6px;
+ 	top: 6px;
+ 	z-index: 2;
+ 	font-size: 14px;
+ 	background: $buttonColor;
+ 	padding: 3px 9px;
+ 	& img {
+ 		width: 18px;
+ 		float: left;
+ 		margin-right: 5px;
+ 	}
+ 	&:after{
+ 		content: '';
+ 		right:0px;
+ 		position: absolute;
+ 		bottom: -5px;
+ 		border: 3px solid transparent;
+ 		// border-left: 5px solid #000;
+ 		border-left:3px solid $buttonColor;
+ 		border-top: 3px solid $buttonColor;
+ 	}
+}
+
+// Рейтинг аниме 
+.raiting{
+	left: -6px;	
+	display: none;
+	position: absolute;
+ 	top: 6px;
+ 	z-index: 2;
+ 	font-size: 14px;
+ 	background: #FF4F19;
+ 	padding: 3px 9px;
+ 	& img {
+ 		width: 18px;
+ 		float: left;
+ 		margin-right: 5px;
+ 	}
+
+ 	&:after{
+ 		content: '';
+ 		left:0px;
+ 		position: absolute;
+ 		bottom: -5px;
+ 		border: 3px solid transparent;
+ 		// border-left: 5px solid #000;
+ 		border-right:3px solid #FF4F19;
+ 		border-top: 3px solid #FF4F19;
+ 	}
+}
+
 
 
 
@@ -979,5 +1038,7 @@ aside {
 		margin-top: 50px;
 		width: 100%!important;
 	}
+
+	.rainting{display:block;}
 
 }
