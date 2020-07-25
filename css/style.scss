@@ -616,6 +616,7 @@ body {
 	}
 }
 
+// Блок в котором манга
 
 // Просмотров аниме 
 .watch{
@@ -1036,10 +1037,11 @@ aside {
 		
 	#main {
 		display: block;
+		padding: 5px 5px;
 	}
 	.content-section{ 
 		max-width: 1140px;
-		padding: 55px 0px;
+		padding: 0px 0px;
 		margin: 0;
 		background: transparent;
 	}
@@ -1053,12 +1055,14 @@ aside {
 	.raiting{display:block;}
 
 	.block_anime{
-
 		article {
-			width: 45%;
+			width: 45.2%;
 			margin: 0px 5px 20px;
 			.img{
-				height: 250px;
+				height: 220px;
+			}
+			.title_anime{
+				font-size: 13px;
 			}
 		}
 	}
