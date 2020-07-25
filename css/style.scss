@@ -61,8 +61,7 @@ body {
 	top: 0;
 	width: 100%!important;
 	background: $twoColor;
-	z-index: 2;
-	/*padding: 16px;*/
+	z-index: 99;
 	box-shadow: 0px 3px 10px rgba(40,40,40,.04);
 	border-bottom: 1px solid #2C2E2F;
 }
@@ -441,9 +440,7 @@ body {
 	position: relative;
 	max-width: 1140px;
 	background-image: url(../img/registration/decor-min.png);
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
+	background-size: contain;
 	padding: 55px 20px;
 	margin:0px 30px 0px 0px;
 }
@@ -674,6 +671,19 @@ body {
  	}
 }
 
+
+.button-all-view{
+	position: relative;
+	margin: 30px 0px;
+	text-align: center;
+	background: rgba(0,0,0,.3);
+	padding: 12px 6px;
+	border-radius: 2px;
+	&:hover{
+		background: rgba(0,0,0,.7);
+		transition-duration:800ms;
+	}
+}
 
 
 
@@ -1028,10 +1038,10 @@ aside {
 		display: block;
 	}
 	.content-section{ 
-		background: transparent;
 		max-width: 1140px;
 		padding: 55px 0px;
 		margin: 0;
+		background: transparent;
 	}
 
 	.block_release{display: block;}
@@ -1041,5 +1051,16 @@ aside {
 	}
 
 	.raiting{display:block;}
+
+	.block_anime{
+
+		article {
+			width: 45%;
+			margin: 0px 5px 20px;
+			.img{
+				height: 250px;
+			}
+		}
+	}
 
 }
