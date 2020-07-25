@@ -612,11 +612,41 @@ body {
 			}
 		}
 
-
+		// Статус аниме
+		.status{
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			background: #A631E1;
+			z-index: 19;
+			border-radius: 50%;
+			left: 15px;
+			top: 15px;
+			&:after{
+				content: '';
+				background:#A631E1;
+				border-radius: 50%;
+				left: 50%;
+				top: 50%;
+				transform:translate(-50%,-50%);
+				position: absolute;
+          	animation:status 3s ease-out 0s infinite backwards;
+				}
+		
+		}
 	}
 }
 
-// Блок в котором манга
+
+@keyframes status{
+	0%{
+		width: 0px;
+		height: 0px;
+	}
+
+	100% {width: 30px;height: 30px; opacity: 0;}
+
+}
 
 // Просмотров аниме 
 .watch{
@@ -1064,7 +1094,14 @@ aside {
 			.title_anime{
 				font-size: 13px;
 			}
+			.status{
+				top: 200px;
+				left: 90%!important;
+				transform:translate(-50%);
+			}
 		}
 	}
+
+
 
 }
