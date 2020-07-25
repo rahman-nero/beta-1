@@ -522,11 +522,11 @@ body {
 // Блок в котором аниме
 .block_anime{
 	position: relative;
-	margin: 20px 0px;
+	margin: 20px 0px 50px;
 	min-width: 100%;
 	// Аниме блоки
 	article {
-		display: inline-block;
+		display: inline-table;
 		margin: 0px 19px 20px 0px;
 		width: 197px;
 		cursor: pointer;
@@ -673,6 +673,7 @@ body {
  		border-top: 3px solid #FF4F19;
  	}
 }
+
 
 
 
