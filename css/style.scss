@@ -543,6 +543,52 @@ body {
 				transition: all 400ms;
 				height: 100%;
 			}
+
+				.hover__block{
+				position: absolute;
+				width: 100%;
+				height:100%;
+				transition: all 400ms;
+				z-index: 1;
+				opacity: 0;
+				background: rgba(15,15,15,.9);	
+				.bottom_text{
+					position: absolute;
+					width: 100%;
+					bottom: 0px;
+					padding: 25px;
+					// background: #000;
+					.bottom_text_rainting{
+						// font-weight: bold;
+						margin-bottom: 10px;
+						& img {
+							width: 20px;
+							height: 20px;
+							float: left;
+							margin-top: -1px;
+							margin-right: 6px;
+						}
+						& span{
+							font-family: Roboto;
+							font-weight: 500;
+							font-size: 18px;
+						}
+						.lines{
+							width: 100%;
+							margin-top: 2px;
+							height: 2px;
+		               background: linear-gradient(to left, $twoColor, $buttonColor);
+							z-index: 9;
+							display: block;
+						}
+					}
+					.year_category{
+						font-size: 14px;
+						// font-weight: bold;
+
+					}
+				}
+			}
 		}
 		.title_anime, small{
 			position: relative;
@@ -555,51 +601,7 @@ body {
 			color: rgba(255,255,255,.5);
 		}
 		// блок который показывается при наведение на аниме
-		.hover__block{
-			position: absolute;
-			width: 100%;
-			height:285px;
-			transition: all 400ms;
-			z-index: 1;
-			opacity: 0;
-			background: rgba(15,15,15,.9);	
-			.bottom_text{
-				position: absolute;
-				width: 100%;
-				bottom: 0px;
-				padding: 25px;
-				// background: #000;
-				.bottom_text_rainting{
-					// font-weight: bold;
-					margin-bottom: 10px;
-					& img {
-						width: 20px;
-						height: 20px;
-						float: left;
-						margin-top: -1px;
-						margin-right: 6px;
-					}
-					& span{
-						font-family: Roboto;
-						font-weight: 500;
-						font-size: 18px;
-					}
-					.lines{
-						width: 100%;
-						margin-top: 2px;
-						height: 2px;
-	               background: linear-gradient(to left, $twoColor, $buttonColor);
-						z-index: 9;
-						display: block;
-					}
-				}
-				.year_category{
-					font-size: 14px;
-					// font-weight: bold;
-
-				}
-			}
-		}
+		
 		
 		&:hover{
 			transition: all 300ms;
