@@ -264,7 +264,8 @@ body {
 		content: '';
 		position: absolute;
 		left: -8px;
-		border: 8px solid transparent; border-top: 8px solid #2B92CA;
+		border: 8px solid transparent; 
+		border-top: 8px solid #2B92CA;
 	}
 	&::after{right: -8px}
 }
@@ -996,7 +997,58 @@ aside {
     }
 }
 
+/* Footer */
+#footer{
+	position: relative;
+	min-width: 100%;
+	background: #1E1F20;
 
+	.header__style_line {	
+		bottom: -8px;
+		top: 1px;
+	}
+	.header-open-block {
+		bottom: -8px;
+		top: -6px;
+		&:before{
+		    left:-5px;
+		    top: -8px;
+		    border: 8px solid transparent;
+		    border-bottom: 8px solid #2B92CA;
+		}
+		&:after{ 
+		   top: -8px;
+			border: 8px solid transparent;
+		   border-bottom: 8px solid #2B92CA;
+		 }
+	}
+
+	.center__footer{
+		max-width: 1460px;
+		position: relative;
+		padding: 17px 0px 13px;
+		display: flex;
+		margin:0px auto;
+		& a{
+			margin: 0px 7px;
+			font-size: 14px;
+			color: rgba(255,255,255,.8);
+		}
+		.author{
+			position: absolute;
+			font-family: Roboto;
+			font-size: 13px;
+			right: 0px;
+			top: 20px;
+			color: rgba(255,255,255,.8);
+			& a{
+				color: rgba(255,255,255,.8);
+				font-size: 13px;
+			}
+		}
+	}
+}
+/* Footer */
 
 /* конец - контейнер где находятся меню и контент */
 
@@ -1006,12 +1058,19 @@ aside {
 @keyframes loads{
     100%{transform: rotate(360deg);}
 }
+
 /* Animation */
 
 
 
-@media (max-width: 1020px) {
 
+
+
+
+@media (max-width: 1020px) {
+	body{ // Чтобы фоотер норамльнор отображался
+    	margin-bottom: 49px;
+	}
 	#header{
 		.block-header-top{display: none;}
 		background: transparent;
@@ -1042,8 +1101,8 @@ aside {
 	.mobile_menu{
 		position: fixed;
 		width: 100%!important;
-		background: rgba(32,33,34,.7);
-		z-index: 2;
+		background: #1D1E1F;
+		z-index: 99;
 		bottom: 0px;
 		text-align: center;
 		display: flex;
@@ -1075,7 +1134,7 @@ aside {
 		margin: 0;
 		background: transparent;
 	}
-
+	
 	.block_release{display: block;}
 	.block_info_release{
 		margin-top: 50px;
@@ -1101,7 +1160,26 @@ aside {
 			}
 		}
 	}
+	
+	#footer {
+		.center__footer{
+			padding-left: 10px;
 
-
+			a{
+				display: none;
+			}
+			.author{
+				position: relative;
+				top: 0;
+					display: flex;
+				a{
+					display: block;
+					color:$buttonColor;
+					text-decoration: underline;
+					margin: 0px 0px 0px 5px;
+				}
+			}
+		}
+	}
 
 }
