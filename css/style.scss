@@ -1035,6 +1035,11 @@ aside {
 			margin: 0px 7px;
 			font-size: 14px;
 			color: rgba(255,255,255,.8);
+
+			&:hover{
+				color: white;
+				transition-duration:800ms;
+			}
 		}
 		.author{
 			position: absolute;
@@ -1075,7 +1080,7 @@ aside {
 	}
 	#header{
 		.block-header-top{display: none;}
-		background: transparent;
+		background: #1C1D1E;
 		border: none;
 		padding: 0;
 		.center-header{
@@ -1085,13 +1090,14 @@ aside {
 				flex: 2;
 				input {
 					width: 100%;
-					background: #1D1E1F;
+					background: #232324;
 					font-family:Roboto;
-					padding-top:12px;
+					padding-top:10px;
+					font-weight: thin;
 					font-size: 15px; 
-					padding-bottom:12px; 
+					padding-bottom:9px; 
 				}	
-				&::before{margin-left: 0;left: 13px; margin-top: 12px;}
+				&::before{margin-left: 0;left: 13px; margin-top: 10px;}
 				.result-search{width: 100%;}
 			}
 			.user-info-block{display: none;}
