@@ -14,3 +14,19 @@ if (screen.availWidth > 1200) {
 
 // Загрузка чата
 $('.loading_chat').fadeOut('slow');
+
+$('.up').on('click', function() {
+	$(window).scrollTop(0);
+});
+
+$('.modal_menu').on('click', (e) => {
+	e.preventDefault();
+	if ($('.mobile-modal').hasClass('open')) {
+		$('.mobile-modal').removeClass('open');
+		$('.modal_menu').html("<img src='img/icons2/close.svg'>");
+	} else {
+		$('.mobile-modal').addClass('open');
+		$('.modal_menu').html("<img src='img/header/menu.svg'>");
+	}
+
+});
