@@ -1057,6 +1057,19 @@ aside {
 }
 /* Footer */
 
+
+.up{
+	position: fixed;
+	bottom: 10px;
+	left: 10px;
+	width: 30px;
+	height: 30px;
+	background: #111;
+	border-radius: 5px;
+}
+
+
+
 /* конец - контейнер где находятся меню и контент */
 
 /* Animation */
@@ -1072,15 +1085,13 @@ aside {
 
 
 
-
-
 @media (max-width: 1020px) {
 	body{ // Чтобы фоотер норамльнор отображался
     	margin-bottom: 49px;
 	}
 	#header{
 		.block-header-top{display: none;}
-		background: #1C1D1E;
+		background: #1E1F20;
 		border: none;
 		padding: 0;
 		.center-header{
@@ -1090,7 +1101,7 @@ aside {
 				flex: 2;
 				input {
 					width: 100%;
-					background: #232324;
+					background: #262627;
 					font-family:Roboto;
 					padding-top:10px;
 					font-weight: thin;
