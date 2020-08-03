@@ -1143,6 +1143,10 @@ aside {
   margin-bottom: 10px;
 }
 
+.mobile-modal {
+  display: none;
+}
+
 /* конец - контейнер где находятся меню и контент */
 /* Animation */
 /* Загрузка чата */
