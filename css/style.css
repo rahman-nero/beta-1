@@ -755,8 +755,8 @@ aside {
   -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   float: left;
-  min-width: 320px;
-  max-width: 320px;
+  min-width: 335px;
+  max-width: 335px;
   background-color: #222324;
 }
 
@@ -819,44 +819,17 @@ aside {
           filter: blur(1px);
 }
 
-.vk_link {
-  margin-top: 50px;
-  padding: 15px;
-}
-.vk_link span:first-child {
-  position: relative;
+.aside__block__title {
   font-size: 18px;
-  display: block;
   color: #e4e6eb;
+  margin: 10px 0px;
 }
-.vk_link span:first-child img {
-  width: 22px;
-  margin-top: 1px;
-  float: left;
+.aside__block__title img {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 3px;
   margin-right: 10px;
-}
-
-/*  Правое меню */
-.main_img_icon {
-  width: 25px;
-  float: left;
-  margin-right: 9px;
-  z-index: 9;
-  margin-top: -4px;
-  -webkit-filter: blur(2px);
-          filter: blur(2px);
-}
-
-.magic_effect_img {
-  position: absolute;
-  -webkit-filter: blur(0px);
-          filter: blur(0px);
-  z-index: 1;
-  margin-top: -2px;
-  left: 24px;
-}
-.magic_effect_img img {
-  width: 21px;
 }
 
 /* Чат во меню */
@@ -868,17 +841,8 @@ aside {
   width: 100%;
   background: #1E1F20;
 }
-.chat span:first-child {
-  font-size: 18px;
-  color: #e4e6eb;
+.chat .aside__block__title {
   margin-left: 10px;
-}
-.chat span:first-child img {
-  width: 20px;
-  height: 20px;
-  position: relative;
-  top: 3px;
-  margin-right: 10px;
 }
 .chat .loading_chat {
   position: absolute;
@@ -932,7 +896,6 @@ aside {
   position: relative;
   overflow: auto;
   height: 450px;
-  margin-top: 15px;
 }
 .chat .message_block .message {
   margin: 10px 10px 15px;
@@ -987,7 +950,6 @@ aside {
   /* Блок который показывается коглда кликаешь на иконку смаилики  */
 }
 .chat .form_send .block_input {
-  /*flex: 1;*/
   margin: 20px 0px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1058,6 +1020,66 @@ aside {
   -webkit-transition-duration: 500ms;
        -o-transition-duration: 500ms;
           transition-duration: 500ms;
+}
+
+.vk_link {
+  margin: 50px 15px;
+}
+.vk_link .aside__block__title .main_img_icon {
+  margin-top: -1px;
+  margin-right: 12px;
+  z-index: 9;
+}
+.vk_link .aside__block__title .magic_effect_img {
+  margin-top: -1px;
+  z-index: 11;
+  margin-left: -10px;
+}
+
+.ads {
+  margin: 50px 0px 0px;
+}
+.ads .aside__block__title {
+  margin-left: 15px;
+}
+.ads .aside__block__title .main_img_icon {
+  margin-top: 0px;
+  margin-right: 12px;
+  z-index: 9;
+}
+.ads .aside__block__title .magic_effect_img {
+  margin-top: 0px;
+  z-index: 11;
+  margin-left: -9px;
+}
+.ads .ad_content {
+  margin: 10px 15px;
+  width: inherit;
+  height: 400px;
+  background: #111;
+}
+
+/*  Правое меню */
+.main_img_icon {
+  width: 25px;
+  float: left;
+  margin-right: 9px;
+  z-index: 9;
+  margin-top: -4px;
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+}
+
+.magic_effect_img {
+  position: absolute;
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+  z-index: 1;
+  margin-top: -2px;
+  left: 24px;
+}
+.magic_effect_img img {
+  width: 21px;
 }
 
 /* Footer */

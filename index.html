@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
     <!-- Vk-widget -->
-    <script type="text/javascript" src="https://vk.com/js/api/openapi.js?168" defer></script>
+    <script type="text/javascript" src="https://vk.com/js/api/openapi.js?168"></script>
 
   
 </head>
@@ -829,6 +829,7 @@
     </section>
     <!-- end content -->
 
+
     <!-- Aside - right menu -->
 	<aside>
         <!-- <p>Меню</p> -->
@@ -857,8 +858,7 @@
             </nav>
 
             <div class="chat">
-                
-                <span><img src="img/icons2/online-chat.svg" >Онлайн Чат</span><br>
+                <div class="aside__block__title"><img src="img/icons2/online-chat.svg" >Онлайн Чат</div>
 
                     <div class="loading_chat">
                         <div class="centerLoading">
@@ -929,7 +929,7 @@
                                 <span class="data_public">11:34</span>
                                 <span class="author">NEzuko</span>
                             <div class="text">Привет а чат работает?</div>
-                        </div>
+                            </div>
                     </div>
                     <div class="message">
                         <div class="img_author_chat"><img class="lazyload" data-src="img/s.jpg"></div>
@@ -955,22 +955,27 @@
                         <div class="block_input"> 
                             <input type="text" name="text" placeholder="Введите сообщение" autocomplete="off" id="input_chat" class="desktop_chat">
                                 <span class="smile_icon" title="Смайлики"><img src="img/icons/smile.svg" class="smile_i"></span>
-                                <div class="send_button"><img src="img/icons/send.svg" ></div>
-                            </div>
+                                <div class="send_button"><img src="img/icons/send.svg"></div>
+                        </div>
                     </form>
                     <div class="smiles_all"></div>
                 </div>
             </div>
 
             <div class="vk_link">
-                <span><img src="img/icons2/vk.svg" >Мы в вк</span><br>
+                 <div class="aside__block__title"><span class="magic_effect_img"><img src="img/icons2/vk.svg" alt=""></span>
+                        <img src="img/icons2/vk.svg" alt="" class="main_img_icon">Мы в вк</div>
 
                 <!-- VK Widget -->
                 <div id="vk_groups"></div>
             </div>
 
             <div class="ads">
-
+                 <div class="aside__block__title"><span class="magic_effect_img"><img src="img/icons2/ad.svg" alt=""></span>
+                        <img src="img/icons2/ad.svg" alt="" class="main_img_icon">Реклама</div>
+                <div class="ad_content">
+                    
+                </div>
             </div>
 
     </aside>
@@ -989,7 +994,11 @@
     </div>
 </footer>
 
-<div class="up"><img src="img/icons2/up.svg" alt=""></div>
+<div class="up_block">
+    <div class="up">
+        <img src="img/icons2/up.svg" alt="">
+    </div>
+</div>
 
 <!-- Modal -->
 <div class="mobile-modal">
