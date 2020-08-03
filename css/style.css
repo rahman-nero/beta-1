@@ -1319,6 +1319,7 @@ aside {
   .mobile-modal {
     left: -320px;
     position: fixed;
+    display: block;
     width: 320px;
     height: 100%;
     background: #151516;
