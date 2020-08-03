@@ -1,4 +1,3 @@
-jQuery(function(){
 	if (screen.availWidth > 1200) {
 		//  Если ширина экрана больше 1200 пх, то показывваем верхний блок над меню
 		 $(window).scroll(function(){
@@ -33,4 +32,3 @@ jQuery(function(){
 	 });
 	 
 
-});
