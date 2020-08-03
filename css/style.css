@@ -465,7 +465,7 @@ body {
   position: relative;
   max-width: 1500px;
   padding: 0px 10px;
-  margin: 0px auto 0px;
+  margin: 119px auto 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -760,10 +760,27 @@ aside {
   background-color: #222324;
 }
 
+.aside__header {
+  position: relative;
+  margin: 10px 20px;
+}
+.aside__header span:first-child {
+  position: relative;
+  font-size: 18px;
+  display: block;
+  color: #e4e6eb;
+}
+.aside__header span:first-child img {
+  width: 22px;
+  margin-top: 1px;
+  float: left;
+  margin-right: 10px;
+}
+
 /* Ссылки в меню */
 #menu {
   background: #212121;
-  margin: 50px 0px;
+  margin: 0px 0px 50px;
 }
 #menu ul {
   list-style: none;
@@ -800,6 +817,23 @@ aside {
           transition-duration: 700ms;
   -webkit-filter: blur(1px);
           filter: blur(1px);
+}
+
+.vk_link {
+  margin-top: 50px;
+  padding: 10px;
+}
+.vk_link span:first-child {
+  position: relative;
+  font-size: 18px;
+  display: block;
+  color: #e4e6eb;
+}
+.vk_link span:first-child img {
+  width: 22px;
+  margin-top: 1px;
+  float: left;
+  margin-right: 10px;
 }
 
 /*  Правое меню */

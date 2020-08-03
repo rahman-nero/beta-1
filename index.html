@@ -14,6 +14,10 @@
 
      <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Vk-widget -->
+    <script type="text/javascript" src="https://vk.com/js/api/openapi.js?168" ></script>
+
   
 </head>
 <body>
@@ -90,7 +94,7 @@
 <!-- Конец мобильное меню -->
 
 <!-- Slick slader -->
-<div class="slick-slader">
+<!-- <div class="slick-slader">
 	<section class="regular slider">
         <div>
             <a href="">
@@ -143,7 +147,7 @@
             </a>
         </div>
     </section>
-</div>
+</div> -->
 <!-- Slick slader -->
 
 <!-- Main block -->
@@ -827,8 +831,7 @@
 
     <!-- Aside - right menu -->
 	<aside>
-        <div class="aside__header">
-        </div>
+        <!-- <p>Меню</p> -->
         <!-- <div class="sit_naruto"><img class="lazyload" data-src="img/PotableDarkAkitainu-size_restricted.gif" alt=""></div> -->
             <nav id="menu">
                 <ul>
@@ -855,7 +858,7 @@
 
             <div class="chat">
                 
-                <span><img src="img/icons/chat.svg" >Онлайн Чат</span><br>
+                <span><img src="img/icons2/online-chat.svg" >Онлайн Чат</span><br>
 
                     <div class="loading_chat">
                         <div class="centerLoading">
@@ -959,6 +962,19 @@
                 </div>
             </div>
 
+            <div class="vk_link">
+                <span><img src="img/icons2/vk.svg" >Мы в вк</span><br>
+
+                <!-- VK Widget -->
+                <div id="vk_groups"></div>
+                <script type="text/javascript">
+                VK.Widgets.Group("vk_groups", {mode: 4, wide: 1, no_cover: 1, width: "300", height: "400", color1: '1E1F20', color2: 'FFFFFF', color3: '2D88FF'}, 20003922);
+                </script>
+            </div>
+
+            <div class="ads">
+
+            </div>
 
     </aside>
     <!-- Aside - right menu -->
@@ -1045,6 +1061,7 @@
 
 <!-- Lazyload -->
 <script src="js/lazyload.js"  type="text/javascript"></script>
+
 
 </body>
 </html>
