@@ -1143,10 +1143,6 @@ aside {
   margin-bottom: 10px;
 }
 
-.mobile-modal {
-  display: none;
-}
-
 /* конец - контейнер где находятся меню и контент */
 /* Animation */
 /* Загрузка чата */
@@ -1317,18 +1313,15 @@ aside {
   }
 
   .mobile-modal {
-    visibility: hidden;
+    left: -320px;
     position: fixed;
-    width: 100%;
-    height: 100%;
+    width: 320px;
     background: #151516;
     top: 0;
-    left: 0;
     z-index: 99;
     -webkit-transition: 800ms all;
     -o-transition: 800ms all;
     transition: 800ms all;
-    opacity: 0;
   }
   .mobile-modal .block_profile {
     margin: 10px;
@@ -1370,8 +1363,7 @@ aside {
   }
 
   .mobile-modal.open {
-    visibility: visible;
-    opacity: 1;
+    left: 0px !important;
   }
 
   .up {

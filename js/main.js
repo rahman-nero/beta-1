@@ -20,7 +20,7 @@
 		 $(window).scrollTop(0);
 	 });
 	 
-	 $('.modal_menu').click(function(){
+	 $('.modal_menu').click(function(e){
 		 e.preventDefault();
 		 if ($('.mobile-modal').hasClass('open')) {
 			 $('.mobile-modal').removeClass('open');
