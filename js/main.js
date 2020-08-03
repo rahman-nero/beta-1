@@ -16,11 +16,11 @@
 	 // Загрузка чата
 	 $('.loading_chat').fadeOut('slow');
 	 
-	 $('.up').on('click', function() {
+	 $('.up').click(function() {
 		 $(window).scrollTop(0);
 	 });
 	 
-	 $('.modal_menu').on('click', (e) => {
+	 $('.modal_menu').click(function(){
 		 e.preventDefault();
 		 if ($('.mobile-modal').hasClass('open')) {
 			 $('.mobile-modal').removeClass('open');
@@ -29,7 +29,6 @@
 			 $('.mobile-modal').addClass('open');
 			 $('.modal_menu').html("<img src='img/header/menu.svg'>");
 		 }
-	 
 	 });
 	 
 
