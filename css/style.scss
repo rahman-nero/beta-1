@@ -1170,6 +1170,7 @@ aside {
 		position: fixed;
 		width: 100%!important;
 		background: #1D1E1F;
+
 		border: 1px solid #212223;
 		z-index: 999;
 		bottom: 0px;
@@ -1257,10 +1258,13 @@ aside {
 		left: -320px;
 		position: fixed;
 		width: 320px;
+		height:100%;
 		background: #151516;
+		overflow: auto;
 		top: 0;
-		z-index: 99; 
-		transition:800ms all;
+		z-index: 99;
+		box-shadow:0px 0px 20px rgba(0, 0, 0, .8);
+		transition:500ms all;
 		.block_profile{ // первый блок, после него идет блок с ссылками
 			margin: 10px;
 			position: relative;

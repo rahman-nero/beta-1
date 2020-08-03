@@ -1316,12 +1316,16 @@ aside {
     left: -320px;
     position: fixed;
     width: 320px;
+    height: 100%;
     background: #151516;
+    overflow: auto;
     top: 0;
     z-index: 99;
-    -webkit-transition: 800ms all;
-    -o-transition: 800ms all;
-    transition: 800ms all;
+    -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+    -webkit-transition: 500ms all;
+    -o-transition: 500ms all;
+    transition: 500ms all;
   }
   .mobile-modal .block_profile {
     margin: 10px;
