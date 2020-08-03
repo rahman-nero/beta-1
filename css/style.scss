@@ -1114,11 +1114,6 @@ aside {
 	}
 }
 
-
-.mobile-modal{
-	display: none;
-}
-
 /* конец - контейнер где находятся меню и контент */
 
 /* Animation */
@@ -1170,7 +1165,6 @@ aside {
 		position: fixed;
 		width: 100%!important;
 		background: #1D1E1F;
-
 		border: 1px solid #212223;
 		z-index: 999;
 		bottom: 0px;

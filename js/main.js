@@ -9,9 +9,11 @@
 	 
 		 // Если он незашел с мобилки, убираем звездочки со аниме - верхние звездочки
 		 $('.raiting').remove();
+		 $('.mobile-modal').remove();
+		 
 
 		 //  скрипт с виджетом вк
-		 $.getScript("vk_widget.js"); 
+		 $.getScript("js/vk_widget.js"); 
 	 } 
 	 
 	 // Загрузка чата
