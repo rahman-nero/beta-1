@@ -13,6 +13,7 @@
 		 
 
 		 //  скрипт с виджетом вк
+		 $.getScript("https://vk.com/js/api/openapi.js?168"); 
 		 $.getScript("js/vk_widget.js"); 
 	 } 
 	 
