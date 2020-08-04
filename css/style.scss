@@ -729,15 +729,33 @@ aside {
      position: relative;
      box-shadow: 0px 0px 5px  rgba(0,0,0,.2);
      float: left;
-     min-width: 320px;
-     max-width: 320px;
+     min-width: 335px;
+     max-width: 335px;
      background-color: #222324;
+}
+
+.aside__header{
+	position: relative;
+	margin: 10px 20px;
+	span:first-child{
+		position: relative;
+		font-size: 18px;
+		display: block;
+		color: #e4e6eb;
+		& img{ 
+			width: 22px;
+			margin-top: 1px;
+			float: left;
+			margin-right: 10px;
+		}
+   }
 }
 
 /* Ссылки в меню */
 #menu{
+
    background: #212121;
-   margin: 50px 0px;
+   margin: 0px 0px 50px;
    ul{
        list-style: none;
        li{ 
@@ -774,28 +792,18 @@ aside {
    }
 }
 
-/*  Правое меню */
-
-// красивое оформление иконок 
-.main_img_icon{
-   width: 25px;
-   float: left;
-   margin-right: 9px;
-   z-index: 9;
-   margin-top: -4px;
-		filter: blur(2px);
-}
-
-// красивое оформление иконок  (с ним)
-.magic_effect_img{
-  	position: absolute;
-  	filter: blur(0px);
-  	z-index: 1;
-  	margin-top: -2px;
-  	left: 24px;
-  	& img{
-  		width: 21px;
-  	}
+// название блоков в правом меню - типа 'Онлайн чат, мы в вк'
+.aside__block__title{
+ 	font-size:18px;
+    color:$textColor;
+    margin:10px 0px;
+    & img{
+        width: 20px;
+        height: 20px;
+        position: relative;
+        top: 3px;
+        margin-right: 10px;
+    }
 }
 
 /* Чат во меню */
@@ -806,19 +814,9 @@ aside {
     display: block;
     width: 100%;
     background: #1E1F20;
-
-    span:first-child{
-        font-size:18px;
-        color:$textColor;
-        margin-left: 10px;
-        & img{
-            width: 20px;
-            height: 20px;
-            position: relative;
-            top: 3px;
-            margin-right: 10px;
-        }
-    }
+	.aside__block__title{
+		margin-left: 10px;
+	}
 
     .loading_chat{
         position: absolute;
@@ -868,7 +866,6 @@ aside {
         position: relative;
         overflow: auto;
         height: 450px;
-        margin-top: 15px;
         .message{
             margin: 10px 10px 15px;
             word-break: break-all;
@@ -924,9 +921,7 @@ aside {
         position: relative;       
         width: 100%;
         left: 0;
-        
         .block_input{
-            /*flex: 1;*/
             margin: 20px 0px 0px;
             display: flex;
             input{
@@ -998,6 +993,82 @@ aside {
 
     }
 }
+// ссылка в вк
+
+.vk_link{
+	margin: 50px 15px; 
+	.aside__block__title{
+		// красивое оформление иконок 
+		.main_img_icon{
+			margin-top:-1px;
+		   margin-right:12px;
+		   z-index: 9;
+		}
+
+		// красивое оформление иконок  (с ним)
+		.magic_effect_img{
+			margin-top: -1px;
+		  	z-index: 11;
+		  	margin-left: -10px;
+		}
+
+	}
+}
+
+// реклама в правом меню
+.ads{
+	margin: 50px 0px 0px;
+	.aside__block__title{
+		margin-left: 15px;
+		// красивое оформление иконок 
+		.main_img_icon{
+			margin-top: 0px;
+		   margin-right:12px;
+		   z-index: 9;
+		}
+
+		// красивое оформление иконок  (с ним)
+		.magic_effect_img{
+			margin-top: 0px;
+		  	z-index: 11;
+		  	margin-left: -9px;
+		}
+
+	}
+
+	.ad_content{
+		margin: 10px 15px;
+		width: inherit;
+		height: 400px;
+		background: #111;
+	}
+}
+
+/*  Правое меню */
+
+// красивое оформление иконок 
+.main_img_icon{
+   width: 25px;
+   float: left;
+   margin-right: 9px;
+   z-index: 9;
+   margin-top: -4px;
+		filter: blur(2px);
+}
+
+// красивое оформление иконок  (с ним)
+.magic_effect_img{
+  	position: absolute;
+  	filter: blur(0px);
+  	z-index: 1;
+  	margin-top: -2px;
+  	left: 24px;
+  	& img{
+  		width: 21px;
+  	}
+}
+
+
 
 /* Footer */
 #footer{
@@ -1077,11 +1148,6 @@ aside {
 		box-shadow: 0px 0px 10px rgba(0,0,0,.2);
 		margin-bottom: 10px;
 	}
-}
-
-
-.mobile-modal{
-	display: none;
 }
 
 /* конец - контейнер где находятся меню и контент */
@@ -1219,16 +1285,17 @@ aside {
 	
 	// Мобильное модальное окно - показ профиля
 	.mobile-modal{
-		visibility: hidden;
+		left: -320px;
 		position: fixed;
-		width: 100%;
-		height: 100%;
+		display: block;
+		width: 320px;
+		height:100%;
 		background: #151516;
+		overflow: auto;
 		top: 0;
-		left: 0;
-		z-index: 99; 
-		transition:800ms all;
-		opacity: 0;
+		z-index: 99;
+		box-shadow:0px 0px 20px rgba(0, 0, 0, .8);
+		transition:500ms all;
 		.block_profile{ // первый блок, после него идет блок с ссылками
 			margin: 10px;
 			position: relative;
@@ -1270,8 +1337,7 @@ aside {
 	}
 	
 	.mobile-modal.open{
-		visibility: visible;
-		opacity: 1;
+		left: 0px!important;
 	}
 
 	.up{

@@ -18,6 +18,10 @@
 
      <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Vk-widget -->
+    <script type="text/javascript" src="https://vk.com/js/api/openapi.js?168"></script>
+
   
 </head>
 <body>
@@ -94,7 +98,7 @@
 <!-- Конец мобильное меню -->
 
 <!-- Slick slader -->
-<div class="slick-slader">
+<div class="slick-slader"> 
 	<section class="regular slider">
         <div>
             <a href="">
@@ -147,7 +151,7 @@
             </a>
         </div>
     </section>
-</div>
+</div> 
 <!-- Slick slader -->
 
 <!-- Main block -->
@@ -829,10 +833,10 @@
     </section>
     <!-- end content -->
 
+
     <!-- Aside - right menu -->
 	<aside>
-        <div class="aside__header">
-        </div>
+        <!-- <p>Меню</p> -->
         <!-- <div class="sit_naruto"><img class="lazyload" data-src="img/PotableDarkAkitainu-size_restricted.gif" alt=""></div> -->
             <nav id="menu">
                 <ul>
@@ -858,8 +862,7 @@
             </nav>
 
             <div class="chat">
-                
-                <span><img src="img/icons/chat.svg" >Онлайн Чат</span><br>
+                <div class="aside__block__title"><img src="img/icons2/online-chat.svg" >Онлайн Чат</div>
 
                     <div class="loading_chat">
                         <div class="centerLoading">
@@ -930,7 +933,7 @@
                                 <span class="data_public">11:34</span>
                                 <span class="author">NEzuko</span>
                             <div class="text">Привет а чат работает?</div>
-                        </div>
+                            </div>
                     </div>
                     <div class="message">
                         <div class="img_author_chat"><img class="lazyload" data-src="img/s.jpg"></div>
@@ -956,13 +959,28 @@
                         <div class="block_input"> 
                             <input type="text" name="text" placeholder="Введите сообщение" autocomplete="off" id="input_chat" class="desktop_chat">
                                 <span class="smile_icon" title="Смайлики"><img src="img/icons/smile.svg" class="smile_i"></span>
-                                <div class="send_button"><img src="img/icons/send.svg" ></div>
-                            </div>
+                                <div class="send_button"><img src="img/icons/send.svg"></div>
+                        </div>
                     </form>
                     <div class="smiles_all"></div>
                 </div>
             </div>
 
+            <div class="vk_link">
+                 <div class="aside__block__title"><span class="magic_effect_img"><img src="img/icons2/vk.svg" alt=""></span>
+                        <img src="img/icons2/vk.svg" alt="" class="main_img_icon">Мы в вк</div>
+
+                <!-- VK Widget -->
+                <div id="vk_groups"></div>
+            </div>
+
+            <div class="ads">
+                 <div class="aside__block__title"><span class="magic_effect_img"><img src="img/icons2/ad.svg" alt=""></span>
+                        <img src="img/icons2/ad.svg" alt="" class="main_img_icon">Реклама</div>
+                <div class="ad_content">
+                    
+                </div>
+            </div>
 
     </aside>
     <!-- Aside - right menu -->
@@ -980,7 +998,11 @@
     </div>
 </footer>
 
-<div class="up"><img src="img/icons2/up.svg" alt=""></div>
+<div class="up_block">
+    <div class="up">
+        <img src="img/icons2/up.svg" alt="">
+    </div>
+</div>
 
 <!-- Modal -->
 <div class="mobile-modal">
@@ -1049,6 +1071,5 @@
 
 <!-- Lazyload -->
 <script src="js/lazyload.js"  type="text/javascript"></script>
-
 </body>
 </html>
