@@ -1170,9 +1170,7 @@ aside {
 	body{ // Чтобы фоотер норамльнор отображался
     	margin-bottom: 49px;
 	}
-	.slick-slader{
-		display: none;
-	}
+	.slick-slader{display: none;}
 	#header{
 		.block-header-top{display: none;}
 		background: #1E1F20;
@@ -1220,9 +1218,7 @@ aside {
 
 		 }
 	}
-	aside{
-		display: none;
-	}
+	aside{display: none;}
 
 	.block-header-top{display: none;}
 	.header__style_line {display: none;}
@@ -1251,6 +1247,7 @@ aside {
 	.block_anime{
 		article {
 			width: 45.2%;
+			background: #1f1e1e;
 			margin: 0px 5px 20px;
 			.img{
 				height: 220px;
@@ -1346,6 +1343,16 @@ aside {
 
 	.up{
 		display: none;
+	}
+
+
+	.button-all-view{
+		position: relative;
+		margin: 30px 100px;
+		text-align: center;
+		background: $buttonColor;
+		padding: 8px 6px;
+		border-radius: 2px;
 	}
 }
 

@@ -1301,6 +1301,7 @@ aside {
 
   .block_anime article {
     width: 45.2%;
+    background: #1f1e1e;
     margin: 0px 5px 20px;
   }
   .block_anime article .img {
@@ -1398,5 +1399,14 @@ aside {
 
   .up {
     display: none;
+  }
+
+  .button-all-view {
+    position: relative;
+    margin: 30px 100px;
+    text-align: center;
+    background: #2D88FF;
+    padding: 8px 6px;
+    border-radius: 2px;
   }
 }
