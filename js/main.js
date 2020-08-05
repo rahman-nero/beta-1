@@ -14,7 +14,8 @@
 
 		 //  скрипт с виджетом вк
 		 $.getScript("https://vk.com/js/api/openapi.js?168"); 
-		 
+		 $.getScript("library/slick_slider/slick.min.js"); 
+		 $.getScript("js/slick_settings.js");
 		 setTimeout(function() {
 			 $.getScript("js/vk_widget.js"); 
 		 }, 2000);

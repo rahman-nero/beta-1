@@ -1169,6 +1169,9 @@ aside {
 	body{ // Чтобы фоотер норамльнор отображался
     	margin-bottom: 49px;
 	}
+	.slick-slader{
+		display: none;
+	}
 	#header{
 		.block-header-top{display: none;}
 		background: #1E1F20;
