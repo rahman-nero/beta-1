@@ -24,7 +24,7 @@
 	 // Загрузка чата
 	 $('.loading_chat').fadeOut('slow');
 	 
-	 $('.up').click(function() {
+	 $('.up_block').click(function() {
 		 $(window).scrollTop(0);
 	 });
 	 

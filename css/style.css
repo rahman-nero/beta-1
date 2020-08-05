@@ -1144,28 +1144,34 @@ aside {
 }
 
 /* Footer */
-.up {
+.up_block {
   position: fixed;
-  bottom: 20px;
-  right: 25px;
-  padding: 7px 10px;
-  background: #262626;
-  border-bottom: 2px solid #2D88FF;
-  border-radius: 5px;
+  width: 110px;
+  background-color: rgba(35, 35, 35, 0.4);
+  opacity: 0.2;
+  height: 100vh;
+  right: 0px;
+  top: 0;
   cursor: pointer;
-  -webkit-transition: 800ms all;
-  -o-transition: 800ms all;
-  transition: 800ms all;
+  z-index: 99999;
 }
-.up img {
+.up_block .up {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+}
+.up_block .up img {
   width: 32px;
   height: 30px;
 }
-.up:hover {
-  background: #1F1F20;
-  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  margin-bottom: 10px;
+.up_block:hover {
+  opacity: 1;
+  -webkit-transition-duration: 800ms;
+       -o-transition-duration: 800ms;
+          transition-duration: 800ms;
 }
 
 /* конец - контейнер где находятся меню и контент */
@@ -1397,13 +1403,13 @@ aside {
     left: 0px !important;
   }
 
-  .up {
+  .up_block {
     display: none;
   }
 
   .button-all-view {
     position: relative;
-    margin: 30px 100px;
+    margin: 30px 50px;
     text-align: center;
     background: #2D88FF;
     padding: 8px 6px;

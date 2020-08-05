@@ -1129,28 +1129,32 @@ aside {
 }
 /* Footer */
 
-
-.up{
+.up_block{
 	position: fixed;
-	bottom: 20px;
-	right: 25px;
-	padding: 7px 10px;
-	background: #262626;
-	border-bottom: 2px solid $buttonColor;
-	border-radius: 5px;
+	width: 110px;
+	background-color:rgba(35,35,35,.4);
+	opacity: 0.2;
+	height: 100vh;
+	right: 0px;
+	top: 0;
 	cursor: pointer;
-	transition:800ms all;
-	& img{
-		width: 32px;
-		height: 30px;
+	z-index: 99999;
+	.up{
+		position: absolute;
+		bottom: 20px;
+		left: 50%;
+		transform:translate(-50%);
+		& img{
+			width: 32px;
+			height: 30px;
+		}
 	}
+
 	&:hover{
-		background: #1F1F20;
-		box-shadow: 0px 0px 10px rgba(0,0,0,.2);
-		margin-bottom: 10px;
+		opacity: 1;
+		transition-duration:800ms;
 	}
 }
-
 /* конец - контейнер где находятся меню и контент */
 
 /* Animation */
@@ -1341,14 +1345,14 @@ aside {
 		left: 0px!important;
 	}
 
-	.up{
+	.up_block{
 		display: none;
 	}
 
 
 	.button-all-view{
 		position: relative;
-		margin: 30px 100px;
+		margin: 30px 50px;
 		text-align: center;
 		background: $buttonColor;
 		padding: 8px 6px;
