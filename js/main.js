@@ -3,14 +3,8 @@
 		 $(window).scroll(function(){
 			 if ($(window).scrollTop() >= 150){
 				 $('.block-header-top').hide(200);
-				 if ($('.filters-sort-block')) {
-				 	$('.filters-sort-block').css({'margin-top': '-106px'});
-				 }
 			 }else if ($(window).scrollTop() <= 150) {
 				 $('.block-header-top').show(200);
-				 if ($('.filters-sort-block')) {
-				 	$('.filters-sort-block').css({'margin-top': '-57px'});
-				 }
 			 }
 		 });
 	 
@@ -60,4 +54,6 @@
 		 }
 	 });
 		 
+
+
 
