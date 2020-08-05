@@ -373,6 +373,7 @@ body {
 		max-width: 1500px;
 		overflow-y: auto;
 		margin: 0px auto 0;
+		display: flex;
 		.slick-list{padding: 15px 0}
 
 		div{
@@ -1198,7 +1199,6 @@ aside {
 		}
 
 	}
-	.slick-slader{margin-top: 0; padding: 80px 10px 40px;}
 
 	.mobile_menu{
 		position: fixed;

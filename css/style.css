@@ -404,6 +404,9 @@ body {
   max-width: 1500px;
   overflow-y: auto;
   margin: 0px auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .slick-slader section.slider .slick-list {
   padding: 15px 0;
@@ -1228,11 +1231,6 @@ aside {
   }
   #header .center-header .user-info-block {
     display: none;
-  }
-
-  .slick-slader {
-    margin-top: 0;
-    padding: 80px 10px 40px;
   }
 
   .mobile_menu {
