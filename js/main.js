@@ -1,10 +1,17 @@
 	if (screen.availWidth > 1200) {
 		//  Если ширина экрана больше 1200 пх, то показывваем верхний блок над меню
 		 $(window).scroll(function(){
-			 if ($(window).scrollTop() >= 150) 
+			 if ($(window).scrollTop() >= 150){
 				 $('.block-header-top').hide(200);
-			 else if ($(window).scrollTop() <= 150)
+				 if ($('.filters-sort-block')) {
+				 	$('.filters-sort-block').css({'margin-top': '-106px'});
+				 }
+			 }else if ($(window).scrollTop() <= 150) {
 				 $('.block-header-top').show(200);
+				 if ($('.filters-sort-block')) {
+				 	$('.filters-sort-block').css({'margin-top': '-57px'});
+				 }
+			 }
 		 });
 	 
 		 // Если он незашел с мобилки, убираем звездочки со аниме - верхние звездочки

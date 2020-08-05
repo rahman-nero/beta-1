@@ -1167,10 +1167,22 @@ aside {
 
 /* Страница anime.html */
 .sort-page{
+	position: relative;
 	.content-section{
 		background: #202122;
-		background-image: none;
 		margin-top: 120px;
+		position: relative;
+
+		.filters-sort-block{
+			position: fixed;
+			height: 50px;
+			background:#111;
+			z-index: 9;
+			margin-left: -20px;
+			margin-top: -57px;
+			width: 100%;
+			border-bottom: 1px solid #222;
+		}
 	}
 	aside{
 		margin-top: 119px;
