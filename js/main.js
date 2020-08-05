@@ -14,7 +14,10 @@
 
 		 //  скрипт с виджетом вк
 		 $.getScript("https://vk.com/js/api/openapi.js?168"); 
-		 $.getScript("js/vk_widget.js"); 
+		 
+		 setTimeout(function() {
+			 $.getScript("js/vk_widget.js"); 
+		 }, 2000);
 	 } 
 	 
 	 // Загрузка чата
