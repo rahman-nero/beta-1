@@ -13,12 +13,13 @@
 		 
 
 		 //  скрипт с виджетом вк
-		 $.getScript("https://vk.com/js/api/openapi.js?168"); 
-		 $.getScript("library/slick_slider/slick.min.js"); 
-		 $.getScript("js/slick_settings.js");
-		 setTimeout(function() {
+		 $.getScript("library/slick_slider/slick.min.js", function() {
+		 	$.getScript("js/slick_settings.js");
+		 });
+
+		 $.getScript("https://vk.com/js/api/openapi.js?168", function() {
 			 $.getScript("js/vk_widget.js"); 
-		 }, 2000);
+		 }); 
 	 } 
 	 
 	 // Загрузка чата
