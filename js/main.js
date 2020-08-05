@@ -33,10 +33,14 @@
 		 e.preventDefault();
 		 if ($('.mobile-modal').hasClass('open')) {
 			 $('.mobile-modal').removeClass('open');
-			 $('.modal_menu').html("<img src='img/icons2/close.svg'>");
 		 } else {
 			 $('.mobile-modal').addClass('open');
-			 $('.modal_menu').html("<img src='img/header/menu.svg'>");
+		 }
+
+		 if ($('.mobile-modal').hasClass('open')) {
+		 	$('.modal_menu').html("<img src='img/icons2/close.svg'>");
+		 } else {
+		 	$('.modal_menu').html("<img src='img/header/menu.svg'>");
 		 }
 	 });
 	 
