@@ -11,7 +11,6 @@
 		 $('.raiting').remove();
 		 $('.mobile-modal').remove();
 		 
-
 		 //  скрипт с виджетом вк
 		 $.getScript("library/slick_slider/slick.min.js", function() {
 		 	$.getScript("js/slick_settings.js");
@@ -20,7 +19,7 @@
 		 $.getScript("https://vk.com/js/api/openapi.js?168", function() {
 			 $.getScript("js/vk_widget.js"); 
 		 }); 
-	 } 
+	 }
 	 
 	 // Загрузка чата
 	 $('.loading_chat').fadeOut('slow');

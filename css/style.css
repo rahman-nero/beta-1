@@ -1276,6 +1276,7 @@ aside {
   #main {
     display: block;
     padding: 5px 5px;
+    margin-top: 30px;
   }
 
   .content-section {
