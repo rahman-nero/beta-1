@@ -298,9 +298,11 @@ body {
 	border-radius: 9px;
 	border: 1px solid #2C2E2F;
 	margin-top: 8px;
+	z-index: 9;
 	box-shadow: 0px 0px 3px rgba(0,0,0,0.1);
 	background: #202122;
 	padding: 8px;
+	transition:800ms all;
 
 	.block-info-modal{
 		position: relative;
@@ -342,6 +344,9 @@ body {
 			transition-duration: 500ms;
 		}
 	}
+}
+.modal-info-user.open{
+	display: block;
 }
 
 /* Slick - Слайдер */
@@ -440,7 +445,7 @@ body {
 
 .content-section{
 	position: relative;
-	max-width: 1140px;
+	width: 1140px;
 	background-image: url(../img/registration/decor-min.png);
 	background-size: contain;
 	padding: 55px 20px;
@@ -558,9 +563,7 @@ body {
 					width: 100%;
 					bottom: 0px;
 					padding: 25px;
-					// background: #000;
 					.bottom_text_rainting{
-						// font-weight: bold;
 						margin-bottom: 10px;
 						& img {
 							width: 20px;
@@ -585,8 +588,6 @@ body {
 					}
 					.year_category{
 						font-size: 14px;
-						// font-weight: bold;
-
 					}
 				}
 			}
@@ -672,7 +673,6 @@ body {
  		position: absolute;
  		bottom: -5px;
  		border: 3px solid transparent;
- 		// border-left: 5px solid #000;
  		border-left:3px solid $buttonColor;
  		border-top: 3px solid $buttonColor;
  	}
@@ -700,7 +700,6 @@ body {
  		position: absolute;
  		bottom: -5px;
  		border: 3px solid transparent;
- 		// border-left: 5px solid #000;
  		border-right:3px solid #FF4F19;
  		border-top: 3px solid #FF4F19;
  	}
@@ -1166,6 +1165,23 @@ aside {
 
 /* Animation */
 
+/* Страница anime.html */
+.sort-page{
+	.content-section{
+		background: #202122;
+		background-image: none;
+		margin-top: 120px;
+	}
+	aside{
+		margin-top: 119px;
+
+	}
+} 
+
+/* конец страница anime.html */
+
+
+
 
 
 
@@ -1304,7 +1320,6 @@ aside {
 		.block_profile{ // первый блок, после него идет блок с ссылками
 			margin: 10px;
 			position: relative;
-			// background-color: #262626;
 			.profile__header{
 				margin: 15px 1px 20px;
 				position: relative;

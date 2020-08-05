@@ -327,10 +327,14 @@ body {
   border-radius: 9px;
   border: 1px solid #2C2E2F;
   margin-top: 8px;
+  z-index: 9;
   -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
   background: #202122;
   padding: 8px;
+  -webkit-transition: 800ms all;
+  -o-transition: 800ms all;
+  transition: 800ms all;
 }
 .modal-info-user .block-info-modal {
   position: relative;
@@ -374,6 +378,10 @@ body {
   -webkit-transition-duration: 500ms;
        -o-transition-duration: 500ms;
           transition-duration: 500ms;
+}
+
+.modal-info-user.open {
+  display: block;
 }
 
 /* Slick - Слайдер */
@@ -477,7 +485,7 @@ body {
 
 .content-section {
   position: relative;
-  max-width: 1140px;
+  width: 1140px;
   background-image: url(../img/registration/decor-min.png);
   background-size: contain;
   padding: 55px 20px;
@@ -1190,6 +1198,17 @@ aside {
   }
 }
 /* Animation */
+/* Страница anime.html */
+.sort-page .content-section {
+  background: #202122;
+  background-image: none;
+  margin-top: 120px;
+}
+.sort-page aside {
+  margin-top: 119px;
+}
+
+/* конец страница anime.html */
 @media (max-width: 1020px) {
   body {
     margin-bottom: 49px;

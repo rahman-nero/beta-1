@@ -42,5 +42,15 @@
 		 	$('.modal_menu').html("<img src='img/header/menu.svg'>");
 		 }
 	 });
-	 
+		
+	// модальное окно инфо о пользователе
+	 $('.open_modal_info').click(function(e){
+		 e.preventDefault();
+		 if ($('.modal-info-user').hasClass('open')) {
+			 $('.modal-info-user').removeClass('open');
+		 } else {
+			 $('.modal-info-user').addClass('open');
+		 }
+	 });
+		 
 
