@@ -19,7 +19,25 @@
 
 		 $.getScript("https://vk.com/js/api/openapi.js?168", function() {
 			 $.getScript("js/vk_widget.js"); 
-		 }); 
+		 });
+
+		 $('.timetable__block').on('click', '.button-open', (e) =>{
+
+		 	let block_time = $(e.target).next();
+		 	let icon = $(e.target).find('.right_icon');
+
+		 	if ($(block_time).hasClass('open')) {
+		 		$(block_time).removeClass('open');
+		 		$(icon).removeClass('open');
+		 	} else {
+		 		$('.block-time').removeClass('open'); // до открытия, мы сначала закрываем все открытые секции
+		 		$('.right_icon').removeClass('open');
+
+		 		$(block_time).addClass('open');
+		 		$(icon).addClass('open');
+		 	}
+		 });
+
 	 }
 	 
 	 // Загрузка чата

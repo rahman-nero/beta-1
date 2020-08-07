@@ -534,10 +534,11 @@ body {
 		margin: 0px 19px 20px 0px;
 		width: 197px;
 		cursor: pointer;
-		background: #111;
+		// background: #111;
 		padding-bottom: 10px;
 		position: relative;
 		// overflow: hidden;
+		text-align: center;
 		.img {
 			position: relative;
 			width: 100%;
@@ -750,6 +751,105 @@ aside {
 		}
    }
 }
+// Таблица расписании
+.timetable__block{
+	position: relative;
+	width: 100%;
+	background: #1E1F20;
+	outline: none;
+	margin-bottom: 30px;
+	padding-bottom: 50px;
+	.aside__block__title{
+		padding:10px 10px 10px 20px;
+		// красивое оформление иконок 
+		.main_img_icon{
+			margin-top:-1px;
+		   margin-right:12px;
+		   z-index: 9;
+		}
+
+		// красивое оформление иконок  (с ним)
+		.magic_effect_img{
+			margin-top: -1px;
+		  	z-index: 11;
+		  	margin-left: -5px;
+		}
+	}
+
+	.wrapper-block-time{
+		position: relative;
+		width: initial;
+		cursor: pointer;
+		background: #222324;
+
+		// иконка с надписью даты
+		.button-open{
+			border-bottom: 1px solid #1D1E1F;
+			padding: 13px 10px 13px 23px;
+			position: relative;
+			font-size: 15px;
+			font-family: Roboto;
+			.right_icon{
+				right: 15px;
+				top: 0;
+				margin-top: 14px;
+				position: absolute;
+				& img{
+					width: 16px;
+					height: 16px;
+				}
+			}
+			.right_icon.open{
+				transform: rotate(180deg);
+				transition-duration: 500ms; 
+			}
+			&:hover{
+				background-color: #1D1D1D;
+				transition-duration:600ms;
+			}
+		}
+
+		.block-time{
+			padding: 10px 20px 5px 20px;
+			font-size: 13px;
+			box-shadow: inset 0px 0px 15px rgba(0,0,0,.2);
+			background: #1A1B1C;
+			display: none;
+			height: 0px;
+			p{
+				padding: 4px 0px 5px;
+				&:hover{
+					color: $buttonColor;
+					transition-duration:800ms;
+				}
+			}
+			
+		}
+
+		.block-time.open{
+			display: block;
+			animation-name: timetable_display;
+			animation-timing-function: ease;
+			animation-iteration-count: 1;
+			animation-fill-mode:forwards;
+			animation-duration: 2s;
+		}
+
+
+	}
+}
+
+@keyframes timetable_display{
+	0,50%{
+			display: block;
+
+		height: 50%;
+	}
+	100% {
+		height: 100%;
+	}
+}
+
 
 /* Ссылки в меню */
 #menu{
