@@ -1445,13 +1445,13 @@ aside {
 	// Мобильное модальное окно - показ профиля
 	.mobile-modal{
 		position: fixed;
-		width: 100%;
-		display: block;
-		transform:translate(-100%);
+		width: 320px;
 		height:100%;
+		left: -320px;
+		top: 0;
+		display: block;
 		background: #151516;
 		overflow: auto;
-		top: 0;
 		z-index: 99;
 		box-shadow:0px 0px 20px rgba(0, 0, 0, .8);
 		.block_profile{ // первый блок, после него идет блок с ссылками
@@ -1494,7 +1494,7 @@ aside {
 	}
 	
 	.mobile-modal.open{
-		transform:translate(0%);
+		left: 0px;
 		transition-duration:500ms;
 	}
 
