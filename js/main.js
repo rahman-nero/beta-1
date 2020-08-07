@@ -21,7 +21,7 @@
 			 $.getScript("js/vk_widget.js"); 
 		 });
 
-		 $('.timetable__block').on('click', '.button-open', (e) =>{
+		 $('.timetable__block').on('click', '.button-open', function(e){
 
 		 	let block_time = $(e.target).next();
 		 	let icon = $(e.target).find('.right_icon');
