@@ -455,7 +455,7 @@ body {
 // первые три блока, с датами выхода и тп 
 .block_release{
 	min-width: 100%;
-	display: flex;
+	display: none;
 	margin: 20px 0px 80px;
 
 	// Три блока
@@ -816,12 +816,12 @@ aside {
 			box-shadow: inset 0px 0px 20px rgba(0,0,0,.15);
 			background: #1A1B1C;
 			display: none;
-			height: 0px;
 			p{
 				padding: 4px 0px 5px;
 				&:hover{
 					color: $buttonColor;
 					transition-duration:800ms;
+					text-decoration: underline;
 				}
 			}
 			
@@ -829,28 +829,11 @@ aside {
 
 		.block-time.open{
 			display: block;
-			animation-name: timetable_display;
-			animation-timing-function: ease;
-			animation-iteration-count: 1;
-			animation-fill-mode:forwards;
-			animation-duration: 2s;
 		}
 
 
 	}
 }
-
-@keyframes timetable_display{
-	0,50%{
-			display: block;
-
-		height: 50%;
-	}
-	100% {
-		height: 100%;
-	}
-}
-
 
 /* Ссылки в меню */
 #menu{
@@ -1404,13 +1387,15 @@ aside {
 	.block_anime{
 		article {
 			width: 45.2%;
-			background: #1f1e1e;
+			// background: #1f1e1e;
 			margin: 0px 5px 20px;
 			.img{
 				height: 220px;
 			}
 			.title_anime{
 				font-size: 13px;
+				margin: 5px 1px 1px;
+				padding:0px;
 			}
 			.status{
 				top: 200px;
