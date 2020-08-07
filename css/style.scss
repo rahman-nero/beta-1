@@ -1348,8 +1348,20 @@ aside {
 		text-align: center;
 		display: flex;
 		transition:400ms all;
+		.current_page{
+			&:after{
+				content: '';
+				width: 30px;
+				height: 30px;
+				position: absolute;
+				// z-index: 9;
+				background: #000;
+				bottom: 20px;
+				display: block;
+			}
+		}
 	 	& a { 
-	 		width: 25%; 
+	 		width: 25%;
 	 		padding: 10px;
 			& img{
 				width: 25px;
@@ -1383,18 +1395,20 @@ aside {
 	}
 
 	.raiting{display:block;}
-
+	.section__title{
+		margin: 5px;
+	}
 	.block_anime{
+		padding: 5px;
 		article {
-			width: 45.2%;
-			// background: #1f1e1e;
+			width: 45%;
 			margin: 0px 5px 20px;
 			.img{
-				height: 220px;
+				height: 229px;
 			}
 			.title_anime{
 				font-size: 13px;
-				margin: 5px 1px 1px;
+				margin: 9px 1px 1px;
 				padding:0px;
 			}
 			.status{
@@ -1428,17 +1442,16 @@ aside {
 	
 	// Мобильное модальное окно - показ профиля
 	.mobile-modal{
-		left: -320px;
+		visibility: hidden;
 		position: fixed;
 		display: block;
-		width: 320px;
+		width: 100%;
 		height:100%;
 		background: #151516;
 		overflow: auto;
 		top: 0;
 		z-index: 99;
 		box-shadow:0px 0px 20px rgba(0, 0, 0, .8);
-		transition:500ms all;
 		.block_profile{ // первый блок, после него идет блок с ссылками
 			margin: 10px;
 			position: relative;
@@ -1479,7 +1492,8 @@ aside {
 	}
 	
 	.mobile-modal.open{
-		left: 0px!important;
+		visibility: visible;
+	transition-duration:500ms;
 	}
 
 	.up_block{
