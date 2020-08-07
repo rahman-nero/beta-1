@@ -21,22 +21,7 @@
 			 $.getScript("js/vk_widget.js"); 
 		 });
 
-		 $('.timetable__block').on('click', '.button-open', function(e){
 
-		 	var block_time = $(e.target).next();
-		 	var icon = $(e.target).find('.right_icon');
-
-		 	if ($(block_time).hasClass('open')) {
-		 		$(block_time).removeClass('open');
-		 		$(icon).removeClass('open');
-		 	} else {
-		 		$('.block-time').removeClass('open'); // до открытия, мы сначала закрываем все открытые секции
-		 		$('.right_icon').removeClass('open');
-
-		 		$(block_time).addClass('open');
-		 		$(icon).addClass('open');
-		 	}
-		 });
 
 	 }
 	 
@@ -71,5 +56,24 @@
 			 $('.modal-info-user').addClass('open');
 		 }
 	 });
+
+
+	 // Таблица расписании
+	 $('.timetable__block').on('click', '.button-open', function(e){
+		 	console.log(e);
+		 	var block_time = $(e.target).next();
+		 	var icon = $(e.target).find('.right_icon');
+
+		 	if ($(block_time).hasClass('open')) {
+		 		$(block_time).removeClass('open');
+		 		$(icon).removeClass('open');
+		 	} else {
+		 		$('.block-time').removeClass('open'); // до открытия, мы сначала закрываем все открытые секции
+		 		$('.right_icon').removeClass('open');
+
+		 		$(block_time).addClass('open');
+		 		$(icon).addClass('open');
+		 	}
+		 });
 		 
 

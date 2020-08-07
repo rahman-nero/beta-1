@@ -452,69 +452,6 @@ body {
 	margin:0px 30px 0px 0px;
 }
 
-// первые три блока, с датами выхода и тп 
-.block_release{
-	min-width: 100%;
-	display: none;
-	margin: 20px 0px 80px;
-
-	// Три блока
-	.block_info_release {
-		width: 350px;
-		border: 1px solid #151515;
-		margin-right: 20px;
-		background: #222324;
-
-		// Описание этого блока - крч тайтл в блоке
-		.release__header{
-			padding: 19px;
-			position: relative;
-			font-size: 20px;	
-			border-bottom: 1px solid #151515;
-			background-color: #1E1F20;
-			& img {
-				float: left;
-				margin-top: 3px;
-				margin-right: 10px;
-			}
-			.magic_effect_img{
-				left: 21px;
-				margin-top: 2px;
-			}
-		}
-		// блок в котором находится - аниме и т.п
-		.block_release_content{
-			position: relative;
-
-			// сами аниме в блоке
-			.anime{
-				padding: 15px;
-				display: flex;
-				& img{
-					width: 35px;
-					height: 35px;
-					border-radius: 50%;
-				}
-				div {
-					margin-left: 10px;
-					margin-top: -3px;
-					width: 100%;
-					// background: #111;
-					small{
-						display: block;
-						color:rgba(255,255,255,.5);
-					}
-				}
-
-				&:hover{
-               background:#1A1A1A;
-				}
-			}
-		}
-
-	}
-
-}
 
 
 // Название блока - крч смотри в коде
@@ -1376,11 +1313,7 @@ aside {
 		background: transparent;
 	}
 	
-	.block_release{display: block;}
-	.block_info_release{
-		margin-top: 50px;
-		width: 100%!important;
-	}
+	
 
 	.raiting{display:block;}
 	.section__title{
