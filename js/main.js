@@ -23,8 +23,8 @@
 
 		 $('.timetable__block').on('click', '.button-open', function(e){
 
-		 	let block_time = $(e.target).next();
-		 	let icon = $(e.target).find('.right_icon');
+		 	var block_time = $(e.target).next();
+		 	var icon = $(e.target).find('.right_icon');
 
 		 	if ($(block_time).hasClass('open')) {
 		 		$(block_time).removeClass('open');
@@ -72,6 +72,4 @@
 		 }
 	 });
 		 
-
-
 
