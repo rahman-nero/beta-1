@@ -673,24 +673,18 @@ aside {
      background-color: #222324;
 }
 
-.aside__header{
-	position: relative;
-	margin: 10px 20px;
-	span:first-child{
-		position: relative;
-		font-size: 18px;
-		display: block;
-		color: #e4e6eb;
-		& img{ 
-			width: 22px;
-			margin-top: 1px;
-			float: left;
-			margin-right: 10px;
-		}
-   }
+.aside__block__title.header_aside{
+	background:#1B1C1D;
+	padding: 10px;
+	border-bottom: 1px solid #161718;
+	margin: 0px!important;
 }
 // Таблица расписании
 .timetable__block{
+	.animate_gif{
+		margin-top: 20px;
+		z-index: 9;
+	}
 	width: 100%;
 	margin-bottom: 30px;
 	.aside__block__title{
@@ -1101,7 +1095,14 @@ aside {
   	}
 }
 
-
+.animate_gif{
+	position: absolute;
+	right: 0px;
+	margin-top: -80px;
+	& img{
+		width: 140px;
+	}
+}
 
 /* Footer */
 #footer{
