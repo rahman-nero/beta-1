@@ -1438,13 +1438,14 @@ aside {
 				}
 			}
 		}
+
+
 	}
 	
 	// Мобильное модальное окно - показ профиля
 	.mobile-modal{
-		visibility: hidden;
 		position: fixed;
-		display: block;
+		display: none;
 		width: 100%;
 		height:100%;
 		background: #151516;
@@ -1492,8 +1493,8 @@ aside {
 	}
 	
 	.mobile-modal.open{
-		visibility: visible;
-	transition-duration:500ms;
+		display: block;
+		transition-duration:500ms;
 	}
 
 	.up_block{
