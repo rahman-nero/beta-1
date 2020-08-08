@@ -65,3 +65,4 @@ $('.open_modal_info').click(function(e){
  }
 });
 
+

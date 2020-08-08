@@ -80,10 +80,10 @@
 
 <!-- Мобильное меню -->
 <div class="mobile_menu">
-	<a href=""><img src="img/header/home.svg" alt=""></a>
-		<a href=""><img src="img/header/messenger.svg"></a>
-		<a href=""><img src="img/header/bell.svg" alt="Уведомление"></a>
-	<a class="modal_menu"><img src="img/header/menu.svg" alt="Меню"></a>
+    <a href=""><img src="img/mobile_menu/home_active.svg" alt=""></a>
+        <a href=""><img src="img/mobile_menu/comment.svg"></a>
+        <a href=""><img src="img/mobile_menu/bell.svg" alt="Уведомление"></a>
+    <a class="modal_menu"><img src="img/header/menu.svg" alt="Меню"></a>
 </div>
 <!-- Конец мобильное меню -->
 
@@ -98,7 +98,13 @@
                 Здесь вы можете фильтровать аниме, по жанрам, по типу и погодам, и также есть возможность фильтровать их по просмотрам, и по рейтингу
             </p>
             <div class="filters-sort-block">
-                <a сlass="open_filters">Фильтры</a>
+                <span сlass="open_filters"><a>Фильтры</a></span>
+                <select class="select" name="language">
+                    <option disabled="">- - По Рейтингу - -</option>
+                    <option value="HTML">По просмотрам</option>
+                    <option value="JavaScript">По дате добавления</option>
+                    <option value="PHP">Названию</option>
+                </select>
             </div>
         </div>
         
@@ -617,21 +623,5 @@
 <script src="js/main.js" type="text/javascript" defer=""></script>
 <!-- Lazyload -->
 <script src="js/lazyload.js"  type="text/javascript"></script>
-<script>
-     $('.sort-page .content-section .block_sort .filters-sort-block a').click(function(){
-         if ($('.modal_selects').hasClass('open')) {
-             $('.modal_selects').removeClass('open');
-         } else {
-             $('.modal_selects').addClass('open');
-         }
-    }); 
-     $('.modal_selects__close').click(function(){
-         if ($('.modal_selects').hasClass('open')) {
-             $('.modal_selects').removeClass('open');
-         }
-    });
-
-     
-</script>
 </body>
 </html>
