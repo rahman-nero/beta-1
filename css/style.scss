@@ -584,17 +584,11 @@ body {
 		}
 		// блок который показывается при наведение на аниме
 		
-		
 		&:hover{
-			transition: all 300ms;
-			.hover__block{
-				opacity: 1;
-			}
-			.img {
-				 // & img {
-				 	// transform: scale(1.33);
-				 // }
-			}
+			 .title_anime, small{
+			 	color: $buttonColor;
+			 	transition-duration:400ms;
+			 }
 		}
 
 		// Статус аниме
@@ -640,8 +634,8 @@ body {
 	h4{
 		font-weight: normal;
 		margin: 10px 15px 3px;
-		padding-bottom:10px;
-		border-bottom: 2px dashed #2A282A;
+		padding-bottom:5px;
+		border-bottom: 1px solid #454245;
 	}
 	p{
 		padding: 10px 15px;
@@ -654,18 +648,12 @@ body {
 	}
 	table{
 		width: 100%;
-		tbody{
-			tr{
-				td{
-					padding: 5px 10px;
-					font-size: 13px;
-					border-right: 1px solid #171819;
-				}
-			}
-			tr:nth-child(2n){
-				background: #171819;
-			}
+		tbody tr td{
+			padding: 5px 10px;
+			font-size: 13px;
+			border-right: 1px solid #171819;
 		}
+		tr:nth-child(2n){background: #171819;}
 	}
 
 	&:before{
