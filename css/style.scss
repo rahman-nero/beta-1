@@ -1314,40 +1314,14 @@ aside {
 				    width: 100%;
 				    position: absolute;
 				    right: 10px;
-				    top:1px;
+				    top:3px;
+				    padding: 10px 9px;
+				    border: none;
+				    background: #111;
+				    border-radius: 3px;
+				    color: #fff;
 				}
 
-				.new-select {
-				    position: relative;
-				  	 background-color:#212121;
-				  	 color:white;
-				    padding: 10px 15px;
-				    font-size: 14px;
-				    cursor: pointer;
-				    user-select: none;
-				}
-				.new-select__list {
-				    position: absolute;
-				    top: 45px;
-				    left: 0;
-				    cursor: pointer;
-				    width: 100%;
-				    z-index: 2;
-				    background: transparent!important;
-				    user-select: none;
-				}
-
-				.new-select__list.on {display: block;}
-
-				.new-select__item span {
-				    display: block;
-				    background: #181818!important;
-				    padding: 7px 15px;
-				    border-radius: none;
-				    font-size: 14px;
-				}
-				.new-select__item span:hover {color: $buttonColor;}
-				
 			}
 			// мини текст - чтобы не было пустоты
 			.mini_text{
