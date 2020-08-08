@@ -4,6 +4,8 @@ if (screen.availWidth > 1200) {
 	$.getScript("js/mobile_script.js"); 
 }
 
+
+
 // Таблица расписании
 $('.timetable__block').on('click', '.button-open', function(e){
  	var block_time = $(e.target).next();
@@ -20,4 +22,7 @@ $('.timetable__block').on('click', '.button-open', function(e){
  		$(icon).addClass('open');
  	}
 });
+
+
+
  
