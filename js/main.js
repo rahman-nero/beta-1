@@ -25,7 +25,7 @@
 	 $('.content-section article').on('mouseover', '.img', function(e){
 
 	 	if ($(e.currentTarget).find('.article__description').length == 0) {
-	 		let content = $(e.currentTarget).html();
+	 		var content = $(e.currentTarget).html();
 	 		$.ajax({
   				method: "GET",
   				url: "ajax.html",
