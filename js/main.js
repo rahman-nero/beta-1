@@ -20,10 +20,21 @@
 		 $.getScript("https://vk.com/js/api/openapi.js?168", function() {
 			 $.getScript("js/vk_widget.js"); 
 		 });
-
-
-
 	 }
+
+	 $('.content-section article').on('mouseover', '.img', function(e){
+
+	 	if ($(e.currentTarget).find('.article__description').length == 0) {
+	 		let content = $(e.currentTarget).html();
+	 		$.ajax({
+  				method: "GET",
+  				url: "ajax.html",
+  				success: function (res) {
+	 				$(e.currentTarget).html(content + '<div class="article__description">' + res + '</div>');
+  				}
+			});
+	 	}
+	 });
 	 
 	 // Загрузка чата
 	 $('.loading_chat').fadeOut('slow');

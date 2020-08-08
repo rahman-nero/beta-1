@@ -445,7 +445,7 @@ body {
 
 .content-section{
 	position: relative;
-	max-width: 1140px;
+	flex-basis:1140px;
 	background-image: url(../img/registration/decor-min.png);
 	background-size: contain;
 	padding: 55px 20px;
@@ -469,67 +469,40 @@ body {
 	// Аниме блоки
 	article {
 		display: inline-table;
-		margin: 0px 19px 20px 0px;
+		margin: 0px 14px 20px 0px;
 		width: 197px;
 		cursor: pointer;
-		// background: #111;
 		padding-bottom: 10px;
 		position: relative;
-		// overflow: hidden;
 		text-align: center;
 		.img {
 			position: relative;
 			width: 100%;
 			height: 285px;
-			overflow: hidden;
 			background: #0F0F0F;
 			& img {
 				width: 100%;
 				transition: all 400ms;
 				height: 100%;
 			}
-
-				.hover__block{
+			.last_episode{
 				position: absolute;
+				background:$buttonColor;
 				width: 100%;
-				height:100%;
-				transition: all 400ms;
-				z-index: 1;
-				opacity: 0;
-				background: rgba(15,15,15,.9);	
-				.bottom_text{
-					position: absolute;
-					width: 100%;
-					bottom: 0px;
-					padding: 25px;
-					.bottom_text_rainting{
-						margin-bottom: 10px;
-						& img {
-							width: 20px;
-							height: 20px;
-							float: left;
-							margin-top: -1px;
-							margin-right: 6px;
-						}
-						& span{
-							font-family: Roboto;
-							font-weight: 500;
-							font-size: 18px;
-						}
-						.lines{
-							width: 100%;
-							margin-top: 2px;
-							height: 2px;
-		               background: linear-gradient(to left, $twoColor, $buttonColor);
-							z-index: 9;
-							display: block;
-						}
-					}
-					.year_category{
-						font-size: 14px;
-					}
-				}
+				padding: 5px;
+				font-size: 14px;
+				bottom: 0px;
 			}
+
+			&:hover{
+				.article__description{
+					opacity: 1;
+					visibility: visible;
+					transition-duration:800ms;
+				}
+
+			}
+			
 		}
 		.title_anime, small{
 			position: relative;
@@ -550,9 +523,9 @@ body {
 				opacity: 1;
 			}
 			.img {
-				 & img {
-				 	transform: scale(1.33);
-				 }
+				 // & img {
+				 	// transform: scale(1.33);
+				 // }
 			}
 		}
 
@@ -581,6 +554,57 @@ body {
 	}
 }
 
+// данные об аниме которые показываются при наведении на блок
+.article__description{
+	position: absolute;
+	width: 365px;
+	top: 20px;
+	left: 100%;
+	text-align: left;
+	color: $textColor;
+	font-family: Roboto;
+	background: #1A1B1C;
+	visibility: hidden;
+	z-index: 99;
+	border: 1px solid #222;
+	padding-bottom: 10px;
+	border-radius: 3px;
+
+	p{
+		padding: 10px 15px;
+		font-size: 13px;
+		color: rgba(255,255,255,.9);
+		font-family: Arial;
+		line-height: 17px;
+		font-weight: thin;
+		border-bottom: 1px solid #222;
+	}
+	table{
+		width: 100%;
+		tbody{
+			tr{
+				td{
+					padding: 5px 10px;
+					font-size: 13px;
+					border-right: 1px solid #171819;
+				}
+			}
+			tr:nth-child(2n){
+				background: #171819;
+			}
+		}
+	}
+
+	&:before{
+		position: absolute;
+		content: '';
+		border: 10px solid transparent;
+		border-right: 10px solid #171819;
+ 		left: -21px;
+ 		top: 50%;
+ 		transform:translate(-50%, -50);
+	}
+}
 
 @keyframes status{
 	0%{
@@ -673,12 +697,6 @@ aside {
      background-color: #222324;
 }
 
-.aside__block__title.header_aside{
-	background:#1B1C1D;
-	padding: 10px;
-	border-bottom: 1px solid #161718;
-	margin: 0px!important;
-}
 // Таблица расписании
 .timetable__block{
 	.animate_gif{
