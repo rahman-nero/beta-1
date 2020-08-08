@@ -511,6 +511,7 @@ body {
 .block_anime{
 	position: relative;
 	padding: 20px 15px 50px;
+	margin-bottom: 30px;
 	min-width: 100%;
 	background: #1E1F20;
 	border: 1px solid #212223;
@@ -1316,6 +1317,7 @@ aside {
 	body{ // Чтобы фоотер нормально отображался
     	margin-bottom: 49px;
 	}
+	// slick-slader
 	.slick-slader{
 		margin-top: 49px;
 		section.slider div img{
@@ -1323,7 +1325,7 @@ aside {
 			height: 234px;
 		}
 	}
-
+	// header - top menu
 	#header{
 		.block-header-top{display: none;}
 		background: #1E1F20;
@@ -1369,16 +1371,20 @@ aside {
 
 		 }
 	}
+	// боковое меню
 	aside{display: none;}
-
+	// блок над меню - ТОП 100 аниме и т.д
 	.block-header-top{display: none;}
+	// украшения headera
 	.header__style_line {display: none;}
 	.header-open-block {display: none;}
-		
+
+	// главный блок
 	#main {
 		display: block;
 		padding: 5px 0px;
 	}
+	// блок в которой все находится - аниме и т.д
 	.content-section{ 
 		max-width: 1140px!important;
 		padding: 0px 0px;
@@ -1400,8 +1406,11 @@ aside {
 			height: auto;
 		}
 	}
+	// показ рейтинга на аниме 
 	.raiting{display:block;}
+	// Название блока
 	.section__title{margin: 0px;}
+	// блок в котором аниме
 	.block_anime{
 		padding: 5px;
 		article {
@@ -1422,7 +1431,7 @@ aside {
 			}
 		}
 	}
-
+	// фоотер
 	#footer {
 		.center__footer{
 			padding-left: 10px;
@@ -1496,12 +1505,12 @@ aside {
 				}
 			}
 	}
-	
+	// открытый модальное окно инфа - о пользователе
 	.mobile-modal.open{
 		transition-duration:500ms;
 		display: block;
 	}
-
+	// ссылка которая 
 	.up_block{
 		display: none;
 	}
