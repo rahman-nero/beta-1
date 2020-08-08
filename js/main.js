@@ -22,19 +22,18 @@
 		 });
 	 }
 
-	 $('.content-section article').on('mouseover', '.img', function(e){
-
-	 	if ($(e.currentTarget).find('.article__description').length == 0) {
-	 		var content = $(e.currentTarget).html();
-	 		$.ajax({
-  				method: "GET",
-  				url: "ajax.html",
-  				success: function (res) {
-	 				$(e.currentTarget).html(content + '<div class="article__description">' + res + '</div>');
-  				}
-			});
-	 	}
-	 });
+	 // $('.content-section article').on('mouseover', '.img', function(e){
+	 // 	if ($(e.currentTarget).find('.article__description').length == 0) {
+	 // 		var content = $(e.currentTarget).html();
+	 // 		$.ajax({
+  // 				method: "GET",
+  // 				url: "ajax.html",
+  // 				success: function (res) {
+	 // 				$(e.currentTarget).html(content + '<div class="article__description">' + res + '</div>');
+  // 				}
+		// 	});
+	 // 	}
+	 // });
 	 
 	 // Загрузка чата
 	 $('.loading_chat').fadeOut('slow');
@@ -71,7 +70,6 @@
 
 	 // Таблица расписании
 	 $('.timetable__block').on('click', '.button-open', function(e){
-		 	console.log(e);
 		 	var block_time = $(e.target).next();
 		 	var icon = $(e.target).find('.right_icon');
 
