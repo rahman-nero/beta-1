@@ -1322,18 +1322,16 @@ aside {
 			.user-info-block{display: none;}
 		}
 	}
-
-
+	// нижнее мобильное меню с иконками
 	.mobile_menu{
 		position: fixed;
 		width: 100%!important;
 		background: #1D1E1F;
-		border: 1px solid #212223;
+		border-top: 1px solid #212223;
 		z-index: 999;
 		bottom: 0px;
 		text-align: center;
 		display: flex;
-		transition:400ms all;
 	 	& a { 
 	 		width: 25%;
 	 		padding: 10px;
@@ -1403,7 +1401,7 @@ aside {
 			}
 		}
 	}
-	
+
 	#footer {
 		.center__footer{
 			padding-left: 10px;
@@ -1424,7 +1422,6 @@ aside {
 			}
 		}
 	}
-	
 	// Мобильное модальное окно - показ профиля
 	.mobile-modal{
 		position: fixed;
@@ -1436,6 +1433,9 @@ aside {
 		z-index: 99;
 		box-shadow:0px 0px 20px rgba(0, 0, 0, .8);
 		transition: all 800ms;
+		// убераем скролл с права  - не красиво выглядить
+		&::-webkit-scrollbar {width: 0px;}
+		&::-moz-scrollbar {width: 0;}
 
 		.block_profile{ // первый блок, после него идет блок с ссылками
 			margin: 10px;
