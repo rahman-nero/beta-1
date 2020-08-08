@@ -1,3 +1,17 @@
+// slick - слайдер
+$.getScript("library/slick_slider/slick.min.js", function() {
+	$(".regular").slick({
+     dots: false,
+     slidesToShow: 1,
+     variableWidth: true,
+     slidesToScroll:1,   
+     centerMode: true,
+     lazyLoad : 'ondemand',
+     prevArrow: '<div class="prev"><img src="img/slider/left.svg"></div>',
+     nextArrow : '<div class="next"><img src="img/slider/right.svg"></div>',
+});
+
+});
 
 $('.modal_menu').click(function(e){
  e.preventDefault();
@@ -14,3 +28,4 @@ $('.modal_menu').click(function(e){
  }
 });
 
+// slick - слайдер

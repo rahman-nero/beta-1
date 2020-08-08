@@ -1313,10 +1313,17 @@ aside {
 
 
 @media (max-width: 1020px) {
-	body{ // Чтобы фоотер норамльнор отображался
+	body{ // Чтобы фоотер нормально отображался
     	margin-bottom: 49px;
 	}
-	.slick-slader{display: none;}
+	.slick-slader{
+		margin-top: 49px;
+		section.slider div img{
+			width: 155px;
+			height: 234px;
+		}
+	}
+
 	#header{
 		.block-header-top{display: none;}
 		background: #1E1F20;
@@ -1371,7 +1378,6 @@ aside {
 	#main {
 		display: block;
 		padding: 5px 0px;
-		margin-top: 50px;
 	}
 	.content-section{ 
 		max-width: 1140px!important;

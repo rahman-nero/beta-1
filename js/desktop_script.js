@@ -11,10 +11,22 @@ $(window).scroll(function(){
 $('.raiting').remove();
 $('.mobile-modal').remove();
 
-//  скрипт с виджетом вк
+//  slick слайдер
 $.getScript("library/slick_slider/slick.min.js", function() {
-	$.getScript("js/slick_settings.js");
+	$(".regular").slick({
+	     dots: false,
+	     slidesToShow: 6,
+	     autoplay: true,
+	     autoplaySpeed: 5000,
+	     infinite: true,
+	     variableWidth: true,
+	     slidesToScroll:2,
+	     prevArrow: '<div class="prev"><img src="img/slider/left.svg"></div>',
+	     nextArrow : '<div class="next"><img src="img/slider/right.svg"></div>'
+	 });
 });
+
+//  скрипт с виджетом вк
 
 $.getScript("https://vk.com/js/api/openapi.js?168", function() {
  $.getScript("js/vk_widget.js"); 
@@ -52,3 +64,4 @@ $('.open_modal_info').click(function(e){
 	 $('.modal-info-user').addClass('open');
  }
 });
+
