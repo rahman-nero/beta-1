@@ -29,7 +29,7 @@
   				method: "GET",
   				url: "ajax.html",
   				success: function (res) {
- 					$(e.target.parentElement).html(content + '<div class="article__description">' + res + '</div>');
+ 					$(e.target).parent().html(content + '<div class="article__description">' + res + '</div>');
   				}
 			});
 	 	}
