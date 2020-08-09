@@ -1,3 +1,4 @@
+
 /* $VARIABLE */
 $textColor : rgba(228, 230, 235,1);
 $buttonColor : #2D88FF;
@@ -832,7 +833,7 @@ aside {
 			padding: 10px 20px 5px 20px;
 			font-size: 13px;
 			box-shadow: inset 0px 0px 20px rgba(0,0,0,.15);
-			background: $threeColor;
+			background: #171819;
 			display: none;
 			p{
 				padding: 4px 0px 5px;
@@ -1358,31 +1359,25 @@ aside {
 				.row-blocks-select{
 					display: block;
 					margin-bottom: 10px;
-					& label{
-						// background: #000;
-						display: block;
-						color: rgba(255,255,255,.8);
-						margin-bottom: 30px;
-					}
+
 					// кнопка при нажатии показывается блок со жанрами и т.д 
-					.view-modal-section:first-child{
+					.title-sort-block{
 						width: inherit;
 						cursor: pointer;
 						font-size: 14px;
-						margin: 10px 15px;
-						border: 1px solid #404345;
-						padding: 7px 0px 7px 15px;
+						padding: 10px 0px 10px 15px;
+						margin: 0px;
 						display:block;
-						&:hover{
-							background: #212223;
-						}
+				
+						// иконка (вниз) как у select
 						.icon-down {
 							width: 15px;
 							margin-top: 2px;
 							position: absolute;
-							right: 30px;
+							right: 20px;
+							transform: rotate(0deg);
 						}
-
+						.icon-down.open{transform: rotate(-180deg);}
 						// красивое оформление иконок 
 						.main_img_icon{
 							margin-top: 1px;
@@ -1394,25 +1389,32 @@ aside {
 						.magic_effect_img{
 							margin-top: 1px;
 						  	z-index: 11;
-						  	margin-left: 8px;
+						  	margin-left: -8px;
 						  	& img{
 						  		width: 17px;
 						  	}
 						}
 					}
+					.view-modal-section{
+						// border: 1px solid #363535;
+
+						&:hover{
+							background: #212223;
+						}
+					}
+					// блок в котором перечилсяются жанры и т.д
 					.select-filters{
 						position: absolute;
-						
 						z-index: 99;
 						visibility: hidden;
 						opacity: 0;
 						width: 100%;
-						padding: 10px 20px;
+						padding: 10px 20px 0px;
 						border: 1px solid #444;
 						margin: 0;
 						left: 0;
 						overflow: auto;
-						height: 300px;
+						max-height: 300px;
 						transition:500ms all;
 						background: $twoColor;
 						& input{
@@ -1427,12 +1429,47 @@ aside {
 								font-family: Roboto;
 								margin-bottom: 10px;
 								font-size: 14px;
+								display: block;
 							}
 						}
 					}
+					// это открытое состояние блока
 					.select-filters.open{
 						visibility: visible;
 						opacity: 1;
+					}
+
+					.filters-flex-input{
+						display: flex;
+						margin: 10px 10px 0px;
+						& input{
+							width: 50%;
+							padding: 6px 10px;
+							border: 1px solid #3B3D45;
+							background: #1A1A1A;
+							margin: 0px 5px;
+							color: white;
+						}
+					}
+
+					.filters-flex-input.checkboxs{
+						display: block;
+						margin: 0px 10px;
+						& span{
+							font-size: 14px;
+							color: rgba(255,255,255,.7);
+							letter-spacing: 0.5px;
+							font-weight: thin;
+							display: block;
+								& input{
+									position: relative;
+									margin: 0;
+									width: 30px;
+									margin-top: 4px;
+								}
+						}
+
+						// & label
 					}
 				}
 		}

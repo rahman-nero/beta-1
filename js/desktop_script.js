@@ -67,12 +67,17 @@ $('.open_modal_info').click(function(e){
 
 
 $('.row-blocks-select').on('click', '.view-modal-section', function(e){
-	let block_view = $(e.currentTarget).next().hasClass('select-filters') ?  $(e.currentTarget).next() :  $(e.currentTarget).parent().parent() ;
+	let block_view = $(e.currentTarget).next();
+	let icon_down = $(e.currentTarget).find('.icon-down');
+	console.log(icon_down);
+
 	if ($(block_view).hasClass('open')) {
+		$(icon_down).removeClass('open');
 		$(block_view).removeClass('open');
 	} else {
 		$('.select-filters').removeClass('open');
-
+		$('.icon-down').removeClass('open');
+		$(icon_down).addClass('open');
 		$(block_view).addClass('open');
 	}
 });
