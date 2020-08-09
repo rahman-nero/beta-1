@@ -3,6 +3,7 @@ $textColor : rgba(228, 230, 235,1);
 $buttonColor : #2D88FF;
 $backColor : #141314;
 $twoColor : #222324;
+$threeColor : #1B1C1D;
 
 /* #3F4243 - цвет иконок*/
 * {
@@ -464,7 +465,7 @@ body {
 			&:nth-child(2){margin-left:5px;}
 			width: 50%;
 			margin:10px 0px; 
-			background: #1E1F20;
+			background: $twoColor;
 			border: 1px solid #212223;
 			box-shadow: 0px 0px 10px rgba(0,0,0,.2);
 			.section__title{font-size: 17px;}
@@ -518,7 +519,7 @@ body {
 .section__title{
 	position: relative;
 	font-size: 22px;
-	background: #1E1F20;
+	background: $twoColor;
 	padding: 10px 15px;
 	border-bottom: 1px solid #111;
 	z-index: 9; 
@@ -530,7 +531,7 @@ body {
 	padding: 20px 15px 50px;
 	margin-bottom: 30px;
 	min-width: 100%;
-	background: #1E1F20;
+	background: $twoColor;
 	border: 1px solid #212223;
 	box-shadow: 0px 0px 10px rgba(0,0,0,.2);
 	// Аниме блоки
@@ -546,7 +547,7 @@ body {
 			position: relative;
 			width: 100%;
 			height: 285px;
-			background: #0F0F0F;
+			background: $twoColor;
 			& img {
 				width: 100%;
 				transition: all 400ms;
@@ -761,7 +762,7 @@ aside {
      float: left;
      min-width: 335px;
      max-width: 335px;
-     background-color: #222324;
+     background-color: $twoColor;
 }
 
 // Таблица расписании
@@ -776,7 +777,7 @@ aside {
 		padding:15px 10px 15px 20px;
 		border-bottom: 1px solid #151515;
 		margin-bottom: 0px;
-		background-color: #1B1C1D;
+		background-color: $threeColor;
 		// красивое оформление иконок 
 		.main_img_icon{
 			margin-top:-1px;
@@ -796,7 +797,7 @@ aside {
 		position: relative;
 		width: initial;
 		cursor: pointer;
-		background: #1E1F20;
+		background: $threeColor;
 
 		// иконка с надписью даты
 		.button-open{
@@ -831,7 +832,7 @@ aside {
 			padding: 10px 20px 5px 20px;
 			font-size: 13px;
 			box-shadow: inset 0px 0px 20px rgba(0,0,0,.15);
-			background: #1A1B1C;
+			background: $threeColor;
 			display: none;
 			p{
 				padding: 4px 0px 5px;
@@ -854,7 +855,7 @@ aside {
 
 /* Ссылки в меню */
 #menu{
-   background: #1A1B1C;
+   background: $threeColor;
    margin: 0px 0px 50px;
    ul{
        list-style: none;
@@ -925,7 +926,7 @@ aside {
     margin: 10px 0px;
     display: block;
     width: 100%;
-    background: #1E1F20;
+    background: $threeColor;
 	.aside__block__title{
 		margin-left: 10px;
 	}
@@ -937,7 +938,7 @@ aside {
         height: 100%;
         z-index: 99;
         margin: 0px -10px;
-        background: #212223;
+        background: $twoColor;
         .centerLoading{
             width: 200px;
             padding: 10px;
@@ -1152,7 +1153,7 @@ aside {
 		margin: 10px 15px;
 		width: inherit;
 		height: 400px;
-		background: #111;
+		background: $threeColor;
 	}
 }
 
@@ -1193,7 +1194,7 @@ aside {
 #footer{
 	position: relative;
 	min-width: 100%;
-	background: #1E1F20;
+	background: $threeColor;
 
 	.header__style_line {	
 		bottom: -8px;
@@ -1288,7 +1289,7 @@ aside {
 .sort-page{
 	position: relative;
 	.content-section{
-		background: #181818;
+		background: $threeColor;
 		margin-top: 120px;
 		padding-top: 20px;
 		position: relative;
@@ -1351,7 +1352,7 @@ aside {
 		margin-top: 119px;
 			.filters_block{
 				width: 100%;
-				background: #111;
+				background: $threeColor;
 		}
 	}
 }
@@ -1474,7 +1475,7 @@ aside {
 	// header - top menu
 	#header{
 		.block-header-top{display: none;}
-		background: #1E1F20;
+		background: $threeColor;
 		border: none;
 		padding: 0;
 		.center-header{
@@ -1501,7 +1502,7 @@ aside {
 	.mobile_menu{
 		position: fixed;
 		width: 100%!important;
-		background: #1D1E1F;
+		background: $threeColor;
 		border-top: 1px solid #212223;
 		z-index: 999;
 		bottom: 0px;
@@ -1604,7 +1605,7 @@ aside {
 		width: 100%;
 		height: 100%;
 		top: 0;
-		background: #151516;
+		background: $twoColor;
 		overflow: auto;
 		z-index: 99;
 		box-shadow:0px 0px 20px rgba(0, 0, 0, .8);
