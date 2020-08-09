@@ -1355,16 +1355,15 @@ aside {
 				width: 100%;
 				background: $threeColor;
 				padding: 10px 0px;
-				margin-bottom: 20px;
+				margin-bottom: 50px;
 				// каждый раздел находится в отдельном блоке 
 				.row-blocks-select{
 					display: block;
 					margin-bottom: 10px;
-
 					// кнопка при нажатии показывается блок со жанрами и т.д 
 					.title-sort-block{
 						width: inherit;
-						font-size: 14px;
+						// font-size: 1px;
 						padding: 10px 0px 10px 15px;
 						margin: 0px;
 						display:block;
@@ -1400,6 +1399,7 @@ aside {
 						cursor: pointer;
 						&:hover{
 							background: #212223;
+							transition-duration:400ms;
 						}
 					}
 					// блок в котором перечилсяются жанры и т.д - скрытая окно
@@ -1468,9 +1468,43 @@ aside {
 									margin-top: 4px;
 								}
 						}
-
 					}
 				}
+
+				// Блок в котором два button - 'Отправить' и 'Сбросить'
+				.filter-send-block{
+					margin: 15px 10px 5px;
+					display: flex;
+					// кнопка отправки фильтров
+					.submit-filters, .reset-filters{
+						background: $buttonColor;
+						color:white;
+						border: 1px solid #2571D3;
+						cursor: pointer;
+						width: 50%;
+						padding: 7px 0px;
+						border-radius: 3px;
+						box-shadow: 0px 0px 1px rgba(0,0,0,.1);
+						margin-left: 10px;
+						&:hover{
+							background: #388EFF;
+							transition-duration:500ms;
+						}
+					}
+
+					// кнопка Сброс фильтров
+					.reset-filters{
+						background: #292A2C;
+						margin-right: 10px;
+						margin-left: 0px;
+						border:none;
+						&:hover{
+							background: #2D2E30;
+							transition-duration:500ms;
+						}
+					}
+				}
+				
 		}
 	}
 
