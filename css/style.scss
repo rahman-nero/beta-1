@@ -2,7 +2,7 @@
 $textColor : rgba(228, 230, 235,1);
 $buttonColor : #2D88FF;
 $backColor : #141314;
-$twoColor : #202122;
+$twoColor : #222324;
 
 /* #3F4243 - цвет иконок*/
 * {
@@ -37,11 +37,11 @@ $twoColor : #202122;
 
 ::-moz-scrollbar {
     width: 8px;
-    background-color: rgba(0, 0, 0, .0);
+    background-color:  #212121;
 }
 
 ::-moz-scrollbar-thumb {
-  background: linear-gradient(0deg, #ff0000, #ff9000);
+  background: #212121;
 }
 
 a {text-decoration: none; color:$textColor;}
@@ -652,6 +652,12 @@ body {
 			padding: 5px 10px;
 			font-size: 13px;
 			border-right: 1px solid #171819;
+		}
+		tbody tr td:last-child{
+			text-decoration: underline;
+			&:hover{
+			color: $buttonColor;
+			}
 		}
 		tr:nth-child(2n){background: #171819;}
 	}
@@ -1294,6 +1300,7 @@ aside {
 			}
 			// Сами фильтры находятся здесь
 			.filters-sort-block{
+				display: none;
 				position: relative;
 				z-index: 9;
 				padding: 10px;
@@ -1307,7 +1314,6 @@ aside {
 					cursor: pointer;
 					border-radius: 3px;
 				}
-
 				.select {
 				    display: block;
 				    max-width: 215px;
@@ -1332,13 +1338,21 @@ aside {
 				color: rgba(255,255,255,.7);
 			}
 		}
-
+		.block_anime{
+			border: none;
+			box-shadow: none;
+			background: transparent;
+		}
 		article .title_anime{
 				margin: 10px 3px 0px;
 		}
 	}
 	aside{
 		margin-top: 119px;
+			.filters_block{
+				width: 100%;
+				background: #111;
+		}
 	}
 }
 
@@ -1651,10 +1665,12 @@ aside {
 	.sort-page{
 		.content-section{
 			margin-top: 50px;
-			.block_sort h2{
-				margin-left: 10px;
+			.block_sort {
+				.filters-sort-block{display: block}
+				h2 {margin-left: 10px;}
 			}
 		}
+		
 	}
 	.modal_selects{
 		z-index: 999;
