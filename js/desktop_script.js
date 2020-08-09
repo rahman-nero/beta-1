@@ -66,3 +66,13 @@ $('.open_modal_info').click(function(e){
 });
 
 
+$('.row-blocks-select').on('click', '.view-modal-section', function(e){
+	let block_view = $(e.currentTarget).next().hasClass('select-filters') ?  $(e.currentTarget).next() :  $(e.currentTarget).parent().parent() ;
+	if ($(block_view).hasClass('open')) {
+		$(block_view).removeClass('open');
+	} else {
+		$('.select-filters').removeClass('open');
+
+		$(block_view).addClass('open');
+	}
+});

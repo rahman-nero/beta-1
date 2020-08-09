@@ -866,16 +866,16 @@ aside {
            color: $textColor;
            	// красивое оформление иконок 
 				.main_img_icon{
-					margin-top:-3px;
-				   margin-right:11px;
+					margin-top:-5px;
+				   margin-right:12px;
 				   z-index: 9;
 				}
 
 				// красивое оформление иконок  (с ним)
 				.magic_effect_img{
-					margin-top: -1px;
+					margin-top: -3px;
 				  	z-index: 11;
-				  	margin-left: -5px;
+				  	margin-left: -5.5px;
 				}
 
            &::after{
@@ -1344,17 +1344,100 @@ aside {
 			box-shadow: none;
 			background: transparent;
 		}
-		article .title_anime{
-				margin: 10px 3px 0px;
-		}
+		article .title_anime{margin: 10px 3px 0px;}
 	}
+	
 	aside{
 		margin-top: 119px;
 			.filters_block{
 				width: 100%;
 				background: $threeColor;
+				padding: 10px 0px;
+				margin-bottom: 20px;
+
+				.row-blocks-select{
+					display: block;
+					margin-bottom: 10px;
+					& label{
+						// background: #000;
+						display: block;
+						color: rgba(255,255,255,.8);
+						margin-bottom: 30px;
+					}
+					// кнопка при нажатии показывается блок со жанрами и т.д 
+					.view-modal-section:first-child{
+						width: inherit;
+						cursor: pointer;
+						font-size: 14px;
+						margin: 10px 15px;
+						border: 1px solid #404345;
+						padding: 7px 0px 7px 15px;
+						display:block;
+						&:hover{
+							background: #212223;
+						}
+						.icon-down {
+							width: 15px;
+							margin-top: 2px;
+							position: absolute;
+							right: 30px;
+						}
+
+						// красивое оформление иконок 
+						.main_img_icon{
+							margin-top: 1px;
+						   margin-right:12px;
+						   width: 17px;
+						   z-index: 9;
+						} 
+						// красивое оформление иконок  (с ним)
+						.magic_effect_img{
+							margin-top: 1px;
+						  	z-index: 11;
+						  	margin-left: 8px;
+						  	& img{
+						  		width: 17px;
+						  	}
+						}
+					}
+					.select-filters{
+						position: absolute;
+						
+						z-index: 99;
+						visibility: hidden;
+						opacity: 0;
+						width: 100%;
+						padding: 10px 20px;
+						border: 1px solid #444;
+						margin: 0;
+						left: 0;
+						overflow: auto;
+						height: 300px;
+						transition:500ms all;
+						background: $twoColor;
+						& input{
+							background: #000;
+							float: left;
+							margin-top: 1px;
+							margin-right: 10px;
+							display: block;
+							& + label{
+								margin: 0px;
+								color: rgba(255,255,255,.6);
+								font-family: Roboto;
+								margin-bottom: 10px;
+								font-size: 14px;
+							}
+						}
+					}
+					.select-filters.open{
+						visibility: visible;
+						opacity: 1;
+					}
+				}
 		}
 	}
+
 }
 
 // модальное окно при нажатии на 'фильтры' - в нем фильтры
@@ -1531,6 +1614,7 @@ aside {
 		display: block;
 		padding: 5px 0px;
 	}
+
 	// блок в которой все находится - аниме и т.д
 	.content-section{ 
 		max-width: 1140px!important;
