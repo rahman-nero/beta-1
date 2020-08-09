@@ -69,7 +69,6 @@ $('.open_modal_info').click(function(e){
 $('.row-blocks-select').on('click', '.view-modal-section', function(e){
 	let block_view = $(e.currentTarget).next();
 	let icon_down = $(e.currentTarget).find('.icon-down');
-	console.log(icon_down);
 
 	if ($(block_view).hasClass('open')) {
 		$(icon_down).removeClass('open');
