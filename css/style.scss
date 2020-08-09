@@ -1475,7 +1475,7 @@ aside {
 	// header - top menu
 	#header{
 		.block-header-top{display: none;}
-		background: $threeColor;
+		background: $twoColor;
 		border: none;
 		padding: 0;
 		.center-header{
@@ -1502,7 +1502,7 @@ aside {
 	.mobile_menu{
 		position: fixed;
 		width: 100%!important;
-		background: $threeColor;
+		background: $twoColor;
 		border-top: 1px solid #212223;
 		z-index: 999;
 		bottom: 0px;
