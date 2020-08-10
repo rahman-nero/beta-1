@@ -1682,7 +1682,8 @@ aside {
 			font-size: 15px;
 			line-height: 23px;
 		}
-		// Плеер
+
+		// блок в котором плеер
 		.section-player{
 			position: relative;
 			max-width: 100%;
@@ -1695,36 +1696,47 @@ aside {
 			}
 			.player{
 				height: 100%;
-				& iframe{
-					height: 500px;
-				}
 				background: #141314;
 				padding: 0px 50px;
+				// плеер
+				& iframe{height: 500px;}
 
 				// панель где можно выбрать серию - и поделится ссылкой
 				.player-bottom-panel{
 					display: flex;
-					padding: 15px 20px;
+					padding: 15px 0px;
 					position: relative;
 					text-align: left;
 					margin-top: -4px;
 					background: transparent;
 					width: 100%;
+
 					// выбор серии
 					.controls{
+						padding: 10px;
 						flex:2;
-						background: #111;
+						border: 1px solid $buttonColor;
+						border-left: none;
+						border-right: none;
 					}
 					// Ссылки чтобы поделится с сайтом
 					.link-share{
 						flex:2;
 						display: flex;
-						background: #000;
-						align-item:right;
+						// background: #000;
+						border: 1px solid $buttonColor;
+						border-left: none;
+						border-right: none;
+						padding: 10px; 
+						justify-content: flex-end;
+						& span{
+							margin-right: 10px;
+						}
 						& img{
 							width: 20px;
-
 							margin-right: 10px;
+							margin-top: 1px;
+							float: left;
 							border-radius: 3px;
 						}
 					}
