@@ -1525,7 +1525,8 @@ aside {
 .modification-page{
 	position: relative;
 	.content-section{
-			background: transparent;
+		// background: transparent;
+		box-shadow: 0px 0px 10px  rgba(0,0,0,.2);
 		// хлебные крошки
 		.breadcrumbs{
 			position: relative;
@@ -1559,20 +1560,15 @@ aside {
 				}
 				.watch{
 					margin-top: 10px;
-					margin-right:20px;
-					border-radius: 2px;
+					margin-right:0px;
+					background-color: #FF421D;
 					cursor: pointer;
 					font-size: 12px;
 					transition:500ms all;
-					// border: none;
 					box-shadow: none;
-					& img{
-						margin-top: -1px;
-					}
-					&:after{display: none;}
-					&:hover{
-						box-shadow: 0px 0px 5px rgba(45, 136, 255, 0.8);
-					}
+					& img{margin-top: -1px;}
+					&:after{border-left-color: #FF421D;border-top-color: #FF421D;}
+					&:hover{box-shadow: 0px 0px 5px rgba(255,66,29,0.8);}
 				}
 				.add-to-list{
 					text-align: center;
@@ -1657,10 +1653,13 @@ aside {
 						& a {
 							border-bottom: 1px dashed $buttonColor;
 							color: rgba(255,255,255,.8);
+							&:hover{
+								color:$buttonColor;
+							}
 						}
 						& b{
 							color: $textColor;
-							font-weight: 600;
+							font-weight: 500;
 							font-size: 15px;
 							margin-right: 5px;
 							position: relative;
@@ -1669,19 +1668,75 @@ aside {
 				}
 			}
 		}
-
+		// Описание аниме
 		.about_anime__description{
-			padding: 20px;
-			// color: rgba(0,0,0,.8);
+			h4{
+				font-size: 19px;
+				font-weight: 500;
+				margin-bottom: 10px;
+			}
+			padding: 20px 20px;
+			background-color: #212223;
 			font-family: Roboto;
-			background: #212223;
 			font-weight: 400;
 			font-size: 15px;
 			line-height: 23px;
 		}
+		// Плеер
+		.section-player{
+			position: relative;
+			max-width: 100%;
+			// background: #000;
+			margin-top: 40px;
+			text-align: center;
+			p{
+				margin: 20px 0px;
+				font-size: 22px;
+			}
+			.player{
+				height: 100%;
+				& iframe{
+					height: 500px;
+				}
+				background: #141314;
+				padding: 0px 50px;
+
+				// панель где можно выбрать серию - и поделится ссылкой
+				.player-bottom-panel{
+					display: flex;
+					padding: 15px 20px;
+					position: relative;
+					text-align: left;
+					margin-top: -4px;
+					background: transparent;
+					width: 100%;
+					// выбор серии
+					.controls{
+						flex:2;
+						background: #111;
+					}
+					// Ссылки чтобы поделится с сайтом
+					.link-share{
+						flex:2;
+						display: flex;
+						background: #000;
+						align-item:right;
+						& img{
+							width: 20px;
+
+							margin-right: 10px;
+							border-radius: 3px;
+						}
+					}
+
+
+				}
+			}
+		}
+
+
 	}
 }
-
 /* Страница view.html */
 
 
