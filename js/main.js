@@ -45,5 +45,15 @@ $('.modal_selects').click(function(e){
    }
 });
 
+// закрытие модалки со фильтрами  - если клинуть на черную область
+$('.add-to-list').click(function(e){
+
+  if ($('.list-link').hasClass('open'))
+       $('.list-link').removeClass('open');
+  else 
+       $('.list-link').addClass('open');
+   
+});
+
  
 
