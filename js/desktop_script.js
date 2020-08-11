@@ -79,3 +79,27 @@ $('.row-blocks-select').on('click', '.view-modal-section', function(e){
 		$(block_view).addClass('open');
 	}
 });
+
+
+
+
+// показ скриншотов в модалке - если кликнуть на скриншот открывается модальное окно с ним
+$('.screens').on('click', 'a', function(e){
+  let img_link = $(e.currentTarget).data('src'); // ссылка на изображение
+
+  if ($('.modal-view-img').hasClass('open') == false){
+    $('.modal-view-img .center-view-img').html(
+      '<span class="close-view-img-modal">x</span>' + // вставляем туда кнопку закрытия модалки
+      '<img src="' + img_link + '">'
+      );
+    $('.modal-view-img').addClass('open'); 
+  }
+
+});
+
+// обрабатываем модалку скриншотов - делаем возможность закрытия(выше)
+$('.modal-view-img').click(function(e) {
+  if ($(e.target).hasClass('open') ||  $(e.target).hasClass('close-view-img-modal')) {
+    $('.modal-view-img').removeClass('open');
+  }
+})

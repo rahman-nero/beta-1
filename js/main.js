@@ -5,7 +5,6 @@ if (screen.availWidth > 1200) {
 }
 
 
-
 // Таблица расписании
 $('.timetable__block').on('click', '.button-open', function(e){
  	var block_time = $(e.target).next();
@@ -62,7 +61,7 @@ $('.scroll-left').on('click', function(){
   var leftValue = $('.list-series').css('left').match(/[0-9-]+/)[0];
 
   if (+leftValue + valueScroll <= 0  ) {
-    $('.list-series').css({'left' : +leftValue + valueScroll + 'px'});
+    $('.list-series').css({'left' : +leftValue + valueScroll});
   } else {
     $('.list-series').css({'left' : '0px'});
   }
@@ -74,16 +73,13 @@ $('.scroll-right').on('click', function(){
   var valueScroll = 200;
   var leftValue = $('.list-series').css('left').match(/[0-9-]+/)[0];
   var widthBlock = parseInt($('.list-series').width());
-  widthBlock -= widthBlock * 2;
-
+  widthBlock = widthBlock - (widthBlock * 2);
+  console.log(widthBlock);
+  
   if (+leftValue - valueScroll < widthBlock)  {
-    $('.list-series').css({'left' : '-' + widthBlock + 'px'});
+    $('.list-series').css({'left' : '-' + widthBlock});
   } else {
-    $('.list-series').css({'left' : +leftValue - valueScroll + 'px'});
+    $('.list-series').css({'left' : +leftValue - valueScroll});
   }
-
-
 });
  
-
-

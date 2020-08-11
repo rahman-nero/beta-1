@@ -1546,7 +1546,7 @@ aside {
 		.content-about-anime{
 			position: relative;
 			width: inherit;
-			margin: 20px;
+			margin: 20px 20px 0px;
 			display: flex;
 			.mobile_title_anime{display: none;}
 
@@ -1704,6 +1704,25 @@ aside {
 				}
 			}
 		}
+		
+		// Раздел скриншотов
+		.anime_screenshots{
+			width: 100%;
+			padding: 10px 20px ;
+			margin-bottom: 40px;
+			h4{margin: 0px 0px 20px;}
+			.screens{
+				display: flex;
+				& img{
+					cursor: pointer;
+					border-radius: 3px;
+					width:180px;
+					height: auto;
+				}
+			}
+		}
+
+
 		// Описание аниме
 		.about_anime__description{
 			h4{
@@ -1718,6 +1737,7 @@ aside {
 			font-size: 15px;
 			line-height: 23px;
 		}
+
 
 		// блок в котором плеер
 		.section-player{
@@ -1801,9 +1821,10 @@ aside {
 						// блок в котором ссылки на серии
 						.list-series{
 							position: relative;
+							transition:500ms all; 
 							margin: 0px 38px;
 							display: flex;
-							left: 0px;
+							transform:translateX(0px);
 							width: inherit;
 							a{
 								background: #222;
@@ -1885,6 +1906,51 @@ aside {
 /* Страница view.html */
 
 
+// модальное окно просмотра скриншотов со сайта 
+.modal-view-img{
+	visibility: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,.5);
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	.center-view-img{
+		max-width: 1000px;
+		position: absolute;
+		background-color: #000;
+		border-radius: 3px;
+		top: 50%;
+		left: 50%;
+		transform:translate(-50%,-50%);
+		height: auto;
+		& img{
+			width: 100%;
+			height: 100%;
+		}
+
+		.close-view-img-modal{
+			position: absolute;
+			right: 20px;
+			top: 20px;
+			background: #222;
+			padding: 2px 10px;
+			border-radius: 2px;
+			cursor: pointer;
+			&:hover{
+				box-shadow: 0px 0px 3px rgba(0,0,0,.4);
+				transition-duration:500ms;
+				background: #333;
+			}
+		}
+	}
+
+}
+
+.modal-view-img.open{
+	visibility: visible;
+}
 // модальное окно при нажатии на 'фильтры' - в нем фильтры
 .modal_selects{
 	position: fixed;
@@ -2315,16 +2381,19 @@ aside {
 			}
 		}
 	}
-
+	// скрываем скиншоты, тк как они почти не видны на телефоне
+	.modal-view-img{display: none;} 
+	.anime_screenshots{display: none;} 
+	
 	/* Страница view.html */
 
-		.button-all-view{
-			position: relative;
-			margin: 30px 51px;
-			text-align: center;
-			background: $buttonColor;
-			padding: 8px 6px;
-			border-radius: 2px;
-		}
+	.button-all-view{
+		position: relative;
+		margin: 30px 51px;
+		text-align: center;
+		background: $buttonColor;
+		padding: 8px 6px;
+		border-radius: 2px;
+	}
 }
 
