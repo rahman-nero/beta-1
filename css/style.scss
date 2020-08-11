@@ -1554,10 +1554,25 @@ aside {
 				position: relative;
 				padding: 10px 0px 50px;
 				margin-right: 10px;
+				// кнопка при нажатии которая введет вниз к плееру 
+				.button-down-watch{
+					width: inherit;
+					display: block;
+					margin: 6px 0px;
+					background:$buttonColor;
+					box-shadow: 0px 0px 1px rgba(0,0,0,.2);
+					border-radius: 2px;
+					padding: 6px 4px;
+					text-align: center;
+					cursor: pointer;
+					font-size: 14px;
+					transition:600ms all;
+				}
 				& img{
 					width: 210px;
-					height: 285px;
+					height: 275px;
 				}
+				// количество просмотров аниме
 				.watch{
 					margin-top: 10px;
 					margin-right:0px;
@@ -1570,16 +1585,17 @@ aside {
 					&:after{border-left-color: #FF421D;border-top-color: #FF421D;}
 					&:hover{box-shadow: 0px 0px 5px rgba(255,66,29,0.8);}
 				}
+				//  добавления аниме в свои списки
 				.add-to-list{
 					text-align: center;
-					width: 100%;
+					width: inherit;
 					background:$buttonColor;
 					box-shadow: 0px 0px 1px rgba(0,0,0,.2);
-					border-radius: 3px;
-					padding: 7px 10px;
+					border-radius: 2px;
+					padding: 6px 4px;
 					cursor: pointer;
 					font-size: 14px;
-					position: absolute;
+					position: relative;
 					transition:600ms all;
 					& img{
 						top: 3px;
@@ -1587,18 +1603,19 @@ aside {
 						position: relative;
 						height: 14px;
 					}
-					&:hover{
-						box-shadow: 0px 0px 12px rgba(72,151,255,.3);
-					}
+					// показывающийся список при клике на ссылку - кнопку
 					.list-link{
 						width: 100%;
-						margin-top:20px;
+						border: 1px solid #444;
+
+						margin-top:10px;
 						left: 0;
 						visibility: hidden;
 						opacity: 0;
 						background: #1B1C1D;
-						// border: 1px solid #191919;
 						transition:500ms all;
+						border-top: none;
+						border-bottom: none;
 						position: absolute;
 						padding: 5px 0px;
 						& a{
@@ -1613,6 +1630,11 @@ aside {
 					.list-link.open{
 						visibility: visible;
 						opacity: 1;
+					}
+				}
+				&:hover{
+					.button-down-watch,.add-to-list{
+						background-color: #2672D6;
 					}
 				}
 			
@@ -1636,10 +1658,24 @@ aside {
 				&__raiting{
 					width: 200px;
 					height: 20px;
-					background-color: #222;
 					position: absolute;
 					right: 20px;
+					text-align: right;
 					top:5px;
+					.inline-stars{
+						display: flex;
+						justify-content:flex-end;
+						 & img{
+							cursor: pointer;
+						 	width: 20px;
+						 	margin: 0px 3px;
+						 	height: 20px;
+						 }
+					}
+
+					small{
+						color: rgba(255,255,255,.7);
+					}
 				}
 				&__content{
 					margin-top: 20px;
@@ -1704,7 +1740,7 @@ aside {
 				.player-header{
 					max-width: 1015px;
 					position: relative;
-					// background: #000;
+					// выбор плеера и озвучки
 					.select-player{
 						display: flex;
 						justify-content:flex-end;
@@ -1784,9 +1820,8 @@ aside {
 					}
 
 				}
-				// плеер
+				// сам плеер
 				& iframe{height: 500px;}
-
 
 				// панель где можно выбрать серию - и поделится ссылкой
 				.player-bottom-panel{
@@ -2310,6 +2345,7 @@ aside {
 					position: absolute;
 					right: 20px;
 					top:5px;
+					
 				}
 				&__content{
 					font-family: Roboto;
