@@ -1699,9 +1699,63 @@ aside {
 			.player{
 				height: 100%;
 				background: #141314;
-				padding: 0px 50px;
+				padding: 10px 50px 0px;
+				// выбор серии  и плеера и озвучки
+				.player-header{
+					width: 100%;
+					position: relative;
+					// background: #000;
+					.select-player{
+						display: none;
+					}
+					// слайдер выбора серии
+					.block-select-series{
+						margin: 10px 0px;
+						width: inherit;
+						border: 1px solid #2D2A2D;
+						padding: 10px 38px;
+						text-align: left;
+						display: flex;
+						border-left: none;
+						border-right: none;
+						align-items:center;
+
+						.scroll-left{
+							position: absolute;
+							left: 0px;
+							background: #212021;
+							display: flex;
+							padding: 0px 10px;
+							cursor: pointer;
+							align-items:center;
+							height: 100%;
+							border-radius: 2px;
+							top: 0px;
+						}
+						.scroll-right{
+							position: absolute;
+							cursor: pointer;
+							right: 0px;
+							background: #212021;
+							display: flex;
+							padding: 0px 10px;
+							align-items:center;
+							height: 100%;
+							border-radius: 2px;
+							top: 0px;
+						}
+						a{
+							background: #222;
+							padding: 3px 10px;
+							margin: 0px 3px;
+							border-radius: 2px;
+						}
+					}
+
+				}
 				// плеер
 				& iframe{height: 500px;}
+
 
 				// панель где можно выбрать серию - и поделится ссылкой
 				.player-bottom-panel{
@@ -1754,9 +1808,8 @@ aside {
 							border-radius: 3px;
 						}
 					}
-
-
 				}
+
 			}
 		}
 
