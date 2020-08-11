@@ -1594,6 +1594,7 @@ aside {
 					border-radius: 2px;
 					padding: 6px 4px;
 					cursor: pointer;
+					z-index: 2;
 					font-size: 14px;
 					position: relative;
 					transition:600ms all;
@@ -1644,8 +1645,6 @@ aside {
 				width: 100%;
 				padding:2px 0px;
 				margin-left: 15px;
-				height: 300px;
-
 				&__title{
 					font-size: 21px;
 					max-width: 400px;
@@ -2239,172 +2238,66 @@ aside {
 	
 	/* Страница view.html */
 	.modification-page{
-	position: relative;
-	.content-section{
-		// background: transparent;
-		// хлебные крошки
-		.breadcrumbs{
-			position: relative;
-			margin: 0px 20px;
-			font-size: 12px;
-			color: rgba(255,255,255,.7);
-			& span a {
-			font-size: 12px;
-				&:hover{
-					color: $buttonColor;
-					transition-duration:500ms;
-					text-decoration: underline;
-				}
-			}
-		}
-		// блок в котором находитяс фото и инфа
-		.content-about-anime{
-			position: relative;
-			width: inherit;
-			display: block;
-			margin: 20px;
-
-			// Фото аниме
-
-			.section-image, .add-to-bookmark{
+		position: relative;
+		.content-section{
+		   background: #1B1C1D;
+ 			margin-top: 100px;
+			// блок в котором находитяс фото и инфа
+			.content-about-anime{
 				position: relative;
-				text-align: center;
-				.watch,.add-to-bookmark{
-					margin-right:20px;
-					font-size: 17px;
+				width: inherit;
+				display: block;
+				margin: 20px;
+				// Фото аниме
+				.section-image{
+					position: relative;
+					padding: 10px 0px 00px;
+					margin-right: 0px;
 					& img{
-						width: 22px!important;
-						margin-top: 2px;
-						height: 22px!important;
+						width: 100%;
+						height: auto;
 					}
+					// количество просмотров аниме
+					.watch{display: none;}
 				}
-			
-				.section-like{
-					display: flex;
-					position: relative;
-					a {
-						padding: 3px 10px;
-						background: #000;
-						margin-right: 10px;
-						border-radius: 3px;
-						transition:500ms all;
-						background: #2D88FF;
-						& img{
-							width: 18px;
-							height: 18px;
-							position: relative;
-							margin-top: 1px;
-							margin-right: 7px;
-						}
-						&:last-child{
-							background: #FF291E;
-						}
-						
-						& span{
-							background: rgba(0,0,0,.3);
-							padding: 1px 4px;
-							font-size: 14px;
-							margin-left: 5px;
-							border-radius: 2px;
-						}
-						&:hover{
-							box-shadow: 0px 0px 5px rgba(45, 136, 255, 0.8);
-							&:last-child{
-								box-shadow: 0px 0px 5px rgba(255,41,30, 0.8)
-							}
-						}
-					}
-
-				}
-				& img{
-					width: 100%;
-					height: auto;
+				// инфа об аниме
+				.about_anime{
+					margin-left: 0px;
+					&__title{display: none;}
+					&__raiting{display: none;}
 				}
 			}
-			
-			.about_anime{
-				width: 100%;
-				padding:2px 0px;
-				margin-left: 15px;
-				height: 300px;
 
-				&__title{
-					display: none;
-					font-size: 21px;
-					max-width: 400px;
-					& small{
+			// блок в котором плеер
+			.section-player{
+				// строчка над плеером 'Смотреть ....' 
+				.title-anime{font-size: 20px;}
+				// блок в котором плеер - и выбор серии и т.д
+				.player{
+					padding: 10px 0px 0px;
+					// сам плеер
+					& iframe{height: 300px;}
+					// панель где можно выбрать серию - и поделится ссылкой
+					.player-bottom-panel{
 						display: block;
-						font-size: 14px;
-						color: rgba(255,255,255,.6);
-					}
-				}
-				&__raiting{
-					width: 200px;
-					height: 20px;
-					background-color: #222;
-					position: absolute;
-					right: 20px;
-					top:5px;
-					
-				}
-				&__content{
-					font-family: Roboto;
-					margin-top: 30px;
-					position: relative;
-					display: block;
-					p{
-						margin: 5px 0px;
-						& b{
-							letter-spacing: 0.4px;
-							font-weight: 300;
-							margin-right: 22px;
-							position: relative;
+						// название и кол-во просмотров
+						.desciption-series{
+							padding-top: 10px;
+							padding-bottom: 10px;
+							border-bottom: none;
+						}
+						// Ссылки чтобы поделится с сайтом
+						.link-share{
+							border: 1px solid #2D2A2D;
+							border-left: none;
+							border-right: none;
+							border-bottom: none;
+							justify-content: flex-start;
 						}
 					}
 				}
-
 			}
 		}
-
-		.anime_description{
-			padding: 20px;
-			// color: rgba(0,0,0,.8);
-			font-family: Roboto;
-			background: #212223;
-			font-size: 15px;
-			line-height: 23px;
-		}
-
-		// блок в котором плеер
-		.section-player{
-			// строчка над плеером 'Смотреть ....' 
-			.title-anime{font-size: 20px;}
-			// блок в котором плеер - и выбор серии и т.д
-			.player{
-				padding: 10px 0px 0px;
-				// сам плеер
-				& iframe{height: 300px;}
-				// панель где можно выбрать серию - и поделится ссылкой
-				.player-bottom-panel{
-					display: block;
-					// название и кол-во просмотров
-					.desciption-series{
-						padding-top: 10px;
-						padding-bottom: 10px;
-						border-bottom: none;
-					}
-					// Ссылки чтобы поделится с сайтом
-					.link-share{
-						border: 1px solid #2D2A2D;
-						border-left: none;
-						border-right: none;
-						border-bottom: none;
-						justify-content: flex-start;
-					}
-				}
-			}
-		}
-	}
 	}
 
 	/* Страница view.html */
