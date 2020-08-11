@@ -1706,11 +1706,20 @@ aside {
 					position: relative;
 					// background: #000;
 					.select-player{
-						display: none;
+						display: flex;
+						justify-content:flex-end;
+						& select{
+							padding: 4px 10px;
+							border-color: #2D2A2D;
+							background-color: #222;
+							color: white;
+							margin: 0px 5px;
+						}
 					}
 					// слайдер выбора серии
 					.block-select-series{
 						margin: 10px 0px;
+						position: relative;
 						width: inherit;
 						border: 1px solid #2D2A2D;
 						padding: 10px 0px;
@@ -1720,7 +1729,7 @@ aside {
 						overflow: hidden;
 						border-right: none;
 						align-items:center;
-
+						// кнопка в лево
 						.scroll-left{
 							position: absolute;
 							left: 0px;
@@ -1734,6 +1743,8 @@ aside {
 							border-radius: 2px;
 							top: 0px;
 						}
+						// кнопка в лево
+
 						.scroll-right{
 							position: absolute;
 							z-index: 1;
@@ -1746,6 +1757,10 @@ aside {
 							height: 100%;
 							border-radius: 2px;
 							top: 0px;
+						}
+						.scroll-right:hover, .scroll-left:hover{
+							background: #292929;
+							transition-duration:500ms;
 						}
 						// блок в котором ссылки на серии
 						.list-series{
@@ -1765,7 +1780,6 @@ aside {
 									transition-duration:400ms;
 								}
 							}
-
 						}
 					}
 
