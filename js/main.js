@@ -62,7 +62,7 @@ $('.scroll-left').on('click', function(){
   var leftValue = $('.list-series').css('left').match(/[0-9-]+/)[0];
 
   if (+leftValue + valueScroll <= 0  ) {
-    $('.list-series').css({'left' : +leftValue + valueScroll});
+    $('.list-series').css({'left' : +leftValue + valueScroll + 'px'});
   } else {
     $('.list-series').css({'left' : '0px'});
   }
@@ -77,9 +77,9 @@ $('.scroll-right').on('click', function(){
   widthBlock -= widthBlock * 2;
 
   if (+leftValue - valueScroll < widthBlock)  {
-    $('.list-series').css({'left' : '-' + widthBlock});
+    $('.list-series').css({'left' : '-' + widthBlock + 'px'});
   } else {
-    $('.list-series').css({'left' : +leftValue - valueScroll});
+    $('.list-series').css({'left' : +leftValue - valueScroll + 'px'});
   }
 
 
