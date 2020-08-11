@@ -1690,10 +1690,12 @@ aside {
 			// background: #000;
 			margin-top: 40px;
 			text-align: center;
-			p{
+			// строчка над плеером 'Смотреть ....' 
+			.title-anime{
 				margin: 20px 0px;
 				font-size: 22px;
 			}
+			// блок в котором плеер - и выбор серии и т.д
 			.player{
 				height: 100%;
 				background: #141314;
@@ -1711,38 +1713,35 @@ aside {
 					background: transparent;
 					width: 100%;
 
-					// выбор серии
-					.controls{
-						padding: 10px;
+					// название и кол-во просмотров
+					.desciption-series{
+						padding: 5px 10px;
 						flex:2;
-						border: 1px solid $buttonColor;
+						border: 1px solid #2D2A2D;
 						border-left: none;
 						border-right: none;
-						& span{
-							margin-right: 10px;
-						}
-						& select{
-							padding: 4px 10px;
-							border-radius: 4px;
+						p{
+							margin-bottom: 4px;
 							color: white;
-							background: transparent;
-							border-color: $buttonColor;
-							& option{
-								color: black;
-								background: #000;
-								padding: 3px 0px;
+							font-size: 15px;
+							span{
+								font-size: 14px;
+								border-bottom: 1px dashed #fff;
 							}
+						}
+						p:nth-child(2){
+							margin-bottom: 1;
 						}
 					}
 					// Ссылки чтобы поделится с сайтом
 					.link-share{
 						flex:2;
 						display: flex;
-						// background: #000;
-						border: 1px solid $buttonColor;
+						border: 1px solid #2D2A2D;
 						border-left: none;
 						border-right: none;
 						padding: 10px; 
+						align-items: center;
 						justify-content: flex-end;
 						& span{
 							margin-right: 10px;
