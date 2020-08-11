@@ -1710,13 +1710,15 @@ aside {
 			width: 100%;
 			padding: 10px 20px ;
 			margin-bottom: 40px;
-			h4{margin: 0px 0px 20px;}
+			h4{margin: 0px 0px 20px; font-size: 20px;}
 			.screens{
 				display: flex;
 				& img{
 					cursor: pointer;
+					margin: 0px 5px;
 					border-radius: 3px;
-					width:180px;
+					width:200px;
+					border-radius: 3px;
 					height: auto;
 				}
 			}
@@ -1916,6 +1918,8 @@ aside {
 	width: 100%;
 	height: 100%;
 	z-index: 9999;
+	opacity: 0;
+	transition:500ms all;
 	.center-view-img{
 		max-width: 1000px;
 		position: absolute;
@@ -1950,6 +1954,8 @@ aside {
 
 .modal-view-img.open{
 	visibility: visible;
+	opacity: 1;
+	transition-duration:500ms;
 }
 // модальное окно при нажатии на 'фильтры' - в нем фильтры
 .modal_selects{
@@ -2042,6 +2048,7 @@ aside {
 
 .modal_selects.open{
 	display: block;
+	transition-duration:400ms;
 }
 
 
@@ -2384,7 +2391,7 @@ aside {
 	// скрываем скиншоты, тк как они почти не видны на телефоне
 	.modal-view-img{display: none;} 
 	.anime_screenshots{display: none;} 
-	
+
 	/* Страница view.html */
 
 	.button-all-view{
