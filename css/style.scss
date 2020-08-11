@@ -1548,6 +1548,7 @@ aside {
 			width: inherit;
 			margin: 20px;
 			display: flex;
+			.mobile_title_anime{display: none;}
 
 			// Фото аниме
 			.section-image{
@@ -2241,13 +2242,28 @@ aside {
 		position: relative;
 		.content-section{
 		   background: #1B1C1D;
- 			margin-top: 100px;
+ 			margin-top: 50px;
 			// блок в котором находитяс фото и инфа
 			.content-about-anime{
 				position: relative;
 				width: inherit;
 				display: block;
 				margin: 20px;
+				// название аниме над фотой
+				.mobile_title_anime{
+					display: block;
+					position: relative;
+					margin: 10px 0px;
+					font-weight: 500;
+					font-size: 21px;
+
+					& small{
+						display: block;
+						font-size: 13px;
+						color: rgba(255,255,255,.8);
+						margin: 3px 0px;
+					}
+				}
 				// Фото аниме
 				.section-image{
 					position: relative;
