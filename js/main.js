@@ -74,8 +74,9 @@ $('.scroll-right').on('click', function(){
   var valueScroll = 200;
   var leftValue = $('.list-series').css('left').match(/[0-9-]+/)[0];
   var widthBlock = parseInt($('.list-series').width());
+  widthBlock -= widthBlock * 2;
 
-  if (+leftValue - valueScroll < ~widthBlock)  {
+  if (+leftValue - valueScroll < widthBlock)  {
     $('.list-series').css({'left' : '-' + widthBlock});
   } else {
     $('.list-series').css({'left' : +leftValue - valueScroll});
