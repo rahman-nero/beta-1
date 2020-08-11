@@ -89,7 +89,7 @@ $('.screens').on('click', 'a', function(e){
 
   if ($('.modal-view-img').hasClass('open') == false){
     $('.modal-view-img .center-view-img').html(
-      '<span class="close-view-img-modal">x</span>' + // вставляем туда кнопку закрытия модалки
+      '<span class="close-view-img-modal">&#10006;</span>' + // вставляем туда кнопку закрытия модалки
       '<img src="' + img_link + '">'
       );
     $('.modal-view-img').addClass('open'); 
