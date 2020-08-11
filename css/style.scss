@@ -1718,6 +1718,21 @@ aside {
 						border: 1px solid $buttonColor;
 						border-left: none;
 						border-right: none;
+						& span{
+							margin-right: 10px;
+						}
+						& select{
+							padding: 4px 10px;
+							border-radius: 4px;
+							color: white;
+							background: transparent;
+							border-color: $buttonColor;
+							& option{
+								color: black;
+								background: #000;
+								padding: 3px 0px;
+							}
+						}
 					}
 					// Ссылки чтобы поделится с сайтом
 					.link-share{

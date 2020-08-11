@@ -35,12 +35,11 @@ $.getScript("https://vk.com/js/api/openapi.js?168", function() {
 
 $('.content-section article').on('mouseover', '.img', function(e){
 	if ($(this).find('.article__description').length == 0) {
-		let content = $(this).html();
 		$.ajax({
 			method: "GET",
 			url: "ajax.html",
 			success: function (res) {
-				$(e.target).parent().html(content + '<div class="article__description">' + res + '</div>');
+				$(e.target).parent().append('<div class="article__description">' + res + '</div>');
 			}
 	});
 	}
