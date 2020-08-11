@@ -1803,7 +1803,7 @@ aside {
 							position: relative;
 							margin: 0px 38px;
 							display: flex;
-							left: -530px;
+							left: 0px;
 							width: inherit;
 							a{
 								background: #222;
@@ -2373,6 +2373,36 @@ aside {
 			background: #212223;
 			font-size: 15px;
 			line-height: 23px;
+		}
+
+		// блок в котором плеер
+		.section-player{
+			// строчка над плеером 'Смотреть ....' 
+			.title-anime{font-size: 20px;}
+			// блок в котором плеер - и выбор серии и т.д
+			.player{
+				padding: 10px 0px 0px;
+				// сам плеер
+				& iframe{height: 300px;}
+				// панель где можно выбрать серию - и поделится ссылкой
+				.player-bottom-panel{
+					display: block;
+					// название и кол-во просмотров
+					.desciption-series{
+						padding-top: 10px;
+						padding-bottom: 10px;
+						border-bottom: none;
+					}
+					// Ссылки чтобы поделится с сайтом
+					.link-share{
+						border: 1px solid #2D2A2D;
+						border-left: none;
+						border-right: none;
+						border-bottom: none;
+						justify-content: flex-start;
+					}
+				}
+			}
 		}
 	}
 	}
