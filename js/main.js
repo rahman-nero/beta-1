@@ -55,5 +55,34 @@ $('.add-to-list').click(function(e){
    
 });
 
+
+// перелистивание серии на странице view.html
+$('.scroll-left').on('click', function(){
+  var valueScroll = 200;
+  var leftValue = $('.list-series').css('left').match(/[0-9-]+/)[0];
+
+  if (+leftValue + valueScroll <= 0  ) {
+    $('.list-series').css({'left' : +leftValue + valueScroll});
+  } else {
+    $('.list-series').css({'left' : '0px'});
+  }
+
+});
+
+// перелистивание серии на странице view.html
+$('.scroll-right').on('click', function(){
+  var valueScroll = 200;
+  var leftValue = $('.list-series').css('left').match(/[0-9-]+/)[0];
+  var widthBlock = parseInt($('.list-series').width());
+
+  if (+leftValue - valueScroll < ~widthBlock)  {
+    $('.list-series').css({'left' : '-' + widthBlock});
+  } else {
+    $('.list-series').css({'left' : +leftValue - valueScroll});
+  }
+
+
+});
  
+
 
