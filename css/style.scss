@@ -2006,6 +2006,7 @@ aside {
 				}
 				.active{color:white;border-bottom: 2px solid $buttonColor;}
 			}
+			// блок со коментариями
 			.block-review-comment-content{
 				margin: 20px 0px;
 				background-color: transparent;
@@ -2121,12 +2122,12 @@ aside {
  		border: 2px solid #246CCA;
  		background: $buttonColor;
  		color:white;
+ 		margin-right: 5px;
 		cursor: pointer;
 		&:hover{
 			box-shadow: 0px 0px 5px rgba(45,136,255,.4);
 		}
  	}
-
  	.close-answer-form{
  		background: #FF6232;
  		border-color:#C74C27;
