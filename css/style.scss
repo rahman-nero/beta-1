@@ -446,7 +446,7 @@ body {
 
 .content-section{
 	position: relative;
-	flex-basis:1140px;
+	// flex-basis:1140px;
 	// background-image: url(../img/registration/decor-min.png);
 	background-size: contain;
 	// padding: 55px 20px;
@@ -553,9 +553,6 @@ body {
 				width: 100%;
 				transition: all 400ms;
 				height: 100%;
-				&:hover .article__description{
-					visibility: visible;
-				}
 			}
 			.last_episode{
 				position: absolute;
@@ -572,9 +569,7 @@ body {
 					transform:scale(1.02);
 				}
 				.article__description{
-					opacity: 1;
 					visibility: visible;
-					transition-duration:800ms;
 				}
 
 			}
@@ -627,6 +622,7 @@ body {
 // данные об аниме которые показываются при наведении на блок
 .article__description{
 	position: absolute;
+	// display: none;
 	visibility: hidden;
 	width:340px;
 	top: -10px;
@@ -2058,7 +2054,7 @@ aside {
 							margin-top: 9px;
 							max-width: inherit;
  							word-break: break-all;
-
+ 							word-break: break-word;
 							font-size: 14px;
 							color:rgba(255,255,255,1);
 						}
@@ -2288,7 +2284,7 @@ aside {
 
 
 
-@media (max-width: 1020px) {
+@media (max-width: 450px) {
 	body{ // Чтобы фоотер нормально отображался
     	margin-bottom: 49px;
 	}
@@ -2407,6 +2403,8 @@ aside {
 			}
 		}
 	}
+
+	.article__description{display: none;}
 	// фоотер
 	#footer {
 		.center__footer{
