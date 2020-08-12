@@ -2389,7 +2389,7 @@ aside {
 			width: 45%;
 			margin: 0px 7px 20px 7px;
 			.img{
-				height: 229px;
+				height: auto;
 			}
 			.title_anime{
 				font-size: 13px;
@@ -2637,6 +2637,731 @@ aside {
 		background: $buttonColor;
 		padding: 8px 6px;
 		border-radius: 2px;
+	}
+}
+
+
+@media (min-width: 450px) and (max-width: 770px) {
+	body{ // Чтобы фоотер нормально отображался
+    	margin-bottom: 49px;
+	}
+	// slick-slader
+	.slick-slader{
+		margin-top: 49px;
+		section.slider div img{
+			width: 155px;
+			height: 234px;
+		}
+	}
+	// header - top menu
+	#header{
+		.block-header-top{display: none;}
+		background: $twoColor;
+		border: none;
+		padding: 0;
+		.center-header{
+			padding: 10px ;
+			.logo{display: none;}
+			.search{
+				flex: 2;
+				input {
+					width: 100%;
+					background: #262627;
+					font-family:Roboto;
+					padding-top:10px;
+					font-weight: thin;
+					font-size: 15px; 
+					padding-bottom:9px; 
+				}	
+				&::before{margin-left: 0;left: 13px; margin-top: 10px;}
+				.result-search{width: 100%;}
+			}
+			.user-info-block{display: none;}
+		}
+	}
+	// нижнее мобильное меню с иконками
+	.mobile_menu{
+		position: fixed;
+		width: 100%!important;
+		background: $twoColor;
+		border-top: 1px solid #212223;
+		z-index: 999;
+		bottom: 0px;
+		text-align: center;
+		display: flex;
+	 	& a { 
+	 		width: 25%;
+	 		padding: 10px;
+			& img{
+				width: 25px;
+				height: 25px;
+			}
+
+		 }
+	}
+	// боковое меню
+	aside{display: none;}
+	// блок над меню - ТОП 100 аниме и т.д
+	.block-header-top{display: none;}
+	// украшения headera
+	.header__style_line {display: none;}
+	.header-open-block {display: none;}
+
+	// главный блок
+	#main {
+		display: block;
+		padding: 5px 0px;
+	}
+
+	// блок в которой все находится - аниме и т.д
+	.content-section{ 
+		max-width: 530px!important;
+	   padding: 0px 0px;
+	   margin: 21px auto 0px;
+		background: transparent;
+		.timetable__block{
+		  	display: block;
+		  	margin-top: 30px;
+		}
+	}
+	// два блока с инфой
+	.preview_blocks{
+		width: 100%;
+		display: block;
+		.preview_block{
+			&:nth-child(1){margin-right:0px;}
+			&:nth-child(2){margin-left:0px;}
+			width: 100%;
+			height: auto;
+		}
+	}
+	// показ рейтинга на аниме 
+	.raiting{display:block;}
+	// Название блока
+	.section__title{margin: 0px;}
+	// блок в котором аниме
+	.block_anime{
+		padding: 5px;
+		article {
+			width: 30%;
+			margin: 0px 7px 20px 7px;
+			.img{
+				height: auto;
+			}
+			.title_anime{
+				font-size: 13px;
+				margin: 9px 1px 1px;
+				padding:0px;
+			}
+			.status{
+				top: 200px;
+				left: 90%!important;
+				transform:translate(-50%);
+			}
+		}
+	}
+
+	.article__description{display: none;}
+	// фоотер
+	#footer {
+		.center__footer{
+			padding-left: 10px;
+			max-width: 540px;
+			a{display: none;}
+			.author{
+				position: relative;
+				top: 0;
+					display: flex;
+				a{
+					display: block;
+					color:$buttonColor;
+					text-decoration: underline;
+					margin: 0px 0px 0px 5px;
+				}
+			}
+		}
+	}
+	// Мобильное модальное окно - показ профиля
+	.mobile-modal{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		background: $twoColor;
+		overflow: auto;
+		z-index: 99;
+		box-shadow:0px 0px 20px rgba(0, 0, 0, .8);
+		transition: all 800ms;
+		// убераем скролл с права  - не красиво выглядить
+		&::-webkit-scrollbar {width: 0px;}
+		&::-moz-scrollbar {width: 0;}
+
+		.block_profile{ // первый блок, после него идет блок с ссылками
+			margin: 10px;
+			position: relative;
+			.profile__header{
+				margin: 15px 1px 20px;
+				position: relative;
+			}
+			.block_link_profile{
+				background-color: #1D1D1E;
+				display: flex;
+				box-shadow: 0px 0px 1px rgba(0,0,0,.4);
+				border-radius: 10px;
+				padding: 10px;
+				& img{
+					width: 50px;
+					height: 50px;
+					border-radius:50%;
+					border: 2px solid $buttonColor;
+				}
+
+				p{
+					margin: 3px 0px 0px 10px;
+					small{
+						display: block;
+						color: rgba(255,255,255,.4);
+					}
+				}
+			}
+		}
+
+		.profile__links{ // ссылки в меню
+			p{margin: 40px 10px 10px;}
+				#menu{
+					background: #1D1D1E!important;
+					margin: 0px 0px 10px;
+				}
+			}
+	}
+	// открытый модальное окно инфа - о пользователе
+	.mobile-modal.open{
+		transition-duration:500ms;
+		display: block;
+	}
+	// ссылка которая 
+	.up_block{
+		display: none;
+	}
+
+	/* Страница anime.html*/
+	.sort-page{
+		.content-section{
+			margin-top: 50px;
+			.block_sort {
+				.filters-sort-block{display: block}
+				h2 {margin-left: 10px;}
+			}
+		}
+		
+	}
+	.modal_selects{
+		z-index: 999;
+		background: rgba(20,20,20,.9);
+		&__center{
+			margin: 10px;
+			padding-bottom: 20px;
+			height: 100%;
+			overflow: auto;
+			top: 0%;
+			transform: translate(0%, 0%);
+			&::-webkit-scrollbar {width: 0px;}
+			&::-moz-scrollbar {width: 0;}
+			.list_select{
+				padding:5px 0px;
+				margin-bottom: 20px;
+				.adaptive_column{
+					display:block;
+					margin: 0px 6px;
+				}
+			}
+
+	
+		}
+		// кнопка закрытыя фильтров
+
+		&__close{
+			position: fixed;
+			right: 10px;
+			padding: 5px 10px;
+			cursor: pointer;
+			border-radius: 3px;
+			top: 100%;
+			background-color: #fff;
+			&:hover{background: #222;}
+		}
+	} 
+
+	/* Страница anime.html*/
+	
+	/* Страница view.html */
+	.modification-page{
+		position: relative;
+		.content-section{
+		   background: #1B1C1D;
+ 			margin-top: 50px;
+			// блок в котором находитяс фото и инфа
+			.content-about-anime{
+				position: relative;
+				width: inherit;
+				display: block;
+				margin: 20px;
+				// название аниме над фотой
+				.mobile_title_anime{
+					display: block;
+					position: relative;
+					margin: 10px 0px;
+					font-weight: 500;
+					font-size: 21px;
+
+					& small{
+						display: block;
+						font-size: 13px;
+						color: rgba(255,255,255,.8);
+						margin: 3px 0px;
+					}
+				}
+				// Фото аниме
+				.section-image{
+					position: relative;
+					padding: 10px 0px 00px;
+					margin-right: 0px;
+					& img{
+						width: 100%;
+						height: auto;
+					}
+					// количество просмотров аниме
+					.watch{display: none;}
+				}
+				// инфа об аниме
+				.about_anime{
+					margin-left: 0px;
+					&__title{display: none;}
+					&__raiting{display: none;}
+				}
+			}
+
+			// блок в котором плеер
+			.section-player{
+				// строчка над плеером 'Смотреть ....' 
+				.title-anime{font-size: 20px;}
+				// блок в котором плеер - и выбор серии и т.д
+				.player{
+					padding: 10px 0px 0px;
+					.player-header{
+						.block-select-series{display: none;}
+					}
+					// сам плеер
+					& iframe{height: 300px;}
+					// панель где можно выбрать серию - и поделится ссылкой
+					.player-bottom-panel{
+						display: block;
+						// название и кол-во просмотров
+						.desciption-series{
+							padding-top: 10px;
+							padding-bottom: 10px;
+							border-bottom: none;
+						}
+						// Ссылки чтобы поделится с сайтом
+						.link-share{
+							border: 1px solid #2D2A2D;
+							border-left: none;
+							border-right: none;
+							border-bottom: none;
+							justify-content: flex-start;
+						}
+					}
+				}
+			}
+
+			.section-similar-anime{display: none;}
+			
+			.section-comments-review{margin: 30px 10px;}
+		}
+	}
+	// скрываем скиншоты, тк как они почти не видны на телефоне
+	.modal-view-img{display: none;} 
+	.anime_screenshots{display: none;} 
+
+	/* Страница view.html */
+
+	.button-all-view{
+		position: relative;
+		margin: 30px 51px;
+		text-align: center;
+		background: $buttonColor;
+		padding: 8px 6px;
+		border-radius: 2px;
+	}
+}
+
+@media (min-width: 770px) and (max-width: 1024px) {
+	body{ // Чтобы фоотер нормально отображался
+    	margin-bottom: 49px;
+	}
+	// slick-slader
+	.slick-slader{
+		margin-top: 49px;
+		section.slider div img{
+			width: 155px;
+			height: 234px;
+		}
+	}
+	// header - top menu
+	#header{
+		.block-header-top{display: none;}
+		background: $twoColor;
+		border: none;
+		padding: 0;
+		.center-header{
+			padding: 10px ;
+			.logo{display: none;}
+			.search{
+				flex: 2;
+				input {
+					width: 100%;
+					background: #262627;
+					font-family:Roboto;
+					padding-top:10px;
+					font-weight: thin;
+					font-size: 15px; 
+					padding-bottom:9px; 
+				}	
+				&::before{margin-left: 0;left: 13px; margin-top: 10px;}
+				.result-search{width: 100%;}
+			}
+			.user-info-block{display: none;}
+		}
+	}
+	// нижнее мобильное меню с иконками
+	.mobile_menu{
+		position: fixed;
+		width: 100%!important;
+		background: $twoColor;
+		border-top: 1px solid #212223;
+		z-index: 999;
+		bottom: 0px;
+		text-align: center;
+		display: flex;
+	 	& a { 
+	 		width: 25%;
+	 		padding: 10px;
+			& img{
+				width: 25px;
+				height: 25px;
+			}
+
+		 }
+	}
+	// боковое меню
+	aside{display: none;}
+	// блок над меню - ТОП 100 аниме и т.д
+	.block-header-top{display: none;}
+	// украшения headera
+	.header__style_line {display: none;}
+	.header-open-block {display: none;}
+
+	// главный блок
+	#main {
+		display: block;
+		padding: 5px 0px;
+	}
+
+	// блок в которой все находится - аниме и т.д
+	.content-section{ 
+		max-width: 730px!important;
+	   padding: 0px 0px;
+	   margin: 21px auto 0px;
+		background: transparent;
+		.timetable__block{
+		  	display: block;
+		  	margin-top: 30px;
+		}
+	}
+	// два блока с инфой
+	.preview_blocks{
+		width: 100%;
+		display: block;
+		.preview_block{
+			&:nth-child(1){margin-right:0px;}
+			&:nth-child(2){margin-left:0px;}
+			width: 100%;
+			height: auto;
+		}
+	}
+	// показ рейтинга на аниме 
+	.raiting{display:block;}
+	// Название блока
+	.section__title{margin: 0px;}
+	// блок в котором аниме
+	.block_anime{
+		padding: 5px;
+		article {
+			width: 22.7%;
+			margin: 0px 7px 20px 7px;
+			.img{
+				height: auto;
+			}
+			.title_anime{
+				font-size: 13px;
+				margin: 9px 1px 1px;
+				padding:0px;
+			}
+			.status{
+				top: 200px;
+				left: 90%!important;
+				transform:translate(-50%);
+			}
+		}
+	}
+
+	.article__description{display: none;}
+	// фоотер
+	#footer {
+		.center__footer{
+			padding-left: 10px;
+			max-width: 540px;
+			a{display: none;}
+			.author{
+				position: relative;
+				top: 0;
+					display: flex;
+				a{
+					display: block;
+					color:$buttonColor;
+					text-decoration: underline;
+					margin: 0px 0px 0px 5px;
+				}
+			}
+		}
+	}
+	// Мобильное модальное окно - показ профиля
+	.mobile-modal{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		background: $twoColor;
+		overflow: auto;
+		z-index: 99;
+		box-shadow:0px 0px 20px rgba(0, 0, 0, .8);
+		transition: all 800ms;
+		// убераем скролл с права  - не красиво выглядить
+		&::-webkit-scrollbar {width: 0px;}
+		&::-moz-scrollbar {width: 0;}
+
+		.block_profile{ // первый блок, после него идет блок с ссылками
+			margin: 10px;
+			position: relative;
+			.profile__header{
+				margin: 15px 1px 20px;
+				position: relative;
+			}
+			.block_link_profile{
+				background-color: #1D1D1E;
+				display: flex;
+				box-shadow: 0px 0px 1px rgba(0,0,0,.4);
+				border-radius: 10px;
+				padding: 10px;
+				& img{
+					width: 50px;
+					height: 50px;
+					border-radius:50%;
+					border: 2px solid $buttonColor;
+				}
+
+				p{
+					margin: 3px 0px 0px 10px;
+					small{
+						display: block;
+						color: rgba(255,255,255,.4);
+					}
+				}
+			}
+		}
+
+		.profile__links{ // ссылки в меню
+			p{margin: 40px 10px 10px;}
+				#menu{
+					background: #1D1D1E!important;
+					margin: 0px 0px 10px;
+				}
+			}
+	}
+	// открытый модальное окно инфа - о пользователе
+	.mobile-modal.open{
+		transition-duration:500ms;
+		display: block;
+	}
+	// ссылка которая 
+	.up_block{
+		display: none;
+	}
+
+	/* Страница anime.html*/
+	.sort-page{
+		.content-section{
+			margin-top: 50px;
+			.block_sort {
+				.filters-sort-block{display: block}
+				h2 {margin-left: 10px;}
+			}
+		}
+		
+	}
+	.modal_selects{
+		z-index: 999;
+		background: rgba(20,20,20,.9);
+		&__center{
+			margin: 10px;
+			padding-bottom: 20px;
+			height: 100%;
+			overflow: auto;
+			top: 0%;
+			transform: translate(0%, 0%);
+			&::-webkit-scrollbar {width: 0px;}
+			&::-moz-scrollbar {width: 0;}
+			.list_select{
+				padding:5px 0px;
+				margin-bottom: 20px;
+				.adaptive_column{
+					display:block;
+					margin: 0px 6px;
+				}
+			}
+
+	
+		}
+		// кнопка закрытыя фильтров
+
+		&__close{
+			position: fixed;
+			right: 10px;
+			padding: 5px 10px;
+			cursor: pointer;
+			border-radius: 3px;
+			top: 100%;
+			background-color: #fff;
+			&:hover{background: #222;}
+		}
+	} 
+
+	/* Страница anime.html*/
+	
+	/* Страница view.html */
+	.modification-page{
+		position: relative;
+		.content-section{
+		   background: #1B1C1D;
+ 			margin-top: 50px;
+			// блок в котором находитяс фото и инфа
+			.content-about-anime{
+				position: relative;
+				width: inherit;
+				display: block;
+				margin: 20px;
+				// название аниме над фотой
+				.mobile_title_anime{
+					display: block;
+					position: relative;
+					margin: 10px 0px;
+					font-weight: 500;
+					font-size: 21px;
+
+					& small{
+						display: block;
+						font-size: 13px;
+						color: rgba(255,255,255,.8);
+						margin: 3px 0px;
+					}
+				}
+				// Фото аниме
+				.section-image{
+					position: relative;
+					padding: 10px 0px 00px;
+					margin-right: 0px;
+					& img{
+						width: 100%;
+						height: auto;
+					}
+					// количество просмотров аниме
+					.watch{display: none;}
+				}
+				// инфа об аниме
+				.about_anime{
+					margin-left: 0px;
+					&__title{display: none;}
+					&__raiting{display: none;}
+				}
+			}
+
+			// блок в котором плеер
+			.section-player{
+				// строчка над плеером 'Смотреть ....' 
+				.title-anime{font-size: 20px;}
+				// блок в котором плеер - и выбор серии и т.д
+				.player{
+					padding: 10px 0px 0px;
+					.player-header{
+						.block-select-series{display: none;}
+					}
+					// сам плеер
+					& iframe{height: 300px;}
+					// панель где можно выбрать серию - и поделится ссылкой
+					.player-bottom-panel{
+						display: block;
+						// название и кол-во просмотров
+						.desciption-series{
+							padding-top: 10px;
+							padding-bottom: 10px;
+							border-bottom: none;
+						}
+						// Ссылки чтобы поделится с сайтом
+						.link-share{
+							border: 1px solid #2D2A2D;
+							border-left: none;
+							border-right: none;
+							border-bottom: none;
+							justify-content: flex-start;
+						}
+					}
+				}
+			}
+
+			.section-similar-anime{display: none;}
+			
+			.section-comments-review{margin: 30px 10px;}
+		}
+	}
+	// скрываем скиншоты, тк как они почти не видны на телефоне
+	.modal-view-img{display: none;} 
+	.anime_screenshots{display: none;} 
+
+	/* Страница view.html */
+
+	.button-all-view{
+		position: relative;
+		margin: 30px 51px;
+		text-align: center;
+		background: $buttonColor;
+		padding: 8px 6px;
+		border-radius: 2px;
+	}
+}
+
+@media (min-width: 1024px) and (max-width:1245px) {
+	.search {
+		flex:2;
+		input{width: 100%}
+		&:before{
+			margin-left: -228px;
+		}
+	}
+	.block_anime article{
+		width: 22.2%;
+		.img{
+			height: auto;
+		}
 	}
 }
 
