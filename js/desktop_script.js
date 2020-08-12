@@ -34,15 +34,19 @@ $.getScript("https://vk.com/js/api/openapi.js?168", function() {
 
 
 $('.content-section article').on('mouseover', '.img', function(e){
-	if ($(this).find('.article__description').length == 0) {
-		$.ajax({
-			method: "GET",
-			url: "ajax.html",
-			success: function (res) {
-				$(e.target).parent().append('<div class="article__description">' + res + '</div>');
-			}
-	});
-	}
+	let div = $(this).find('.article__description');
+	setTimeout(function() {
+		if (div.length <= 1) {
+			$.ajax({
+				method: "GET",
+				url: "ajax.html",
+				success: function (res) {
+					$(div).html(res);
+				}
+			});
+		}
+	}, 600);
+
 });
 
 
