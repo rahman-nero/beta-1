@@ -2021,7 +2021,8 @@ aside {
 					.image-commentator{
 						margin-right: 10px;
 						padding-top: 5px;
-						flex:0.27;
+						min-flex:0.27;
+						max-flex:0.27;
 						display: flex;
 						justify-content:center;
 						& img{
@@ -2094,8 +2095,8 @@ aside {
 	margin-top: 10px;
 	position: relative;
 	textarea{
-		max-width: 100%;
-		min-width: 100%;
+		max-width: 1003px;
+		max-height: 200px;
 		font-family: Roboto;
 		border: 2px solid #444;
 		background: transparent;
