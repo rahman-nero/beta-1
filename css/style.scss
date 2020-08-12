@@ -2069,12 +2069,14 @@ aside {
 							margin-top: 7px;
 							font-size: 14px;
 							.link-to-answer{
-								color: $buttonColor;
+								color: #FF6232;
 								font-size: 14px;
 								margin-right: 5px;
 							}
 							a {
 							}
+
+
 						}
 
 					}
@@ -2082,9 +2084,26 @@ aside {
 			}
 
 		}
-
-
 	}
+}
+
+// блок добавления коментариев
+.form-add-answer{
+	width: 100%;
+	height: 150px;
+	margin-top: 10px;
+	position: relative;
+	textarea{
+		max-width: 100%;
+		min-width: 100%;
+		font-family: Roboto;
+		border: 2px solid #444;
+		background: transparent;
+		border-radius: 4px;
+		padding: 10px 15px;
+		color: white;
+	}
+ 
 }
 /* Страница view.html */
 
@@ -2572,6 +2591,8 @@ aside {
 			}
 
 			.section-similar-anime{display: none;}
+			
+			.section-comments-review{margin: 30px 10px;}
 		}
 	}
 	// скрываем скиншоты, тк как они почти не видны на телефоне
