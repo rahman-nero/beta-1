@@ -635,7 +635,7 @@ body {
 	color: $textColor;
 	font-family: Roboto;
 	background: #1A1B1C;
-	z-index: 12;
+	z-index: 33;
 	border: 1px solid #222;
 	padding-bottom: 10px;
 	border-radius: 3px;
@@ -687,9 +687,9 @@ body {
 	}	
 	.circle{
 		display: inline-block;
-		width: 18px;
-		height: 18px;
-		background: white;
+		width: 13px;
+		height: 13px;
+		background: $buttonColor;
 		border-radius: 50%;
 		animation: load_circle 1s ease 0s infinite ;
 		animation-fill-mode: forwards;
@@ -719,7 +719,6 @@ body {
 	100% {width: 30px;height: 30px; opacity: 0;}
 
 }
-
 // Просмотров аниме 
 .watch{
  	position: absolute;
@@ -1806,10 +1805,13 @@ aside {
 				.player-header{
 					max-width:1075px;
 					position: relative;
+						overflow: auto;
+
 					// выбор плеера и озвучки
 					.select-player{
 						display: flex;
 						justify-content:flex-end;
+						overflow: auto;
 						& select{
 							padding: 4px 10px;
 							border-color: #2D2A2D;
@@ -1893,10 +1895,9 @@ aside {
 				// панель где можно выбрать серию - и поделится ссылкой
 				.player-bottom-panel{
 					display: flex;
-					padding: 15px 0px;
 					position: relative;
 					text-align: left;
-					margin-top: -4px;
+					margin-top: 15px;
 					background: transparent;
 					width: 100%;
 
@@ -1945,6 +1946,44 @@ aside {
 
 			}
 		}
+		// блок об оишибке
+		.block-player-error{
+			position: relative;
+			padding: 20px 10px;
+			background: transparent;
+			text-align: left;
+			transition:500ms all;
+			& a{
+				padding: 4px 19px;
+				font-size: 15px;
+				border-radius: 3px;
+				box-shadow: 0px 0px 1px rgba(0,0,0,.3);
+				border: 1px solid #BE1417;
+				background: #DE181B;
+				&:hover{
+					box-shadow: 0px 0px 2px #DE181B;
+				}
+			}
+		}
+
+		// блок "похожие аниме"
+		.section-similar-anime{
+			margin: 50px 10px 0px;
+			.section__title{
+				font-weight: 500;
+				background: transparent;
+				border-bottom: none;
+				padding-bottom: 0px;
+				font-size: 20px;
+			}
+
+			.block_anime{
+				padding-bottom: 0px;
+				article{
+					width: 195px;
+				}
+			}
+		}
 
 		// блок со коментариями и рецензиями
 		.section-comments-review{
@@ -1967,16 +2006,83 @@ aside {
 				}
 				.active{color:white;border-bottom: 2px solid $buttonColor;}
 			}
-		
+			.block-review-comment-content{
+				margin: 20px 0px;
+				background-color: transparent;
+				max-width:100%;
+				height: 300px;
+				display: block;
+				// сами коменты в ряд
+				.comment{
+					max-width: 100%;
+					display: flex;
+					margin-bottom: 30px;
+					// аватарка коментатора
+					.image-commentator{
+						margin-right: 10px;
+						padding-top: 5px;
+						flex:0.27;
+						display: flex;
+						justify-content:center;
+						& img{
+							width: 50px;
+							height: 50px;
+							border: 2px solid $buttonColor;
+							border-radius: 50%;
+						}
+					}
+					
+					// блок с текстом коментария, еще имя и т.д
+					.comment-content{
+						position: relative;
+						padding-top:5px;
+						flex:4;
+						// имя и дата публикации
+						.commentator-name{
+							display: block;
+							a{
+								font-weight: bold;
+								color: $buttonColor;
+							}
+							& span{
+								font-weight: thin;
+								font-size: 13px;
+								margin-left: 7px;
+								color: rgba(255,255,255,.4);
+								}
+							}	
+						
+						// текст коментарии - т.е сам коментарии
+						.comment-text{
+							margin-top: 9px;
+							font-size: 14px;
+							color:rgba(255,255,255,1);
+						}
+						// количество лайков и дизлайков на комент
+						.comment-section-like{
+							position: absolute;
+							right: 20px;
+							top: 10px;
+						}
+						// 
+						.comment_controls{
+							margin-top: 7px;
+							font-size: 14px;
+							.link-to-answer{
+								color: $buttonColor;
+								font-size: 14px;
+								margin-right: 5px;
+							}
+							a {
+							}
+						}
+
+					}
+				}
+			}
+
 		}
 
-		// блок с коментами или рецензиями - что он выберет то и будет показыватся
-		.block-review-comment-content{
-			margin: 20px 0px;
-			background-color: #000;
-			max-width:100%;
-			height: 300px;
-		}
 
 	}
 }
@@ -2439,6 +2545,9 @@ aside {
 				// блок в котором плеер - и выбор серии и т.д
 				.player{
 					padding: 10px 0px 0px;
+					.player-header{
+						.block-select-series{display: none;}
+					}
 					// сам плеер
 					& iframe{height: 300px;}
 					// панель где можно выбрать серию - и поделится ссылкой
@@ -2461,6 +2570,8 @@ aside {
 					}
 				}
 			}
+
+			.section-similar-anime{display: none;}
 		}
 	}
 	// скрываем скиншоты, тк как они почти не видны на телефоне
