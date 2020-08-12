@@ -83,3 +83,17 @@ $('.scroll-right').on('click', function(){
   }
 });
  
+
+
+// в блоке коментарии - при клике на кнопку 'ответить' появляется форма для добваления коментария
+$('.block-review-comment-content .comment').on('click', '.comment_controls', function(e){
+  e.preventDefault();
+  if ($(e.target).hasClass('link-to-answer') &&  $(e.currentTarget).find('.form-add-answer').length == 0) {
+    $(e.currentTarget).append('<div class="form-add-answer"><form action=""><textarea name="" placeholder="Введи хоть что-нибудь"></textarea><button type="submit">Отправить</button><button class="close-answer-form">Закрыть</button></form></div>');
+  }
+
+  if ($(e.target).hasClass('close-answer-form') &&  $(e.currentTarget).find('.form-add-answer').length == 1) {
+    $(e.currentTarget).find('.form-add-answer').remove();
+  }
+
+});

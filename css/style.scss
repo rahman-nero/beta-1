@@ -2010,7 +2010,6 @@ aside {
 				margin: 20px 0px;
 				background-color: transparent;
 				max-width:100%;
-				height: 300px;
 				display: block;
 				// сами коменты в ряд
 				.comment{
@@ -2126,6 +2125,14 @@ aside {
 		&:hover{
 			box-shadow: 0px 0px 5px rgba(45,136,255,.4);
 		}
+ 	}
+
+ 	.close-answer-form{
+ 		background: #FF6232;
+ 		border-color:#C74C27;
+ 		&:hover{
+			box-shadow: 0px 0px 5px rgba(255,98,50,.4);
+ 		} 
  	}
 }
 /* Страница view.html */
