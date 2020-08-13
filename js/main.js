@@ -97,3 +97,33 @@ $('.block-review-comment-content .comment').on('click', '.comment_controls', fun
   }
 
 });
+
+
+// Модалка подачи жалобы на коментарии
+$('.link-complain').click(function() {
+  if ($('.modal-complaint-comments').hasClass('open') == false) {
+    $('.modal-complaint-comments').addClass('open');
+  }
+});
+
+// обработка закрытия модалки подачи жалобы на коментарии
+$('.modal-complaint-comments').on('click', function(e) {
+ if ($(e.target).hasClass('close-complaint-modal') || $(e.target).hasClass('modal-complaint-comments') && $(e.currentTarget).hasClass('open')) {
+    $('.modal-complaint-comments').removeClass('open');
+  }
+});
+
+// показ формы т.е textarea, при клике на чекбокс 'Другое', в блоке Жалоба на коментатора
+$('.modal-complaint-body input').on('click', function(e){
+  if ($(e.target).attr('id') == 'other-complaint') {
+      if ($('.modal-complaint-body textarea').css('display') == 'none') {
+        $('.modal-complaint-body textarea').css({'display' : 'block'});
+      } else {
+        $('.modal-complaint-body textarea').css({'display' : 'none'});
+      }
+  } else {
+    if ($('.modal-complaint-body textarea').css('display') == 'block')
+        $('.modal-complaint-body textarea').css({'display' : 'none'});
+  }
+
+})

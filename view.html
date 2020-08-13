@@ -375,13 +375,7 @@
             </div>
         </div> 
         <!-- similar anime -->
- <!--  <div class="form-add-answer">
-                                 <form action="">
-                                    <textarea name="" placeholder="Введи хоть что-нибудь"></textarea>
-                                    <button type="submit">Отправить</button>
-                                    <button class="close-answer-form">Закрыть</button>
-                                </form>
-                            </div> -->
+
         <!-- Comments and review -->
         <div class="section-comments-review">
             <div class="section-comments-review-header">
@@ -736,13 +730,30 @@
 
 <!-- modal complaint about comments -->
 <div class="modal-complaint-comments">
-    <h4>Подать жалобу</h4>
-    <form action="">
-        <input type="checked">
-        <input type="checked">
-        <input type="checked">
-        <input type="checked">
-    </form>
+    <div class="modal-complaint-body">
+        <h3>Подать жалобу</h3>
+        <span class="close-complaint-modal">&times;</span>
+        <hr color="#37393B" size="1">
+        <form action="">
+            <input type="text"  hidden="" value="" name="id">
+            <input type="radio" id="f" name="complait_name">
+            <label for="f">Провокации или конфликты</label>
+            <br>
+            <input type="radio" id="a" name="complait_name">
+            <label for="a">Реклама или спам</label>
+            <br>
+            <input type="radio" id="b" name="complait_name">
+            <label for="b">Оскорбления других участников</label>
+            <br>
+            <input type="radio" id="c" name="complait_name">
+            <label for="c">Спойлер (не заключил в теги)</label>
+            <br>
+            <input type="radio" id="other-complaint" name="complait_name">
+            <label for="other-complaint" >Другое</label>
+            <textarea name="" placeholder="Опиши ситуация, чтобы мы смогли понять тебя"></textarea>
+            <button type="submit">Отправить жалобу</button>
+        </form>
+    </div>
 </div>
 
 <!-- modal complaint about comments -->

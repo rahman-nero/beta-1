@@ -2132,6 +2132,118 @@ aside {
  		} 
  	}
 }
+
+// модалка для подачи жалобы - на коментатора
+.modal-complaint-comments{
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 9999;
+	background: rgba(0,0,0,.4);
+	.modal-complaint-body{
+		position: absolute;
+		width: 360px;
+		border: 1px solid #37393B;
+		transform:translate(-50%, -50%);
+		left: 50%;
+		top: 50%;
+		background:$threeColor;
+		border-radius: 3px;
+		h3{margin: 10px 20px;}
+		// стилиазция чекбоксов
+		form{
+			padding: 10px 20px;
+			& input{
+				width: 0px;
+				height: 0px;
+				opacity: 0;
+				display: none;
+				&:checked + label:before{
+					content: "\2714";
+				    color: $buttonColor;
+				    font-size: 13px;
+				    border-color: $buttonColor;
+				    text-align: center;
+				    line-height: 14px;
+				}
+			}
+			label{
+				display: inline-block;
+				cursor: pointer;
+				position: relative;
+				font-size: 13px;
+				margin-top: 10px;
+				color: $textColor;
+				padding-left: 30px;
+				&:before{
+					content: "";
+					display: inline-block;
+					width: 15px;
+					height: 15px;
+					margin-right: 10px;
+					position: absolute;
+					left: 0;
+					bottom: -2px;
+					background-color: transparent;
+					border: 1px solid #37393B;
+					border-radius: 3px;
+				}
+
+				&:hover{
+					color: white;
+					&:before{
+						border-color: $buttonColor;
+						transition-duration:500ms;
+					}
+				}
+			}
+			textarea{
+				resize:none;
+				width: 100%;
+				padding: 10px;
+				display: none;
+				color:white;
+				height: 100px;
+				border-radius: 3px;
+				background: transparent;
+				margin: 10px 0px;
+				border: 1px solid #37393B;
+			}
+			button{
+				display: block;
+				margin-top: 10px;
+				padding: 5px 9px;
+				background: $buttonColor;
+				border: 2px solid #236AC7;
+				border-radius: 3px;
+				box-shadow: 0px 0px 1px rgba(0,0,0,.1);
+				color:white;
+				cursor: pointer;
+			}
+		}
+		// кнопка закрытия модалки
+		.close-complaint-modal{
+			position: absolute;
+			right: 10px;
+			top: 10px;
+			background-color: #2E2F31;
+			padding: 0px 7px 2px;
+			border-radius: 3px;
+			cursor: pointer;
+			transition:600ms all;
+			text-align: center;	
+			&:hover{
+				background-color:$buttonColor;
+			}
+		}
+	}
+}
+.modal-complaint-comments.open{ 
+	display: block;
+}
 /* Страница view.html */
 
 
@@ -2627,6 +2739,11 @@ aside {
 	// скрываем скиншоты, тк как они почти не видны на телефоне
 	.modal-view-img{display: none;} 
 	.anime_screenshots{display: none;} 
+	// модальное окно для подачи жалобы на коментарии
+	.modal-complaint-comments .modal-complaint-body{
+		position: absolute;
+		width: 100%;
+	}
 
 	/* Страница view.html */
 
