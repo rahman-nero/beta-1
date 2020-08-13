@@ -133,8 +133,8 @@ $('.modal-complaint-body input').on('click', function(e){
 
 // фильтры на странице anime.html - с боку
 $('.row-blocks-select').on('click', '.view-modal-section', function(e){
-  let block_view = $(e.currentTarget).next();
-  let icon_down = $(e.currentTarget).find('.icon-down');
+  var block_view = $(e.currentTarget).next();
+  var icon_down = $(e.currentTarget).find('.icon-down');
 
   if ($(block_view).hasClass('open')) {
     $(icon_down).removeClass('open');
