@@ -1448,33 +1448,61 @@ aside {
 					// блок в котором перечилсяются жанры и т.д - скрытая окно
 					.select-filters{
 						position: absolute;
-						z-index: 99;
+						z-index: 12;
 						visibility: hidden;
 						opacity: 0;
 						width: 100%;
-						padding: 10px 20px 0px;
-						border: 1px solid #444;
+						padding: 10px 15px;
 						margin: 0;
 						left: 0;
 						overflow: auto;
 						max-height: 300px;
 						transition:500ms all;
 						background: $twoColor;
-						& input{
-							background: #000;
-							float: left;
-							margin-top: 1px;
-							margin-right: 10px;
-							display: block;
-							& + label{
-								margin: 0px;
-								color: rgba(255,255,255,.6);
-								font-family: Roboto;
-								margin-bottom: 10px;
-								font-size: 14px;
-								display: block;
+							& input{
+								width: 0px;
+								height: 0px;
+								opacity: 0;
+								display: none;
+								&:checked + label:before{
+									content: "\2714";
+								    color: $buttonColor;
+								    font-size: 13px;
+								    border-color: $buttonColor;
+								    text-align: center;
+								    line-height: 14px;
+								}
 							}
-						}
+							label{
+								display: block;
+								cursor: pointer;
+								position: relative;
+								font-size: 13px;
+								margin: 6px 0px;
+								color: $textColor;
+								padding-left: 30px;
+								&:before{
+									content: "";
+									display: inline-block;
+									width: 15px;
+									height: 15px;
+									margin-right: 10px;
+									position: absolute;
+									left: 0;
+									bottom: -1px;
+									background-color: transparent;
+									border: 1px solid #37393B;
+									border-radius: 3px;
+								}
+
+								&:hover{
+									color: white;
+									&:before{
+										border-color: $buttonColor;
+										transition-duration:500ms;
+									}
+								}
+							}
 					}
 					// это открытое состояние блока - открывает это окно
 					.select-filters.open{
@@ -1497,19 +1525,56 @@ aside {
 					// а это для input ckeckbox
 					.filters-flex-input.checkboxs{
 						display: block;
-						margin: 0px 10px;
+						margin: 0px 17px;
 						& span{
-							font-size: 14px;
 							color: rgba(255,255,255,.7);
 							letter-spacing: 0.5px;
 							font-weight: thin;
 							display: block;
-								& input{
-									position: relative;
-									margin: 0;
-									width: 30px;
-									margin-top: 4px;
+							& input{
+								width: 0px;
+								height: 0px;
+								opacity: 0;
+								display: none;
+								&:checked + label:before{
+									content: "\2714";
+								    color: $buttonColor;
+								    font-size: 13px;
+								    border-color: $buttonColor;
+								    text-align: center;
+								    line-height: 14px;
 								}
+							}
+							label{
+								display: inline-block;
+								cursor: pointer;
+								position: relative;
+								font-size: 13px;
+								margin: 4px 0px;
+								color: $textColor;
+								padding-left: 30px;
+								&:before{
+									content: "";
+									display: inline-block;
+									width: 15px;
+									height: 15px;
+									margin-right: 10px;
+									position: absolute;
+									left: 0;
+									bottom: -1px;
+									background-color: transparent;
+									border: 1px solid #37393B;
+									border-radius: 3px;
+								}
+
+								&:hover{
+									color: white;
+									&:before{
+										border-color: $buttonColor;
+										transition-duration:500ms;
+									}
+								}
+							}
 						}
 					}
 				}
@@ -2175,7 +2240,7 @@ aside {
 				cursor: pointer;
 				position: relative;
 				font-size: 13px;
-				margin-top: 10px;
+				margin: 6px 0px;
 				color: $textColor;
 				padding-left: 30px;
 				&:before{
@@ -2186,7 +2251,7 @@ aside {
 					margin-right: 10px;
 					position: absolute;
 					left: 0;
-					bottom: -2px;
+					bottom: -1px;
 					background-color: transparent;
 					border: 1px solid #37393B;
 					border-radius: 3px;
@@ -2223,6 +2288,7 @@ aside {
 				color:white;
 				cursor: pointer;
 			}
+			hr{margin-top: 10px;}
 		}
 		// кнопка закрытия модалки
 		.close-complaint-modal{
@@ -2602,15 +2668,19 @@ aside {
 	}
 
 	/* Страница anime.html*/
-	.sort-page{
+	.modification-page{
 		.content-section{
 			margin-top: 50px;
 			.block_sort {
-				.filters-sort-block{display: block}
+				.filters-sort-block{display: block!important;}
 				h2 {margin-left: 10px;}
 			}
 		}
 		
+	}
+
+	.filters-sort-block{
+		display: block;
 	}
 	.modal_selects{
 		z-index: 999;
@@ -2962,7 +3032,7 @@ aside {
 	}
 
 	/* Страница anime.html*/
-	.sort-page{
+	.modification-page{
 		.content-section{
 			margin-top: 50px;
 			.block_sort {
@@ -3316,7 +3386,7 @@ aside {
 	}
 
 	/* Страница anime.html*/
-	.sort-page{
+	.modification-page{
 		.content-section{
 			margin-top: 50px;
 			.block_sort {

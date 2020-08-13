@@ -22,7 +22,7 @@ $('.timetable__block').on('click', '.button-open', function(e){
  	}
 });
 // показ модалки со фильтрами
-$('#main.sort-page .content-section .block_sort .filters-sort-block span').click(function(){
+$('#main.modification-page .content-section .block_sort .filters-sort-block span').click(function(){
    if ($('.modal_selects').hasClass('open')) {
        $('.modal_selects').removeClass('open');
    } else {
