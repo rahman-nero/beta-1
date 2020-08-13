@@ -127,3 +127,22 @@ $('.modal-complaint-body input').on('click', function(e){
   }
 
 })
+
+
+
+
+// фильтры на странице anime.html - с боку
+$('.row-blocks-select').on('click', '.view-modal-section', function(e){
+  let block_view = $(e.currentTarget).next();
+  let icon_down = $(e.currentTarget).find('.icon-down');
+
+  if ($(block_view).hasClass('open')) {
+    $(icon_down).removeClass('open');
+    $(block_view).removeClass('open');
+  } else {
+    $('.select-filters').removeClass('open');
+    $('.icon-down').removeClass('open');
+    $(icon_down).addClass('open');
+    $(block_view).addClass('open');
+  }
+});

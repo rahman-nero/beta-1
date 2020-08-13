@@ -32,7 +32,7 @@ $.getScript("https://vk.com/js/api/openapi.js?168", function() {
  $.getScript("js/vk_widget.js"); 
 });
 
-
+// показ инфы аниме , если навести на аниме
 $('.content-section article').on('mouseover', '.img', function(e){
 	let div = $(this).find('.article__description');
 	setTimeout(function() {
@@ -69,20 +69,6 @@ $('.open_modal_info').click(function(e){
 });
 
 
-$('.row-blocks-select').on('click', '.view-modal-section', function(e){
-	let block_view = $(e.currentTarget).next();
-	let icon_down = $(e.currentTarget).find('.icon-down');
-
-	if ($(block_view).hasClass('open')) {
-		$(icon_down).removeClass('open');
-		$(block_view).removeClass('open');
-	} else {
-		$('.select-filters').removeClass('open');
-		$('.icon-down').removeClass('open');
-		$(icon_down).addClass('open');
-		$(block_view).addClass('open');
-	}
-});
 
 
 

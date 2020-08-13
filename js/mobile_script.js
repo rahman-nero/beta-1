@@ -29,3 +29,5 @@ $('.modal_menu').click(function(e){
 });
 
 // slick - слайдер
+
+$('aside').remove();

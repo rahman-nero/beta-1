@@ -1394,232 +1394,232 @@ aside {
 	aside{
 		margin-top: 119px;
 		// Фильтры на десктопе - в боковом меню
-			.filters_block{
-				width: 100%;
-				background: $threeColor;
-				padding: 10px 0px;
-				margin-bottom: 50px;
-				// каждый раздел находится в отдельном блоке 
-				.row-blocks-select{
-					display: block;
-					margin-bottom: 10px;
-					// кнопка при нажатии показывается блок со жанрами и т.д 
-					.title-sort-block{
-						width: inherit;
-						// font-size: 1px;
-						padding: 10px 0px 10px 15px;
-						margin: 0px;
-						display:block;
-				
-						// иконка (вниз) как у select
-						.icon-down {
-							width: 15px;
-							margin-top: 2px;
-							position: absolute;
-							right: 20px;
-							transform: rotate(0deg);
-						}
-						.icon-down.open{transform: rotate(-180deg);}
-						// красивое оформление иконок 
-						.main_img_icon{
-							margin-top: 1px;
-						   margin-right:12px;
-						   width: 17px;
-						   z-index: 9;
-						} 
-						// красивое оформление иконок  (с ним)
-						.magic_effect_img{
-							margin-top: 1px;
-						  	z-index: 11;
-						  	margin-left: -8px;
-						  	& img{
-						  		width: 17px;
-						  	}
-						}
-					}
-					// это второй класс который дополняет - title-sort-block
-					.view-modal-section{
-						cursor: pointer;
-						&:hover{
-							background: #212223;
-							transition-duration:400ms;
-						}
-					}
-					// блок в котором перечилсяются жанры и т.д - скрытая окно
-					.select-filters{
-						position: absolute;
-						z-index: 12;
-						visibility: hidden;
-						opacity: 0;
-						width: 100%;
-						padding: 10px 15px;
-						margin: 0;
-						left: 0;
-						overflow: auto;
-						max-height: 300px;
-						transition:500ms all;
-						background: $twoColor;
-							& input{
-								width: 0px;
-								height: 0px;
-								opacity: 0;
-								display: none;
-								&:checked + label:before{
-									content: "\2714";
-								    color: $buttonColor;
-								    font-size: 13px;
-								    border-color: $buttonColor;
-								    text-align: center;
-								    line-height: 14px;
-								}
-							}
-							label{
-								display: block;
-								cursor: pointer;
-								position: relative;
-								font-size: 13px;
-								margin: 6px 0px;
-								color: $textColor;
-								padding-left: 30px;
-								&:before{
-									content: "";
-									display: inline-block;
-									width: 15px;
-									height: 15px;
-									margin-right: 10px;
-									position: absolute;
-									left: 0;
-									bottom: -1px;
-									background-color: transparent;
-									border: 1px solid #37393B;
-									border-radius: 3px;
-								}
-
-								&:hover{
-									color: white;
-									&:before{
-										border-color: $buttonColor;
-										transition-duration:500ms;
-									}
-								}
-							}
-					}
-					// это открытое состояние блока - открывает это окно
-					.select-filters.open{
-						visibility: visible;
-						opacity: 1;
-					}
-					// фильтры у которых нету окон - параметрые размешены в ряд - это для input
-					.filters-flex-input{
-						display: flex;
-						margin: 10px 10px 0px;
-						& input{
-							width: 50%;
-							padding: 6px 10px;
-							border: 1px solid #3B3D45;
-							background: #1A1A1A;
-							margin: 0px 5px;
-							color: white;
-						}
-					}
-					// а это для input ckeckbox
-					.filters-flex-input.checkboxs{
-						display: block;
-						margin: 0px 17px;
-						& span{
-							color: rgba(255,255,255,.7);
-							letter-spacing: 0.5px;
-							font-weight: thin;
-							display: block;
-							& input{
-								width: 0px;
-								height: 0px;
-								opacity: 0;
-								display: none;
-								&:checked + label:before{
-									content: "\2714";
-								    color: $buttonColor;
-								    font-size: 13px;
-								    border-color: $buttonColor;
-								    text-align: center;
-								    line-height: 14px;
-								}
-							}
-							label{
-								display: inline-block;
-								cursor: pointer;
-								position: relative;
-								font-size: 13px;
-								margin: 4px 0px;
-								color: $textColor;
-								padding-left: 30px;
-								&:before{
-									content: "";
-									display: inline-block;
-									width: 15px;
-									height: 15px;
-									margin-right: 10px;
-									position: absolute;
-									left: 0;
-									bottom: -1px;
-									background-color: transparent;
-									border: 1px solid #37393B;
-									border-radius: 3px;
-								}
-
-								&:hover{
-									color: white;
-									&:before{
-										border-color: $buttonColor;
-										transition-duration:500ms;
-									}
-								}
-							}
-						}
-					}
-				}
-
-				// Блок в котором два button - 'Отправить' и 'Сбросить'
-				.filter-send-block{
-					margin: 15px 10px 5px;
-					display: flex;
-					// кнопка отправки фильтров
-					.submit-filters, .reset-filters{
-						background: $buttonColor;
-						color:white;
-						border: 1px solid #2571D3;
-						cursor: pointer;
-						width: 50%;
-						padding: 7px 0px;
-						border-radius: 3px;
-						box-shadow: 0px 0px 1px rgba(0,0,0,.1);
-						margin-left: 10px;
-						&:hover{
-							background: #388EFF;
-							transition-duration:500ms;
-						}
-					}
-
-					// кнопка Сброс фильтров
-					.reset-filters{
-						background: #292A2C;
-						margin-right: 10px;
-						margin-left: 0px;
-						border:none;
-						&:hover{
-							background: #2D2E30;
-							transition-duration:500ms;
-						}
-					}
-				}
-				
-		}
+		
 	}
 
 }
 /* Страница anime.html */
 
+.filters_block{
+			width: 100%;
+			background: $threeColor;
+			padding: 10px 0px;
+			margin-bottom: 50px;
+			// каждый раздел находится в отдельном блоке 
+			.row-blocks-select{
+				display: block;
+				margin-bottom: 10px;
+				// кнопка при нажатии показывается блок со жанрами и т.д 
+				.title-sort-block{
+					width: inherit;
+					// font-size: 1px;
+					padding: 10px 0px 10px 15px;
+					margin: 0px;
+					display:block;
+			
+					// иконка (вниз) как у select
+					.icon-down {
+						width: 15px;
+						margin-top: 2px;
+						position: absolute;
+						right: 20px;
+						transform: rotate(0deg);
+					}
+					.icon-down.open{transform: rotate(-180deg);}
+					// красивое оформление иконок 
+					.main_img_icon{
+						margin-top: 1px;
+					   margin-right:12px;
+					   width: 17px;
+					   z-index: 9;
+					} 
+					// красивое оформление иконок  (с ним)
+					.magic_effect_img{
+						margin-top: 1px;
+					  	z-index: 11;
+					  	margin-left: -8px;
+					  	& img{
+					  		width: 17px;
+					  	}
+					}
+				}
+				// это второй класс который дополняет - title-sort-block
+				.view-modal-section{
+					cursor: pointer;
+					&:hover{
+						background: #212223;
+						transition-duration:400ms;
+					}
+				}
+				// блок в котором перечилсяются жанры и т.д - скрытая окно
+				.select-filters{
+					position: absolute;
+					z-index: 12;
+					visibility: hidden;
+					opacity: 0;
+					width: 100%;
+					padding: 10px 15px;
+					margin: 0;
+					left: 0;
+					overflow: auto;
+					max-height: 300px;
+					transition:500ms all;
+					background: $twoColor;
+						& input{
+							width: 0px;
+							height: 0px;
+							opacity: 0;
+							display: none;
+							&:checked + label:before{
+								content: "\2714";
+							    color: $buttonColor;
+							    font-size: 13px;
+							    border-color: $buttonColor;
+							    text-align: center;
+							    line-height: 14px;
+							}
+						}
+						label{
+							display: block;
+							cursor: pointer;
+							position: relative;
+							font-size: 13px;
+							margin: 6px 0px;
+							color: $textColor;
+							padding-left: 30px;
+							&:before{
+								content: "";
+								display: inline-block;
+								width: 15px;
+								height: 15px;
+								margin-right: 10px;
+								position: absolute;
+								left: 0;
+								bottom: -1px;
+								background-color: transparent;
+								border: 1px solid #37393B;
+								border-radius: 3px;
+							}
 
+							&:hover{
+								color: white;
+								&:before{
+									border-color: $buttonColor;
+									transition-duration:500ms;
+								}
+							}
+						}
+				}
+				// это открытое состояние блока - открывает это окно
+				.select-filters.open{
+					visibility: visible;
+					opacity: 1;
+				}
+				// фильтры у которых нету окон - параметрые размешены в ряд - это для input
+				.filters-flex-input{
+					display: flex;
+					margin: 10px 10px 0px;
+					& input{
+						width: 50%;
+						padding: 6px 10px;
+						border: 1px solid #3B3D45;
+						background: #1A1A1A;
+						margin: 0px 5px;
+						color: white;
+					}
+				}
+				// а это для input ckeckbox
+				.filters-flex-input.checkboxs{
+					display: block;
+					margin: 0px 17px;
+					& span{
+						color: rgba(255,255,255,.7);
+						letter-spacing: 0.5px;
+						font-weight: thin;
+						display: block;
+						& input{
+							width: 0px;
+							height: 0px;
+							opacity: 0;
+							display: none;
+							&:checked + label:before{
+								content: "\2714";
+							    color: $buttonColor;
+							    font-size: 13px;
+							    border-color: $buttonColor;
+							    text-align: center;
+							    line-height: 14px;
+							}
+						}
+						label{
+							display: inline-block;
+							cursor: pointer;
+							position: relative;
+							font-size: 13px;
+							margin: 4px 0px;
+							color: $textColor;
+							padding-left: 30px;
+							&:before{
+								content: "";
+								display: inline-block;
+								width: 15px;
+								height: 15px;
+								margin-right: 10px;
+								position: absolute;
+								left: 0;
+								bottom: -1px;
+								background-color: transparent;
+								border: 1px solid #37393B;
+								border-radius: 3px;
+							}
+
+							&:hover{
+								color: white;
+								&:before{
+									border-color: $buttonColor;
+									transition-duration:500ms;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			// Блок в котором два button - 'Отправить' и 'Сбросить'
+			.filter-send-block{
+				margin: 15px 10px 5px;
+				display: flex;
+				// кнопка отправки фильтров
+				.submit-filters, .reset-filters{
+					background: $buttonColor;
+					color:white;
+					border: 1px solid #2571D3;
+					cursor: pointer;
+					width: 50%;
+					padding: 7px 0px;
+					border-radius: 3px;
+					box-shadow: 0px 0px 1px rgba(0,0,0,.1);
+					margin-left: 10px;
+					&:hover{
+						background: #388EFF;
+						transition-duration:500ms;
+					}
+				}
+
+				// кнопка Сброс фильтров
+				.reset-filters{
+					background: #292A2C;
+					margin-right: 10px;
+					margin-left: 0px;
+					border:none;
+					&:hover{
+						background: #2D2E30;
+						transition-duration:500ms;
+					}
+				}
+			}
+			
+	}
 
 /* Страница view.html */
 .modification-page{
@@ -2370,81 +2370,34 @@ aside {
 	height: 100%;
 	overflow: auto;
 	top: 0;
-	z-index: 9999;
+	z-index: 99;
+		&::-webkit-scrollbar {width: 0px;}
+		&::-moz-scrollbar {width: 0;}
 	background: rgba(20,20,20,.3);
 	&__center{
-		max-width: 1050px;
+		max-width: 500px;
+		margin: 0px auto;
 		position: relative;
-		margin:150px auto ;
-		h4{
-			width: 100%;
-			padding: 10px;
-			margin-bottom: 10px;
-			background: #1D1D1E;
-			border-bottom: 1px solid $buttonColor;
-		}
-
-		.list_select{
-			margin-bottom: 20px;
-			background:#222324;
-			padding:20px 0px;
-			.adaptive_column{
-				display:inline-table;
-				margin: 0px 20px;
-			}
-			.custom-checkbox {
-	  			position: absolute;
-	 		 	z-index: -1;
-	 			 opacity: 0;
-			}
-			.custom-checkbox+label {
-			  display: block;
-			  margin-left: 10px;
-			  margin-top: 10px;
-			  align-items: center;
-			  user-select: none;
-			}
-			.custom-checkbox+label::before {
-			  content: '';
-			  display: inline-block;
-			  width: 1em;
-			  height: 1em;
-			  flex-shrink: 0;
-			  flex-grow: 0;
-			  border: 1px solid #adb5bd;
-			  border-radius: 0.25em;
-			  margin-right: 0.5em;
-			  background-repeat: no-repeat;
-			  background-position: center center;
-			  background-size: 50% 50%;
-			}
-			.custom-checkbox:checked+label::before {
-				  border-color: #0b76ef;
-				  background-color: #0b76ef;
-	  			background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
-			}
-		}
-
-		.filters-send-button{
-			position: relative;
-			padding: 6px 15px;
-			border-radius: 3px;
-			background-color: $buttonColor;
-			color: white;
-			font-family: Roboto;
-			border: 1px solid #287AE5;
+		padding-bottom: 0px;
+	    
+		.filters_block{
+			margin-bottom: 0px;
+			height: 100%;
 		}
 	}
 	// кнопка закрытыя фильтров
 	&__close{
-		position: absolute;
-		right: 0px;
+		position: relative;
+		width: 100%;
+		display: flex;
+		align-items:center;
+		justify-content:flex-end;
 		padding: 0px 14px 5px;
 		cursor: pointer;
 		font-size: 22px;
-		border-radius: 3px;
-		background:#333;
-		top: -50px;
+		background:#212324;
+
+
 		&:hover{
 			background: #222;
 		}
@@ -2612,7 +2565,7 @@ aside {
 		top: 0;
 		background: $twoColor;
 		overflow: auto;
-		z-index: 99;
+		z-index: 995;
 		box-shadow:0px 0px 20px rgba(0, 0, 0, .8);
 		transition: all 800ms;
 		// убераем скролл с права  - не красиво выглядить
@@ -2679,44 +2632,21 @@ aside {
 		
 	}
 
-	.filters-sort-block{
-		display: block;
-	}
+	.filters-sort-block{display: block;}
 	.modal_selects{
-		z-index: 999;
 		background: rgba(20,20,20,.9);
 		&__center{
-			margin: 10px;
-			padding-bottom: 20px;
+			// top: 50%;
+			margin: 0;
 			height: 100%;
-			overflow: auto;
-			top: 0%;
-			transform: translate(0%, 0%);
 			&::-webkit-scrollbar {width: 0px;}
 			&::-moz-scrollbar {width: 0;}
-			.list_select{
-				padding:5px 0px;
-				margin-bottom: 20px;
-				.adaptive_column{
-					display:block;
-					margin: 0px 6px;
-				}
-			}
-
-	
 		}
+
+
 		// кнопка закрытыя фильтров
 
-		&__close{
-			position: fixed;
-			right: 10px;
-			padding: 5px 10px;
-			cursor: pointer;
-			border-radius: 3px;
-			top: 100%;
-			background-color: #fff;
-			&:hover{background: #222;}
-		}
+		
 	} 
 
 	/* Страница anime.html*/
@@ -2976,7 +2906,7 @@ aside {
 		top: 0;
 		background: $twoColor;
 		overflow: auto;
-		z-index: 99;
+		z-index: 995;
 		box-shadow:0px 0px 20px rgba(0, 0, 0, .8);
 		transition: all 800ms;
 		// убераем скролл с права  - не красиво выглядить
@@ -3043,40 +2973,16 @@ aside {
 		
 	}
 	.modal_selects{
-		z-index: 999;
 		background: rgba(20,20,20,.9);
 		&__center{
-			margin: 10px;
-			padding-bottom: 20px;
-			height: 100%;
-			overflow: auto;
-			top: 0%;
-			transform: translate(0%, 0%);
+			top: 50%;
+			transform: translate(0%, -50%);
 			&::-webkit-scrollbar {width: 0px;}
 			&::-moz-scrollbar {width: 0;}
-			.list_select{
-				padding:5px 0px;
-				margin-bottom: 20px;
-				.adaptive_column{
-					display:block;
-					margin: 0px 6px;
-				}
-			}
-
 	
 		}
 		// кнопка закрытыя фильтров
 
-		&__close{
-			position: fixed;
-			right: 10px;
-			padding: 5px 10px;
-			cursor: pointer;
-			border-radius: 3px;
-			top: 100%;
-			background-color: #fff;
-			&:hover{background: #222;}
-		}
 	} 
 
 	/* Страница anime.html*/
@@ -3330,7 +3236,7 @@ aside {
 		top: 0;
 		background: $twoColor;
 		overflow: auto;
-		z-index: 99;
+		z-index: 995;
 		box-shadow:0px 0px 20px rgba(0, 0, 0, .8);
 		transition: all 800ms;
 		// убераем скролл с права  - не красиво выглядить
@@ -3397,40 +3303,18 @@ aside {
 		
 	}
 	.modal_selects{
-		z-index: 999;
 		background: rgba(20,20,20,.9);
 		&__center{
-			margin: 10px;
-			padding-bottom: 20px;
-			height: 100%;
-			overflow: auto;
-			top: 0%;
-			transform: translate(0%, 0%);
+				top: 50%;
+			transform: translate(0%, -50%);
 			&::-webkit-scrollbar {width: 0px;}
 			&::-moz-scrollbar {width: 0;}
-			.list_select{
-				padding:5px 0px;
-				margin-bottom: 20px;
-				.adaptive_column{
-					display:block;
-					margin: 0px 6px;
-				}
-			}
 
 	
 		}
 		// кнопка закрытыя фильтров
 
-		&__close{
-			position: fixed;
-			right: 10px;
-			padding: 5px 10px;
-			cursor: pointer;
-			border-radius: 3px;
-			top: 100%;
-			background-color: #fff;
-			&:hover{background: #222;}
-		}
+		
 	} 
 
 	/* Страница anime.html*/
