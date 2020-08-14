@@ -2414,7 +2414,10 @@ aside {
 
 /* конец страница anime.html */
 
-
+@media (max-width: 770px) and (max-height: 580px) {
+	// добавил стили - это для телефонов с маленкими высотой, модалка ломась вот поэтому
+	.modal_selects__center {height: auto!important;}
+}
 
 @media (max-width: 450px) {
 	body{ // Чтобы фоотер нормально отображался
