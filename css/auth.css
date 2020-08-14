@@ -33,6 +33,24 @@
     margin-bottom: 6px;
     display: block;
     font-size: 15px; }
+  .block-auth button {
+    margin: 20px 0px 10px;
+    color: white;
+    background: #2D88FF;
+    font-weight: 500;
+    font-family: Roboto;
+    -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    padding: 6px 20px;
+    cursor: pointer;
+    font-size: 15px;
+    border: none;
+    border-radius: 3px;
+    -webkit-transition: 500ms all;
+    -o-transition: 500ms all;
+    transition: 500ms all; }
+    .block-auth button:hover {
+      background: #2571D3; }
   .block-auth .block-remember {
     position: relative;
     margin-top: 10px; }

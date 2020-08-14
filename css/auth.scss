@@ -38,7 +38,26 @@ $threeColor : #1B1C1D;
 		display: block;					
 		font-size: 15px;
 	}
-	
+
+	// кнопка - отправки формы 
+	button{
+		margin: 20px 0px 10px;
+		color: white;
+		background: $buttonColor;
+		font-weight: 500;
+		font-family: Roboto;
+		box-shadow: 0px 0px 5px rgba(0,0,0,.1);
+		padding: 6px 20px;
+		cursor: pointer;
+		font-size: 15px;
+		border: none;
+		border-radius: 3px;
+		transition:500ms all;
+		&:hover{
+			background: #2571D3;
+		}
+	}
+
 	//  кнопка - запомнить
 	.block-remember{
 		position: relative;
@@ -87,8 +106,6 @@ $threeColor : #1B1C1D;
 		}
 	}
 
-	
-
 	// авторизация через соц сети
 	.auth-with-social{
 		margin: 10px 0px;
@@ -113,10 +130,7 @@ $threeColor : #1B1C1D;
 			}
 		}
 	}
-
-
-
-
+	
 }
 
 
