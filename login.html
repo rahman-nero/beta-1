@@ -11,6 +11,7 @@
 
     <!-- Style -->
     <link rel="stylesheet" href="css/style.css"  rel='preload'>
+    <link rel="stylesheet" href="css/auth.css"  rel='preload'>
 
      <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -88,32 +89,30 @@
 </div>
 <!-- Конец мобильное меню -->
 
+<div class="block-auth">
+    <h2>Вход</h2>
+    <form action="">
+        <label for="">Логин</label>
+        <input type="text" name="login" autocomplete="off" placeholder="Введите логин или Email">
+        <label for="">Пароль</label>
+        <input type="password" name="password" autocomplete="off" min="6" placeholder="Введите пароль (минимум 6 символов)">
 
-<!-- Main block -->
-<main id="main" class="modification-page">
-    <!-- Content -->
-    <section class="content-section">
-        <div class="block-auth">
-            <h4>Вход</h4>
-            
+        <div class="block-remember">
+            <input type="checkbox" name="remember" id="rememb">
+            <label for="rememb">Запомнить</label>
+            <small><a href="">Забыли пароль?</a></small>
         </div>
-    </section>
-    <!-- end content -->
-  
-</main>
-
-<footer id="footer">
-    <div class="header__style_line"></div>
-    <div class="header-open-block"></div>
-    <div class="center__footer">
-        <a href="">О нас</a>
-        <a href="">Для правобладателей</a>
-        <a href="">Пользовательские соглашения</a>
-        <div class="author">
-            © 2020. Автор проекта: Zero<a href="mailto:">dikaevr053@gmail.com</a>
+        <hr color="#444" size="1">
+        <div class="auth-with-social">
+            <p>Войти через соц. сети</p>
+            <a href=""><img src="img/view/vk.svg" alt=""></a>
+            <a href=""><img src="img/view/twitter.svg" alt=""></a>
         </div>
-    </div>
-</footer>
+        <hr color="#444" size="1">
+        <p>Еще не зареганы? <a href="">Зарегатся</a></p>
+    </form>
+    
+</div>
 
 
 <!-- Modal -->

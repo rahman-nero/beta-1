@@ -1,0 +1,96 @@
+@charset "UTF-8";
+.block-auth {
+  position: absolute;
+  width: 400px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: #222;
+  padding: 20px;
+  border: 1px solid #444;
+  border-radius: 3px; }
+  .block-auth h2 {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #444; }
+  .block-auth input {
+    -webkit-transition: 500ms all;
+    -o-transition: 500ms all;
+    transition: 500ms all;
+    display: block;
+    min-width: 100%;
+    padding: 9px 12px;
+    border: 1px solid #555;
+    background: transparent;
+    color: white; }
+    .block-auth input:focus {
+      border-radius: 3px;
+      border-color: #2D88FF; }
+  .block-auth label {
+    margin-top: 20px;
+    margin-bottom: 6px;
+    display: block;
+    font-size: 15px; }
+  .block-auth .block-remember {
+    position: relative;
+    margin-top: 10px; }
+    .block-auth .block-remember input {
+      min-width: auto !important;
+      width: 20px !important;
+      display: none; }
+    .block-auth .block-remember input:checked + label:before {
+      content: "\2714";
+      font-size: 12px;
+      line-height: 13px; }
+    .block-auth .block-remember label {
+      cursor: pointer;
+      font-size: 13px;
+      position: relative;
+      margin-left: 25px; }
+      .block-auth .block-remember label:before {
+        content: '';
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        display: block;
+        margin-left: -25px;
+        margin-top: 1px;
+        left: 0;
+        top: 0;
+        background: transparent;
+        border-radius: 3px;
+        border: 1px solid #444; }
+    .block-auth .block-remember small {
+      position: absolute;
+      color: rgba(255, 255, 255, 0.7);
+      top: 0;
+      right: 0px;
+      margin-top: 0px;
+      font-size: 13px;
+      -webkit-transition: 990ms all;
+      -o-transition: 990ms all;
+      transition: 990ms all; }
+      .block-auth .block-remember small :hover {
+        color: #2D88FF; }
+  .block-auth .auth-with-social {
+    margin: 10px 0px; }
+    .block-auth .auth-with-social p {
+      margin: 5px 0px 10px; }
+    .block-auth .auth-with-social img {
+      width: 30px;
+      height: 30px;
+      margin-right: 5px; }
+  .block-auth p {
+    font-size: 14px;
+    margin-top: 10px; }
+    .block-auth p a {
+      color: rgba(255, 255, 255, 0.8); }
+      .block-auth p a:hover {
+        color: #2D88FF;
+        -webkit-transition-duration: 800ms;
+        -o-transition-duration: 800ms;
+        transition-duration: 800ms; }
+
+/**********************конец страницы login.html и sugnup.html********************* */

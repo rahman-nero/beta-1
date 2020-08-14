@@ -1,0 +1,123 @@
+$textColor : rgba(228, 230, 235,1);
+$buttonColor : #2D88FF;
+$backColor : #141314;
+$twoColor : #222324;
+$threeColor : #1B1C1D;
+.block-auth{
+	position: absolute;
+	width: 400px;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+	background: #222;
+	padding: 20px;
+	border: 1px solid #444;
+	border-radius: 3px;
+	h2{
+		margin-bottom: 10px;
+		padding-bottom:5px;
+		border-bottom: 1px solid #444;
+	}
+	input{
+		transition:500ms all;
+		display: block;
+		min-width: 100%;
+		padding: 9px 12px;
+		border: 1px solid #555;
+		background: transparent;
+		color: white;
+		&:focus{
+			border-radius: 3px;
+			border-color: $buttonColor; 
+		}
+	}
+	
+	label{
+		margin-top: 20px;
+		margin-bottom: 6px;
+		display: block;					
+		font-size: 15px;
+	}
+	
+	//  кнопка - запомнить
+	.block-remember{
+		position: relative;
+		margin-top: 10px;
+		input{
+			min-width: auto!important;
+			width: 20px!important;
+			display: none;
+		}
+		input:checked + label:before{
+			content: "\2714";
+			font-size: 12px;
+			line-height: 13px;
+		}
+		label{
+			cursor: pointer;
+			font-size: 13px;
+			position: relative;
+			margin-left: 25px;
+			&:before{
+				content: '';
+				position: absolute;
+				width: 14px;
+				height: 14px;
+				display: block;
+				margin-left: -25px;
+				margin-top:1px;
+				left: 0;
+				top: 0;
+				background: transparent;
+				border-radius: 3px;
+				border: 1px solid #444;
+			}
+		}
+
+		// кнопка - забыли пароль
+		small{
+			position: absolute;
+			color: rgba(255,255,255,.7);
+			top:0;
+			right: 0px;
+			margin-top: 0px;
+			font-size: 13px;
+			transition:990ms all;
+			:hover{color: $buttonColor;}
+		}
+	}
+
+	
+
+	// авторизация через соц сети
+	.auth-with-social{
+		margin: 10px 0px;
+		p{
+			margin: 5px 0px 10px;
+		}
+		& img {
+			width: 30px;
+			height: 30px;
+			margin-right: 5px;
+		}
+	}
+	// кнопка - регистрации
+	p {
+		font-size: 14px;
+		margin-top: 10px;
+		a {
+			color: rgba(255,255,255,.8);
+			&:hover{
+				color: $buttonColor;
+				transition-duration: 800ms;
+			}
+		}
+	}
+
+
+
+
+}
+
+
+/**********************конец страницы login.html и sugnup.html********************* */
