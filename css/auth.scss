@@ -7,6 +7,8 @@ $threeColor : #1B1C1D;
 	position: absolute;
 	width: 400px;
 	top: 50%;
+	overflow: auto;
+	height: auto;
 	left: 50%;
 	transform:translate(-50%,-50%);
 	background: #222;
@@ -131,6 +133,11 @@ $threeColor : #1B1C1D;
 		}
 	}
 	
+}
+
+
+@media (max-width: 550px) {
+	.block-auth{width:100%;}
 }
 
 

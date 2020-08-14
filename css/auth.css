@@ -3,6 +3,8 @@
   position: absolute;
   width: 400px;
   top: 50%;
+  overflow: auto;
+  height: auto;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -110,5 +112,9 @@
         -webkit-transition-duration: 800ms;
         -o-transition-duration: 800ms;
         transition-duration: 800ms; }
+
+@media (max-width: 550px) {
+  .block-auth {
+    width: 100%; } }
 
 /**********************конец страницы login.html и sugnup.html********************* */
