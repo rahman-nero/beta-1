@@ -1811,6 +1811,8 @@ aside {
 			background: #212223;
 			padding: 10px 20px ;
 			margin-bottom: 40px;
+			border-bottom: 1px solid #2D2A2D; 
+			border-top: 1px solid #2D2A2D; 
 			h4{margin: 0px 0px 20px; font-size: 20px;}
 			.screens{
 				transition:600ms all;
@@ -1833,6 +1835,8 @@ aside {
 
 		// Описание аниме
 		.about_anime__description{
+			border-bottom: 1px solid #2D2A2D; 
+			border-top: 1px solid #2D2A2D; 
 			h4{
 				font-size: 19px;
 				font-weight: 500;
@@ -1844,6 +1848,34 @@ aside {
 			font-weight: 400;
 			font-size: 15px;
 			line-height: 23px;
+		}
+
+		// блок связанное
+		.block-anime-related{
+			margin: 60px 10px 30px;
+			padding: 10px 15px;
+			border: 1px solid #2D2A2D;
+			background: #212223;
+			position: relative;
+			a{
+				display: block;
+				font-size: 14px;
+				margin: 3px 0px;
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+			&:before{
+				content: 'Связанное с ним';
+				position: absolute;
+				padding: 5px 10px;
+				font-size: 15px;
+				background: #212223;
+				border: 1px solid #2D2A2D;
+				border-bottom: none;
+				left: -1px;
+				top: -31px;
+			}
 		}
 
 		// блок в котором плеер
@@ -2067,9 +2099,39 @@ aside {
 				}
 				.active{color:white;border-bottom: 2px solid $buttonColor;}
 			}
+			// Блок добваления коментарии
+			.block-to-add-comment{
+				max-width: 100%;
+				// background: #000;
+				margin: 20px 0px;
+				padding: 10px 0px;
+				textarea{
+					width: 100%;
+					padding: 10px;
+					color: white;
+					background: transparent;
+					border: 1px solid $buttonColor;
+					resize:none;
+					border-radius: 3px;
+					height: 150px;
+				}
+
+				button {
+			 		padding: 5px 9px;
+			 		border-radius: 3px;
+			 		border: 2px solid #246CCA;
+			 		background: $buttonColor;
+			 		color:white;
+			 		margin-right: 5px;
+					cursor: pointer;
+					&:hover{
+						box-shadow: 0px 0px 5px rgba(45,136,255,.4);
+					}
+				}
+			}
 			// блок со коментариями
 			.block-review-comment-content{
-				margin: 20px 0px;
+				margin: 20px 0px 0px;
 				background-color: transparent;
 				max-width:100%;
 				display: block;
@@ -2125,9 +2187,13 @@ aside {
 						}
 						// количество лайков и дизлайков на комент
 						.comment-section-like{
+							display: flex;
+							align-items:center;
 							position: absolute;
-							right: 20px;
-							top: 10px;
+							right: 5px;
+							top:8px;
+							& img {margin: 0px 10px;width: 14px;}
+							.uplike img{transform:rotate(-180deg);}
 						}
 						// 
 						.comment_controls{
