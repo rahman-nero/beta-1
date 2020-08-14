@@ -56,7 +56,7 @@ body {
 
 
 
-/* top header - menu*/
+/**************************** Вехнее меню ********************************/
 #header{
 	position: fixed;
 	top: 0;
@@ -283,74 +283,13 @@ body {
 
 
 
-
-/* end top header - menu*/
+/*********************** Вехнее меню****************************/
 
 .mobile_menu{display: none}
 .mobile-modal{display: none;}
 
-/* Модальное окно в верхнем меню */
-.modal-info-user{
-	display: none;
-	position: absolute;
-	width: 243px;
-	right: 0;
-	margin-right: 8px;
-	border-radius: 9px;
-	border: 1px solid #2C2E2F;
-	margin-top: 8px;
-	z-index: 9;
-	box-shadow: 0px 0px 3px rgba(0,0,0,0.1);
-	background: #202122;
-	padding: 8px;
-	transition:800ms all;
 
-	.block-info-modal{
-		position: relative;
-		border-radius: 10px;
-		padding: 4px;
-		margin-bottom: 5px;
-		a {font-size: 14px}	
-		& img { 
-			width: 42px;
-			float: left;
-			margin-right: 10px;
-			border-radius: 50%;
-		}
-
-		&:hover{
-			background: #2F3234;
-			transition-duration: 500ms;
-		}
-	}
-	
-	.block-info-modal + hr + a{margin-top: 9px}
-
-	.block-info-modal ~ a{
-		padding: 9px 8px;
-		display: block!important;
-		margin: 5px 0px;
-		border-radius: 5px;
-		font-size: 15px;
-		font-family:Roboto;
-
-		& img { 
-			width: 18px;
-			float: left;
-			margin-right: 10px;
-
-		}	
-		&:hover {
-			background: #2F3234;
-			transition-duration: 500ms;
-		}
-	}
-}
-.modal-info-user.open{
-	display: block;
-}
-
-/* Slick - Слайдер */
+/******************** Slick - слайдер ************************* */
 .slick-slader{
 	position: relative;
 	background: #212121;
@@ -432,9 +371,10 @@ body {
 	.next{right: -20px}
 
 }
-/* конец slick - Слайдера */
+/******************** конец slick - слайдера ******************* */
 
-/* Контейнер где находятся меню и контент */
+
+/******************Контейнер где находятся меню и контент ********/
 #main{
 	position: relative;
 	max-width: 1500px;
@@ -443,6 +383,7 @@ body {
 	display: flex;
 	height: 100%!important;
 }
+
 
 .content-section{
 	position: relative;
@@ -694,27 +635,9 @@ body {
 	.circle:nth-child(2){
 		animation: load_circle 1.2s ease 0s infinite ;
 	}
-	@keyframes load_circle{
-		0%{
-			transform:scale(1);
-		}
-		50% {
-			transform:scale(1.2);
-		}
-		100%{
-			transform:scale(1);
-		}
-	}
+	
 }
 
-@keyframes status{
-	0%{
-		width: 0px;
-		height: 0px;
-	}
-	100% {width: 30px;height: 30px; opacity: 0;}
-
-}
 // Просмотров аниме 
 .watch{
  	position: absolute;
@@ -773,24 +696,9 @@ body {
 }
 
 
-.button-all-view{
-	position: relative;
-	margin: 30px 0px;
-	text-align: center;
-	background: rgba(0,0,0,.3);
-	padding: 12px 6px;
-	border-radius: 2px;
-	&:hover{
-		background: rgba(0,0,0,.7);
-		transition-duration:800ms;
-	}
-}
 
 
-
-
-
-/*  Правое меню */
+/******************Правое меню********************/
 aside {
      color: $textColor;
      position: relative;
@@ -1198,7 +1106,7 @@ aside {
 	}
 }
 
-/*  Правое меню */
+/**********************Правое меню*****************/
 
 // красивое оформление иконок 
 .main_img_icon{
@@ -1231,7 +1139,7 @@ aside {
 	}
 }
 
-/* Footer */
+/****************Footer**************** */
 #footer{
 	position: relative;
 	min-width: 100%;
@@ -1287,7 +1195,7 @@ aside {
 		}
 	}
 }
-/* Footer */
+/****************Footer*************** */
 
 .up_block{
 	position: fixed;
@@ -1315,21 +1223,11 @@ aside {
 		transition-duration:800ms;
 	}
 }
-/* конец - контейнер где находятся меню и контент */
-
-
-/* Animation */
-
-/* Загрузка чата */
-@keyframes loads{
-    100%{transform: rotate(360deg);}
-}
-
-/* Animation */
+/***********************конец - контейнер где находятся меню и контент******************* */
 
 
 
-/* Страница anime.html */
+/***********************Страница anime.html**************** */
 .modification-page{
 	position: relative;
 	.content-section{
@@ -1398,230 +1296,230 @@ aside {
 	}
 
 }
-/* Страница anime.html */
+/**********************Страница anime.html**************** */
 
 .filters_block{
+	width: 100%;
+	background: $threeColor;
+	padding: 10px 0px;
+	margin-bottom: 50px;
+	// каждый раздел находится в отдельном блоке 
+	.row-blocks-select{
+		display: block;
+		margin-bottom: 10px;
+		// кнопка при нажатии показывается блок со жанрами и т.д 
+		.title-sort-block{
+			width: inherit;
+			// font-size: 1px;
+			padding: 10px 0px 10px 15px;
+			margin: 0px;
+			display:block;
+	
+			// иконка (вниз) как у select
+			.icon-down {
+				width: 15px;
+				margin-top: 2px;
+				position: absolute;
+				right: 20px;
+				transform: rotate(0deg);
+			}
+			.icon-down.open{transform: rotate(-180deg);}
+			// красивое оформление иконок 
+			.main_img_icon{
+				margin-top: 1px;
+			   margin-right:12px;
+			   width: 17px;
+			   z-index: 9;
+			} 
+			// красивое оформление иконок  (с ним)
+			.magic_effect_img{
+				margin-top: 1px;
+			  	z-index: 11;
+			  	margin-left: -8px;
+			  	& img{
+			  		width: 17px;
+			  	}
+			}
+		}
+		// это второй класс который дополняет - title-sort-block
+		.view-modal-section{
+			cursor: pointer;
+			&:hover{
+				background: #212223;
+				transition-duration:400ms;
+			}
+		}
+		// блок в котором перечилсяются жанры и т.д - скрытая окно
+		.select-filters{
+			position: absolute;
+			z-index: 12;
+			visibility: hidden;
+			opacity: 0;
 			width: 100%;
-			background: $threeColor;
-			padding: 10px 0px;
-			margin-bottom: 50px;
-			// каждый раздел находится в отдельном блоке 
-			.row-blocks-select{
-				display: block;
-				margin-bottom: 10px;
-				// кнопка при нажатии показывается блок со жанрами и т.д 
-				.title-sort-block{
-					width: inherit;
-					// font-size: 1px;
-					padding: 10px 0px 10px 15px;
-					margin: 0px;
-					display:block;
-			
-					// иконка (вниз) как у select
-					.icon-down {
-						width: 15px;
-						margin-top: 2px;
-						position: absolute;
-						right: 20px;
-						transform: rotate(0deg);
-					}
-					.icon-down.open{transform: rotate(-180deg);}
-					// красивое оформление иконок 
-					.main_img_icon{
-						margin-top: 1px;
-					   margin-right:12px;
-					   width: 17px;
-					   z-index: 9;
-					} 
-					// красивое оформление иконок  (с ним)
-					.magic_effect_img{
-						margin-top: 1px;
-					  	z-index: 11;
-					  	margin-left: -8px;
-					  	& img{
-					  		width: 17px;
-					  	}
-					}
-				}
-				// это второй класс который дополняет - title-sort-block
-				.view-modal-section{
-					cursor: pointer;
-					&:hover{
-						background: #212223;
-						transition-duration:400ms;
-					}
-				}
-				// блок в котором перечилсяются жанры и т.д - скрытая окно
-				.select-filters{
-					position: absolute;
-					z-index: 12;
-					visibility: hidden;
+			padding: 10px 15px;
+			margin: 0;
+			left: 0;
+			overflow: auto;
+			max-height: 300px;
+			transition:500ms all;
+			background: $twoColor;
+				& input{
+					width: 0px;
+					height: 0px;
 					opacity: 0;
-					width: 100%;
-					padding: 10px 15px;
-					margin: 0;
-					left: 0;
-					overflow: auto;
-					max-height: 300px;
-					transition:500ms all;
-					background: $twoColor;
-						& input{
-							width: 0px;
-							height: 0px;
-							opacity: 0;
-							display: none;
-							&:checked + label:before{
-								content: "\2714";
-							    color: $buttonColor;
-							    font-size: 13px;
-							    border-color: $buttonColor;
-							    text-align: center;
-							    line-height: 14px;
-							}
-						}
-						label{
-							display: block;
-							cursor: pointer;
-							position: relative;
-							font-size: 13px;
-							margin: 6px 0px;
-							color: $textColor;
-							padding-left: 30px;
-							&:before{
-								content: "";
-								display: inline-block;
-								width: 15px;
-								height: 15px;
-								margin-right: 10px;
-								position: absolute;
-								left: 0;
-								bottom: -1px;
-								background-color: transparent;
-								border: 1px solid #37393B;
-								border-radius: 3px;
-							}
-
-							&:hover{
-								color: white;
-								&:before{
-									border-color: $buttonColor;
-									transition-duration:500ms;
-								}
-							}
-						}
-				}
-				// это открытое состояние блока - открывает это окно
-				.select-filters.open{
-					visibility: visible;
-					opacity: 1;
-				}
-				// фильтры у которых нету окон - параметрые размешены в ряд - это для input
-				.filters-flex-input{
-					display: flex;
-					margin: 10px 10px 0px;
-					& input{
-						width: 50%;
-						padding: 6px 10px;
-						border: 1px solid #3B3D45;
-						background: #1A1A1A;
-						margin: 0px 5px;
-						color: white;
+					display: none;
+					&:checked + label:before{
+						content: "\2714";
+					    color: $buttonColor;
+					    font-size: 13px;
+					    border-color: $buttonColor;
+					    text-align: center;
+					    line-height: 14px;
 					}
 				}
-				// а это для input ckeckbox
-				.filters-flex-input.checkboxs{
+				label{
 					display: block;
-					margin: 0px 17px;
-					& span{
-						color: rgba(255,255,255,.7);
-						letter-spacing: 0.5px;
-						font-weight: thin;
-						display: block;
-						& input{
-							width: 0px;
-							height: 0px;
-							opacity: 0;
-							display: none;
-							&:checked + label:before{
-								content: "\2714";
-							    color: $buttonColor;
-							    font-size: 13px;
-							    border-color: $buttonColor;
-							    text-align: center;
-							    line-height: 14px;
-							}
-						}
-						label{
-							display: inline-block;
-							cursor: pointer;
-							position: relative;
-							font-size: 13px;
-							margin: 4px 0px;
-							color: $textColor;
-							padding-left: 30px;
-							&:before{
-								content: "";
-								display: inline-block;
-								width: 15px;
-								height: 15px;
-								margin-right: 10px;
-								position: absolute;
-								left: 0;
-								bottom: -1px;
-								background-color: transparent;
-								border: 1px solid #37393B;
-								border-radius: 3px;
-							}
-
-							&:hover{
-								color: white;
-								&:before{
-									border-color: $buttonColor;
-									transition-duration:500ms;
-								}
-							}
-						}
-					}
-				}
-			}
-
-			// Блок в котором два button - 'Отправить' и 'Сбросить'
-			.filter-send-block{
-				margin: 15px 10px 5px;
-				display: flex;
-				// кнопка отправки фильтров
-				.submit-filters, .reset-filters{
-					background: $buttonColor;
-					color:white;
-					border: 1px solid #2571D3;
 					cursor: pointer;
-					width: 50%;
-					padding: 7px 0px;
-					border-radius: 3px;
-					box-shadow: 0px 0px 1px rgba(0,0,0,.1);
-					margin-left: 10px;
+					position: relative;
+					font-size: 13px;
+					margin: 6px 0px;
+					color: $textColor;
+					padding-left: 30px;
+					&:before{
+						content: "";
+						display: inline-block;
+						width: 15px;
+						height: 15px;
+						margin-right: 10px;
+						position: absolute;
+						left: 0;
+						bottom: -1px;
+						background-color: transparent;
+						border: 1px solid #37393B;
+						border-radius: 3px;
+					}
+
 					&:hover{
-						background: #388EFF;
-						transition-duration:500ms;
+						color: white;
+						&:before{
+							border-color: $buttonColor;
+							transition-duration:500ms;
+						}
 					}
 				}
+		}
+		// это открытое состояние блока - открывает это окно
+		.select-filters.open{
+			visibility: visible;
+			opacity: 1;
+		}
+		// фильтры у которых нету окон - параметрые размешены в ряд - это для input
+		.filters-flex-input{
+			display: flex;
+			margin: 10px 10px 0px;
+			& input{
+				width: 50%;
+				padding: 6px 10px;
+				border: 1px solid #3B3D45;
+				background: #1A1A1A;
+				margin: 0px 5px;
+				color: white;
+			}
+		}
+		// а это для input ckeckbox
+		.filters-flex-input.checkboxs{
+			display: block;
+			margin: 0px 17px;
+			& span{
+				color: rgba(255,255,255,.7);
+				letter-spacing: 0.5px;
+				font-weight: thin;
+				display: block;
+				& input{
+					width: 0px;
+					height: 0px;
+					opacity: 0;
+					display: none;
+					&:checked + label:before{
+						content: "\2714";
+					    color: $buttonColor;
+					    font-size: 13px;
+					    border-color: $buttonColor;
+					    text-align: center;
+					    line-height: 14px;
+					}
+				}
+				label{
+					display: inline-block;
+					cursor: pointer;
+					position: relative;
+					font-size: 13px;
+					margin: 4px 0px;
+					color: $textColor;
+					padding-left: 30px;
+					&:before{
+						content: "";
+						display: inline-block;
+						width: 15px;
+						height: 15px;
+						margin-right: 10px;
+						position: absolute;
+						left: 0;
+						bottom: -1px;
+						background-color: transparent;
+						border: 1px solid #37393B;
+						border-radius: 3px;
+					}
 
-				// кнопка Сброс фильтров
-				.reset-filters{
-					background: #292A2C;
-					margin-right: 10px;
-					margin-left: 0px;
-					border:none;
 					&:hover{
-						background: #2D2E30;
-						transition-duration:500ms;
+						color: white;
+						&:before{
+							border-color: $buttonColor;
+							transition-duration:500ms;
+						}
 					}
 				}
 			}
-			
+		}
 	}
 
-/* Страница view.html */
+	// Блок в котором два button - 'Отправить' и 'Сбросить'
+	.filter-send-block{
+		margin: 15px 10px 5px;
+		display: flex;
+		// кнопка отправки фильтров
+		.submit-filters, .reset-filters{
+			background: $buttonColor;
+			color:white;
+			border: 1px solid #2571D3;
+			cursor: pointer;
+			width: 50%;
+			padding: 7px 0px;
+			border-radius: 3px;
+			box-shadow: 0px 0px 1px rgba(0,0,0,.1);
+			margin-left: 10px;
+			&:hover{
+				background: #388EFF;
+				transition-duration:500ms;
+			}
+		}
+
+		// кнопка Сброс фильтров
+		.reset-filters{
+			background: #292A2C;
+			margin-right: 10px;
+			margin-left: 0px;
+			border:none;
+			&:hover{
+				background: #2D2E30;
+				transition-duration:500ms;
+			}
+		}
+	}
+	
+}
+
+/**********************Страница view.html********************* */
 .modification-page{
 	position: relative;
 	.content-section{
@@ -2264,6 +2162,108 @@ aside {
  	}
 }
 
+
+/********************** Страница view.html ********************* */
+
+
+
+/********************** конец страница anime.html********************* */
+
+
+/**********************  Анимация **********************/
+// в блоке articel__description
+@keyframes load_circle{
+	0%{
+		transform:scale(1);
+	}
+	50% {
+		transform:scale(1.2);
+	}
+	100%{
+		transform:scale(1);
+	}
+}
+
+
+/* мигающая точка на аниме */
+@keyframes status{
+	0%{
+		width: 0px;
+		height: 0px;
+	}
+	100% {width: 30px;height: 30px; opacity: 0;}
+
+}
+
+
+/* Загрузка чата */
+@keyframes loads{
+    100%{transform: rotate(360deg);}
+}
+/**********************  Анимация **********************/
+
+/*********************Модальные окна******************** */
+/* Модальное окно в верхнем меню */
+.modal-info-user{
+	display: none;
+	position: absolute;
+	width: 243px;
+	right: 0;
+	margin-right: 8px;
+	border-radius: 9px;
+	border: 1px solid #2C2E2F;
+	margin-top: 8px;
+	z-index: 9;
+	box-shadow: 0px 0px 3px rgba(0,0,0,0.1);
+	background: #202122;
+	padding: 8px;
+	transition:800ms all;
+
+	.block-info-modal{
+		position: relative;
+		border-radius: 10px;
+		padding: 4px;
+		margin-bottom: 5px;
+		a {font-size: 14px}	
+		& img { 
+			width: 42px;
+			float: left;
+			margin-right: 10px;
+			border-radius: 50%;
+		}
+
+		&:hover{
+			background: #2F3234;
+			transition-duration: 500ms;
+		}
+	}
+	
+	.block-info-modal + hr + a{margin-top: 9px}
+
+	.block-info-modal ~ a{
+		padding: 9px 8px;
+		display: block!important;
+		margin: 5px 0px;
+		border-radius: 5px;
+		font-size: 15px;
+		font-family:Roboto;
+
+		& img { 
+			width: 18px;
+			float: left;
+			margin-right: 10px;
+
+		}	
+		&:hover {
+			background: #2F3234;
+			transition-duration: 500ms;
+		}
+	}
+}
+.modal-info-user.open{
+	display: block;
+}
+
 // модалка для подачи жалобы - на коментатора
 .modal-complaint-comments{
 	position: fixed;
@@ -2376,7 +2376,6 @@ aside {
 .modal-complaint-comments.open{ 
 	display: block;
 }
-/* Страница view.html */
 
 
 // модальное окно просмотра скриншотов со сайта 
@@ -2420,7 +2419,6 @@ aside {
 			}
 		}
 	}
-
 }
 
 .modal-view-img.open{
@@ -2476,10 +2474,15 @@ aside {
 	transition-duration:400ms;
 }
 
+/********************Модальные окна*********************** */
 
 
-/* конец страница anime.html */
 
+
+
+
+
+/**********************  Медиа-запросы **********************/
 @media (max-width: 770px) and (max-height: 580px) {
 	// добавил стили - это для телефонов с маленкими высотой, модалка ломась вот поэтому
 	.modal_selects__center {height: auto!important;}
@@ -3506,3 +3509,4 @@ aside {
 	}
 }
 
+/**********************  Медиа-запросы **********************/
