@@ -3,14 +3,14 @@ $buttonColor : #2D88FF;
 $backColor : #141314;
 $twoColor : #222324;
 $threeColor : #1B1C1D;
+
+body{
+
+}
 .block-auth{
-	position: absolute;
-	width: 400px;
-	top: 50%;
-	overflow: auto;
-	height: auto;
-	left: 50%;
-	transform:translate(-50%,-50%);
+	width: 440px;
+	position: relative;
+	display: block;
 	background: #222;
 	padding: 20px;
 	border: 1px solid #444;
@@ -135,10 +135,33 @@ $threeColor : #1B1C1D;
 	
 }
 
-
-@media (max-width: 550px) {
-	.block-auth{width:100%;}
+.block-center-auth{
+	 position: absolute;
+	 width: 100%;
+	 display: flex;
+	 height: auto;
+	 top: 50%;
+	 margin-top: 60px;
+	 align-items: center;
+	 left: 50%;
+	 max-width: 440px;
+	 transform: translate(-50%, -50%);
 }
+
+
+
+@media (max-width: 1024px) {
+	.block-auth{
+		width:100%;
+		height: auto;
+		border: none;
+	}
+	.block-center-auth{
+	 	margin-top: 00px;
+	}
+}
+
+
 
 
 /**********************конец страницы login.html и sugnup.html********************* */
