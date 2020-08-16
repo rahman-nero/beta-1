@@ -1,0 +1,216 @@
+@charset "UTF-8";
+/* $VARIABLE */
+.modification-page {
+  display: block; }
+  .modification-page .content-section {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    width: 1370px;
+    margin: 120px auto 0px;
+    padding-top: 0px; }
+    .modification-page .content-section .block-splash-screen-user {
+      position: relative;
+      width: 100%;
+      background-image: url("https://wallpaperaccess.com/full/1122002.jpg");
+      height: 300px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      -webkit-transition: 400ms all;
+      -o-transition: 400ms all;
+      transition: 400ms all;
+      border-bottom: 2px solid #222; }
+      .modification-page .content-section .block-splash-screen-user .block-hover {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        visibility: hidden; }
+        .modification-page .content-section .block-splash-screen-user .block-hover a {
+          padding: 5px 10px;
+          background-color: rgba(0, 0, 0, 0.4);
+          font-size: 14px;
+          border-radius: 3px; }
+      .modification-page .content-section .block-splash-screen-user:hover .block-hover {
+        visibility: visible; }
+    .modification-page .content-section .main-block-info-user {
+      width: 100%; }
+      .modification-page .content-section .main-block-info-user .info-user-block {
+        background-color: #1B1C1D;
+        border: 1px solid #333;
+        border-top: none;
+        border-radius: 0px 0px 3px 3px;
+        padding: 20px 20px 0px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+        .modification-page .content-section .main-block-info-user .info-user-block .image-user {
+          padding-top: 4px;
+          -webkit-box-flex: .5;
+          -ms-flex: .5;
+          flex: .5;
+          margin-right: 30px;
+          text-align: center; }
+          .modification-page .content-section .main-block-info-user .info-user-block .image-user img {
+            border: 3px solid #2D88FF;
+            border-radius: 50%;
+            max-width: 80px;
+            max-height: 80px; }
+          .modification-page .content-section .main-block-info-user .info-user-block .image-user a {
+            margin-top: 10px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            font-size: 14px;
+            padding: 5px 10px;
+            border-radius: 3px;
+            background: #222324;
+            -webkit-transition: 400ms all;
+            -o-transition: 400ms all;
+            transition: 400ms all;
+            -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.06);
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.06); }
+            .modification-page .content-section .main-block-info-user .info-user-block .image-user a img {
+              width: 16px;
+              margin-top: 3px;
+              margin-right: 5px;
+              border: none; }
+            .modification-page .content-section .main-block-info-user .info-user-block .image-user a:hover {
+              background-color: #2D88FF; }
+        .modification-page .content-section .main-block-info-user .info-user-block .description-user {
+          -webkit-box-flex: 6;
+          -ms-flex: 6;
+          flex: 6; }
+          .modification-page .content-section .main-block-info-user .info-user-block .description-user .desc-block .name-user-profile {
+            margin-bottom: 5px;
+            font-size: 18px;
+            font-weight: bold; }
+            .modification-page .content-section .main-block-info-user .info-user-block .description-user .desc-block .name-user-profile small {
+              font-size: 13px;
+              font-weight: normal;
+              color: rgba(255, 255, 255, 0.6); }
+          .modification-page .content-section .main-block-info-user .info-user-block .description-user .desc-block .name-user-profile ~ p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 4px; }
+          .modification-page .content-section .main-block-info-user .info-user-block .description-user .list-profile-links {
+            border-top: 1px solid #333;
+            padding-top: 10px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            margin-top: 10px; }
+            .modification-page .content-section .main-block-info-user .info-user-block .description-user .list-profile-links a {
+              margin: 0px 27px 0px 0px;
+              padding-bottom: 9px;
+              font-size: 14px;
+              border-bottom: 2px solid transparent;
+              -webkit-transition: 500ms all;
+              -o-transition: 500ms all;
+              transition: 500ms all; }
+              .modification-page .content-section .main-block-info-user .info-user-block .description-user .list-profile-links a img {
+                display: none;
+                width: 16px;
+                top: 2px;
+                position: relative;
+                margin-right: 8px; }
+              .modification-page .content-section .main-block-info-user .info-user-block .description-user .list-profile-links a:hover {
+                border-bottom-color: #2D88FF; }
+            .modification-page .content-section .main-block-info-user .info-user-block .description-user .list-profile-links .active {
+              border-bottom-color: #2D88FF; }
+      .modification-page .content-section .main-block-info-user .content-active-link {
+        margin: 10px 0px;
+        border-radius: 3px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+        .modification-page .content-section .main-block-info-user .content-active-link .content-block {
+          margin: 10px 0px;
+          background-color: #1B1C1D;
+          /* Стилизация для блоков в разделе 'Списки' - показ аниме*/
+          /* Стилизация для блоков в разделе 'Списки' - показ аниме*/ }
+          .modification-page .content-section .main-block-info-user .content-active-link .content-block .list-anime {
+            -ms-flex-preferred-size: 630px;
+            flex-basis: 630px;
+            cursor: pointer;
+            margin: 10px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            width: 100%; }
+            .modification-page .content-section .main-block-info-user .content-active-link .content-block .list-anime .image-anime {
+              margin-right: 10px; }
+              .modification-page .content-section .main-block-info-user .content-active-link .content-block .list-anime .image-anime img {
+                width: 60px;
+                height: 80px; }
+            .modification-page .content-section .main-block-info-user .content-active-link .content-block .list-anime .list-anime-content {
+              position: relative;
+              width: 100%; }
+              .modification-page .content-section .main-block-info-user .content-active-link .content-block .list-anime .list-anime-content p {
+                font-weight: 500;
+                color: rgba(255, 255, 255, 0.9);
+                margin-bottom: 5px;
+                -webkit-transition: 400ms all;
+                -o-transition: 400ms all;
+                transition: 400ms all; }
+                .modification-page .content-section .main-block-info-user .content-active-link .content-block .list-anime .list-anime-content p:hover {
+                  color: white; }
+              .modification-page .content-section .main-block-info-user .content-active-link .content-block .list-anime .list-anime-content small {
+                display: block;
+                color: rgba(255, 255, 255, 0.6);
+                margin-top: 2px; }
+              .modification-page .content-section .main-block-info-user .content-active-link .content-block .list-anime .list-anime-content .button-delete-from-list {
+                position: absolute;
+                right: 10px;
+                top: 0px;
+                padding: 3px 9px;
+                background-color: #222;
+                font-size: 13px;
+                border-radius: 3px;
+                -webkit-transition: 400ms all;
+                -o-transition: 400ms all;
+                transition: 400ms all; }
+                .modification-page .content-section .main-block-info-user .content-active-link .content-block .list-anime .list-anime-content .button-delete-from-list:hover {
+                  background-color: #FF2424; }
+          .modification-page .content-section .main-block-info-user .content-active-link .content-block .friend {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            width: 100%;
+            margin: 0px 0px 10px; }
+            .modification-page .content-section .main-block-info-user .content-active-link .content-block .friend .friend__img {
+              margin-right: 20px; }
+              .modification-page .content-section .main-block-info-user .content-active-link .content-block .friend .friend__img img {
+                width: 80px;
+                border-radius: 50%; }
+            .modification-page .content-section .main-block-info-user .content-active-link .content-block .friend .friend__links {
+              padding-top: 3px;
+              color: white;
+              font-weight: bold; }
+              .modification-page .content-section .main-block-info-user .content-active-link .content-block .friend .friend__links small {
+                margin-top: 10px;
+                display: block; }
+                .modification-page .content-section .main-block-info-user .content-active-link .content-block .friend .friend__links small a {
+                  font-weight: normal;
+                  color: rgba(255, 255, 255, 0.8); }
+      .modification-page .content-section .main-block-info-user .title-active-block {
+        font-size: 18px;
+        font-weight: 500;
+        margin: 18px 3px 10px;
+        position: relative; }
+        .modification-page .content-section .main-block-info-user .title-active-block .additional-block-right {
+          position: absolute;
+          -webkit-transition: 400ms all;
+          -o-transition: 400ms all;
+          transition: 400ms all;
+          top: 0px;
+          right: 4px; }
+          .modification-page .content-section .main-block-info-user .title-active-block .additional-block-right a {
+            font-size: 14px;
+            margin: 0px 4px;
+            font-weight: normal;
+            color: rgba(255, 255, 255, 0.8); }
+            .modification-page .content-section .main-block-info-user .title-active-block .additional-block-right a:hover {
+              color: white; }

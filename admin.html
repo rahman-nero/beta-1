@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	 <!-- Не лезь сюда, беги -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">    
+    <meta name="author" content="Rahman and 02" />
+
+	<title>Профиль</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css"  rel='preload'>
+    <link rel="stylesheet" href="css/admin.css"  rel='preload'>
+
+     <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+     <!-- Library --> 
+
+  
+</head>
+<body>
+
+<!-- Top menu -->
+<header id="header">
+    <div class="block-header-top" >
+        <div class="center">       
+            <a href="">ТОП 100 АНИМЕ</a>
+            <a href="">ТОП 100 МАНГИ</a>
+        </div>
+    </div>
+	<div class="center-header">
+		<div class="logo">
+			<!-- <a href="index.html"><img src="" alt="Логотип"></a> -->
+				<a href="">АНИМЕ</a>
+		</div>
+		<div class="search">
+			<form action="">
+				<input type="text" placeholder="Аниме, манга ...">
+			</form>
+			<div class="result-search">
+				<p><a href="">Показать все результаты</a></p>
+				<a href="">Наруто</a>
+				<a href="">Sao</a>
+			</div>
+		</div>
+		<div class="user-info-block">
+			<div class="user-avatar-login">
+				<img src="img/users/nezuko.jpg" alt="Nero">
+				<a href="">Rahman</a>
+			</div>
+			<!-- <a href="" data-title="" class="not-auth-user">Вход</a>
+			<a href="" data-title="" class="not-auth-user">Регистрация</a> -->
+			<div class="user-panel-links">
+				<a href="" data-title=""><span><img src="img/header/bell.svg" alt="Уведомление"></span></a>
+				<a href="" data-title=""><span><img src="img/header/heart.svg" alt="Уведомление"></span></a>
+					<a href=""><span><img src="img/header/messenger.svg" alt="Сообщение"></span></a>
+				<a href="" class="open_modal_info"><span><img src="img/header/down-arrow.svg" alt="Развернуть"></span></a>
+				<!-- Модальное окно  -->
+				<div class="modal-info-user">
+					<div class="block-info-modal">
+						<img src="img/users/nezuko.jpg" alt="Nero">
+							<a href="">Nero</a><br>
+						<small>Посмотреть профиль</small>
+					</div>
+				    	<hr size="1" color="#393A3B">
+							<a href=""><img src="img/header/friends.svg">Друзья</a>
+								<a href=""><img src="img/header/settings.svg">Редактировать профиль</a>
+				    		<a href=""><img src="img/header/messenger.svg">Cообщение</a>
+				      	<hr size="1" color="#393A3B">
+				    <a href=""><img src="img/header/logout.svg" >Выйти</a>
+				</div>
+				<!-- Конец модального окна  -->
+			</div>
+		</div>
+	</div>
+    <div class="header__style_line"></div>
+    <div class="header-open-block"></div>
+</header>
+<!-- end top menu -->
+
+<!-- Мобильное меню -->
+<div class="mobile_menu">
+    <a href=""><img src="img/mobile_menu/home_active.svg" alt=""></a>
+        <a href=""><img src="img/mobile_menu/comment.svg"></a>
+        <a href=""><img src="img/mobile_menu/bell.svg" alt="Уведомление"></a>
+    <a class="modal_menu"><img src="img/header/menu.svg" alt="Меню"></a>
+</div>
+<!-- Конец мобильное меню -->
+
+
+<!-- Main block -->
+<main id="main" class="modification-page">
+    <!-- Content -->
+	<section class="content-section">
+        <!-- Фон пользователя -->
+        <div class="block-splash-screen-user"></div>
+            <div class="main-block-info-user">
+                <!-- Info about User -->
+                <div class="info-user-block">
+                    <div class="image-user">
+                        <img src="data:application/octet-stream;base64,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" alt="">
+                        <a href=""><img src="img/icons2/technical-support.svg" alt="">Настройки</a>
+                    </div>
+                    <div class="description-user">
+                        <div class="desc-block">
+                            <p class="name-user-profile">Рахман дикаев <small>на сайте с 6 января</small></p>
+                            <p><span>Страна:</span> Россия</p>
+                            <p><span>Город:</span> Neverland</p>
+                            <p><span>Возраст:</span> 14</p>
+                        </div>
+                        <div class="list-profile-links">
+                            <a href="" class="active"><img src="img/icons2/list.svg" alt="">Списки</a>
+                            <a href=""><img src="img/icons2/heart_red.svg" alt="">Избранные</a>
+                            <a href=""><img src="img/icons2/friend.svg" alt="">Мои друзья</a>
+                            <a href=""><img src="img/mobile_menu/comment_active.svg" alt="">Сообщения</a>
+                            <a href=""><img src="img/icons2/notification_fill.svg" alt="">Уведомления</a>
+                            <a href=""><img src="img/icons2/chat.svg" alt="">Мои коментарии</a>
+                            <a href=""><img src="img/icons2/notes.svg" alt="">Мои рецензии</a>
+                            <a href=""><img src="img/icons2/paint-palette.svg" alt="">Кастомизация</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Info about User -->
+                
+                <div class="title-active-block">Списки 
+                    <div class="additional-block-right">
+                       
+                    </div>
+                </div>
+                <div class="content-active-link">
+                    <div class="content-block">
+                      <!--   <div class="list-anime">
+                            <div class="image-anime">
+                                <img src="https://animego.org/media/cache/thumbs_250x350/upload/anime/images/5e2c8ad1f1999722807328.jpg" alt="">
+                            </div>
+                            <div class="list-anime-content">
+                                <p>Мастера меча онлайн алисизация</p>
+                                <small>2020</small>
+                                <small>41 серии</small>
+                                <div class="button-delete-from-list"><a href="">Удалить</a></div>
+                            </div> 
+                        </div>
+                        <div class="list-anime">
+                            <div class="image-anime">
+                                <img src="https://animego.org/media/cache/thumbs_250x350/upload/anime/images/5e2c8ad1f1999722807328.jpg" alt="">
+                            </div>
+                            <div class="list-anime-content">
+                                <p>Госпожа кагуя в любви как на войне</p>
+                                <small>2018</small>
+                                <small>21 серии</small>
+                                <div class="button-delete-from-list"><a href="">Удалить</a></div>
+                            </div> 
+                        </div>
+                        <div class="list-anime">
+                            <div class="image-anime">
+                                <img src="https://animego.org/media/cache/thumbs_250x350/upload/anime/images/5e2c8ad1f1999722807328.jpg" alt="">
+                            </div>
+                            <div class="list-anime-content">
+                                <p>Клинок рассекающий демонов</p>
+                                <small>2018</small>
+                                <small>25 серии</small>
+                                <div class="button-delete-from-list"><a href="">Удалить</a></div>
+                            </div> 
+                        </div>
+                        <div class="list-anime">
+                            <div class="image-anime">
+                                <img src="https://animego.org/media/cache/thumbs_250x350/upload/anime/images/5e2c8ad1f1999722807328.jpg" alt="">
+                            </div>
+                            <div class="list-anime-content">
+                                <p>Торадора</p>
+                                <small>2008</small>
+                                <small>54 серии</small>
+                                <div class="button-delete-from-list"><a href="">Удалить</a></div>
+                            </div> 
+                        </div> -->
+                         <div class="block_anime"> 
+                        <a href="">
+                            <article>
+                                <div class="watch"><img src="img/icons2/eye.svg" alt="">8k</div>
+                                    <div class="status"></div>
+                                        <div class="raiting"><img src="img/icons2/star2.svg" alt="">9,3</div>
+                                            <div class="img">
+                                                <img class="lazyload" data-src="https://animego.org/media/cache/thumbs_300x420/upload/anime/images/5f0b4b7708146728129954.jpg" alt="">
+                                                    <div class="last_episode manga_version">Добавлена глава 152</div> 
+                                                        <div class="article__description">
+                                                            <div class="load-animate-block">
+                                                                <div class="circle"></div>
+                                                            <div class="circle"></div>
+                                                        <div class="circle"></div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        <p class="title_anime">Гибель японии</p>
+                                <small>(2014-2019)</small>
+                            </article>
+                        </a>
+
+                        <a href="">
+                            <article>
+                                <div class="watch"><img src="img/icons2/eye.svg" alt="">11k</div>
+                                    <div class="status"></div>
+                                        <div class="raiting"><img src="img/icons2/star2.svg" alt="">9,3</div>
+                                            <div class="img">
+                                                <img class="lazyload" data-src="https://animego.org/media/cache/thumbs_250x350/upload/anime/images/5eee3b7e75335894524288.jpg" alt="">
+                                                        <div class="article__description">
+                                                            <div class="load-animate-block">
+                                                                <div class="circle"></div>
+                                                            <div class="circle"></div>
+                                                        <div class="circle"></div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        <p class="title_anime">Смертельный бильярд</p>
+                                <small>32 серии</small>
+                            </article>
+                        </a> 
+                        <a href="">
+                            <article>
+                                <div class="watch"><img src="img/icons2/eye.svg" alt="">233 111</div>
+                                    <div class="status"></div>
+                                        <div class="raiting"><img src="img/icons2/star2.svg" alt="">9,3</div>
+                                            <div class="img">
+                                                <img class="lazyload" data-src="https://animego.org/media/cache/thumbs_250x350/upload/anime/images/5ca8e16ebd092601180598.jpg" alt="">
+                                                        <div class="article__description">
+                                                            <div class="load-animate-block">
+                                                                <div class="circle"></div>
+                                                            <div class="circle"></div>
+                                                        <div class="circle"></div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        <p class="title_anime">Клинок расекающий демонов</p>
+                                <small>27 серии</small>
+                            </article>
+                        </a>  
+                        <a href="">
+                            <article>
+                                <div class="watch"><img src="img/icons2/eye.svg" alt=""> 3421 </div>
+                                    <div class="status"></div>
+                                        <div class="raiting"><img src="img/icons2/star2.svg" alt="">9,3</div>
+                                            <div class="img">
+                                                <img class="lazyload" data-src="https://animego.org/media/cache/thumbs_250x350/upload/anime/images/5e905c9f598ba534069919.jpg" alt="">
+                                                        <div class="article__description">
+                                                            <div class="load-animate-block">
+                                                                <div class="circle"></div>
+                                                            <div class="circle"></div>
+                                                        <div class="circle"></div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        <p class="title_anime">Госпожа кагуя в любви как на войне</p>
+                                <small>24 серии</small>
+                            </article>
+                        </a>   
+                        <a href="">
+                            <article>
+                                <div class="watch"><img src="img/icons2/eye.svg" alt=""> 3421 </div>
+                                    <div class="status"></div>
+                                        <div class="raiting"><img src="img/icons2/star2.svg" alt="">9,3</div>
+                                            <div class="img">
+                                                <img class="lazyload" data-src="https://animego.org/media/cache/thumbs_250x350/upload/anime/images/5a6b4d938096a.jpg" alt="">
+                                                        <div class="article__description">
+                                                            <div class="load-animate-block">
+                                                                <div class="circle"></div>
+                                                            <div class="circle"></div>
+                                                        <div class="circle"></div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        <p class="title_anime">Волейбол 2</p>
+                                <small>72 серии</small>
+                            </article>
+                        </a>    
+                        <a href="">
+                            <article>
+                                <div class="watch"><img src="img/icons2/eye.svg" alt=""> 3421 </div>
+                                    <div class="status"></div>
+                                        <div class="raiting"><img src="img/icons2/star2.svg" alt="">9,3</div>
+                                            <div class="img">
+                                                <img class="lazyload" data-src="https://animego.org/media/cache/thumbs_250x350/upload/anime/images/5f076f777b681319703859.jpg" alt="">
+                                                        <div class="article__description">
+                                                            <div class="load-animate-block">
+                                                                <div class="circle"></div>
+                                                            <div class="circle"></div>
+                                                        <div class="circle"></div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        <p class="title_anime">Kак и ожидалось, моя розовая пора школьной жизни сплошной обман</p>
+                                <small>23 серии</small>
+                            </article>
+                        </a>     
+                        <a href="">
+                            <article>
+                                <div class="watch"><img src="img/icons2/eye.svg" alt=""> 3421 </div>
+                                    <div class="status"></div>
+                                        <div class="raiting"><img src="img/icons2/star2.svg" alt="">9,3</div>
+                                            <div class="img">
+                                                <img class="lazyload" data-src="https://animego.org/media/cache/thumbs_250x350/upload/anime/images/5efd95a5b16fa302767505.jpg" alt="">
+                                                        <div class="article__description">
+                                                            <div class="load-animate-block">
+                                                                <div class="circle"></div>
+                                                            <div class="circle"></div>
+                                                        <div class="circle"></div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        <p class="title_anime">Пламенная бригада пожарных</p>
+                                <small>32 серии</small>
+                            </article>
+                        </a>      
+                        <a href="">
+                            <article>
+                                <div class="watch"><img src="img/icons2/eye.svg" alt=""> 3421 </div>
+                                    <div class="status"></div>
+                                        <div class="raiting"><img src="img/icons2/star2.svg" alt="">9,3</div>
+                                            <div class="img">
+                                                <img class="lazyload" data-src="https://animego.org/media/cache/thumbs_250x350/upload/anime/images/5e2c8ad1f1999722807328.jpg" alt="">
+                                                        <div class="article__description">
+                                                            <div class="load-animate-block">
+                                                                <div class="circle"></div>
+                                                            <div class="circle"></div>
+                                                        <div class="circle"></div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        <p class="title_anime">Мастера Меча Онлайн:</p>
+                                <small>87 серии</small>
+                            </article>
+                        </a>       
+                        <a href="">
+                            <article>
+                                <div class="watch"><img src="img/icons2/eye.svg" alt=""> 3421 </div>
+                                    <div class="status"></div>
+                                        <div class="raiting"><img src="img/icons2/star2.svg" alt="">9,3</div>
+                                            <div class="img">
+                                                <img class="lazyload" data-src="https://animego.org/media/cache/thumbs_250x350/upload/anime/images/5f0894051dc0f278525107.jpg" alt="">
+                                                        <div class="article__description">
+                                                            <div class="load-animate-block">
+                                                                <div class="circle"></div>
+                                                            <div class="circle"></div>
+                                                        <div class="circle"></div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        <p class="title_anime">Re:zero Жизнь в альтернативном мире:</p>
+                                <small>15 серии</small>
+                            </article>
+                        </a> 
+                   
+                        <a href="">
+                            <article>
+                                <div class="watch"><img src="img/icons2/eye.svg" alt=""> 3421 </div>
+                                    <div class="status"></div>
+                                        <div class="raiting"><img src="img/icons2/star2.svg" alt="">9,3</div>
+                                            <div class="img">
+                                                <img class="lazyload" data-src="https://animego.org/media/cache/thumbs_250x350/upload/anime/images/5efcb1985b434430299533.jpg" alt="">
+                                                        <div class="article__description">
+                                                            <div class="load-animate-block">
+                                                                <div class="circle"></div>
+                                                            <div class="circle"></div>
+                                                        <div class="circle"></div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        <p class="title_anime">Жизнь без оружия 2</p>
+                                <small>42 серии</small>
+                            </article>
+                        </a> 
+
+                    </div>
+        
+                    </div>
+                    <div class="right-panel-control">
+                        <a href="">Смотрел</a>
+                        <a href="">Буду смотреть</a>
+                        <a href="">Смотрю</a>
+                        <a href="">Брошено</a>
+                    </div>
+                </div>
+        </div>
+        </section>
+    <!-- end content -->
+</main>
+
+<footer id="footer">
+    <div class="header__style_line"></div>
+    <div class="header-open-block"></div>
+    <div class="center__footer">
+        <a href="">О нас</a>
+        <a href="">Для правобладателей</a>
+        <a href="">Пользовательские соглашения</a>
+        <div class="author">
+            © 2020. Автор проекта: Zero<a href="mailto:">dikaevr053@gmail.com</a>
+        </div>
+    </div>
+</footer>
+
+<div class="up_block">
+    <div class="up">
+        <img src="img/icons2/up.svg" alt="">
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="mobile-modal">
+    <div class="block_profile">
+        <div class="profile__header">Профиль <img src="" alt=""></div>
+        <div class="block_link_profile">
+            <img src="img/s.jpg" alt="">
+            <p>Hunter x hunter <small>Перейти в профиль</small></p>
+        </div>
+    </div>
+    <div class="profile__links">
+        <p>Навигация</p>
+            <nav id="menu">
+                <ul>
+                    <a href="anime.html"><li>
+                        <span class="magic_effect_img"><img src="img/icons2/fire.svg" alt=""></span>
+                        <img src="img/icons2/fire.svg" alt="" class="main_img_icon">Аниме</li></a>
+                    <a href=""><li>
+                        <span class="magic_effect_img"><img src="img/icons2/books.svg" alt=""></span>
+                        <img src="img/icons2/books.svg" alt="" class="main_img_icon">Манга</li></a>
+                    <a href=""><li>
+                        <span class="magic_effect_img"><img src="img/icons2/dot.svg" alt=""></span>
+                        <img src="img/icons2/dot.svg" alt="" class="main_img_icon">Онгоинги</li></a>
+                    <a href=""><li>
+                        <span class="magic_effect_img"><img src="img/icons2/calendar.svg" alt=""></span>
+                        <img src="img/icons2/calendar.svg" alt="" class="main_img_icon">Анонсы</li></a> 
+                    <a href=""><li>
+                        <span class="magic_effect_img"><img src="img/icons2/change.svg" alt=""></span>
+                        <img src="img/icons2/change.svg" alt="" class="main_img_icon">Случайное аниме</li></a> 
+                </ul>
+            </nav>
+        <p>Аккаунт</p>
+            <nav id="menu">
+                <ul>
+                    <a href="anime.html"><li>
+                        <span class="magic_effect_img"><img src="img/icons2/friend.svg" alt=""></span>
+                        <img src="img/icons2/friend.svg" alt="" class="main_img_icon">Друзья</li></a>
+                        <a href="anime.html"><li>
+                        <span class="magic_effect_img"><img src="img/icons2/fire.svg" alt=""></span>
+                        <img src="img/icons2/fire.svg" alt="" class="main_img_icon">Онлайн чат</li></a>
+                    <a href=""><li>
+                        <span class="magic_effect_img"><img src="img/icons2/heart_red.svg" alt=""></span>
+                        <img src="img/icons2/heart_red.svg" alt="" class="main_img_icon">Закладки</li></a>
+                    <a href=""><li>
+                        <span class="magic_effect_img"><img src="img/icons2/technical-support.svg" alt=""></span>
+                        <img src="img/icons2/technical-support.svg" alt="" class="main_img_icon">Настройки</li></a>
+                    <a href=""><li>
+                        <span class="magic_effect_img"><img src="img/icons2/question.svg" alt=""></span>
+                        <img src="img/icons2/question.svg" alt="" class="main_img_icon">Помощь</li></a> 
+                    <a href=""><li>
+                        <span class="magic_effect_img"><img src="img/icons2/logout.svg" alt=""></span>
+                        <img src="img/icons2/logout.svg" alt="" class="main_img_icon">Выйти</li></a> 
+                </ul>
+            </nav>
+    </div>
+
+</div>
+
+<!-- Modal -->
+
+<!-- JS & Jquery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/main.js" type="text/javascript" defer=""></script>
+<!-- Lazyload -->
+<script src="js/lazyload.js"  type="text/javascript"></script>
+</body>
+</html>

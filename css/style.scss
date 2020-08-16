@@ -256,9 +256,9 @@ body {
 	bottom: -8px;
 	width: 46px;
 	height: 8px;
-	background: #2B92CA;
+	background: $buttonColor;
 	left: 50%;
-	box-shadow: 0px 0px 5px  #2B92CA;
+	box-shadow: 0px 0px 5px  $buttonColor;
 	transform:translate(-50%,0%);
 	cursor: pointer;
 	&::before, &::after{
@@ -266,7 +266,7 @@ body {
 		position: absolute;
 		left: -8px;
 		border: 8px solid transparent; 
-		border-top: 8px solid #2B92CA;
+		border-top: 8px solid $buttonColor;
 	}
 	&::after{right: -8px}
 }
@@ -274,7 +274,7 @@ body {
 // line-bottom on header
 .header__style_line, .article__line{
 	position: absolute;
-	bottom: 0px;
+	bottom: -1px;
 	min-width: 100%;
 	height: 1.5px;
 	left: 0;
@@ -2007,12 +2007,13 @@ aside {
 				textarea{
 					width: 100%;
 					padding: 10px;
+					font-family: Roboto;
 					color: white;
 					background: transparent;
-					border: 1px solid $buttonColor;
+					border: 1px solid #444444;
 					resize:none;
 					border-radius: 3px;
-					height: 150px;
+					height: 130px;
 				}
 
 				button {
