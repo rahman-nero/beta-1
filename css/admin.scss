@@ -141,70 +141,21 @@ $threeColor : #1B1C1D;
 
 			// Блок который идет после инфы - там обычно - список аниме - в зависимости от страницы
 			.content-active-link{
-				margin: 10px 0px;
-				// background-color: $threeColor;
-				// border: 1px  solid #333;
+				margin-top: 40px;
 				border-radius: 3px;
 				display: flex;
 				//  блок в котором перечислены аниме которые нравятся или манги
 				.content-block{
-					margin: 10px 0px;
-				 	background-color: $threeColor;
-
-					/* Стилизация для блоков в разделе 'Списки' - показ аниме*/				
-					.list-anime{
-					 	flex-basis:630px;
-					 	cursor: pointer;
-					 	margin: 10px;
-						display:flex;
-					 	width: 100%;
-					 	.image-anime{
-							margin-right: 10px;
-							& img{
-								width: 60px;
-								height: 80px;
-							}
-					 	}
-				
-						.list-anime-content{
-							position: relative;
-							width: 100%;
-							// название аниме
-							p{
-								font-weight:500;
-								color: rgba(255,255,255,.9);
-								margin-bottom: 5px;
-								transition:400ms all;
-								&:hover{
-									color:white;
-								}
-							}
-							// описание сколько серии и год
-							small{
-								display: block;
-								color: rgba(255,255,255,.6);
-								margin-top: 2px;
-							}
-							// кнопка удаления аниме из списка
-							.button-delete-from-list{
-								position: absolute;
-								right: 10px;
-								top: 0px;
-								padding: 3px 9px;
-								background-color: #222;
-								font-size: 13px;
-								border-radius: 3px;
-								transition:400ms all;
-								&:hover{
-									background-color: #FF2424;
-				
-								}
-							}
-						}
-						
-					}
-					/* Стилизация для блоков в разделе 'Списки' - показ аниме*/				
-
+					flex-basis: 1100px;
+				 	// background-color: $threeColor;
+				 	.block_anime article{
+				 		width: 160px;
+				 		margin-bottom: 0px;
+				 		.img{height: 220px;}
+				 		.title_anime{font-size: 12px;}
+				 		small{font-size: 11px;}
+				 		.watch{font-size: 12px;& img{margin-top: -1px;}}
+				 	}
 					.friend{
 						display: flex;
 						width: 100%;
@@ -233,6 +184,46 @@ $threeColor : #1B1C1D;
 						}
 					}
 
+				}
+				
+				// правый блок
+				.right-panel-control{
+					margin-left: 10px;
+					flex-basis:260px;
+					h4{
+						margin: 0px 0px 10px 8px;
+					}
+					// Ссылки в правом блоке
+					.links{
+						border-radius: 3px;
+						background-color: $threeColor;
+						border: 1px solid #333;
+						a{
+							display: block;
+							padding: 9px 12px;
+							margin: 0px 0px 4px;
+
+							transition:500ms all;
+							border-radius: 3px;
+							color: rgba(255,255,255,.8);
+							font-size: 14px;
+							&:hover{
+								color: white;
+								background-color: #222222;
+							}
+						}
+						.active{
+							background-color: #222;
+						}	
+					}
+					// реклама в правом блоке
+					.ads{
+						margin: 20px 0px;
+						width: 100%;
+						height: 300px;
+						background-color: #000; 
+					}
+					
 				}
 
 
@@ -266,3 +257,56 @@ $threeColor : #1B1C1D;
 	}
 }
 
+	// /* Стилизация для блоков в разделе 'Списки' - показ аниме*/				
+	// 				.list-anime{
+	// 				 	flex-basis:630px;
+	// 				 	cursor: pointer;
+	// 				 	margin: 10px;
+	// 					display:flex;
+	// 				 	width: 100%;
+	// 				 	.image-anime{
+	// 						margin-right: 10px;
+	// 						& img{
+	// 							width: 60px;
+	// 							height: 80px;
+	// 						}
+	// 				 	}
+				
+	// 					.list-anime-content{
+	// 						position: relative;
+	// 						width: 100%;
+	// 						// название аниме
+	// 						p{
+	// 							font-weight:500;
+	// 							color: rgba(255,255,255,.9);
+	// 							margin-bottom: 5px;
+	// 							transition:400ms all;
+	// 							&:hover{
+	// 								color:white;
+	// 							}
+	// 						}
+	// 						// описание сколько серии и год
+	// 						small{
+	// 							display: block;
+	// 							color: rgba(255,255,255,.6);
+	// 							margin-top: 2px;
+	// 						}
+	// 						// кнопка удаления аниме из списка
+	// 						.button-delete-from-list{
+	// 							position: absolute;
+	// 							right: 10px;
+	// 							top: 0px;
+	// 							padding: 3px 9px;
+	// 							background-color: #222;
+	// 							font-size: 13px;
+	// 							border-radius: 3px;
+	// 							transition:400ms all;
+	// 							&:hover{
+	// 								background-color: #FF2424;
+				
+	// 							}
+	// 						}
+	// 					}
+						
+	// 				}
+	// 				/* Стилизация для блоков в разделе 'Списки' - показ аниме*/				
