@@ -10,7 +10,6 @@ $threeColor : #1B1C1D;
 	display: block;
 
 	.content-section{
-		background-color: transparent;
 		box-shadow: none;
 		width: 1370px;
 		margin: 120px auto 0px;
@@ -138,7 +137,6 @@ $threeColor : #1B1C1D;
 				}
 
 			}
-
 			// Блок который идет после инфы - там обычно - список аниме - в зависимости от страницы
 			.content-active-link{
 				margin-top: 40px;
@@ -147,6 +145,7 @@ $threeColor : #1B1C1D;
 				//  блок в котором перечислены аниме которые нравятся или манги
 				.content-block{
 					flex-basis: 1100px;
+					padding-bottom: 50px;
 				 	// background-color: $threeColor;
 				 	.block_anime article{
 				 		width: 160px;
@@ -156,10 +155,12 @@ $threeColor : #1B1C1D;
 				 		small{font-size: 11px;}
 				 		.watch{font-size: 12px;& img{margin-top: -1px;}}
 				 	}
+				 	// Страница вывода всех друзьей
 					.friend{
+						position: relative;
 						display: flex;
 						width: 100%;
-						margin: 0px 0px 10px;
+						margin: 20px 0px 10px;
 						.friend__img{
 							margin-right: 20px;
 							& img{
@@ -167,23 +168,46 @@ $threeColor : #1B1C1D;
 								border-radius: 50%;
 							}
 						}
-
+				
 						.friend__links{
 							padding-top: 3px;
 							color: white;
 							font-weight: bold;
+							// кнопка написать сообщение
 							small{
 								margin-top: 10px;
 								display: block;
 								& a{
 									font-weight: normal;
-									color: rgba(255,255,255,.8);
+									color: rgba(255,255,255,.6);
+									&:hover{
+										color: white;
+									}
+								}
+							}
+							// Кнопка удалить из друзьей
+							.delete-friend {
+								display: block;
+								right: 20px;
+								top: 0;
+								margin: 10px 0px;
+								position: absolute;
+								a{
+									background-color: rgba(25,25,25,.7);
+									transition:400ms all;
+									padding: 5px 9px;
+									font-size: 11px;
+									font-weight: normal;
+									border-radius: 3px;
+									&:hover{
+										background-color: #FF1928;
+									}
 								}
 							}
 
 						}
 					}
-
+					
 				}
 				
 				// правый блок
@@ -226,31 +250,7 @@ $threeColor : #1B1C1D;
 					
 				}
 
-
 			}
-			// надпись над блоком типа 'Друзья' - в зависимости от страницы
-			.title-active-block{
-				font-size: 18px;
-				font-weight: 500;
-				margin: 18px 3px 10px;
-				position: relative;
-				.additional-block-right{
-					position: absolute;
-					transition:400ms all;
-					top: 0px;
-					right: 4px;
-					& a{
-						font-size: 14px;
-						margin: 0px 4px;
-						font-weight: normal;
-						color:rgba(255,255,255,.8);
-						&:hover{
-							color:rgba(255,255,255,1);
-						}
-					}
-				}
-			}
-
 
 		}
 

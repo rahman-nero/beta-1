@@ -2,7 +2,6 @@
 .modification-page {
   display: block; }
   .modification-page .content-section {
-    background-color: transparent;
     -webkit-box-shadow: none;
     box-shadow: none;
     width: 1370px;
@@ -127,7 +126,8 @@
         display: flex; }
         .modification-page .content-section .main-block-info-user .content-active-link .content-block {
           -ms-flex-preferred-size: 1100px;
-          flex-basis: 1100px; }
+          flex-basis: 1100px;
+          padding-bottom: 50px; }
           .modification-page .content-section .main-block-info-user .content-active-link .content-block .block_anime article {
             width: 160px;
             margin-bottom: 0px; }
@@ -142,11 +142,12 @@
               .modification-page .content-section .main-block-info-user .content-active-link .content-block .block_anime article .watch img {
                 margin-top: -1px; }
           .modification-page .content-section .main-block-info-user .content-active-link .content-block .friend {
+            position: relative;
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
             width: 100%;
-            margin: 0px 0px 10px; }
+            margin: 20px 0px 10px; }
             .modification-page .content-section .main-block-info-user .content-active-link .content-block .friend .friend__img {
               margin-right: 20px; }
               .modification-page .content-section .main-block-info-user .content-active-link .content-block .friend .friend__img img {
@@ -161,7 +162,26 @@
                 display: block; }
                 .modification-page .content-section .main-block-info-user .content-active-link .content-block .friend .friend__links small a {
                   font-weight: normal;
-                  color: rgba(255, 255, 255, 0.8); }
+                  color: rgba(255, 255, 255, 0.6); }
+                  .modification-page .content-section .main-block-info-user .content-active-link .content-block .friend .friend__links small a:hover {
+                    color: white; }
+              .modification-page .content-section .main-block-info-user .content-active-link .content-block .friend .friend__links .delete-friend {
+                display: block;
+                right: 20px;
+                top: 0;
+                margin: 10px 0px;
+                position: absolute; }
+                .modification-page .content-section .main-block-info-user .content-active-link .content-block .friend .friend__links .delete-friend a {
+                  background-color: rgba(25, 25, 25, 0.7);
+                  -webkit-transition: 400ms all;
+                  -o-transition: 400ms all;
+                  transition: 400ms all;
+                  padding: 5px 9px;
+                  font-size: 11px;
+                  font-weight: normal;
+                  border-radius: 3px; }
+                  .modification-page .content-section .main-block-info-user .content-active-link .content-block .friend .friend__links .delete-friend a:hover {
+                    background-color: #FF1928; }
         .modification-page .content-section .main-block-info-user .content-active-link .right-panel-control {
           margin-left: 10px;
           -ms-flex-preferred-size: 260px;
@@ -192,22 +212,3 @@
             width: 100%;
             height: 300px;
             background-color: #000; }
-      .modification-page .content-section .main-block-info-user .title-active-block {
-        font-size: 18px;
-        font-weight: 500;
-        margin: 18px 3px 10px;
-        position: relative; }
-        .modification-page .content-section .main-block-info-user .title-active-block .additional-block-right {
-          position: absolute;
-          -webkit-transition: 400ms all;
-          -o-transition: 400ms all;
-          transition: 400ms all;
-          top: 0px;
-          right: 4px; }
-          .modification-page .content-section .main-block-info-user .title-active-block .additional-block-right a {
-            font-size: 14px;
-            margin: 0px 4px;
-            font-weight: normal;
-            color: rgba(255, 255, 255, 0.8); }
-            .modification-page .content-section .main-block-info-user .title-active-block .additional-block-right a:hover {
-              color: white; }
