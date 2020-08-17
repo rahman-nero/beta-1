@@ -4,6 +4,7 @@
   .modification-page .content-section {
     -webkit-box-shadow: none;
     box-shadow: none;
+    background-color: transparent;
     width: 1370px;
     margin: 120px auto 0px;
     padding-top: 0px; }
@@ -212,3 +213,137 @@
             width: 100%;
             height: 300px;
             background-color: #000; }
+
+.main-container-friends-messages {
+  position: relative;
+  margin: 160px auto 20px;
+  max-width: 1200px;
+  height: 600px;
+  border: 1px solid #333;
+  background-color: #1B1C1D;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .main-container-friends-messages .container-friends {
+    -ms-flex-preferred-size: 350px;
+    flex-basis: 350px;
+    border-right: 1px solid #333;
+    height: 100%;
+    overflow: auto; }
+    .main-container-friends-messages .container-friends .container-friends__header {
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #333; }
+    .main-container-friends-messages .container-friends .friend {
+      width: 100%;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      padding: 10px;
+      -webkit-transition: 400ms all;
+      -o-transition: 400ms all;
+      transition: 400ms all; }
+      .main-container-friends-messages .container-friends .friend .img_friend {
+        margin-right: 10px; }
+        .main-container-friends-messages .container-friends .friend .img_friend img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%; }
+      .main-container-friends-messages .container-friends .friend .description-friend p {
+        font-weight: 500;
+        font-size: 15px; }
+        .main-container-friends-messages .container-friends .friend .description-friend p small {
+          font-weight: normal;
+          color: rgba(255, 255, 255, 0.5); }
+      .main-container-friends-messages .container-friends .friend .description-friend .last-message.new {
+        padding: 0px 4px 2px;
+        border-radius: 5px;
+        font-size: 11px;
+        background-color: #2D88FF; }
+      .main-container-friends-messages .container-friends .friend:hover {
+        background-color: #222; }
+    .main-container-friends-messages .container-friends .friend.active {
+      background-color: #222; }
+  .main-container-friends-messages .container-messages {
+    -ms-flex-preferred-size: 950px;
+    flex-basis: 950px;
+    display: block; }
+    .main-container-friends-messages .container-messages .container-messages__header {
+      padding: 10px;
+      border-bottom: 1px solid #333;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .main-container-friends-messages .container-messages .container-messages__header img {
+        margin-right: 10px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%; }
+    .main-container-friends-messages .container-messages .all_messages {
+      width: 100%;
+      overflow: auto;
+      padding: 20px 10px;
+      height: 500px;
+      background-color: #222324; }
+      .main-container-friends-messages .container-messages .all_messages .message {
+        margin: 0px 0px 20px;
+        padding: 5px 0px; }
+        .main-container-friends-messages .container-messages .all_messages .message span {
+          padding: 5px 12px;
+          border: 1px solid #444;
+          max-width: 300px;
+          position: relative;
+          border-radius: 20px; }
+      .main-container-friends-messages .container-messages .all_messages .message.i-send {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end; }
+      .main-container-friends-messages .container-messages .all_messages .message.i-send.read span:before {
+        left: -25px;
+        top: 50%;
+        content: '';
+        position: absolute;
+        display: block;
+        -webkit-transform: translate(0%, -50%);
+        -ms-transform: translate(0%, -50%);
+        transform: translate(0%, -50%);
+        width: 18px;
+        height: 18px;
+        background-image: url("../img/icons2/tick.svg");
+        background-size: 18px 18px; }
+    .main-container-friends-messages .container-messages .form-send-message {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      padding: 6px; }
+      .main-container-friends-messages .container-messages .form-send-message input[type='text'] {
+        width: 813px;
+        background-color: #222324;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        padding: 10px;
+        float: left;
+        border: 1px solid transparent;
+        -webkit-transition: 400ms all;
+        -o-transition: 400ms all;
+        transition: 400ms all; }
+        .main-container-friends-messages .container-messages .form-send-message input[type='text']:focus {
+          border-color: #2D88FF; }
+      .main-container-friends-messages .container-messages .form-send-message input[type='submit'] {
+        display: none; }
+      .main-container-friends-messages .container-messages .form-send-message label {
+        cursor: pointer;
+        margin-left: 10px; }
+        .main-container-friends-messages .container-messages .form-send-message label img {
+          width: 34px; }

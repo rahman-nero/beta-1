@@ -11,6 +11,7 @@ $threeColor : #1B1C1D;
 
 	.content-section{
 		box-shadow: none;
+		background-color: transparent;
 		width: 1370px;
 		margin: 120px auto 0px;
 		padding-top: 0px;
@@ -254,59 +255,158 @@ $threeColor : #1B1C1D;
 
 		}
 
+		// Блок сообщении
+
 	}
 }
 
-	// /* Стилизация для блоков в разделе 'Списки' - показ аниме*/				
-	// 				.list-anime{
-	// 				 	flex-basis:630px;
-	// 				 	cursor: pointer;
-	// 				 	margin: 10px;
-	// 					display:flex;
-	// 				 	width: 100%;
-	// 				 	.image-anime{
-	// 						margin-right: 10px;
-	// 						& img{
-	// 							width: 60px;
-	// 							height: 80px;
-	// 						}
-	// 				 	}
-				
-	// 					.list-anime-content{
-	// 						position: relative;
-	// 						width: 100%;
-	// 						// название аниме
-	// 						p{
-	// 							font-weight:500;
-	// 							color: rgba(255,255,255,.9);
-	// 							margin-bottom: 5px;
-	// 							transition:400ms all;
-	// 							&:hover{
-	// 								color:white;
-	// 							}
-	// 						}
-	// 						// описание сколько серии и год
-	// 						small{
-	// 							display: block;
-	// 							color: rgba(255,255,255,.6);
-	// 							margin-top: 2px;
-	// 						}
-	// 						// кнопка удаления аниме из списка
-	// 						.button-delete-from-list{
-	// 							position: absolute;
-	// 							right: 10px;
-	// 							top: 0px;
-	// 							padding: 3px 9px;
-	// 							background-color: #222;
-	// 							font-size: 13px;
-	// 							border-radius: 3px;
-	// 							transition:400ms all;
-	// 							&:hover{
-	// 								background-color: #FF2424;
-				
-	// 							}
-	// 						}
-	// 					}
-						
-	// 				}
-	// 				/* Стилизация для блоков в разделе 'Списки' - показ аниме*/				
+
+// Страница message.html
+
+.main-container-friends-messages{
+	position: relative;
+	margin: 160px auto 20px;	
+	max-width: 1200px;
+	height:600px;
+	border: 1px solid #333;
+	background-color: $threeColor;
+	display: flex;
+	// блок со друзьями
+	.container-friends{
+		flex-basis:350px;
+		border-right: 1px solid #333;
+		height: 100%;
+		overflow: auto;
+		// названия 'Друзья'
+		.container-friends__header{
+			text-align: center;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			border-bottom: 1px solid #333;
+		}
+		// блок с инфой о друге - выровнены в ряд
+		.friend{
+			width: 100%;
+			align-items:center;
+			display: flex;
+			padding: 10px;
+			transition:400ms all;
+			// аватарка друга 
+			.img_friend{
+				margin-right: 10px;
+				& img{
+					width: 50px;
+					height: 50px;
+					border-radius: 50%;
+				}
+			}
+
+			// инфа о друга с последним сообщением 
+			.description-friend{
+				p{
+					font-weight: 500;
+					font-size: 15px;
+					& small{
+						font-weight: normal;
+						color: rgba(255,255,255,.5);
+					}
+				}
+				.last-message.new{padding:0px 4px 2px;border-radius: 5px;font-size:11px; background-color: $buttonColor;}
+			}
+			&:hover{
+				background-color: #222;
+			}
+		}
+		.friend.active{
+			background-color: #222;
+		}
+	}
+	// Контаинер со всеми сообщениями который писал 
+	.container-messages{
+		flex-basis:950px;
+		// background-color: #000;
+		display: block;
+		.container-messages__header{
+			padding: 10px ;
+			border-bottom: 1px solid #333;
+			display: flex;
+			align-items:center;
+			& img{
+				margin-right: 10px;
+				width: 30px;
+				height: 30px;
+				border-radius: 50%;
+			}
+		}
+		// все сообщение 
+		.all_messages{
+			width: 100%;
+			overflow: auto;
+			padding: 20px 10px;
+			height: 500px;
+			background-color: $twoColor;
+			.message{
+				margin: 0px 0px 20px;
+				padding: 5px 0px;
+				span{
+					padding: 5px 12px;
+					border: 1px solid #444;
+					max-width: 300px;
+					position: relative;
+					border-radius: 20px;
+				}
+			}
+			.message.i-send{
+				display: flex;
+				justify-content:flex-end;
+			}
+			.message.i-send.read{
+				& span:before{
+					left: -25px;
+					top: 50%;
+					// margin-top: 4px;
+					content: '';
+					position: absolute;
+					display: block;
+					transform:translate(-0%, -50%);
+					width: 18px;
+					height: 18px;
+					background-image: url('../img/icons2/tick.svg');
+					background-size: 18px 18px;
+				}
+			}
+		}
+
+		.form-send-message{
+			display: flex;
+			padding: 6px;
+			input[type='text']{
+				width: 813px;
+				background-color: $twoColor;
+				color: white;
+				border-radius: 5px; 
+				border: none;
+				padding: 10px;
+				float: left;
+				border: 1px solid transparent;
+				transition:400ms all;
+				&:focus{
+					border-color: $buttonColor;
+				}
+			}
+
+			input[type='submit']{
+				display: none;
+			}
+
+			label{
+				cursor: pointer;
+				margin-left: 10px;
+				img{
+					width: 34px;
+				}
+			}
+
+		}
+	}
+}
