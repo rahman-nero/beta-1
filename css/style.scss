@@ -1362,7 +1362,6 @@ aside {
 			left: 0;
 			overflow: auto;
 			max-height: 300px;
-			transition:500ms all;
 			background: $twoColor;
 				& input{
 					width: 0px;
@@ -1370,12 +1369,11 @@ aside {
 					opacity: 0;
 					display: none;
 					&:checked + label:before{
-						content: "\2714";
-					    color: $buttonColor;
-					    font-size: 13px;
-					    border-color: $buttonColor;
-					    text-align: center;
-					    line-height: 14px;
+						content: "";
+						background-image: url(../img/icons2/tick.svg);
+						background-position: center;
+						background-repeat: no-repeat;
+						background-size: 13px 13px;
 					}
 				}
 				label{
@@ -1442,12 +1440,11 @@ aside {
 					opacity: 0;
 					display: none;
 					&:checked + label:before{
-						content: "\2714";
-					    color: $buttonColor;
-					    font-size: 13px;
-					    border-color: $buttonColor;
-					    text-align: center;
-					    line-height: 14px;
+					    content: "";
+						background-image: url(../img/icons2/tick.svg);
+						background-position: center;
+						background-repeat: no-repeat;
+						background-size: 13px 13px;
 					}
 				}
 				label{
@@ -2296,12 +2293,11 @@ aside {
 				opacity: 0;
 				display: none;
 				&:checked + label:before{
-					content: "\2714";
-				    color: $buttonColor;
-				    font-size: 13px;
-				    border-color: $buttonColor;
-				    text-align: center;
-				    line-height: 14px;
+					 content: "";
+						background-image: url(../img/icons2/tick.svg);
+						background-position: center;
+						background-repeat: no-repeat;
+						background-size: 13px 13px;
 				}
 			}
 			label{
