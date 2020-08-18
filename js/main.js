@@ -115,12 +115,8 @@ $('.modal-complaint-comments').on('click', function(e) {
 
 // показ формы т.е textarea, при клике на чекбокс 'Другое', в блоке Жалоба на коментатора
 $('.modal-complaint-body input').on('click', function(e){
-  if ($(e.target).attr('id') == 'other-complaint') {
-      if ($('.modal-complaint-body textarea').css('display') == 'none') {
+  if ($(e.target).attr('id') == 'other-complaint' && $(e.target).is(':checked') ) {
         $('.modal-complaint-body textarea').css({'display' : 'block'});
-      } else {
-        $('.modal-complaint-body textarea').css({'display' : 'none'});
-      }
   } else {
     if ($('.modal-complaint-body textarea').css('display') == 'block')
         $('.modal-complaint-body textarea').css({'display' : 'none'});
