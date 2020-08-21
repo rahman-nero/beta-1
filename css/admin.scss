@@ -330,32 +330,79 @@ $threeColor : #1B1C1D;
 			padding: 10px ;
 			border-bottom: 1px solid #333;
 			display: flex;
+			position: relative;
 			align-items:center;
-			& img{
+			img:nth-child(1){
 				margin-right: 10px;
 				width: 30px;
 				height: 30px;
 				border-radius: 50%;
+			}
+
+			.remove-all-messages{
+				right: 10px;
+				position: absolute;
+				cursor: pointer;
+				& img{
+					width: 20px;
+					height: 20px;
+					border-radius: 0;
+				}
 			}
 		}
 		// все сообщение 
 		.all_messages{
 			width: 100%;
 			overflow: auto;
-			padding: 20px 10px;
+			padding: 50px 10px 20px;
+			position: relative;
 			height: 500px;
 			background-color: $twoColor;
 			.message{
+				cursor: pointer;
 				margin: 0px 0px 20px;
 				padding: 5px 0px;
-				span{
+				position: relative;
+				display: flex;
+				.message_content{
 					padding: 5px 12px;
-					border: 1px solid #444;
-					max-width: 300px;
-					position: relative;
 					border-radius: 20px;
+					position: relative;
+					span{
+						margin-top: 10px;
+						display: block;
+					}
+				}
+				.block-anwser{
+					// display: none;
+					position: relative;
+					padding: 4px 9px;
+					font-size: 13px;
+					max-width:100%;
+					border-left:2px solid $buttonColor;
+				}
+				&:hover{
+					& span{
+						background: #202020;
+					}
 				}
 			}
+			// если сообщение выбрано с помощью js
+			.message.select{
+				span{background: #111;}
+				&:after{
+					content: '';
+					border-radius: 50%;
+					width: 8px;
+					position: absolute;
+					z-index: 9;
+					height: 8px;
+					margin-left: 10px;
+					margin-top: 6px;
+					background: red;
+				}
+			}
+
 			.message.i-send{
 				display: flex;
 				justify-content:flex-end;
@@ -375,6 +422,24 @@ $threeColor : #1B1C1D;
 					background-size: 18px 18px;
 				}
 			}
+			.message.i-send.select{
+				position: relative;
+				span{background: #111;}
+				&:after{display: none;}
+				&:before{
+					content: '';
+					border-radius: 50%;
+					width: 8px;
+					position: absolute;
+					z-index: 9;
+					height: 8px;
+					margin-right: 40px!important;
+					// margin-top: 6px;
+					background: red;
+				}
+			}
+
+
 		}
 
 		.form-send-message{
