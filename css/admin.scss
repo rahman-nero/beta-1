@@ -263,7 +263,7 @@ $threeColor : #1B1C1D;
 
 // Страница message.html
 
-.main-container-friends-messages{
+.main-container{
 	position: relative;
 	margin: 160px auto 20px;	
 	max-width: 1200px;
@@ -473,5 +473,71 @@ $threeColor : #1B1C1D;
 			}
 
 		}
+	}
+}
+
+
+// Страница notifaction.html
+.section-notification{
+	position: relative;
+	margin: 120px auto;
+	max-width: 850px;
+	background-color: $threeColor;
+	border: 1px solid #333;
+	border-top: none;
+	.title-section{
+		font-size: 20px;
+		font-weight: 500;
+		padding: 10px 20px;
+		position: relative;
+		border-bottom: 1px solid #333;
+		display: block;
+
+		.right-icon-delete-notification{
+			top: 0;
+			margin-top: 10px;
+		}
+	}
+	// блок со всеми уведомлениями
+	.block-notifications{
+		width: 100%;
+			padding: 10px 10px 20px;
+		// блок уведомления
+		.notification{
+			display: flex;
+			width:100%;
+			padding: 10px;
+			transition:400ms all;
+			cursor: pointer;
+			.img-notification{
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			.content-notification{
+				position: relative;
+				padding: 7px 15px 3px;
+				p{font-size:14px;}
+				small{color: rgba(255,255,255,.6);}
+			}
+
+
+			&:hover{background:$twoColor;}
+
+		}
+	}
+
+}
+
+
+.right-icon-delete-notification{
+	position: absolute;
+	right: 30px;
+	margin-top: 10px;
+	& img{
+		width: 20px;
+		height: 20px;
 	}
 }
