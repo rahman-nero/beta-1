@@ -82,31 +82,18 @@
 
 <div class="main-block-settings">
         <div class="block-tabs">
-            <a href="" class="active">Аккаунт</a>
+            <a href="" >Аккаунт</a>
             <a href="">Профиль</a>
             <a href="">Пароль</a>
-            <a href="">Уведомления</a>
+            <a href=""  class="active">Уведомления</a>
         </div>
         <form action="">
-            <label class="login">Логин</label>
-            <input type="text" id="login" name="login">
-
-            <label class="email">Email</label>
-            <input type="email" id="email" name="email_user">
-
-            <label class="name">Имя</label>
-            <input type="text" id="name" name="name_user">
-
-            <label class="locate">Живу</label>
-            <input type="text" id="locate" name="locate_user">
-
-            <label class="about_myself">О себе</label>
-            <textarea name="about_myself" id="about_myself"></textarea>
+            <small style="color: rgba(255,255,255,.8);">Присылать уведомления на email</small>
+            <input type="checkbox"  name="login" id="push_email" >
+            <label for="push_email" ></label>
             <button class="button-save-settings" name="save_settings">Сохранить</button>
         </form>
 </div>
-
-
 
 <!-- Modal -->
 <div class="mobile-modal">

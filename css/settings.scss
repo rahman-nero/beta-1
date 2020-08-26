@@ -1,0 +1,132 @@
+/* $VARIABLE */
+$textColor : rgba(228, 230, 235,1);
+$buttonColor : #2D88FF;
+$backColor : #141314;
+$twoColor : #222324;
+$threeColor : #1B1C1D;
+
+
+.main-block-settings{
+	position: relative;
+	margin: 70px auto;
+	padding: 15px 10px;
+	max-width: 900px;
+	background-color: $threeColor;
+	border: 1px solid #333;
+	border-top: none;
+
+	.block-tabs{
+		width: 100%;
+		padding-bottom: 5px;
+		border-bottom: 1px solid #444;
+		margin-bottom: 30px;
+		& a{
+			font-weight: 500;
+			font-size:14px;
+			margin: 0px 10px 0px 0px;
+			padding-bottom: 5px;
+			transition:400ms all;
+			border-bottom: 2px solid transparent;
+			&.active{
+				border-bottom-color: $buttonColor;
+			}
+			&:hover{
+				border-bottom-color: $buttonColor;
+				color: $buttonColor;
+			}
+		}
+	}
+
+	form{
+		label{
+			font-size: 13px;
+			color: rgba(255,255,255,.8);
+			margin: 3px 0px;
+			display: block;
+		}
+		input, textarea{
+			display: block;
+			width: 100%;
+			padding: 8px 10px;
+			border-radius: 3px;
+			color: white;
+			margin-bottom: 20px;
+			background-color: $threeColor;
+			border: 1px solid #333;
+			transition:400ms all;
+			&:focus{
+				border-color: $buttonColor;
+			}
+		}
+
+		textarea{
+			resize:none;
+			height: 130px;
+		}
+		// кнопка 'Сохранить'
+		.button-save-settings{
+			padding: 6px 12px; 
+			font-weight: 500;
+			background-color: $buttonColor;
+			color: white;
+			font-family: Roboto;
+			border: none;
+			cursor: pointer;
+			border-radius: 3px;
+			transition:400ms all;
+			&:hover{
+				background-color:#2673d8;  
+			}
+		}
+
+		select{
+			margin-top: 3px;
+			padding: 5px 10px;
+			width: 100%;
+			border-radius: 3px;
+			background-color: $threeColor;
+			color: white;
+			border: 1px solid #333;
+			margin-bottom: 10px;
+		}
+
+		.checkbox-notification{
+			width: auto;
+			height: auto;
+		}
+
+		#push_email{
+			display: none;
+		}
+		#push_email + label{
+			margin-top: 5px;
+			margin-bottom: 10px;
+			width: 18px;
+			height: 18px;
+			background:transparent;
+			border: 1px solid #333;
+			border-radius: 3px;
+			cursor: pointer;
+			&:before{
+				width: 13px;
+				height: 13px;
+				position: absolute;
+			}
+
+			&:hover{
+				border-color:$buttonColor; 
+			}
+		}
+
+		#push_email:checked + label:before{
+			content: "";
+			margin-left: 1.5px;
+			margin-top: 1.5px;
+			background-image: url('../img/icons2/tick.svg');
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 13px 13px;
+		}
+	}
+
+}
