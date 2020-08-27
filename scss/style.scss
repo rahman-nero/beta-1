@@ -122,24 +122,25 @@ body {
 	}	
 
 	/* Иконка поиск */
-	&::before{
-		content: ""; 
+	.icon-search{
 	    width: 17px; 
 	    height: 17px; 
 	    position: absolute;
-		background-image: url('../img/header/search.svg');
-	    background-size: 17px 17px; 
-	    background-repeat: no-repeat; 
 	    left: 12px;
 	    margin-top: 10px; 
-	    z-index: 9;
+	  	z-index: 9;
+	  	cursor: pointer;
+		& img{
+			width: 100%;
+			height: 100%;
+		}  
 	}
 
 	/* Блок в котором будут показыватся результаты паиска */
 	.result-search{
 		position: absolute;
 		background: $twoColor;
-		// display:none; 
+		display:none; 
 		font-size: 12px;
 		width: 576px;
 		z-index: 999;
@@ -165,11 +166,13 @@ body {
 
 	}
 
+	.result-search.open{display: block;}
+
 
 	// блок со параметрами поиска - крч иконка 'настройки' которая находится в конце инпута, если на нее кликнуть показывается блок со параметрами
 	.settings-search{
 		position: absolute;
-		background:#343738;
+		background:#3a3c3e;
 		width: 50px;
 		border-radius: 0px 2px 2px 0px;
 		cursor: pointer;
@@ -197,6 +200,8 @@ body {
 			background: #343738;
 			padding: 3px 0px;
 			font-size: 13px;
+			left: -50%;
+			transform:translate(-3%,0%);
 			border-radius: 1px;
 			border: 1px solid #444;
 			&:before{
@@ -221,7 +226,7 @@ body {
 		#settings-search-list.open{display: block;}
 		&:hover{background: #444;}
 	}
-	
+
 	.settings-search.active{
 		background: #444;
 	}
@@ -1643,6 +1648,16 @@ aside {
 				}	
 				&::before{margin-left: 0;left: 13px; margin-top: 10px;}
 				.result-search{width: 100%;}
+
+				.settings-search {
+					:before{
+						left: 77%;
+					}
+					#settings-search-list{
+						left: -100%;
+						margin-left: -5px;
+					}
+				}
 			}
 			.user-info-block{display: none;}
 		}
@@ -1856,7 +1871,16 @@ aside {
 					font-weight: thin;
 					font-size: 15px; 
 					padding-bottom:9px; 
-				}	
+				}
+				.settings-search {
+					:before{
+						left: 77%;
+					}
+					#settings-search-list{
+						left: -100%;
+						margin-left: -5px;
+					}
+				}
 				&::before{margin-left: 0;left: 13px; margin-top: 10px;}
 				.result-search{width: 100%;}
 			}
@@ -2070,7 +2094,16 @@ aside {
 					font-weight: thin;
 					font-size: 15px; 
 					padding-bottom:9px; 
-				}	
+				}
+				.settings-search {
+					:before{
+						left: 77%;
+					}
+					#settings-search-list{
+						left: -100%;
+						margin-left: -5px;
+					}
+				}
 				&::before{margin-left: 0;left: 13px; margin-top: 10px;}
 				.result-search{width: 100%;}
 			}

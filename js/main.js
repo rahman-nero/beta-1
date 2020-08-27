@@ -16,6 +16,24 @@ $('.settings-search').on('click', function (e) {
 
 });
 
+// обработка инпута поиска, крч когда что-то введешь в поиск - показываеются результаты в отдельном блоке
+$('#search-input').on('input', function (e) {
+  if ($('.result-search').hasClass('open') == false) {
+    $('.result-search').addClass('open');
+    $('.icon-search').html('<img src="img/icons2/close.svg" alt="">');
+  }
+});
+
+// закрытие блоки поиска - т.е когда пользовател ввел чтот-то и показались результаты, то если он хочеть не искать аниме, то тогда кликнув на иконку закрыть результаты убераются
+$('.icon-search').on('click', function(e) {
+  if ($('.result-search').hasClass('open')) {
+    $('.result-search').removeClass('open');
+    $('.icon-search').html('<img src="img/header/search.svg" alt="">');
+    $('#search-input').val('');
+  }
+  console.log('нажали на кнопку');  
+});
+
 // Таблица расписании
 $('.timetable__block').on('click', '.button-open', function(e){
  	var block_time = $(e.target).next();
