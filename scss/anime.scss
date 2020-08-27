@@ -1,0 +1,392 @@
+/* $VARIABLE */
+$textColor : rgba(228, 230, 235,1);
+$buttonColor : #2D88FF;
+$backColor : #141314;
+$twoColor : #222324;
+$threeColor : #1B1C1D;
+
+/***********************Страница anime.html**************** */
+.modification-page{
+	position: relative;
+	.content-section{
+		background: $threeColor;
+		margin-top: 120px;
+		padding-top: 20px;
+		position: relative;
+
+		.block_sort{ // блок со фильтрами и текстом внутри 
+			position: relative;
+			h2{
+				margin-left: 10px;
+			}
+			// Сами фильтры находятся здесь - для мобилок
+			.filters-sort-block{
+				display: none;
+				position: relative;
+				z-index: 9;
+				padding: 10px;
+				margin-bottom:20px;
+				// background-color: #fff;
+				width: 100%;
+				span:first-child{
+					padding: 6px 13px;
+					box-shadow: 0px 0px 1px #1F5FB2;
+					background: $buttonColor;
+					cursor: pointer;
+					border-radius: 3px;
+				}
+				.select {
+				    display: block;
+				    max-width: 215px;
+				    width: 100%;
+				    position: absolute;
+				    right: 10px;
+				    top:3px;
+				    padding: 10px 9px;
+				    border: none;
+				    background: #111;
+				    border-radius: 3px;
+				    color: #fff;
+				}
+
+			}
+			// мини текст - чтобы не было пустоты
+			.mini_text{
+				margin: 15px 0px;
+				background: #212121;
+				font-size: 14px;
+				padding: 10px;
+				color: rgba(255,255,255,.7);
+			}
+		}
+		.block_anime{
+			border: none;
+			box-shadow: none;
+			background: transparent;
+		}
+		article .title_anime{margin: 10px 3px 0px;}
+	}
+	
+	aside{
+		margin-top: 119px;
+		// Фильтры на десктопе - в боковом меню
+		
+	}
+
+}
+
+
+.filters_block{
+	width: 100%;
+	background: $threeColor;
+	padding: 10px 0px;
+	margin-bottom: 50px;
+	// каждый раздел находится в отдельном блоке 
+	.row-blocks-select{
+		display: block;
+		margin-bottom: 10px;
+		// кнопка при нажатии показывается блок со жанрами и т.д 
+		.title-sort-block{
+			width: inherit;
+			// font-size: 1px;
+			padding: 10px 0px 10px 15px;
+			margin: 0px;
+			display:block;
+	
+			// иконка (вниз) как у select
+			.icon-down {
+				width: 15px;
+				margin-top: 2px;
+				position: absolute;
+				right: 20px;
+				transform: rotate(0deg);
+			}
+			.icon-down.open{transform: rotate(-180deg);}
+			// красивое оформление иконок 
+			.main_img_icon{
+				margin-top: 1px;
+			   margin-right:12px;
+			   width: 17px;
+			   z-index: 9;
+			} 
+			// красивое оформление иконок  (с ним)
+			.magic_effect_img{
+				margin-top: 1px;
+			  	z-index: 11;
+			  	margin-left: -8px;
+			  	& img{
+			  		width: 17px;
+			  	}
+			}
+		}
+		// это второй класс который дополняет - title-sort-block
+		.view-modal-section{
+			cursor: pointer;
+			&:hover{
+				background: #212223;
+				transition-duration:400ms;
+			}
+		}
+		// блок в котором перечилсяются жанры и т.д - скрытая окно
+		.select-filters{
+			position: absolute;
+			z-index: 12;
+			visibility: hidden;
+			opacity: 0;
+			width: 100%;
+			padding: 10px 15px;
+			margin: 0;
+			left: 0;
+			overflow: auto;
+			max-height: 300px;
+			background: $twoColor;
+				& input{
+					width: 0px;
+					height: 0px;
+					opacity: 0;
+					display: none;
+					&:checked + label:before{
+						content: "";
+						background-image: url(../img/icons2/tick.svg);
+						background-position: center;
+						background-repeat: no-repeat;
+						background-size: 13px 13px;
+					}
+				}
+				label{
+					display: block;
+					cursor: pointer;
+					position: relative;
+					font-size: 13px;
+					margin: 6px 0px;
+					color: $textColor;
+					padding-left: 30px;
+					&:before{
+						content: "";
+						display: inline-block;
+						width: 15px;
+						height: 15px;
+						margin-right: 10px;
+						position: absolute;
+						left: 0;
+						bottom: -1px;
+						background-color: transparent;
+						border: 1px solid #37393B;
+						border-radius: 3px;
+					}
+
+					&:hover{
+						color: white;
+						&:before{
+							border-color: $buttonColor;
+							transition-duration:500ms;
+						}
+					}
+				}
+		}
+		// это открытое состояние блока - открывает это окно
+		.select-filters.open{
+			visibility: visible;
+			opacity: 1;
+		}
+		// фильтры у которых нету окон - параметрые размешены в ряд - это для input
+		.filters-flex-input{
+			display: flex;
+			margin: 10px 10px 0px;
+			& input{
+				width: 50%;
+				padding: 6px 10px;
+				border: 1px solid #3B3D45;
+				background: #1A1A1A;
+				margin: 0px 5px;
+				color: white;
+			}
+		}
+		// а это для input ckeckbox
+		.filters-flex-input.checkboxs{
+			display: block;
+			margin: 0px 17px;
+			& span{
+				color: rgba(255,255,255,.7);
+				letter-spacing: 0.5px;
+				font-weight: thin;
+				display: block;
+				& input{
+					width: 0px;
+					height: 0px;
+					opacity: 0;
+					display: none;
+					&:checked + label:before{
+					    content: "";
+						background-image: url(../img/icons2/tick.svg);
+						background-position: center;
+						background-repeat: no-repeat;
+						background-size: 13px 13px;
+					}
+				}
+				label{
+					display: inline-block;
+					cursor: pointer;
+					position: relative;
+					font-size: 13px;
+					margin: 4px 0px;
+					color: $textColor;
+					padding-left: 30px;
+					&:before{
+						content: "";
+						display: inline-block;
+						width: 15px;
+						height: 15px;
+						margin-right: 10px;
+						position: absolute;
+						left: 0;
+						bottom: -1px;
+						background-color: transparent;
+						border: 1px solid #37393B;
+						border-radius: 3px;
+					}
+
+					&:hover{
+						color: white;
+						&:before{
+							border-color: $buttonColor;
+							transition-duration:500ms;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// Блок в котором два button - 'Отправить' и 'Сбросить'
+	.filter-send-block{
+		margin: 15px 10px 5px;
+		display: flex;
+		// кнопка отправки фильтров
+		.submit-filters, .reset-filters{
+			background: $buttonColor;
+			color:white;
+			border: 1px solid #2571D3;
+			cursor: pointer;
+			width: 50%;
+			padding: 7px 0px;
+			border-radius: 3px;
+			box-shadow: 0px 0px 1px rgba(0,0,0,.1);
+			margin-left: 10px;
+			&:hover{
+				background: #388EFF;
+				transition-duration:500ms;
+			}
+		}
+
+		// кнопка Сброс фильтров
+		.reset-filters{
+			background: #292A2C;
+			margin-right: 10px;
+			margin-left: 0px;
+			border:none;
+			&:hover{
+				background: #2D2E30;
+				transition-duration:500ms;
+			}
+		}
+	}
+	
+}
+/********************** конец страница anime.html********************* */
+
+
+@media (max-width: 450px) {
+	/* Страница anime.html*/
+	.modification-page{
+		.content-section{
+			margin-top: 50px;
+			.block_sort {
+				.filters-sort-block{display: block!important;}
+				h2 {margin-left: 10px;}
+			}
+		}
+		
+	}
+
+	.filters-sort-block{display: block;}
+	.modal_selects{
+		background: rgba(20,20,20,.9);
+		&__center{
+			// top: 50%;
+			margin: 0;
+			height: 100%;
+			&::-webkit-scrollbar {width: 0px;}
+			&::-moz-scrollbar {width: 0;}
+		}
+
+
+		// кнопка закрытыя фильтров
+
+		
+	} 
+
+	/* Страница anime.html*/
+
+}
+
+
+@media (min-width: 450px) and (max-width: 770px) {
+
+	/* Страница anime.html*/
+	.modification-page{
+		.content-section{
+			margin-top: 50px;
+			.block_sort {
+				.filters-sort-block{display: block}
+				h2 {margin-left: 10px;}
+			}
+		}
+		
+	}
+	.modal_selects{
+		background: rgba(20,20,20,.9);
+		&__center{
+			top: 50%;
+			transform: translate(0%, -50%);
+			&::-webkit-scrollbar {width: 0px;}
+			&::-moz-scrollbar {width: 0;}
+	
+		}
+		// кнопка закрытыя фильтров
+
+	} 
+
+	/* Страница anime.html*/
+
+}
+
+@media (min-width: 770px) and (max-width: 1024px) {
+
+	/* Страница anime.html*/
+	.modification-page{
+		.content-section{
+			margin-top: 50px;
+			.block_sort {
+				.filters-sort-block{display: block}
+				h2 {margin-left: 10px;}
+			}
+		}
+		
+	}
+	.modal_selects{
+		background: rgba(20,20,20,.9);
+		&__center{
+				top: 50%;
+			transform: translate(0%, -50%);
+			&::-webkit-scrollbar {width: 0px;}
+			&::-moz-scrollbar {width: 0;}
+		}
+		// кнопка закрытыя фильтров
+
+		
+	} 
+
+	/* Страница anime.html*/
+
+}
