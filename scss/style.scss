@@ -461,26 +461,24 @@ body {
 .section__title{
 	position: relative;
 	font-size: 22px;
-	background: $twoColor;
+	background:$twoColor;
 	padding: 10px 15px;
-	border-bottom: 1px solid #111;
+	border-bottom: 1px solid #191a1b;
 	z-index: 9; 
 }
 
 // Блок в котором аниме
 .block_anime{
 	position: relative;
-	padding: 20px 15px 50px;
+	padding: 20px 5px 50px 15px;
 	margin-bottom: 30px;
 	min-width: 100%;
 	background: $twoColor;
-	border: 1px solid #212223;
-	box-shadow: 0px 0px 10px rgba(0,0,0,.2);
 	// Аниме блоки
 	article {
 		display: inline-table;
-		margin: 0px 14px 20px 0px;
-		width: 197px;
+		margin: 0px 15px 20px 0px;
+		width: 199px;
 		cursor: pointer;
 		padding-bottom: 10px;
 		position: relative;
@@ -645,13 +643,16 @@ body {
  	box-shadow: 0px 0px 5px rgba(45,136,255,.8);
  	top: 6px;
  	z-index: 2;
- 	font-size: 14px;
+ 	font-size: 12px;
  	background: $buttonColor;
+ 	font-family: Roboto;
+ 	font-weight: 600;
  	padding: 3px 9px;
+ 	display: flex;
+ 	align-items:center;
  	& img {
  		width: 18px!important;
  		height: 18px!important;
- 		float: left;
  		margin-right: 5px;
  	}
  	&:after{
