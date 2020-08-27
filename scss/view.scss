@@ -8,10 +8,13 @@ $threeColor : #1B1C1D;
 
 
 /**********************Страница view.html********************* */
-.modification-page{
+#main.modification-page{
 	position: relative;
+	margin-top: 120px;
 	.content-section{
-		// background: transparent;
+		max-width: 1115px;
+		padding: 20px 0px;
+		background: $threeColor;
 		box-shadow: 0px 0px 10px  rgba(0,0,0,.2);
 		// хлебные крошки
 		.breadcrumbs{
@@ -100,10 +103,9 @@ $threeColor : #1B1C1D;
 						left: 0;
 						visibility: hidden;
 						opacity: 0;
-						background: #1B1C1D;
+						background: $twoColor;
 						transition:500ms all;
 						border-top: none;
-						border-bottom: none;
 						position: absolute;
 						padding: 5px 0px;
 						& a{
@@ -448,6 +450,7 @@ $threeColor : #1B1C1D;
 		// блок "похожие аниме"
 		.section-similar-anime{
 			margin: 50px 10px 0px;
+		
 			.section__title{
 				font-weight: 500;
 				background: transparent;
@@ -457,6 +460,9 @@ $threeColor : #1B1C1D;
 			}
 
 			.block_anime{
+				background: transparent; 
+			    border:none; 
+			    box-shadow:none; 
 				padding-bottom: 0px;
 				article{
 					width: 195px;
@@ -505,14 +511,15 @@ $threeColor : #1B1C1D;
 
 				button {
 			 		padding: 5px 9px;
-			 		border-radius: 3px;
+			 		border-radius: 4px;
 			 		border: 2px solid #246CCA;
 			 		background: $buttonColor;
 			 		color:white;
 			 		margin-right: 5px;
 					cursor: pointer;
+					transition:500ms all;
 					&:hover{
-						box-shadow: 0px 0px 5px rgba(45,136,255,.4);
+						background: #246CCA;
 					}
 				}
 			}
@@ -656,7 +663,7 @@ $threeColor : #1B1C1D;
 
 @media (max-width: 450px) {
 	/* Страница view.html */
-	.modification-page{
+	#main.modification-page{
 		position: relative;
 		.content-section{
 		   background: #1B1C1D;
@@ -756,7 +763,7 @@ $threeColor : #1B1C1D;
 @media (min-width: 450px) and (max-width: 770px) {
 	
 	/* Страница view.html */
-	.modification-page{
+	#main.modification-page{
 		position: relative;
 		.content-section{
 		   background: #1B1C1D;
@@ -850,7 +857,7 @@ $threeColor : #1B1C1D;
 
 @media (min-width: 770px) and (max-width: 1024px) {
 	/* Страница view.html */
-	.modification-page{
+	#main.modification-page{
 		position: relative;
 		.content-section{
 		   background: #1B1C1D;
