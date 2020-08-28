@@ -449,8 +449,7 @@ $threeColor : #1B1C1D;
 
 		// блок "похожие аниме"
 		.section-similar-anime{
-			margin: 50px 10px 0px;
-		
+			margin: 50px 0px 0px;
 			.section__title{
 				font-weight: 500;
 				background: transparent;
@@ -466,6 +465,7 @@ $threeColor : #1B1C1D;
 				padding-bottom: 0px;
 				article{
 					width: 195px;
+					margin: 0px 20px 0px 0px;
 				}
 			}
 		}
@@ -659,7 +659,48 @@ $threeColor : #1B1C1D;
 }
 
 
+
 /********************** конец страницы view.html ********************* */
+
+/**********************Страница manga_view.html********************* */
+
+.block-chapters-manga{
+	background: $twoColor;
+	padding: 10px 0px;
+	h4{
+		padding: 10px 15px;
+		font-weight: 500;
+		border-bottom: 1px solid #444;
+	}
+
+	.chapters{
+		padding: 7px 15px;
+		border-bottom: 1px solid #333;
+		display: flex;
+		width: 100%;
+		transition:400ms all;
+		p{
+			font-size: 14px;
+			flex:2;
+		}
+
+		.watched-chapter{
+			display: flex;
+			font-weight: 600;
+			font-size: 12px;
+			& img{width: 18px;height: 18px;margin-right: 5px;}
+		}
+
+		&:hover{
+			background: $threeColor;
+		}
+	}
+
+}
+
+
+/********************** конец страницы view.html ********************* */
+
 
 @media (max-width: 450px) {
 	/* Страница view.html */
