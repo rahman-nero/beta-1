@@ -1,0 +1,206 @@
+/* $VARIABLE */
+body::-webkit-scrollbar {
+  width: 0px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #212121;
+}
+
+body::-moz-scrollbar {
+  width: 0px;
+}
+
+body::-moz-scrollbar-thumb {
+  background: #212121;
+}
+
+header {
+  background-color: #222324;
+  position: fixed;
+  min-width: 100%;
+  z-index: 9;
+  border-bottom: 1px solid #222;
+}
+header .center-header {
+  padding: 0px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+header .center-header .title-manga {
+  padding: 10px 20px;
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+  width: 50%;
+  -webkit-transition: 400ms all;
+  -o-transition: 400ms all;
+  transition: 400ms all;
+}
+header .center-header .title-manga small {
+  color: rgba(255, 255, 255, 0.6);
+}
+header .center-header .title-manga:hover {
+  background: #1B1C1D;
+}
+header .center-header .select-chapter {
+  width: 50%;
+  position: relative;
+  text-align: right;
+}
+header .center-header .select-chapter .open-chapter-list {
+  padding: 6px 10px;
+  background: #333;
+  border-radius: 3px;
+  font-size: 14px;
+  cursor: pointer;
+  -webkit-transition: 400ms all;
+  -o-transition: 400ms all;
+  transition: 400ms all;
+}
+header .center-header .select-chapter .open-chapter-list.active {
+  background-color: #2D88FF;
+}
+header .center-header .select-chapter .open-chapter-list:hover {
+  background-color: #2D88FF;
+}
+header .center-header .select-chapter .all-manga-chapters {
+  right: 0;
+  margin-top: 10px;
+  border-radius: 3px;
+  text-align: left;
+  position: absolute;
+  background: #292929;
+  max-height: 250px;
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 400ms all;
+  -o-transition: 400ms all;
+  transition: 400ms all;
+}
+header .center-header .select-chapter .all-manga-chapters a {
+  display: block;
+  font-size: 14px;
+  padding: 6px 20px;
+}
+header .center-header .select-chapter .all-manga-chapters a:hover {
+  background: #2D88FF;
+}
+header .center-header .select-chapter .all-manga-chapters.open-list {
+  visibility: visible;
+  opacity: 1;
+}
+
+#main {
+  display: block;
+  max-width: 1100px;
+  padding: 10px 10px 0px;
+}
+#main .content-section {
+  display: block;
+}
+#main .content-section .manga-page-num {
+  padding: 10px;
+  border-radius: 3px;
+  font-weight: 500;
+  background: #222324;
+}
+#main .content-section img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 40px;
+}
+#main .content-section .manga-page-links {
+  width: 100%;
+  padding: 0px 10px 10px;
+  text-align: center;
+  margin: 20px auto;
+}
+#main .content-section .manga-page-links a {
+  background: #222324;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  padding: 5px 11px;
+  margin: 0px 10px;
+}
+#main .content-section .manga-page-links a:hover {
+  background: #2D88FF;
+}
+#main .content-section .manga-panel-links {
+  width: 100%;
+  background: #222324;
+  position: relative;
+  padding: 10px 10px 20px;
+  border-radius: 3px;
+}
+#main .content-section .manga-panel-links a {
+  margin: 0px 5px;
+  font-size: 14px;
+  font-weight: 500;
+}
+#main .content-section .manga-panel-links a.warning {
+  position: absolute;
+  right: 10px;
+}
+
+.select-page {
+  background: #222324;
+  text-align: center;
+  padding: 10px 0px;
+  position: fixed;
+  top: 61px;
+  max-height: 100%;
+  min-height: 100%;
+  overflow: auto;
+  right: 0px;
+}
+.select-page::-webkit-scrollbar-thumb {
+  background-color: #444;
+}
+.select-page::-moz-scrollbar-thumb {
+  background: #444;
+}
+.select-page span {
+  padding: 0px 10px;
+  border-bottom: 1px solid #444;
+  color: #2D88FF;
+  margin-bottom: 5px;
+  display: block;
+  font-size: 13px;
+}
+.select-page a {
+  padding: 3px 10px;
+  -webkit-transition: 400ms all;
+  -o-transition: 400ms all;
+  transition: 400ms all;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+}
+.select-page a:hover {
+  background: #2D88FF;
+}
+.select-page a.active {
+  background: #2D88FF;
+}
+
+@media (max-width: 1024px) {
+  header .center-header {
+    padding-left: 0px;
+  }
+
+  header .center-header .title-manga {
+    font-size: 13px;
+    background: #292929;
+    padding: 8px 10px;
+  }
+
+  .select-page {
+    display: none;
+  }
+}

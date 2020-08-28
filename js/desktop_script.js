@@ -26,11 +26,12 @@ $.getScript("library/slick_slider/slick.min.js", function() {
 	 });
 });
 
-//  скрипт с виджетом вк
-
-$.getScript("https://vk.com/js/api/openapi.js?168", function() {
- $.getScript("js/vk_widget.js"); 
-});
+//  скрипт с виджетом вк - если есть меню с права - то загружаем скрипты
+if ($('aside').is('aside')) {
+  $.getScript("https://vk.com/js/api/openapi.js?168", function() {
+    $.getScript("js/vk_widget.js"); 
+  });
+}
 
 // показ инфы аниме , если навести на аниме
 $('.content-section article').on('mouseover', '.img', function(e){
@@ -70,9 +71,6 @@ $('.open_modal_info').click(function(e){
 
 
 
-
-
-
 // показ скриншотов в модалке - если кликнуть на скриншот открывается модальное окно с ним
 $('.screens').on('click', 'a', function(e){
   let img_link = $(e.currentTarget).data('src'); // ссылка на изображение
@@ -92,4 +90,5 @@ $('.modal-view-img').click(function(e) {
   if ($(e.target).hasClass('open') ||  $(e.target).hasClass('close-view-img-modal')) {
     $('.modal-view-img').removeClass('open');
   }
-})
+});
+

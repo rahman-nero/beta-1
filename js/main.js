@@ -171,3 +171,14 @@ $('.row-blocks-select').on('click', '.view-modal-section', function(e){
     $(block_view).addClass('open');
   }
 });
+
+// Страница read_manga.html - обработка списка, т.е выпадающий список - где можно выбирать главу манги
+$('.open-chapter-list').click(function(){
+  if ($('.all-manga-chapters').hasClass('open-list')) {
+    $('.all-manga-chapters').removeClass('open-list');
+    $('.open-chapter-list').removeClass('active');
+  }else {
+    $('.open-chapter-list').addClass('active');
+    $('.all-manga-chapters').addClass('open-list');
+  }
+});

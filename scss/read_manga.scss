@@ -1,0 +1,205 @@
+/* $VARIABLE */
+$textColor : rgba(228, 230, 235,1);
+$buttonColor : #2D88FF;
+$backColor : #141314;
+$twoColor : #222324;
+$threeColor : #1B1C1D;
+
+
+body::-webkit-scrollbar {
+    width: 0px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #212121;
+}
+
+body::-moz-scrollbar {
+    width: 0px;
+}
+
+body::-moz-scrollbar-thumb {
+  background: #212121;
+}
+
+
+// Меню в верху
+header{
+	background-color: $twoColor;
+	position: fixed;
+	min-width: 100%;
+	z-index: 9;
+	border-bottom: 1px solid #222;
+	.center-header{
+		padding: 0px 10px;
+		display: flex;
+		// название манги и том накотором находится пользователь
+		.title-manga{
+			padding: 10px 20px; 
+			font-weight: 500;
+			font-size: 15px;
+			cursor: pointer;
+			width: 50%;
+			transition:400ms all;
+			small{color: rgba(255,255,255,.6);}
+			&:hover{background: $threeColor;}
+		}
+		// выпадающий список выбора главы манги
+		.select-chapter{
+			width: 50%;
+			position: relative;
+			text-align: right;
+			// кнопка которая открывает список
+			.open-chapter-list{
+				padding: 6px 10px;
+				background: #333;
+				border-radius: 3px;
+				font-size: 14px;
+				cursor: pointer;
+				transition:400ms all;
+				&.active{
+					background-color: $buttonColor;
+				}
+				&:hover{
+					background-color: $buttonColor;
+				}
+			}
+			// выпадающийся список при клике на span
+			.all-manga-chapters{
+				right: 0;
+				margin-top: 10px;
+				border-radius: 3px;
+				text-align: left;
+				position: absolute;
+				background: #292929;
+				max-height: 250px;
+				overflow: auto;
+				opacity: 0;
+				visibility: hidden;
+				transition:400ms all;
+				a {
+					display: block;
+					font-size: 14px;
+					padding: 6px 20px;
+					&:hover{background: $buttonColor;}
+				}
+			}
+
+			.all-manga-chapters.open-list{
+				visibility: visible;
+				opacity: 1;
+			}
+
+		}
+
+	}
+}
+
+
+// Блок в котором будет манга
+
+#main{
+	display: block;
+	max-width: 1100px;
+	padding: 10px 10px 0px;
+	.content-section{
+		display: block;
+		.manga-page-num{
+			padding: 10px;
+			border-radius: 3px;
+			font-weight: 500;
+			background: $twoColor;
+		}
+		& img{
+			display: block;
+			width: 100%;
+			height: auto;
+			margin-bottom:40px;
+		}
+		.manga-page-links{
+			width: 100%;
+			padding: 0px 10px 10px;
+			text-align: center;
+			margin: 20px auto;
+			& a{
+				background: $twoColor;
+				border-radius: 3px;
+				font-size: 14px;
+				font-weight: 500;
+				letter-spacing: .2px;
+				padding: 5px 11px;
+				margin: 0px 10px;
+				&:hover{
+					background: $buttonColor;
+				}
+			}
+
+		}
+		.manga-panel-links{
+			width: 100%;
+			background: $twoColor;
+			position: relative;
+			padding: 10px 10px 20px;
+			border-radius: 3px;
+			& a{
+				margin: 0px 5px;
+				font-size: 14px;
+				font-weight: 500;
+				&.warning{
+
+					position: absolute;
+					right: 10px;
+				}
+			}
+		}
+	}
+}
+
+
+// Боковой панель, при клике на число, переходить на эту страницу, реализовано с помощью якорей
+.select-page{
+	background: $twoColor;
+	text-align: center;
+	padding: 10px 0px;
+	position:fixed;
+	top: 61px;
+	max-height: 100%;
+	min-height: 100%;
+	overflow: auto;
+	right: 0px;
+	&::-webkit-scrollbar-thumb {
+	    background-color: #444;
+	}
+	&::-moz-scrollbar-thumb {
+	  background: #444;
+	}
+	span{
+		padding: 0px 10px;
+		border-bottom: 1px solid #444;
+		color: $buttonColor;
+		margin-bottom: 5px;
+		display: block;
+		font-size: 13px;
+	}
+	& a{
+		padding: 3px 10px;
+		transition:400ms all;
+		display: block;
+		font-size: 14px;
+		font-weight: 500;
+		&:hover{background: $buttonColor;}
+		&.active{background: $buttonColor;}
+	}
+}
+
+
+
+@media (max-width: 1024px ) {
+	header .center-header{padding-left: 0px;}
+	header .center-header .title-manga{
+		font-size: 13px;
+		background: #292929;
+		padding: 8px 10px;
+	}
+	.select-page{display: none;}
+}

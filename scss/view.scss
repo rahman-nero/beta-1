@@ -663,16 +663,17 @@ $threeColor : #1B1C1D;
 /********************** конец страницы view.html ********************* */
 
 /**********************Страница manga_view.html********************* */
-
+// блок в котором находятся главы манги
 .block-chapters-manga{
 	background: $twoColor;
+	margin-top:70px;
 	padding: 10px 0px;
 	h4{
 		padding: 10px 15px;
 		font-weight: 500;
 		border-bottom: 1px solid #444;
 	}
-
+	// главы манги
 	.chapters{
 		padding: 7px 15px;
 		border-bottom: 1px solid #333;
