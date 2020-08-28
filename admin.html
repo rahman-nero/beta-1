@@ -30,51 +30,62 @@
             <a href="">ТОП 100 МАНГИ</a>
         </div>
     </div>
-	<div class="center-header">
-		<div class="logo">
-			<!-- <a href="index.html"><img src="" alt="Логотип"></a> -->
-				<a href="">АНИМЕ</a>
-		</div>
-		<div class="search">
-			<form action="">
-				<input type="text" placeholder="Аниме, манга ...">
-			</form>
-			<div class="result-search">
-				<p><a href="">Показать все результаты</a></p>
-				<a href="">Наруто</a>
-				<a href="">Sao</a>
-			</div>
-		</div>
-		<div class="user-info-block">
-			<div class="user-avatar-login">
-				<img src="img/users/nezuko.jpg" alt="Nero">
-				<a href="">Rahman</a>
-			</div>
-			<!-- <a href="" data-title="" class="not-auth-user">Вход</a>
-			<a href="" data-title="" class="not-auth-user">Регистрация</a> -->
-			<div class="user-panel-links">
-				<a href="" data-title=""><span><img src="img/header/bell.svg" alt="Уведомление"></span></a>
-				<a href="" data-title=""><span><img src="img/header/heart.svg" alt="Уведомление"></span></a>
-					<a href=""><span><img src="img/header/messenger.svg" alt="Сообщение"></span></a>
-				<a href="" class="open_modal_info"><span><img src="img/header/down-arrow.svg" alt="Развернуть"></span></a>
-				<!-- Модальное окно  -->
-				<div class="modal-info-user">
-					<div class="block-info-modal">
-						<img src="img/users/nezuko.jpg" alt="Nero">
-							<a href="">Nero</a><br>
-						<small>Посмотреть профиль</small>
-					</div>
-				    	<hr size="1" color="#393A3B">
-							<a href=""><img src="img/header/friends.svg">Друзья</a>
-								<a href=""><img src="img/header/settings.svg">Редактировать профиль</a>
-				    		<a href=""><img src="img/header/messenger.svg">Cообщение</a>
-				      	<hr size="1" color="#393A3B">
-				    <a href=""><img src="img/header/logout.svg" >Выйти</a>
-				</div>
-				<!-- Конец модального окна  -->
-			</div>
-		</div>
-	</div>
+    <div class="center-header">
+        <div class="logo">
+            <!-- <a href="index.html"><img src="" alt="Логотип"></a> -->
+                <a href="">АНИМЕ</a>
+        </div>
+        <div class="search">
+            <form action="">
+                <div class="icon-search"><img src="img/header/search.svg" alt=""></div>
+                <input type="text" placeholder="Поиск аниме" id="search-input">
+                <div class="settings-search">
+                    <a class="open-setting-list"><img src="img/header/settings-search.svg" alt=""></a>
+                    <div id="settings-search-list">
+                        <span>Искать по:</span>
+                        <input type="radio" id="search-anime" name="search_setting" checked=""><label for="search-anime">Аниме</label>
+                        <input type="radio" id="search-manga" name="search_setting"><label for="search-manga">Манга</label>
+                        <input type="radio" id="search-users" name="search_setting"><label for="search-users">Пользователи</label>
+                    </div>
+                </div>
+            </form>
+            <div class="result-search">
+                <!-- <a href=""><p>Показать все результаты</p></a> -->
+                <!-- <a href="">Наруто</a> -->
+                <!-- <a href="">Sao</a> -->
+                <p>Пока пусто(</p>
+            </div>
+        </div>
+        <div class="user-info-block">
+            <div class="user-avatar-login">
+                <img src="img/users/nezuko.jpg" alt="Nero">
+                <a href="">Rahman</a>
+            </div>
+            <!-- <a href="" data-title="" class="not-auth-user">Вход</a>
+            <a href="" data-title="" class="not-auth-user">Регистрация</a> -->
+            <div class="user-panel-links">
+                <a href="" data-title=""><span><img src="img/header/bell.svg" alt="Уведомление"></span></a>
+                <a href="" data-title=""><span><img src="img/header/heart.svg" alt="Уведомление"></span></a>
+                    <a href=""><span><img src="img/header/messenger.svg" alt="Сообщение"></span></a>
+                <a href="" class="open_modal_info"><span><img src="img/header/down-arrow.svg" alt="Развернуть"></span></a>
+                <!-- Модальное окно  -->
+                <div class="modal-info-user">
+                    <div class="block-info-modal">
+                        <img src="img/users/nezuko.jpg" alt="Nero">
+                            <a href="">Nero</a><br>
+                        <small>Посмотреть профиль</small>
+                    </div>
+                        <hr size="1" color="#393A3B">
+                            <a href=""><img src="img/header/friends.svg">Друзья</a>
+                                <a href=""><img src="img/header/settings.svg">Редактировать профиль</a>
+                            <a href=""><img src="img/header/messenger.svg">Cообщение</a>
+                        <hr size="1" color="#393A3B">
+                    <a href=""><img src="img/header/logout.svg" >Выйти</a>
+                </div>
+                <!-- Конец модального окна  -->
+            </div>
+        </div>
+    </div>
     <div class="header__style_line"></div>
     <div class="header-open-block"></div>
 </header>
