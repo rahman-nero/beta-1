@@ -412,18 +412,27 @@ body {
 		overflow-y: auto;
 		margin: 0px auto 0;
 		display: flex;
-		.slick-list{padding: 15px 0}
 
-		div{
-			margin: 0px 5px;
+		.slide-item{
+			position: relative;
+			margin: 0px 9px;
 			text-align:center;
 			& img{
 				width: 180px;
 				height: 274px;
 				transition: all 300ms;
-				&:hover{
-					transform:scale(1.03);
+				&:hover{transform:scale(1.03);}
+			}
+			.watch, .raiting {
+				position: absolute;
+				padding: auto;
+				img{
+					width: 18px;
+					height: 18px;
 				}
+			}
+			.status{
+				position: absolute;
 			}
 
 			.slider-block-title{
@@ -432,36 +441,56 @@ body {
 				font-size: 14px;
 				font-weight: bold;
 			}
-
 			small{
-				// display: none;
 				margin-left: 5px;
 			}
+
 		}
 	}
 	
 	/* Кнопки */
-	.prev, .next{
-		background: rgba(0,0,0,.7);
+	.prev.slick-arrow{
 		position: absolute;
-		cursor:pointer;
-		padding: 25px 7px;
+		left: 10px;
+		z-index: 9;
+		top: 45%;
+		cursor: pointer;
+		transform:translate(0%, -50%);
+		background: rgba(0,0,0,.7);
 		text-align: center;
-		transform: translate(-50%, -50%);
-		top: 47%;
-		z-index: 1;
+		display: flex;
+		justify-content:center;
+		padding: 25px 5px;
+		transition:400ms all;
 		& img{
-			width: 27px!important;
-			height: 27px!important;
+			width: 30px;
+			height: 30px;
 		}
-
 		&:hover{
 			background: rgba(0,0,0,.9);
 		}
 	}
 
-	.prev{left: 27px}
-	.next{right: -20px}
+	.next.slick-arrow{
+		position: absolute;
+		right: 10px;
+		top: 45%;
+		cursor: pointer;
+		transform:translate(0%, -50%);
+		background: rgba(0,0,0,.7);
+		text-align: center;
+		display: flex;
+		justify-content:center;
+		padding: 25px 5px;
+		transition:400ms all;
+		& img{
+			width: 30px;
+			height: 30px;
+		}
+		&:hover{
+			background: rgba(0,0,0,.9);
+		}
+	}
 
 }
 /******************** конец slick - слайдера ******************* */
@@ -626,29 +655,31 @@ body {
 			 }
 		}
 
-		// Статус аниме
-		.status{
-			position: absolute;
-			width: 10px;
-			height: 10px;
-			background: #A631E1;
-			z-index: 19;
-			border-radius: 50%;
-			left: 15px;
-			top: 15px;
-			&:after{
-				content: '';
-				background:#A631E1;
-				border-radius: 50%;
-				left: 50%;
-				top: 50%;
-				transform:translate(-50%,-50%);
-				position: absolute;
-          	animation:status 3s ease-out 0s infinite backwards;
-				}
 		
-		}
 	}
+}
+
+// Статус аниме
+.status{
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background: #A631E1;
+	z-index: 19;
+	border-radius: 50%;
+	left: 6px;
+	top: 35px;
+	&:after{
+		content: '';
+		background:#A631E1;
+		border-radius: 50%;
+		left: 50%;
+		top: 50%;
+		transform:translate(-50%,-50%);
+		position: absolute;
+  		animation:status 3s ease-out 0s infinite backwards;
+		}
+
 }
 
 // данные об аниме которые показываются при наведении на блок
@@ -762,19 +793,22 @@ body {
 
 // Рейтинг аниме 
 .raiting{
-	left: -6px;	
-	display: none;
+	display: flex;
 	position: absolute;
  	top: 6px;
+	left: -6px;	
+ 	align-items:center;
  	z-index: 2;
- 	font-size: 14px;
  	background: #FF4F19;
  	padding: 3px 9px;
+ 	font-size: 12px;
+ 	font-family: Roboto;
+ 	font-weight: 600;
  	box-shadow: 0px 0px 5px rgba(255,79,25,.8);
 
  	& img {
- 		width: 18px;
- 		float: left;
+ 		width: 16px;
+ 		height: 16px;
  		margin-right: 5px;
  	}
 
@@ -1738,7 +1772,7 @@ aside {
 		}
 	}
 	// показ рейтинга на аниме 
-	.raiting{display:block;}
+	.raiting{display:flex;}
 	// Название блока
 	.section__title{margin: 0px;}
 	// блок в котором аниме
@@ -1957,8 +1991,6 @@ aside {
 			height: auto;
 		}
 	}
-	// показ рейтинга на аниме 
-	.raiting{display:block;}
 	// Название блока
 	.section__title{margin: 0px;}
 	// блок в котором аниме
@@ -2175,8 +2207,6 @@ aside {
 			height: auto;
 		}
 	}
-	// показ рейтинга на аниме 
-	.raiting{display:block;}
 	// Название блока
 	.section__title{margin: 0px;}
 	// блок в котором аниме
