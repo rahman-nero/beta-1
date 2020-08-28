@@ -5,7 +5,7 @@ if (screen.availWidth > 1200) {
 }
 
 // В header, в конце инпута есть иконка, этого мы обрабатываем)
-$('.settings-search').on('click', function (e) {
+$('.settings-search').on('click', '.open-setting-list', function (e) {
     if ($('#settings-search-list').hasClass('open')) {
         $('#settings-search-list').removeClass('open');
         $('.settings-search').removeClass('active');

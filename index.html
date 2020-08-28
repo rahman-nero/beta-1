@@ -40,15 +40,15 @@
         <div class="search">
             <form action="">
                 <div class="icon-search"><img src="img/header/search.svg" alt=""></div>
-                <input type="text" placeholder="Аниме, манга ..." id="search-input">
-
+                <input type="text" placeholder="Поиск аниме" id="search-input">
                 <div class="settings-search">
-                    <a><img src="img/header/settings-search.svg" alt=""></a>
-                    <ul id="settings-search-list">
-                        <li><a>Аниме</a></li>
-                        <li><a>Манга</a></li>
-                        <li><a>Пользователи</a></li>
-                    </ul>
+                    <a class="open-setting-list"><img src="img/header/settings-search.svg" alt=""></a>
+                    <div id="settings-search-list">
+                        <span>Искать по:</span>
+                        <input type="radio" id="search-anime" name="search_setting" checked=""><label for="search-anime">Аниме</label>
+                        <input type="radio" id="search-manga" name="search_setting"><label for="search-manga">Манга</label>
+                        <input type="radio" id="search-users" name="search_setting"><label for="search-users">Пользователи</label>
+                    </div>
                 </div>
             </form>
             <div class="result-search">

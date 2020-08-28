@@ -198,12 +198,13 @@ body {
 			top: 100%;
 			margin-top: 7px;
 			background: #343738;
-			padding: 3px 0px;
 			font-size: 13px;
 			left: -50%;
-			transform:translate(-3%,0%);
+			padding:3px 8px;
+			font-size: 11px;
+			transform:translate(5%,0%);
 			border-radius: 1px;
-			border: 1px solid #444;
+			// треугольник т.е уголок блока
 			&:before{
 				position: absolute;
 				content: '';
@@ -213,12 +214,36 @@ body {
 				border: 6px solid transparent;
 				border-bottom: 6px solid #444;
 			}
+			span{
+				font-weight: bold;
+				font-size: 11px;
+			}
 
-			li{
-				padding:3px 10px;
-				&:hover{
-					background: #444;
+			input{display: none;width: 0;height: 0;}
+			label{
+				margin: 3px 0px;
+				display: flex;
+				&:before{
+					content: "";
+					width: 10px;
+					display: flex;
+					height: 10px;
+					background: #222;
+					border-radius: 50%;
+					border: 1px solid #444;
+					position: relative;
+					margin-right: 5px;
+					margin-top: 2px;
 				}
+			}
+
+			input:checked + label:before{
+				font-size: 22px;
+				text-align: center;
+				z-index: 99;
+				color: $buttonColor;
+				line-height: 6px;
+				content: '\2022';
 			}
 
 		}
@@ -1638,7 +1663,6 @@ aside {
 			.search{
 				flex: 2;
 				input {
-					width: 100%;
 					background: #262627;
 					font-family:Roboto;
 					padding-top:10px;
@@ -1649,14 +1673,9 @@ aside {
 				&::before{margin-left: 0;left: 13px; margin-top: 10px;}
 				.result-search{width: 100%;}
 
-				.settings-search {
-					:before{
-						left: 77%;
-					}
-					#settings-search-list{
-						left: -100%;
-						margin-left: -5px;
-					}
+				 #settings-search-list {
+					left: -100%;
+					margin-left: 0px;
 				}
 			}
 			.user-info-block{display: none;}
@@ -1872,14 +1891,9 @@ aside {
 					font-size: 15px; 
 					padding-bottom:9px; 
 				}
-				.settings-search {
-					:before{
-						left: 77%;
-					}
-					#settings-search-list{
-						left: -100%;
-						margin-left: -5px;
-					}
+				 #settings-search-list {
+					left: -100%;
+					margin-left: 0px;
 				}
 				&::before{margin-left: 0;left: 13px; margin-top: 10px;}
 				.result-search{width: 100%;}
@@ -2095,14 +2109,9 @@ aside {
 					font-size: 15px; 
 					padding-bottom:9px; 
 				}
-				.settings-search {
-					:before{
-						left: 77%;
-					}
-					#settings-search-list{
-						left: -100%;
-						margin-left: -5px;
-					}
+				 #settings-search-list {
+					left: -100%;
+					margin-left: 0px;
 				}
 				&::before{margin-left: 0;left: 13px; margin-top: 10px;}
 				.result-search{width: 100%;}
