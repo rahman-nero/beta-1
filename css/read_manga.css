@@ -99,6 +99,7 @@ header .center-header .select-chapter .all-manga-chapters.open-list {
 #main {
   display: block;
   max-width: 1100px;
+  margin-top: 60px;
   padding: 10px 10px 0px;
 }
 #main .content-section {
