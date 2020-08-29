@@ -13,6 +13,24 @@ $.getScript("library/slick_slider/slick.min.js", function() {
 
 });
 
+
+// выбор страницы в мобильном версии - на read_manga.html
+$('.select-page-modal').on('click', function (e) {
+
+  if ($(e.target).hasClass('open-select-page-list')) {
+    if($('.select-page-modal .list-pages').hasClass('list-open'))
+      $('.select-page-modal .list-pages').removeClass('list-open');
+    else
+      $('.select-page-modal .list-pages').addClass('list-open');
+  }
+  if ($(e.target).is('li') && $('.select-page-modal .list-pages').hasClass('list-open') ) {
+      $('.select-page-modal .list-pages').removeClass('list-open');
+      $('.select-page-modal .open-select-page-list').html($(e.target).text());
+  }
+
+});
+
+// показ модалки в нижнем меню
 $('.modal_menu').click(function(e){
  e.preventDefault();
  if ($('.mobile-modal').hasClass('open')) {
@@ -28,6 +46,5 @@ $('.modal_menu').click(function(e){
  }
 });
 
-// slick - слайдер
-
+// убераем боковое меню десктопа
 $('aside').remove();

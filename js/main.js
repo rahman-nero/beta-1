@@ -16,6 +16,8 @@ $('.settings-search').on('click', '.open-setting-list', function (e) {
 
 });
 
+
+
 // обработка инпута поиска, крч когда что-то введешь в поиск - показываеются результаты в отдельном блоке
 $('#search-input').on('input', function (e) {
   if ($('.result-search').hasClass('open') == false) {

@@ -200,7 +200,7 @@ header{
 	}
 }
 
-
+.select-page-modal{display: none;}
 
 @media (max-width: 1024px ) {
 	header .center-header{padding-left: 0px;}
@@ -210,13 +210,50 @@ header{
 		padding: 8px 10px;
 	}
 	.select-page{display: none;}
-	#main{
-		.content-section{
-			.manga-page-links a{
-				margin: 0px 3px;
-				font-size: 12px;
+	#main .content-section .manga-page-links a{
+		margin: 0px 3px;
+		font-size: 12px;
+	}
+
+
+	// фиксированный блок выбор страницы крч когда кликаешь, на элемент страница 1 - то переходить по странице - для мобилок
+	.select-page-modal{
+	position:fixed;
+	bottom: 60px;
+	width: auto;
+	left: 10px;
+	display: block;
+	span.open-select-page-list{
+		background: $twoColor;
+		padding: 6px 16px;
+		border-radius: 3px; 
+		font-weight: 500;
+		font-size: 12px;
+		cursor: pointer;
+		&:hover{
+			background: #333;
+		}
+	}
+	.list-pages{
+		list-style: none;
+		min-width: 100%;
+		display: none;
+		text-align: center;
+		background:$twoColor;
+		position: absolute;
+		bottom:30px;
+		border-radius: 3px;
+		li {
+			font-size: 14px;
+			word-break:break-word;
+			padding: 4px 0px;
+			transition:400ms all;
+			&:hover{
+				background: #333;
 			}
 		}
 	}
+	.list-pages.list-open{display: block;}
+	}
 
- }
+}
