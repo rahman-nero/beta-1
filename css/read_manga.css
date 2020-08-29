@@ -18,8 +18,11 @@ body::-moz-scrollbar-thumb {
 header {
   background-color: #222324;
   position: fixed;
-  min-width: 317px;
+  min-width: 100%;
   z-index: 9;
+  top: 0;
+  left: 0;
+  right: 0;
   border-bottom: 1px solid #222;
 }
 header .center-header {
@@ -202,5 +205,10 @@ header .center-header .select-chapter .all-manga-chapters.open-list {
 
   .select-page {
     display: none;
+  }
+
+  #main .content-section .manga-page-links a {
+    margin: 0px 3px;
+    font-size: 12px;
   }
 }

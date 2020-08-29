@@ -27,8 +27,11 @@ body::-moz-scrollbar-thumb {
 header{
 	background-color: $twoColor;
 	position: fixed;
-	min-width: 317px;
+	min-width: 100%;
 	z-index: 9;
+	top: 0;
+	left: 0;
+	right: 0;
 	border-bottom: 1px solid #222;
 	.center-header{
 		padding: 0px 10px;
@@ -116,6 +119,8 @@ header{
 			height: auto;
 			margin-bottom:40px;
 		}
+
+		// ссылки предыдущая глава, и следующая глава
 		.manga-page-links{
 			width: 100%;
 			padding: 0px 10px 10px;
@@ -135,6 +140,7 @@ header{
 			}
 
 		}
+		// блок типа фоотер, когда заканчивается манга в низу ссылку
 		.manga-panel-links{
 			width: 100%;
 			background: $twoColor;
@@ -203,4 +209,13 @@ header{
 		padding: 8px 10px;
 	}
 	.select-page{display: none;}
-}
+	#main{
+		.content-section{
+			.manga-page-links a{
+				margin: 0px 3px;
+				font-size: 12px;
+			}
+		}
+	}
+
+ }
