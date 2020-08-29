@@ -18,7 +18,7 @@ body::-moz-scrollbar-thumb {
 header {
   background-color: #222324;
   position: fixed;
-  min-width: 100%;
+  min-width: 317px;
   z-index: 9;
   border-bottom: 1px solid #222;
 }

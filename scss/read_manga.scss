@@ -27,7 +27,7 @@ body::-moz-scrollbar-thumb {
 header{
 	background-color: $twoColor;
 	position: fixed;
-	min-width: 100%;
+	min-width: 317px;
 	z-index: 9;
 	border-bottom: 1px solid #222;
 	.center-header{
@@ -153,6 +153,7 @@ header{
 			}
 		}
 	}
+	
 }
 
 
