@@ -5,7 +5,10 @@
 * classIfOpen - этот класс будет присвоен для visibleBlock
 */
 function dropdown(classHandler, buttonOpen, visibleBlock, classIfOpen = '') {
-  let classIfOpen = classIfOpen.trim() == '' ? 'open' : classIfOpen;
+  if (classIfOpen.trim() == '') {
+     classIfOpen = 'open';    
+     
+  }
   $(classHandler).on('click', buttonOpen, function(e){
     if ($(visibleBlock).hasClass(classIfOpen)) {
       $(visibleBlock).removeClass(classIfOpen);
