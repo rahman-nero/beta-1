@@ -86,3 +86,4 @@ dropdown('.add-to-list', '', '.list-link');
 
 //  страница admin.html - выпадающий список выбора списков
 dropdown('.mobile-select-list', '.open-list', '.mobile-select-list ul');
+

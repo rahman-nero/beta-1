@@ -323,7 +323,7 @@ $threeColor : #1B1C1D;
 	// Контаинер со всеми сообщениями который писал 
 	.container-messages{
 		flex-basis:950px;
-		// background-color: #000;
+		position: relative;
 		display: block;
 		.container-messages__header{
 			padding: 10px ;
@@ -360,17 +360,15 @@ $threeColor : #1B1C1D;
 			.message{
 				cursor: pointer;
 				margin: 0px 0px 20px;
-				padding: 5px 0px;
+				padding: 0px 0px;
 				position: relative;
 				display: flex;
 				.message_content{
 					padding: 5px 12px;
 					border-radius: 20px;
 					position: relative;
-					span{
-						margin-top: 10px;
-						display: block;
-					}
+					border: 1px solid #444;
+					span{display: block;}
 				}
 				.block-anwser{
 					// display: none;
@@ -438,9 +436,8 @@ $threeColor : #1B1C1D;
 				}
 			}
 
-
 		}
-
+		// Форма
 		.form-send-message{
 			display: flex;
 			padding: 6px;
@@ -471,6 +468,26 @@ $threeColor : #1B1C1D;
 				}
 			}
 
+		}
+		// если не выбран пользователь с кем он будет разговаривать то будет показываться иконка и текст выберите друга чтобы начать писать
+		.block-alert-message{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			text-align: center;
+			transform:translate(-50%, -50%);
+			& img{
+				width: 120px;
+				height: 120px;
+			}
+			p{
+				margin: 10px 0px;
+				font-size: 14px;
+				& a{
+					color: $buttonColor;
+					&:hover{text-decoration: underline;}
+				}
+			}
 		}
 	}
 }
@@ -544,7 +561,9 @@ $threeColor : #1B1C1D;
 }
 
 
+
 @media (max-width: 1024px) {
+/****************Страница admin.html*************** */
 	.modification-page{
 		display: block;
 		.content-section{
@@ -698,5 +717,76 @@ $threeColor : #1B1C1D;
 
 		}
 	}
-	
+/****************Конец страницы admin.html*************** */
+
+/****************Страница message.html*************** */
+	.main-container{
+		position: fixed;
+		margin-top: 56px;
+		min-width: 100%;
+		height: 100%;
+
+		// блок со друзьями
+		.container-friends{
+			min-width: 100%;
+			min-height: 100%;
+			padding-bottom: 20px;
+			// названия 'Друзья'
+			.container-friends__header{
+				text-align: left;
+				padding-left: 15px;
+			}
+		}
+		// Контаинер со всеми сообщениями который писал 
+		.container-messages{
+			width: 100%;
+			display: block;
+			margin-bottom: 40px;
+			// все сообщение 
+			.all_messages{
+				padding-bottom: 160px;
+				width: 100%;
+				height: 100%;
+			}
+			// Форма
+			.form-send-message{
+				display: flex;
+				position: fixed;
+				bottom:0px;
+				width: 100%;
+				background: $threeColor;
+				padding: 6px;
+				form{width: 100%;}
+				input[type='text']{width: 85%;}
+			}
+			
+		}
+		.hidden-for-mobile{display: none;}
+
+	}	
+/****************Конец страницы message.html*************** */
+
+
+/****************Страница notifiction.html*************** */
+.section-notification{
+	margin: 56px auto;
+	// блок со всеми уведомлениями
+	.block-notifications{
+		width: 100%;
+		padding: 10px 10px 20px;
+		// блок уведомления
+		.notification{
+			padding: 10px 15px 10px 5px;
+			.img-notification{
+				min-width: 50px;
+				min-height: 50px;
+				max-width: 50px;
+				max-height: 50px;
+			}
+		}
+	}
+
+}
+/****************Конец страницы notifiction.html*************** */
+
 }

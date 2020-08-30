@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+     <!-- Не лезь сюда, беги -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">    
+    <meta name="author" content="Rahman and 02" />
+
+    <title>Профиль</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css"  rel='preload'>
+    <link rel="stylesheet" href="css/admin.css"  rel='preload'>
+
+     <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+
+<!-- Top menu -->
+<header id="header">
+    <div class="block-header-top" >
+        <div class="center">       
+            <a href="">ТОП 100 АНИМЕ</a>
+            <a href="">ТОП 100 МАНГИ</a>
+        </div>
+    </div>
+    <div class="center-header">
+        <div class="logo">
+            <!-- <a href="index.html"><img src="" alt="Логотип"></a> -->
+                <a href="">АНИМЕ</a>
+        </div>
+        <div class="search">
+            <form action="">
+                <div class="icon-search"><img src="img/header/search.svg" alt=""></div>
+                <input type="text" placeholder="Поиск аниме" id="search-input">
+                <div class="settings-search">
+                    <a class="open-setting-list"><img src="img/header/settings-search.svg" alt=""></a>
+                    <div id="settings-search-list">
+                        <span>Искать по:</span>
+                        <input type="radio" id="search-anime" name="search_setting" checked=""><label for="search-anime">Аниме</label>
+                        <input type="radio" id="search-manga" name="search_setting"><label for="search-manga">Манга</label>
+                        <input type="radio" id="search-users" name="search_setting"><label for="search-users">Пользователи</label>
+                    </div>
+                </div>
+            </form>
+            <div class="result-search">
+                <!-- <a href=""><p>Показать все результаты</p></a> -->
+                <!-- <a href="">Наруто</a> -->
+                <!-- <a href="">Sao</a> -->
+                <p>Пока пусто(</p>
+            </div>
+        </div>
+        <div class="user-info-block">
+            <div class="user-avatar-login">
+                <img src="img/users/nezuko.jpg" alt="Nero">
+                <a href="">Rahman</a>
+            </div>
+            <!-- <a href="" data-title="" class="not-auth-user">Вход</a>
+            <a href="" data-title="" class="not-auth-user">Регистрация</a> -->
+            <div class="user-panel-links">
+                <a href="" data-title=""><span><img src="img/header/bell.svg" alt="Уведомление"></span></a>
+                <a href="" data-title=""><span><img src="img/header/heart.svg" alt="Уведомление"></span></a>
+                    <a href=""><span><img src="img/header/messenger.svg" alt="Сообщение"></span></a>
+                <a href="" class="open_modal_info"><span><img src="img/header/down-arrow.svg" alt="Развернуть"></span></a>
+                <!-- Модальное окно  -->
+                <div class="modal-info-user">
+                    <div class="block-info-modal">
+                        <img src="img/users/nezuko.jpg" alt="Nero">
+                            <a href="">Nero</a><br>
+                        <small>Посмотреть профиль</small>
+                    </div>
+                        <hr size="1" color="#393A3B">
+                            <a href=""><img src="img/header/friends.svg">Друзья</a>
+                                <a href=""><img src="img/header/settings.svg">Редактировать профиль</a>
+                            <a href=""><img src="img/header/messenger.svg">Cообщение</a>
+                        <hr size="1" color="#393A3B">
+                    <a href=""><img src="img/header/logout.svg" >Выйти</a>
+                </div>
+                <!-- Конец модального окна  -->
+            </div>
+        </div>
+    </div>
+    <div class="header__style_line"></div>
+    <div class="header-open-block"></div>
+</header>
+<!-- end top menu -->
+
+
+<div class="main-container">
+    <div class="container-friends hidden-for-mobile">
+        <div class="container-friends__header">Друзья</div>
+
+        <a href="">
+            <div class="friend">
+                <div class="img_friend"><img src="img/s.jpg" alt=""></div>
+                    <div class="description-friend">
+                        <p>Рахман дикаев • <small>2013:30:02</small></p>
+                    <small class="last-message new">Ну даже не знаю</small>
+                </div>
+            </div>
+        </a> 
+
+        <a href="">
+            <div class="friend active">
+                <div class="img_friend"><img src="img/s.jpg" alt=""></div>
+                    <div class="description-friend">
+                        <p>Рахман дикаев • <small>2013:30:02</small></p>
+                    <small class="last-message">Ну даже не знаю</small>
+                </div>
+            </div>
+        </a> 
+
+    </div>
+
+    <div class="container-messages">
+
+        <div class="container-messages__header">
+            <img src="img/s.jpg" alt=""><b>Рахман</b>
+            <div class="remove-all-messages"><a href=""><img src="img/icons2/trash.svg" alt="Очистить чат"></a></div>
+        </div>
+
+        <div class="all_messages">
+            <div class="message" data-id='1'>
+                <div class="message_content">
+                   <span>Привет</span>
+                </div>
+            </div>
+            <div class="message" data-id='2'>
+                <div class="message_content">
+                   <span>Как дела?</span>
+                </div>
+            </div>
+            <div class="message i-send read" data-id='3' data-answer='2'>
+                <div class="message_content">
+                   <span>Привет, все хорошо</span>
+                </div>
+            </div>
+            <div class="message i-send read" data-id='4' data-answer='3'>
+                <div class="message_content">
+                   <span>Привет, все хорошо</span>
+                </div>
+            </div>
+            <div class="message i-send read" data-id='5' data-answer='4'>
+                <div class="message_content">
+                   <span>Привет, все хорошо</span>
+                </div>
+            </div>
+            <div class="message i-send read" data-id='6' data-answer='5'>
+                <div class="message_content">
+                   <span>Привет, все хорошо</span>
+                </div>
+            </div>
+
+            <div class="message" data-id='7'>
+                <div class="message_content">
+                   <span>а у тя?</span>
+                </div>
+            </div>
+    
+        </div>
+
+        <div class="form-send-message">
+            <form action="">
+                <input type="text" placeholder="Введите сообщение">
+                <input type="submit" id="send" placeholder="Отправить">
+                <label for="send"><img src="img/icons/send.svg" alt=""></label>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<!-- JS & Jquery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/main.js" type="text/javascript" defer=""></script>
+<!-- Lazyload -->
+<script src="js/lazyload.js"  type="text/javascript"></script>
+<script src="js/test_message_send.js"  type="text/javascript"></script>
+</body>
+</html>
