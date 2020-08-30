@@ -6,9 +6,9 @@ $twoColor : #222324;
 $threeColor : #1B1C1D;
 
 
+/****************Страница admin.html*************** */
 .modification-page{
 	display: block;
-
 	.content-section{
 		box-shadow: none;
 		background-color: transparent;
@@ -90,22 +90,20 @@ $threeColor : #1B1C1D;
 				.description-user{
 					flex:6;
 					// Основная инфа о пользователе
-					.desc-block{
-						.name-user-profile{
-							margin-bottom: 5px;
-							font-size: 18px;
-							font-weight: bold;
-							small{
-								font-size: 13px;
-								font-weight: normal;
-								color: rgba(255,255,255,.6);
-							}
-						}
-						.name-user-profile ~ p{
-							font-size: 14px;
+					.name-user-profile{
+						margin-bottom: 5px;
+						font-size: 18px;
+						font-weight: bold;
+						small{
+							font-size: 13px;
+							font-weight: normal;
 							color: rgba(255,255,255,.6);
-							margin-bottom: 4px;
 						}
+					}
+					.name-user-profile ~ p{
+						font-size: 14px;
+						color: rgba(255,255,255,.6);
+						margin-bottom: 4px;
 					}
 					
 					// Панель со ссылками - 'Списки', 'Мои друзья' и т.д 
@@ -139,7 +137,7 @@ $threeColor : #1B1C1D;
 
 			}
 			// Блок который идет после инфы - там обычно - список аниме - в зависимости от страницы
-			.content-active-link{
+			.content-page{
 				margin-top: 40px;
 				border-radius: 3px;
 				display: flex;
@@ -259,10 +257,11 @@ $threeColor : #1B1C1D;
 
 	}
 }
+.mobile-description, .mobile-select-list{display: none;}
+/****************Конец страницы admin.html*************** */
 
 
-// Страница message.html
-
+/****************Страница message.html*************** */
 .main-container{
 	position: relative;
 	margin: 160px auto 20px;	
@@ -475,9 +474,10 @@ $threeColor : #1B1C1D;
 		}
 	}
 }
+/****************Конец страницы message.html*************** */
 
 
-// Страница notifaction.html
+/****************Страница notifiction.html*************** */
 .section-notification{
 	position: relative;
 	margin: 120px auto;
@@ -530,8 +530,9 @@ $threeColor : #1B1C1D;
 	}
 
 }
+/****************Конец страницы notifiction.html*************** */
 
-
+// кнопка удалениясообщения и т.д
 .right-icon-delete-notification{
 	position: absolute;
 	right: 30px;
@@ -540,4 +541,162 @@ $threeColor : #1B1C1D;
 		width: 20px;
 		height: 20px;
 	}
+}
+
+
+@media (max-width: 1024px) {
+	.modification-page{
+		display: block;
+		.content-section{
+			box-shadow: none;
+			background-color: transparent;
+			width: 100%;
+			margin: 60px auto 0px;
+			padding-top: 0px;
+			// Фон который установил пользователь
+			.block-splash-screen-user{height: 200px;}
+
+			// все инфа о пользователе будет хранится в этом блоке
+			.main-block-info-user{
+				width: 100%;
+				//  Блок со информацией о пользователе
+				.info-user-block{
+					display: block;
+					border: none;
+					border-radius:none;
+					padding: 20px 10px 0px;
+					// Аватарка пользователя
+					.image-user{
+						display: flex;
+						text-align:left;
+						span{display: none;}
+						align-items:center;
+						& img{
+							width: 60px;
+							height: 60px;
+						}
+						// описаниепоказывается только в мобильном версии
+						.mobile-description{
+							padding: 0px 0px 0px 15px;
+							display: block;
+							font-size: 22px;
+							font-weight: 500;
+							& small{
+								font-size: 12px;
+								font-weight: initial;
+								display: block;
+							}
+						}
+					}
+					// блок в который следует за аватаркой пользователя - крч инфа и о немм
+						.description-user{
+							display: block;
+							margin-top: 10px;
+							.name-user-profile{display: none;}
+							.name-user-profile ~ p{
+								font-size: 16px;
+								color: rgba(255,255,255,1);
+								font-weight: 500;
+							}
+						
+						// Панель со ссылками - 'Списки', 'Мои друзья' и т.д 
+						.list-profile-links{
+							// display: none;
+							width: 100%;
+							display: block;
+							text-align: center;
+							& a{
+								display: block;
+								margin: 4px 0px;
+								border-radius: 3px;
+								padding:4px 9px;
+								font-size: 14px;
+								border-bottom: 2px solid transparent; 
+								transition:500ms all;
+							}
+							.active{background-color: $buttonColor;}
+						}
+
+				}
+				}
+
+				// Блок который идет после инфы - там обычно - список аниме - в зависимости от страницы
+				.content-page{
+					display: block;
+					//  блок в котором перечислены аниме которые нравятся или манги
+					.content-block{
+						.block_anime{background: transparent;}
+					 	.block_anime article{
+					 		width: 44.5%;
+					 		.img{height: 215px;}
+					 		.title_anime{font-size: 13px;}
+					 		small{font-size: 12px;}
+					 	}
+					 	// Страница вывода всех друзьей - friends.html
+						.friend{
+							padding: 0px 10px 0px;
+							.friend__img img{width: 60px;}
+							// Кнопка удалить из друзьей
+							.friend__links .delete-friend {
+								position:relative;
+								right: 0;
+							}
+						}
+						// Выпадающий список выбора списков аниме - на admin.html
+						.mobile-select-list{
+							display: block;
+							position: relative;
+							margin: 0px 10px 10px;
+							width: auto;
+							.open-list{
+								background: $twoColor;
+								padding: 4px 12px;
+								font-size: 16px;
+								font-weight: 500;
+								border-radius: 2px;
+								&:hover{background: $buttonColor;}
+							}
+							ul {
+								visibility: hidden;
+								position: absolute;
+								list-style: none;
+								background: $twoColor;
+								width:auto;
+								padding: 5px 15px;
+								margin-top: 15px;
+								z-index: 9;
+								opacity: 0;
+								font-size: 14px;
+								border-radius: 3px;
+								transition:400ms all;
+								&:before{
+									content: '';
+									position: absolute;
+									border: 5px solid transparent;
+									border-bottom-color: $twoColor;
+									top: -10px;
+									left: 3px;
+								}
+								li{
+									margin: 3px 0px;
+								}
+								&.open{
+									opacity: 1;
+									visibility: visible;
+								}
+							}
+
+						}	
+					}
+					
+					// правый блок
+					.right-panel-control{display: none;}
+
+				}
+
+			}
+
+		}
+	}
+	
 }

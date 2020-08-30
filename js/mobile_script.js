@@ -48,3 +48,41 @@ $('.modal_menu').click(function(e){
 
 // убераем боковое меню десктопа
 $('aside').remove();
+
+
+// В header, в конце инпута есть иконка, этого мы обрабатываем)
+$('.settings-search').on('click', '.open-setting-list', function (e) {
+    if ($('#settings-search-list').hasClass('open')) {
+        $('#settings-search-list').removeClass('open');
+        $('.settings-search').removeClass('active');
+    } else {
+        $('#settings-search-list').addClass('open');
+        $('.settings-search').addClass('active');
+    }
+
+});
+
+
+// показ модалки со фильтрами
+dropdown('.filters-sort-block', 'span', '.modal_selects');
+
+
+// закрытие модалки со фильтрами
+$('.modal_selects__close').click(function(){
+   if ($('.modal_selects').hasClass('open')) {
+       $('.modal_selects').removeClass('open');
+   }
+});
+
+// закрытие модалки со фильтрами  - если клинуть на черную область
+$('.modal_selects').click(function(e){
+   if ($(e.target).hasClass('open')) {
+       $('.modal_selects').removeClass('open');
+   }
+});
+
+// закрытие модалки со фильтрами  - если клинуть на черную область
+dropdown('.add-to-list', '', '.list-link');
+
+//  страница admin.html - выпадающий список выбора списков
+dropdown('.mobile-select-list', '.open-list', '.mobile-select-list ul');

@@ -622,13 +622,8 @@ body {
 			.last_episode.manga_version{background: #A631E0;}
 
 			&:hover{
-				& img {
-					transform:scale(1.02);
-				}
-				.article__description{
-					visibility: visible;
-				}
-
+				& img {transform:scale(1.02);}
+				.article__description{visibility: visible;}
 			}
 			
 		}

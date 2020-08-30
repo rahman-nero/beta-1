@@ -10,14 +10,12 @@
 	<title>Профиль</title>
 
     <!-- Style -->
-    <link rel="stylesheet" href="css/style.css"  rel='preload'>
-    <link rel="stylesheet" href="css/admin.css"  rel='preload'>
+    <link rel="stylesheet" href="css/style.css"  rel="preload">
+    <link rel="stylesheet" href="css/admin.css"  rel="preload">
 
-     <!-- Fonts -->
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     
-     <!-- Library --> 
-
   
 </head>
 <body>
@@ -107,20 +105,25 @@
 	<section class="content-section">
         <!-- Фон пользователя -->
         <div class="block-splash-screen-user"></div>
+        <!-- Фон пользователя -->
+
             <div class="main-block-info-user">
+
                 <!-- Info about User -->
                 <div class="info-user-block">
                     <div class="image-user">
                         <img src="https://sun9-29.userapi.com/impg/posntBkx9cr9E8_SNM3_6yxUErKmoMCYVdnoWQ/hGgwH3ZAB1I.jpg?size=200x0&quality=90&crop=0,0,640,640&sign=f713499f0a1cf08cfa90cb3a99fe80fb&ava=1" alt="">
-                        <a href=""><img src="img/icons2/technical-support.svg" alt="">Настройки</a>
+                        <div class="mobile-description">
+                            Рахман дикаев
+                            <small>на сайте с апреля</small>
+                        </div>
+                        <span><a href=""><img src="img/icons2/technical-support.svg" alt="">Настройки</a></span>
                     </div>
                     <div class="description-user">
-                        <div class="desc-block">
-                            <p class="name-user-profile">Рахман дикаев <small>на сайте с 6 января</small></p>
+                            <div class="name-user-profile">Рахман дикаев <small>на сайте с 6 января</small></div>
                             <p><span>Страна:</span> Россия</p>
                             <p><span>Город:</span> Neverland</p>
                             <p><span>Возраст:</span> 14</p>
-                        </div>
                         <div class="list-profile-links">
                             <a href="" class="active"><img src="img/icons2/list.svg" alt="">Списки</a>
                             <a href=""><img src="img/icons2/heart_red.svg" alt="">Избранные</a>
@@ -133,8 +136,17 @@
                 </div>
                 <!-- Info about User -->
                 
-                <div class="content-active-link">
+                <div class="content-page">
                     <div class="content-block">
+                        <div class="mobile-select-list">
+                            <span class="open-list">Смотрел</span>
+                            <ul>
+                                <li><a href="">Буду смотреть</a></li>
+                                <li><a href="">Смотрю</a></li>
+                                <li><a href="">Брошено</a></li>
+                            </ul>
+                            </select>
+                        </div>
                         <div class="block_anime"> 
                             <a href="">
                                 <article>
@@ -258,11 +270,10 @@
                                     <small>42 серии</small>
                                 </article>
                             </a> 
-
                         </div>
                     </div>
                     <div class="right-panel-control">
-                         <h4>Списки</h4>
+                        <h4>Списки</h4>
                         <div class="links">
                             <a href="">Смотрел</a>
                             <a href="">Буду смотреть</a>

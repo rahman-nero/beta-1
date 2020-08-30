@@ -1,3 +1,22 @@
+// 
+/* Функия которая позволяет сделать быстрый выпадающий список
+* classHadler - класс по которому делается обработка событии
+* buttonOpen - кнопка которая открывает список
+* visibleBlock - скрытый блок, который показывается когда сделали клик
+* classIfOpen - этот класс будет присвоен для visibleBlock
+*/
+function dropdown(classHandler, buttonOpen, visibleBlock, classIfOpen = '') {
+  classIfOpen = classIfOpen.trim() == '' ? 'open' : classIfOpen;
+  $(classHandler).on('click', buttonOpen, function(e){
+    if ($(visibleBlock).hasClass(classIfOpen)) {
+      $(visibleBlock).removeClass(classIfOpen);
+    } else {
+      $(visibleBlock).addClass(classIfOpen);
+    }
+  });
+
+}
+
 if (screen.availWidth > 1200) {
 	$.getScript("js/desktop_script.js"); 
 } else {
@@ -52,38 +71,7 @@ $('.timetable__block').on('click', '.button-open', function(e){
  		$(icon).addClass('open');
  	}
 });
-// показ модалки со фильтрами
-$('#main.modification-page .content-section .block_sort .filters-sort-block span').click(function(){
-   if ($('.modal_selects').hasClass('open')) {
-       $('.modal_selects').removeClass('open');
-   } else {
-       $('.modal_selects').addClass('open');
-   }
-});
 
-// закрытие модалки со фильтрами
-$('.modal_selects__close').click(function(){
-   if ($('.modal_selects').hasClass('open')) {
-       $('.modal_selects').removeClass('open');
-   }
-});
-
-// закрытие модалки со фильтрами  - если клинуть на черную область
-$('.modal_selects').click(function(e){
-   if ($(e.target).hasClass('open')) {
-       $('.modal_selects').removeClass('open');
-   }
-});
-
-// закрытие модалки со фильтрами  - если клинуть на черную область
-$('.add-to-list').click(function(e){
-
-  if ($('.list-link').hasClass('open'))
-       $('.list-link').removeClass('open');
-  else 
-       $('.list-link').addClass('open');
-   
-});
 
 
 // перелистивание серии на странице view.html
@@ -114,7 +102,6 @@ $('.scroll-right').on('click', function(){
   }
 });
  
-
 
 // в блоке коментарии - при клике на кнопку 'ответить' появляется форма для добваления коментария
 $('.block-review-comment-content .comment').on('click', '.comment_controls', function(e){
@@ -154,8 +141,6 @@ $('.modal-complaint-body input').on('click', function(e){
   }
 
 })
-
-
 
 
 // фильтры на странице anime.html - с боку
