@@ -1,4 +1,3 @@
-// 
 /* Функия которая позволяет сделать быстрый выпадающий список
 * classHadler - класс по которому делается обработка событии
 * buttonOpen - кнопка которая открывает список
@@ -6,7 +5,7 @@
 * classIfOpen - этот класс будет присвоен для visibleBlock
 */
 function dropdown(classHandler, buttonOpen, visibleBlock, classIfOpen = '') {
-  classIfOpen = classIfOpen.trim() == '' ? 'open' : classIfOpen;
+  let classIfOpen = classIfOpen.trim() == '' ? 'open' : classIfOpen;
   $(classHandler).on('click', buttonOpen, function(e){
     if ($(visibleBlock).hasClass(classIfOpen)) {
       $(visibleBlock).removeClass(classIfOpen);
