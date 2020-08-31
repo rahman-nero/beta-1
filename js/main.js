@@ -4,15 +4,15 @@
 * visibleBlock - скрытый блок, который показывается когда сделали клик
 * classIfOpen - этот класс будет присвоен для visibleBlock
 */
-function dropdown(classHandler, buttonOpen, visibleBlock, classIfOpen = 'open') {
-  $(classHandler).on('click', buttonOpen, function(e){
+function dropdown(classHandler, buttonOpen, visibleBlock) {
+  var classIfOpen = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'open';
+  $(classHandler).on('click', buttonOpen, function (e) {
     if ($(visibleBlock).hasClass(classIfOpen)) {
       $(visibleBlock).removeClass(classIfOpen);
     } else {
       $(visibleBlock).addClass(classIfOpen);
     }
   });
-
 }
 
 if (screen.availWidth > 1200) {
