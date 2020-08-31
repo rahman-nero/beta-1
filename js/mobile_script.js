@@ -50,18 +50,6 @@ $('.modal_menu').click(function(e){
 $('aside').remove();
 
 
-// В header, в конце инпута есть иконка, этого мы обрабатываем)
-$('.settings-search').on('click', '.open-setting-list', function (e) {
-    if ($('#settings-search-list').hasClass('open')) {
-        $('#settings-search-list').removeClass('open');
-        $('.settings-search').removeClass('active');
-    } else {
-        $('#settings-search-list').addClass('open');
-        $('.settings-search').addClass('active');
-    }
-
-});
-
 
 // показ модалки со фильтрами
 dropdown('.filters-sort-block', 'span', '.modal_selects');

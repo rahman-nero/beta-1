@@ -7,11 +7,7 @@
 function dropdown(classHandler, buttonOpen, visibleBlock) {
   var classIfOpen = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'open';
   $(classHandler).on('click', buttonOpen, function (e) {
-    if ($(visibleBlock).hasClass(classIfOpen)) {
-      $(visibleBlock).removeClass(classIfOpen);
-    } else {
-      $(visibleBlock).addClass(classIfOpen);
-    }
+    $(visibleBlock).toggleClass(classIfOpen);
   });
 }
 
@@ -159,11 +155,11 @@ $('.row-blocks-select').on('click', '.view-modal-section', function(e){
 
 // Страница read_manga.html - обработка списка, т.е выпадающий список - где можно выбирать главу манги
 $('.open-chapter-list').click(function(){
-  if ($('.all-manga-chapters').hasClass('open-list')) {
-    $('.all-manga-chapters').removeClass('open-list');
-    $('.open-chapter-list').removeClass('active');
-  }else {
-    $('.open-chapter-list').addClass('active');
-    $('.all-manga-chapters').addClass('open-list');
-  }
+    $('.all-manga-chapters').toggleClass('open-list');
+    $('.open-chapter-list').toggleClass('active');
+});
+
+// В header, в конце инпута есть иконка, этого мы обрабатываем)
+$('.settings-search, .settings-search a').click(function (e) {
+    $('#settings-search-list').toggleClass('open');
 });
