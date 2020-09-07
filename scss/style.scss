@@ -395,7 +395,7 @@ body {
 	padding: 25px 10px;
 	font-weight: normal;
 	border-bottom: 2px solid $buttonColor;
-	
+	.slick-list{padding:0px 5px;}
 	/* Черная пленка над фоном слайдера */
 	&::before{
 		content:"";
@@ -505,10 +505,8 @@ body {
 
 .content-section{
 	position: relative;
-	// flex-basis:1140px;
-	// background-image: url(../img/registration/decor-min.png);
+	min-width: 1100px;
 	background-size: contain;
-	// padding: 55px 20px;
 	margin:0px 30px 0px 0px;
 	.timetable__block{
 		display: none;
@@ -1742,6 +1740,7 @@ aside {
 
 	// блок в которой все находится - аниме и т.д
 	.content-section{ 
+		min-width:100%;
 		max-width: 1140px!important;
 		padding: 0px 0px;
 		margin: 20px 0px 0px;
@@ -1962,6 +1961,8 @@ aside {
 
 	// блок в которой все находится - аниме и т.д
 	.content-section{ 
+		min-width:100%;
+
 		max-width: 530px!important;
 	   padding: 0px 0px;
 	   margin: 21px auto 0px;
@@ -2178,6 +2179,8 @@ aside {
 
 	// блок в которой все находится - аниме и т.д
 	.content-section{ 
+		min-width:100%;
+		
 		max-width: 730px!important;
 	   padding: 0px 0px;
 	   margin: 21px auto 0px;

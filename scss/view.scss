@@ -371,10 +371,32 @@ $threeColor : #1B1C1D;
 
 				}
 				// сам плеер
-				& iframe{height: 500px;}
+				.block-iframe{
+					max-width: 100%;
+					.warning{
+						text-align: center;
+					    padding: 50px 0px 50px;
+					    margin: 0px auto;
+					    display: flex;
+					    max-width: 400px;
+					    justify-content: center;
+					    align-items: center;
+					    font-weight: 500;
+					    font-size: 22px;
+						div{
+							margin: 0px auto;
+							& img{
+								max-width:100%; 
+							}
+						}
+
+					}
+					& iframe{height: 500px;}
+				}
 
 				// панель где можно выбрать серию - и поделится ссылкой
 				.player-bottom-panel{
+					&.hidden{display: none;}
 					display: flex;
 					position: relative;
 					text-align: left;
@@ -758,9 +780,9 @@ $threeColor : #1B1C1D;
 				// блок в котором плеер - и выбор серии и т.д
 				.player{
 					padding: 10px 0px 0px;
-					.player-header{
-						.block-select-series{display: none;}
-					}
+					// .player-header{
+					// 	.block-select-series{display: none;}
+					// }
 					// сам плеер
 					& iframe{height: 300px;}
 					// панель где можно выбрать серию - и поделится ссылкой
@@ -858,9 +880,9 @@ $threeColor : #1B1C1D;
 				// блок в котором плеер - и выбор серии и т.д
 				.player{
 					padding: 10px 0px 0px;
-					.player-header{
-						.block-select-series{display: none;}
-					}
+					// .player-header{
+					// 	.block-select-series{display: none;}
+					// }
 					// сам плеер
 					& iframe{height: 300px;}
 					// панель где можно выбрать серию - и поделится ссылкой
@@ -952,9 +974,9 @@ $threeColor : #1B1C1D;
 				// блок в котором плеер - и выбор серии и т.д
 				.player{
 					padding: 10px 0px 0px;
-					.player-header{
-						.block-select-series{display: none;}
-					}
+					// .player-header{
+					// 	.block-select-series{display: none;}
+					// }
 					// сам плеер
 					& iframe{height: 300px;}
 					// панель где можно выбрать серию - и поделится ссылкой
